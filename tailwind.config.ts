@@ -7,10 +7,37 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      screens: ["1920px"],
+    },
+    fontFamily: {
+      press: "var(--font-press)",
+    },
+    screens: {
+      xxl: { max: "1800px" },
+      xl: { max: "1600px" },
+      lg: { max: "1279px" },
+      md: { max: "1023px" },
+      sm: { max: "768px" },
+      xs: { max: "376px" },
+    },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        BgLight: "#FFFFFF",
+        BgDark: "#F4ECEC",
+        TextLight: "#EDEDED",
+        TextDark: "#111111",
+        AccentLight: "#38B6FF",
+        AccentDark: "#004AAD",
+      },
+      spacing: {
+        xxxxs: "5px",
+        xxxs: "10px",
+        xxs: "15px",
+        xs: "20px",
+        sm: "30px",
+        md: "50px",
       },
     },
   },
