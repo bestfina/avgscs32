@@ -4,7 +4,7 @@ import TaimerBlock from "../TaimerBlock";
 import smoothFn from "@/lib/smoothFn";
 import { MAIN_ADVANTAGES } from "@/constants";
 import { twMerge } from "tailwind-merge";
-import Image from "next/image";
+import ArrowNav from "../ui/ArrowNav";
 
 const Hero = () => (
   <section
@@ -24,11 +24,11 @@ const Hero = () => (
     </video>
     <div
       className="relative flex items-center px-sm lg:p-xxxs xs:px-xxxxs w-full h-screen bg-opacity-50
-       bg-black min-h-[700px] max-h-[1000px] lg:max-h-[700px] md:h-fit md:min-h-fit md:pt-32 md:pb-sm xs:pt-24"
+       bg-black min-h-[700px] max-h-[1000px] lg:min-h-[600px] md:h-fit md:min-h-fit md:pt-32 md:pb-sm xs:pt-24"
     >
       <div className="container gap-md xxl:gap-xs md:flex-col md:items-start sm:h-fit h-full flex items-center">
         <div className="flex flex-col w-2/4 xxl:w-4/6 gap-sm xxl:gap-xs md:w-full">
-          <h1 className="text-TextLight max-w-3xl">Создаём сайты, которые работают на Вас 24/7</h1>
+          <h1 className="text-TextLight max-w-4xl">Создаём продукты, которые работают на Вас 24/7</h1>
           <div className="flex flex-wrap justify-between gap-xs xl:gap-xxs sm:hidden">
             {MAIN_ADVANTAGES.map(({ id, title }) => (
               <AdvantagesMiniBlock key={id} className={twMerge("w-[48%] sm:w-full", id === 3 ? "w-full" : null)}>
@@ -44,13 +44,7 @@ const Hero = () => (
           onClick={() => smoothFn("portfolio")}
         >
           <div className="bg-BgLight w-12 h-12 rounded-full flex items-center justify-center xl:w-10 xl:h-10">
-            <Image
-              src="/assets/icons/arrow-bottom.svg"
-              alt="стрелка"
-              width={10}
-              height={20}
-              className="bounce xl:w-2 xl:h-4"
-            />
+            <ArrowNav className="text-TextDark bounce" />
           </div>
           Далее
         </button>

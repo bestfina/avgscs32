@@ -4,6 +4,7 @@ import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+// import Cursor from "@/components/ui/Cursor";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ const RootLayout = ({
 }>) => (
   <html lang="ru">
     <body className={twMerge(raleway.className, pressStart2P.variable, "antialiased text-TextDark")}>
+      {/* <Cursor /> */}
       <Header />
       <main>{children}</main>
       <Footer />

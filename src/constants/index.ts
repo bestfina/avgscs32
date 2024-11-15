@@ -89,21 +89,20 @@ export const SERVICE: TService[] = [
   {
     id: 1,
     image: "/assets/images/bg-personalised-solution.png",
-    title: "Персонализированное решение - от 70.000 руб.",
-    advantages: ["От 70.000 руб.", "Сроки от 7 дней", "Для крупных компаний", "Максимальное качество"],
-    buttonFocus: true,
+    title: "Персонализированное решение",
+    advantages: ["От 100.000 руб.", "Сроки от 7 дней", "Для крупных компаний", "Максимальное качество"],
   },
   {
     id: 2,
     image: "/assets/images/bg-tilda.png",
-    title: "No code или шаблон",
+    title: "Сайт на готовом решении",
     advantages: ["От 10.000 руб.", "Сроки от 1 дня", "Для малых бизнесов", "Для срочных задач"],
   },
   {
     id: 3,
     image: "/assets/images/bg-support.png",
     title: "Техническая поддержка",
-    advantages: ["От 1.500 руб.", "Сроки от 1 часа", "Любые доработки", "Доп. функционал"],
+    advantages: ["От 1.200 руб.", "Сроки от 1 часа", "Любые доработки", "Доп. функционал"],
   },
   {
     id: 4,
@@ -117,25 +116,156 @@ export const SERVICE: TService[] = [
     title: "Продвижение сайта",
     advantages: ["От 12.000 руб.", "Сроки от 2 дней", "Seo продвижение и аудиты", "Яндекс Директ"],
   },
+  {
+    id: 6,
+    image: "/assets/images/bg-promotion.png",
+    title: "Другое",
+    advantages: ["Цена и сроки договорные", "Crm/Erp сервисы", "Яндекс", "Яндекс Директ"],
+  },
 ];
 
 export const PAGES: TPages[] = [
   {
-    id: 5,
-    image: "/assets/images/bg-personalised-solution.png",
+    id: 10,
+    image: "/assets/images/work-2.png",
     title: "Vintage cottage",
     url: "https://vintage-cottage.eu",
     description: [
       {
         subject: "Поставленная задача:",
-        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом. 
+        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом.
         В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
       },
       {
         subject: "Стек:",
         text: `Wordpress, php, woocommerce, javaScript`,
       },
+      {
+        subject: "Результат:",
+        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
+         repellendus harum quibusdam architecto maiores ad quaerat quis sit eligendi aspernatur cumque,
+          perferendis labore illum odio officia vel fugit incidunt!`,
+      },
     ],
+    data: "01.05.2024",
+  },
+  {
+    id: 9,
+    image: "/assets/images/work-2.png",
+    title: "Vintage cottage",
+    url: "https://vintage-cottage.eu",
+    description: [
+      {
+        subject: "Поставленная задача:",
+        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом.
+        В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
+      },
+      {
+        subject: "Стек:",
+        text: `Wordpress, php, woocommerce, javaScript`,
+      },
+      {
+        subject: "Результат:",
+        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
+         repellendus harum quibusdam architecto maiores ad quaerat quis sit eligendi aspernatur cumque,
+          perferendis labore illum odio officia vel fugit incidunt!`,
+      },
+    ],
+    data: "01.05.2024",
+  },
+  {
+    id: 8,
+    image: "/assets/images/work-2.png",
+    title: "Vintage cottage",
+    url: "https://vintage-cottage.eu",
+    description: [
+      {
+        subject: "Поставленная задача:",
+        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом.
+        В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
+      },
+      {
+        subject: "Стек:",
+        text: `Wordpress, php, woocommerce, javaScript`,
+      },
+      {
+        subject: "Результат:",
+        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
+         repellendus harum quibusdam architecto maiores ad quaerat quis sit eligendi aspernatur cumque,
+          perferendis labore illum odio officia vel fugit incidunt!`,
+      },
+    ],
+    data: "01.05.2024",
+  },
+  {
+    id: 7,
+    image: "/assets/images/work-2.png",
+    title: "Vintage cottage",
+    url: "https://vintage-cottage.eu",
+    description: [
+      {
+        subject: "Поставленная задача:",
+        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом.
+        В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
+      },
+      {
+        subject: "Стек:",
+        text: `Wordpress, php, woocommerce, javaScript`,
+      },
+      {
+        subject: "Результат:",
+        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
+         repellendus harum quibusdam architecto maiores ad quaerat quis sit eligendi aspernatur cumque,
+          perferendis labore illum odio officia vel fugit incidunt!`,
+      },
+    ],
+    data: "01.05.2024",
+  },
+  {
+    id: 6,
+    image: "/assets/images/work-2.png",
+    title: "Vintage cottage",
+    url: "https://vintage-cottage.eu",
+    description: [
+      {
+        subject: "Поставленная задача:",
+        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом.
+        В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
+      },
+      {
+        subject: "Стек:",
+        text: `Wordpress, php, woocommerce, javaScript`,
+      },
+      {
+        subject: "Результат:",
+        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
+         repellendus harum quibusdam architecto maiores ad quaerat quis sit eligendi aspernatur cumque,
+          perferendis labore illum odio officia vel fugit incidunt!`,
+      },
+    ],
+    data: "01.05.2024",
+  },
+  {
+    id: 5,
+    image: "/assets/images/work-3.png",
+    title: "Vintage cottage",
+    url: "https://vintage-cottage.eu",
+    description: [
+      {
+        subject: "Поставленная задача:",
+        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом.`,
+      },
+      {
+        subject: "Стек:",
+        text: `Wordpress, php, woocommerce, javaScript`,
+      },
+      {
+        subject: "Результат:",
+        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
+         repellendus harum quibusdam architecto maiores `,
+      },
+    ],
+    data: "01.05.2024",
   },
   {
     id: 4,
@@ -153,12 +283,13 @@ export const PAGES: TPages[] = [
         text: `Wordpress, php, woocommerce, javaScript`,
       },
     ],
+    data: "01.05.2024",
   },
   {
     id: 3,
-    image: "/assets/images/bg-personalised-solution.png",
-    title: "Vintage cottage",
-    url: "https://vintage-cottage.eu",
+    image: "/assets/images/work-3.png",
+    title: "Тц Малибу",
+    url: "https://malibu-trc.ru",
     description: [
       {
         subject: "Поставленная задача:",
@@ -170,39 +301,52 @@ export const PAGES: TPages[] = [
         text: `Wordpress, php, woocommerce, javaScript`,
       },
     ],
+    data: "01.05.2024",
   },
   {
     id: 2,
     image: "/assets/images/work-2.png",
-    title: "Vintage cottage 2",
-    url: "https://vintage-cottage.eu",
+    title: "Cybertribe",
+    url: "https://www.cybertribe.uk",
     description: [
       {
         subject: "Поставленная задача:",
-        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом. 
-        В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
+        text: `Вёрстку корпоративного сайта с посадкой на cms`,
       },
       {
         subject: "Стек:",
         text: `Wordpress, php, woocommerce, javaScript`,
       },
+      {
+        subject: "Результат:",
+        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
+         repellendus harum quibusdam architecto maiores ad quaerat quis sit eligendi aspernatur cumque,
+          perferendis labore illum odio officia vel fugit incidunt!`,
+      },
     ],
+    data: "25.03.2024",
   },
   {
     id: 1,
     image: "/assets/images/work-1.png",
-    title: "Vintage cottage",
-    url: "https://vintage-cottage.eu",
+    title: "Бизнес совет",
+    url: "https://bisovet.pro",
     description: [
       {
         subject: "Поставленная задача:",
-        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом. 
-        В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
+        text: `Вёрстка корпоративного сайта по уже готовому макету в фигма. Натяжка на удобную cms.`,
       },
       {
         subject: "Стек:",
-        text: `Wordpress, php, woocommerce, javaScript`,
+        text: `Html, css, javaScript, wordpress, php`,
+      },
+      {
+        subject: "Результат:",
+        text: `Данный сайт планировался для выступления на закрытом форуме и будущей раскрутки компании "Бизнес совет" 
+        с её юридицескими услугами. Вся работа была готова раньше срока, чтобы было важно покупателю. 
+        Сам форум по словам заказчика прошёл вполне себе успешно :)`,
       },
     ],
+    data: "14.10.2023",
   },
 ];

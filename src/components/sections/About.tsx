@@ -2,6 +2,7 @@ import Image from "next/image";
 import Logo from "../ui/Logo";
 import Button from "../ui/Button";
 import { ADVANTAGES } from "@/constants";
+import { twMerge } from "tailwind-merge";
 
 const About = () => (
   <section id="about" className="bg-BgDark">
@@ -26,9 +27,9 @@ const About = () => (
         </div>
         <div className="flex flex-wrap gap-md w-2/4">
           {ADVANTAGES.map(({ id, icon, title, description }) => (
-            <div className="w-[46%]" key={id}>
-              <Image src={icon} width={80} height={80} alt="Иконки преимуществ" />
-              <h6 className="mt-1 mb-2">{title}</h6>
+            <div className="w-[46.9%]" key={id}>
+              <Image src={icon} width={80} height={80} alt="Иконка преимущества" className="w-auto h-16" />
+              <h5 className={twMerge("mt-xxxs mb-xxxxs", id === 5 ? "max-w-44" : null)}>{title}</h5>
               <p>{description}</p>
             </div>
           ))}

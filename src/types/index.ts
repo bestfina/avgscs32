@@ -19,6 +19,7 @@ export type TPages = BaseEntity & {
     subject: string;
     text: string;
   }[];
+  data: string;
 };
 
 export type TAdvantages = BaseEntity & {
@@ -29,5 +30,4 @@ export type TAdvantages = BaseEntity & {
 export type TService = BaseEntity & {
   image: Image;
   advantages: [string, string, string, string];
-  buttonFocus?: boolean;
 };

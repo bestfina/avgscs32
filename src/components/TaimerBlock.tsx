@@ -21,7 +21,7 @@ const TaimerBlock = () => {
 
   useEffect(() => {
     const updateCountdown = () => {
-      setTimeLeft((prevTime) => {
+      setTimeLeft(prevTime => {
         if (prevTime <= 1) {
           clearInterval(countdownRef.current!);
           localStorage.removeItem("countdown");
@@ -60,9 +60,9 @@ const TaimerBlock = () => {
       py-16 xxl:py-14 xl:p-6 lg:py-10 md:px-4 md:p-3 text-TextLight bg-AccentLight/55 rounded-3xl"
     >
       <div className="flex flex-col items-center gap-3 xxl:gap-2 xs:gap-xxxxs">
-        <h6 className="font-semibold text-3xl lg:text-2xl md:text-xl xs:text-lg">Бесплатный аудит сайта</h6>
+        <h6 className="font-semibold text-3xl xl:text-2xl md:text-xl xs:text-lg">Бесплатный аудит сайта</h6>
         <p className="max-w-[550px] xxl:max-w-[450px] xl:max-w-[583px] text-center xxl:text-[17px] md:text-sm lg:text-sm">
-          Ваш сайт не даёт нужных результатов? Мы проведём бесплатный аудит и покажем, что можно улучшить!
+          Ваш сайт не даёт нужных результатов? Мы проведём <b>бесплатный</b> аудит и покажем, что можно улучшить!
         </p>
       </div>
       <div className="flex items-center gap-md xxl:gap-sm lg:gap-xs md:gap-xxs sm:gap-2 text-center text-TextLight timer-text">
