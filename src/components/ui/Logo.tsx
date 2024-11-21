@@ -7,13 +7,12 @@ import { twMerge } from "tailwind-merge";
 interface LogoProps {
   scroll?: boolean;
   big?: boolean;
-  className?: string;
 }
 
-const Logo = ({ scroll, big = false, className }: LogoProps) => (
+const Logo = ({ scroll, big = false }: LogoProps) => (
   <Link
     href="/"
-    className={twMerge("flex flex-col items-center w-fit", className)}
+    className={twMerge("flex flex-col items-center w-fit")}
     scroll={false}
     onClick={() => scroll && smoothFn("hero")}
   >

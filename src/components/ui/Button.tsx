@@ -1,3 +1,5 @@
+"use client";
+import { usePopup } from "@/context/PopupContext";
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -5,12 +7,11 @@ interface ButtonProps {
   children: ReactNode;
   type: "white" | "blue" | "lightBlue";
   className?: string;
-  onclick?: () => void;
 }
 
-const Button = ({ children, type, className, onclick }: ButtonProps) => {
+const Button = ({ children, type, className }: ButtonProps) => {
+  const { openPopup } = usePopup();
   let color = null;
-
   if (type === "white") {
     color = "text-TextDark bg-BgLight";
   } else if (type === "blue") {
@@ -21,9 +22,9 @@ const Button = ({ children, type, className, onclick }: ButtonProps) => {
 
   return (
     <button
-      onClick={onclick}
+      onClick={openPopup}
       className={twMerge(
-        "rounded-full font-semibold w-80 py-3 hover:opacity-85 duration-300 xl:w-72 lg:w-60 lg:py-2",
+        "rounded-full font-semibold w-80 py-3 hover:opacity-80 duration-500 xl:w-72 lg:w-60 xl:py-2",
         color,
         className
       )}

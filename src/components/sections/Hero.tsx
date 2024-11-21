@@ -1,10 +1,8 @@
-"use client";
 import AdvantagesMiniBlock from "../ui/AdvantagesBlock";
-import TaimerBlock from "../TaimerBlock";
-import smoothFn from "@/lib/smoothFn";
+import NextSection from "../ui/NextSection";
+import TaimerBlock from "../ui/TaimerBlock";
 import { MAIN_ADVANTAGES } from "@/constants";
 import { twMerge } from "tailwind-merge";
-import ArrowNav from "../ui/ArrowNav";
 
 const Hero = () => (
   <section
@@ -28,26 +26,25 @@ const Hero = () => (
     >
       <div className="container gap-md xxl:gap-xs md:flex-col md:items-start sm:h-fit h-full flex items-center">
         <div className="flex flex-col w-2/4 xxl:w-4/6 gap-sm xxl:gap-xs md:w-full">
-          <h1 className="text-TextLight max-w-4xl">Создаём продукты, которые работают на Вас 24/7</h1>
-          <div className="flex flex-wrap justify-between gap-xs xl:gap-xxs sm:hidden">
+          <h1 className="text-TextLight max-w-4xl">Создаём проекты, которые работают на Вас 24/7</h1>
+          <div className="flex flex-wrap justify-between gap-xs xl:gap-xxs sm:gap-xxxs">
             {MAIN_ADVANTAGES.map(({ id, title }) => (
-              <AdvantagesMiniBlock key={id} className={twMerge("w-[48%] sm:w-full", id === 3 ? "w-full" : null)}>
+              <AdvantagesMiniBlock
+                key={id}
+                className={twMerge(
+                  "w-[48%]",
+                  id === 3 ? "w-full" : null,
+                  "sm:text-[13px] xs:w-full",
+                  id === 2 ? "xs:bg-BgLight xs:text-AccentDark" : "xs:hover:bg-transparent xs:hover:text-TextLight"
+                )}
+              >
                 {title}
               </AdvantagesMiniBlock>
             ))}
           </div>
         </div>
         <TaimerBlock />
-        <button
-          className="next-section-btn flex items-center gap-xs xl:gap-xxs md:hidden
-           text-TextLight absolute bottom-sm xl:bottom-xs"
-          onClick={() => smoothFn("portfolio")}
-        >
-          <div className="bg-BgLight w-12 h-12 rounded-full flex items-center justify-center xl:w-10 xl:h-10">
-            <ArrowNav className="text-TextDark bounce" />
-          </div>
-          Далее
-        </button>
+        <NextSection />
       </div>
     </div>
   </section>

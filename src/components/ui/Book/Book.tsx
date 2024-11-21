@@ -4,14 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import { PAGES } from "@/constants";
-import Logo from "./ui/Logo";
-import ArrowNav from "./ui/ArrowNav";
+import ArrowIcon from "../icon/ArrowIcon";
+import Logo from "../Logo";
+import "./book.css";
 
 const Book = () => {
   const [activePages, setActivePages] = useState(false);
   const [arrPage, setArrPage] = useState<number[]>([]);
 
-  // Установка активного состояния страниц при скролле
   useEffect(() => {
     if (arrPage[arrPage.length - 1] === 3) {
       setArrPage([]);
@@ -23,6 +23,7 @@ const Book = () => {
       setArrPage([6]);
     }
 
+    // Установка активного состояния страниц при скролле
     const handleScroll = () => {
       const offsetY = window.scrollY;
       const pointTop = window.innerWidth < 1279 ? 550 : window.innerWidth < 1600 ? 700 : 900;
@@ -61,7 +62,8 @@ const Book = () => {
         <li className="md:!pl-sm">
           <div
             className={twMerge(
-              "book relative w-[450px] lg:w-96 md:w-[340px] h-[600px] lg:h-[520px] md:h-[500px] duration-1000"
+              "book relative w-[520px] lg:w-96 md:w-[340px] h-[670px] lg:h-[520px] md:h-[500px] duration-1000",
+              activePages && "scale-110"
             )}
           >
             <ul className={twMerge("hardcover_front", activePages && "hardcover_front_active")}>
@@ -97,7 +99,7 @@ const Book = () => {
                         className="rounded-3xl w-full"
                       />
                       {description.map(({ subject, text }, index) => (
-                        <p key={index} className="text-sm lg:text-xs">
+                        <p key={index} className="text-base lg:text-xs">
                           <b>{subject}</b> {text}
                         </p>
                       ))}
@@ -105,7 +107,7 @@ const Book = () => {
                     <div>
                       {id === PAGES[0].id || id === PAGES[PAGES.length - 1].id ? null : (
                         <button onClick={() => togglePageVisibility(id)}>
-                          <ArrowNav className={twMerge(id % 2 === 0 ? "-rotate-90" : "rotate-90")} />
+                          <ArrowIcon className={twMerge(id % 2 === 0 ? "-rotate-90" : "rotate-90")} />
                         </button>
                       )}
                       <div>{data}</div>

@@ -4,7 +4,8 @@ import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
-// import Cursor from "@/components/ui/Cursor";
+import Popup from "@/components/ui/Popup";
+import { PopupProvider } from "@/context/PopupContext";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -33,10 +34,12 @@ const RootLayout = ({
 }>) => (
   <html lang="ru">
     <body className={twMerge(raleway.className, pressStart2P.variable, "antialiased text-TextDark")}>
-      {/* <Cursor /> */}
-      <Header />
-      <main>{children}</main>
-      <Footer />
+      <PopupProvider>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <Popup />
+      </PopupProvider>
     </body>
   </html>
 );

@@ -1,33 +1,49 @@
 import Link from "next/link";
 import Logo from "../ui/Logo";
 import Social from "../ui/Social";
+import FirstSection from "../ui/FirstSection";
+import Image from "next/image";
 
 const Footer = () => (
   <footer className="border-t border-TextDark">
-    <div className="container flex md:flex-col md:gap-xxs justify-between items-center py-sm xl:py-xs">
-      <div className="flex flex-col gap-xs md:gap-xxxs md:order-3">
-        <p className="md:text-center max-w-64 xl:max-w-[230px] lg:max-w-[205px] md:hidden">
+    <div className="container flex sm:flex-col sm:gap-xxs justify-between items-center py-sm xl:py-xs">
+      <div className="flex flex-col h-36 sm:h-fit justify-between sm:justify-start sm:gap-xxxxs sm:items-center sm:order-3">
+        <p className="sm:text-center max-w-64 xl:max-w-[230px] lg:max-w-[205px] sm:hidden">
           Режим работы: Ежедневно с 9:00 до 19:00
         </p>
-        <p className="xl:text-sm md:text-center">
-          CortexDigital © {new Date().getFullYear()} | ИП &quot;CortexDigital&quot; ИНН: 7735172030
-        </p>
+        <FirstSection>
+          Наверх
+          <Image
+            src="/assets/icons/arrow-up.svg"
+            width={22}
+            height={22}
+            alt="стрелка вверх"
+            className="xl:w-4 xl:h-4"
+          />
+        </FirstSection>
+        <p className="sm:text-center">CortexDigital © {new Date().getFullYear()}</p>
       </div>
-      <Logo big className="absolute left-1/2 -translate-x-1/2 md:relative md:left-0 md:translate-x-0 md:order-1" />
-      <div className="flex flex-col items-end md:items-center gap-xs md:gap-xxxxs md:order-2">
-        <div className="flex items-center gap-xs md:flex-col md:gap-xxxxs">
-          <div className="flex flex-col items-end md:items-center md:gap-0">
-            <p className="text-center max-w-[205px] hidden md:block">Режим работы: Ежедневно с 9:00 до 19:00</p>
-            <Link href="mailto:info@CortexDigital" className="text-big-semibold">
-              info@CortexDigital
-            </Link>
-            <Link href="tel:+7 999 999 99 99" className="text-big-semibold">
-              +7 999 999 99 99
-            </Link>
+      <div
+        className="flex flex-col h-36 sm:h-fit justify-between sm:justify-start items-center absolute left-1/2 -translate-x-1/2
+       sm:relative sm:left-0 sm:translate-x-0 sm:order-1"
+      >
+        <Logo big />
+        <button className="w-fit underline">Заполнить бриф</button>
+      </div>
+      <div className="flex flex-col h-36 sm:h-fit justify-between sm:gap-xxxxs sm:justify-start items-end sm:items-center sm:order-2">
+        <div className="flex items-end sm:items-center gap-xxxs flex-col sm:gap-xxxxs">
+          <div className="flex flex-col items-end sm:items-center sm:gap-xxxxs">
+            <p className="text-center max-w-[205px] hidden sm:block">Режим работы: Ежедневно с 9:00 до 19:00</p>
+            <Link href="mailto:info@CortexDigital">info@CortexDigital</Link>
+            <Link href="tel:+7 999 999 99 99">+7 999 999 99 99</Link>
           </div>
           <Social className="hidden md:flex" />
         </div>
-        <Link href="/privacy" scroll={false} className="font-semibold text-lg xl:text-sm">
+        <div className="flex gap-xxxs md:hidden">
+          <Link href="mailto:info@CortexDigital">Телеграм</Link>
+          <Link href="tel:+7 999 999 99 99">Вацап</Link>
+        </div>
+        <Link href="/privacy" scroll={false} className="font-semibold">
           Политика конфиденциальности
         </Link>
       </div>

@@ -1,5 +1,4 @@
 "use client";
-import Book from "../Book";
 
 import { Navigation } from "swiper/modules";
 
@@ -12,22 +11,24 @@ import Link from "next/link";
 import Image from "next/image";
 import { PAGES } from "@/constants";
 import SliderNav from "../ui/SliderNav";
+import Book from "../ui/Book/Book";
 
 const Portfolio = () => {
-  const [hidden, setHidden] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth <= 768) {
-      setHidden(true);
-    }
+    const handleResize = () => setIsMobileView(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <section id="portfolio">
       <div className="container">
         <h2>История о наших проектов</h2>
-        {!hidden ? null : <SliderNav />}
-        {!hidden ? (
+        {!isMobileView ? null : <SliderNav />}
+        {!isMobileView ? (
           <Book />
         ) : (
           <Swiper
@@ -41,7 +42,7 @@ const Portfolio = () => {
             className="mt-xxs"
           >
             {PAGES.map(({ id, title, url, image, description, data }) => (
-              <SwiperSlide key={id}>
+              <SwiperSlide key={id} aria-labelledby={`slide-${id}`}>
                 <div className="flex flex-col gap-xxxs">
                   <h5>{title}</h5>
                   <Link href={url} target="_blank" className="underline">
@@ -52,7 +53,7 @@ const Portfolio = () => {
                     alt={"главный экран сайта " + url}
                     width={768}
                     height={250}
-                    loading="lazy"
+                    priority={id === PAGES[0].id}
                     className="rounded-3xl w-full"
                   />
                   {description.map(({ subject, text }, index) => (

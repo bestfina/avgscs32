@@ -1,7 +1,7 @@
 type URL = string;
 type Image = string;
 
-export interface BaseEntity {
+interface BaseEntity {
   id: number;
   title: string;
 }
@@ -12,13 +12,15 @@ export type TLink = BaseEntity & {
 
 export type TAdvantagesMain = BaseEntity;
 
+interface Description {
+  subject: string;
+  text: string;
+}
+
 export type TPages = BaseEntity & {
   image: Image;
   url: URL;
-  description: {
-    subject: string;
-    text: string;
-  }[];
+  description: Description[];
   data: string;
 };
 
@@ -27,7 +29,19 @@ export type TAdvantages = BaseEntity & {
   description: string;
 };
 
+export type TFaq = BaseEntity & {
+  text: string;
+};
+
 export type TService = BaseEntity & {
   image: Image;
   advantages: [string, string, string, string];
+};
+
+export type TFeedbacks = {
+  id: number;
+  name: string;
+  avatar: string;
+  poster: string;
+  video?: [string, string];
 };
