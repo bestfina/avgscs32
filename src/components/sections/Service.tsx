@@ -18,7 +18,10 @@ const Service = () => (
             <h5 className="text-TextLight">{title}</h5>
             <div className="flex flex-wrap gap-xxs lg:gap-xxxs md:max-w-lg">
               {advantages.map((item, index) => (
-                <AdvantagesBlock className={twMerge(index === 0 ? "bg-BgLight text-AccentDark" : null)} key={index}>
+                <AdvantagesBlock
+                  className={twMerge(index === 0 || index === 1 ? "bg-BgLight text-AccentDark" : null)}
+                  key={index}
+                >
                   {item}
                 </AdvantagesBlock>
               ))}

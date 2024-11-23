@@ -70,6 +70,10 @@
     transform: translateZ(1px);
   }
 
+  .input-style {
+    @apply py-xs px-md border-2 border-AccentDark focus:outline-none rounded-full text-TextDark
+  }
+
   .next-section-btn:hover .bounce {
     -moz-animation: bounce 1.2s infinite;
     -webkit-animation: bounce 1.2s infinite;
@@ -77,6 +81,7 @@
   }
 
   @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -110,6 +115,7 @@
       transform: translateY(-100%);
       opacity: 0;
     }
+
     to {
       transform: translateY(0);
       opacity: 1;

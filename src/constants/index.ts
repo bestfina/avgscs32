@@ -1,4 +1,4 @@
-import { TAdvantages, TAdvantagesMain, TFaq, TFeedbacks, TLink, TPages, TService } from "@/types";
+import { TAdvantages, TAdvantagesMain, TFaq, TFeedbacks, TFields, TLink, TPages, TService } from "@/types";
 
 export const LINK: TLink[] = [
   {
@@ -444,5 +444,26 @@ export const FEEDBACKS: TFeedbacks[] = [
     name: "Андрей",
     avatar: "/assets/images/work-4.png",
     poster: "",
+  },
+];
+
+export const FIELDS: TFields[] = [
+  {
+    id: 1,
+    type: "text",
+    placeholder: "Имя",
+    icon: "/assets/icons/person.svg",
+  },
+  {
+    id: 2,
+    type: "tel",
+    placeholder: "Телефон*",
+    icon: "/assets/icons/phone.svg",
+  },
+  {
+    id: 3,
+    type: "email",
+    placeholder: "Почта",
+    icon: "/assets/icons/email.svg",
   },
 ];

@@ -3,6 +3,7 @@ import Logo from "../ui/Logo";
 import Social from "../ui/Social";
 import FirstSection from "../ui/FirstSection";
 import Image from "next/image";
+import Button from "../ui/Button";
 
 const Footer = () => (
   <footer className="border-t border-TextDark">
@@ -28,7 +29,9 @@ const Footer = () => (
        sm:relative sm:left-0 sm:translate-x-0 sm:order-1"
       >
         <Logo big />
-        <button className="w-fit underline">Заполнить бриф</button>
+        <Button type="none" className="underline">
+          Заполнить бриф
+        </Button>
       </div>
       <div className="flex flex-col h-36 sm:h-fit justify-between sm:gap-xxxxs sm:justify-start items-end sm:items-center sm:order-2">
         <div className="flex items-end sm:items-center gap-xxxs flex-col sm:gap-xxxxs">

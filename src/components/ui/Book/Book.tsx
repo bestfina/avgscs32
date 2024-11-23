@@ -23,7 +23,6 @@ const Book = () => {
       setArrPage([6]);
     }
 
-    // Установка активного состояния страниц при скролле
     const handleScroll = () => {
       const offsetY = window.scrollY;
       const pointTop = window.innerWidth < 1279 ? 550 : window.innerWidth < 1600 ? 700 : 900;

@@ -45,3 +45,10 @@ export type TFeedbacks = {
   poster: string;
   video?: [string, string];
 };
+
+export type TFields = {
+  id: number;
+  type: string;
+  placeholder: string;
+  icon: string;
+};
