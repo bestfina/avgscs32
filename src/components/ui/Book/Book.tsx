@@ -94,7 +94,7 @@ const Book = () => {
                         alt={"главный экран сайта " + url}
                         width={300}
                         height={250}
-                        loading="lazy"
+                        loading="eager"
                         className="rounded-3xl w-full"
                       />
                       {description.map(({ subject, text }, index) => (

@@ -7,11 +7,11 @@ interface ContactProps {
 
 const Contact = ({ className }: ContactProps) => {
   return (
-    <div className={twMerge("flex gap-xxs", className)}>
-      <Link href="mailto:info@CortexDigital" className="text-2xl">
+    <div className={twMerge("flex gap-xxs w-fit", className)}>
+      <Link href="mailto:info@CortexDigital" className="text-2xl sm:text-xl">
         info@CortexDigital
       </Link>
-      <Link href="tel:+7 999 999 99 99" className="text-2xl">
+      <Link href="tel:+7 999 999 99 99" className="text-2xl sm:text-xl">
         +7 999 999 99 99
       </Link>
     </div>

@@ -88,37 +88,37 @@ export const ADVANTAGES: TAdvantages[] = [
 export const SERVICE: TService[] = [
   {
     id: 1,
-    image: "/assets/images/bg-personalised-solution.png",
+    image: "/assets/images/bg-personalised-solution.webp",
     title: "Персонализированное решение",
     advantages: ["От 100.000 руб.", "Сроки от 7 дней", "Для крупных компаний", "Максимальное качество"],
   },
   {
     id: 2,
-    image: "/assets/images/bg-tilda.png",
+    image: "/assets/images/bg-tilda.webp",
     title: "Сайт на готовом решении",
     advantages: ["От 10.000 руб.", "Сроки от 1 дня", "Для малых бизнесов", "Для срочных задач"],
   },
   {
     id: 3,
-    image: "/assets/images/bg-support.png",
+    image: "/assets/images/bg-support.webp",
     title: "Техническая поддержка",
     advantages: ["От 1.200 руб.", "Сроки от 1 часа", "Любые доработки", "Доп. функционал"],
   },
   {
     id: 4,
-    image: "/assets/images/bg-design.png",
+    image: "/assets/images/bg-design.webp",
     title: "Дизайн и прототипирование",
     advantages: ["От 5.000 руб.", "Сроки от 5 часов", "Уникальный дизайн", "Редизайны"],
   },
   {
     id: 5,
-    image: "/assets/images/bg-promotion.png",
+    image: "/assets/images/bg-promotion.webp",
     title: "Продвижение сайта",
     advantages: ["От 12.000 руб.", "Сроки от 2 дней", "Seo продвижение и аудиты", "Яндекс Директ"],
   },
   {
     id: 6,
-    image: "/assets/images/bg-promotion.png",
+    image: "/assets/images/bg-promotion.webp",
     title: "Другое",
     advantages: ["Цена и сроки договорные", "Crm/Erp сервисы", "Яндекс", "Яндекс Директ"],
   },
@@ -127,7 +127,7 @@ export const SERVICE: TService[] = [
 export const PAGES: TPages[] = [
   {
     id: 10,
-    image: "/assets/images/work-2.png",
+    image: "/assets/images/work-2.webp",
     title: "Vintage cottage",
     url: "https://vintage-cottage.eu",
     description: [
@@ -151,7 +151,7 @@ export const PAGES: TPages[] = [
   },
   {
     id: 9,
-    image: "/assets/images/work-2.png",
+    image: "/assets/images/work-2.webp",
     title: "Vintage cottage",
     url: "https://vintage-cottage.eu",
     description: [
@@ -175,7 +175,7 @@ export const PAGES: TPages[] = [
   },
   {
     id: 8,
-    image: "/assets/images/work-2.png",
+    image: "/assets/images/work-2.webp",
     title: "Vintage cottage",
     url: "https://vintage-cottage.eu",
     description: [
@@ -199,7 +199,7 @@ export const PAGES: TPages[] = [
   },
   {
     id: 7,
-    image: "/assets/images/work-2.png",
+    image: "/assets/images/work-2.webp",
     title: "Vintage cottage",
     url: "https://vintage-cottage.eu",
     description: [
@@ -223,7 +223,7 @@ export const PAGES: TPages[] = [
   },
   {
     id: 6,
-    image: "/assets/images/work-2.png",
+    image: "/assets/images/work-2.webp",
     title: "Vintage cottage",
     url: "https://vintage-cottage.eu",
     description: [
@@ -247,7 +247,7 @@ export const PAGES: TPages[] = [
   },
   {
     id: 5,
-    image: "/assets/images/work-3.png",
+    image: "/assets/images/work-3.webp",
     title: "Vintage cottage",
     url: "https://vintage-cottage.eu",
     description: [
@@ -287,7 +287,7 @@ export const PAGES: TPages[] = [
   },
   {
     id: 3,
-    image: "/assets/images/work-3.png",
+    image: "/assets/images/work-3.webp",
     title: "Тц Малибу",
     url: "https://malibu-trc.ru",
     description: [
@@ -305,7 +305,7 @@ export const PAGES: TPages[] = [
   },
   {
     id: 2,
-    image: "/assets/images/work-2.png",
+    image: "/assets/images/work-2.webp",
     title: "Cybertribe",
     url: "https://www.cybertribe.uk",
     description: [
@@ -328,7 +328,7 @@ export const PAGES: TPages[] = [
   },
   {
     id: 1,
-    image: "/assets/images/work-1.png",
+    image: "/assets/images/work-1.webp",
     title: "Бизнес совет",
     url: "https://bisovet.pro",
     description: [
@@ -410,8 +410,8 @@ export const FEEDBACKS: TFeedbacks[] = [
   {
     id: 1,
     name: "Андрей2",
-    avatar: "/assets/images/avatar.png",
-    poster: "/assets/images/work-4.png",
+    avatar: "/assets/images/avatar.webp",
+    poster: "/assets/images/work-4.webp",
     video: [
       "/video/webm/mixkit-code-on-green-letters-on-screen-49122-hd-ready.webm",
       "mixkit-code-on-green-letters-on-screen-49122-hd-ready.mp4",
@@ -420,13 +420,13 @@ export const FEEDBACKS: TFeedbacks[] = [
   {
     id: 2,
     name: "Андрей",
-    avatar: "/assets/images/work-4.png",
-    poster: "/assets/images/work-4.png",
+    avatar: "/assets/images/work-4.webp",
+    poster: "/assets/images/work-4.webp",
   },
   {
     id: 3,
     name: "Андрей",
-    avatar: "/assets/images/work-4.png",
+    avatar: "/assets/images/work-4.webp",
     poster: "",
     video: [
       "/video/webm/mixkit-code-on-green-letters-on-screen-49122-hd-ready.webm",
@@ -436,13 +436,13 @@ export const FEEDBACKS: TFeedbacks[] = [
   {
     id: 4,
     name: "Андрей",
-    avatar: "/assets/images/work-4.png",
+    avatar: "/assets/images/work-4.webp",
     poster: "",
   },
   {
     id: 5,
     name: "Андрей",
-    avatar: "/assets/images/work-4.png",
+    avatar: "/assets/images/work-4.webp",
     poster: "",
   },
 ];

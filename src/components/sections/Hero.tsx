@@ -5,10 +5,7 @@ import { MAIN_ADVANTAGES } from "@/constants";
 import { twMerge } from "tailwind-merge";
 
 const Hero = () => (
-  <section
-    id="hero"
-    className="relative bg-[url('/assets/images/bg-hero.png')] bg-black flex items-center bg-no-repeat bg-cover"
-  >
+  <section id="hero" className="relative bg-black flex items-center bg-no-repeat bg-cover">
     <video
       className="absolute top-0 left-0 h-full w-full object-cover"
       autoPlay

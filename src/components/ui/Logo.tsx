@@ -17,7 +17,7 @@ const Logo = ({ scroll, big = false }: LogoProps) => (
     onClick={() => scroll && smoothFn("hero")}
   >
     <Image
-      src="/public/assets/images/logo.png"
+      src="/assets/images/logo.webp"
       alt="logo"
       width={50}
       height={50}

@@ -21,9 +21,10 @@ const About = () => {
           </div>
           <Image
             className="rounded-3xl w-2/5 md:w-full"
-            src="/assets/images/bg-hero.png"
+            src="/assets/images/bg-tilda.webp"
             width={700}
             height={200}
+            loading="lazy"
             alt="Наша компания"
           />
         </div>

@@ -1,13 +1,18 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import Button from "../ui/Button";
+import { twMerge } from "tailwind-merge";
 
 // Константы для секунд в днях, часах и минутах
 const SECONDS_IN_A_DAY = 86400;
 const SECONDS_IN_AN_HOUR = 3600;
 const SECONDS_IN_A_MINUTE = 60;
 
-const TaimerBlock = () => {
+interface TaimerBlockProps {
+  className?: string;
+}
+
+const TaimerBlock = ({ className }: TaimerBlockProps) => {
   const initialTime: number = 604799; // 6 дней 23 часа 59 минут 59 секунд
   const [timeLeft, setTimeLeft] = useState<number>(initialTime);
   const countdownRef = useRef<NodeJS.Timeout | null>(null);
@@ -57,8 +62,11 @@ const TaimerBlock = () => {
 
   return (
     <div
-      className="flex flex-col w-2/4 md:w-full gap-sm lg:gap-xs md:gap-xxs xs:gap-xxxs items-center 
-    py-16 xxl:py-14 xl:py-9 md:px-4 md:p-3 text-TextLight bg-AccentLight/55 rounded-3xl"
+      className={twMerge(
+        `flex flex-col px-xxs w-2/4 md:w-full h-fit gap-sm lg:gap-xs md:gap-xxs xs:gap-xxxs
+         items-center py-16 xxl:py-14 xl:py-9 md:px-4 md:p-3 text-TextLight bg-AccentLight/55 rounded-3xl`,
+        className
+      )}
     >
       <div className="flex flex-col items-center gap-3 xxl:gap-2 xs:gap-xxxxs">
         <h6 className="font-semibold text-3xl xl:text-2xl md:text-xl xs:text-lg">Бесплатный аудит сайта</h6>
