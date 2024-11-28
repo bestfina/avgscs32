@@ -15,7 +15,7 @@ const Service = () => (
             className="relative min-h-[405px] xl:min-h-[350px] lg:min-h-72 rounded-3xl bg-cover bg-no-repeat bg-center w-[49%] 
             xxl:w-[48.5%] md:w-full p-md xl:p-sm lg:p-xs xs:p-xxs flex flex-col justify-between sm:gap-xs"
           >
-            <h5 className="text-TextLight">{title}</h5>
+            <h3 className="text-TextLight">{title}</h3>
             <div className="flex flex-wrap gap-xxs lg:gap-xxxs md:max-w-lg">
               {advantages.map((item, index) => (
                 <AdvantagesBlock

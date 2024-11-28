@@ -17,10 +17,11 @@ interface Description {
   text: string;
 }
 
-export type TPages = BaseEntity & {
-  image: Image;
+export type TCase = BaseEntity & {
+  image: [Image, Image, Image, Image];
   url: URL;
   description: Description[];
+  advantages: [string, string, string, string];
   data: string;
 };
 
@@ -30,7 +31,7 @@ export type TAdvantages = BaseEntity & {
 };
 
 export type TFaq = BaseEntity & {
-  text: string;
+  description: Description[];
 };
 
 export type TService = BaseEntity & {

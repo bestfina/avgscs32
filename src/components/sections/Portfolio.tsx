@@ -1,72 +1,62 @@
-"use client";
-
-import { Navigation } from "swiper/modules";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import { useEffect, useState } from "react";
 import Link from "next/link";
+import Button from "../ui/Button";
 import Image from "next/image";
-import { PAGES } from "@/constants";
-import SliderNav from "../ui/SliderNav";
-import Book from "../ui/Book/Book";
+import { CASE } from "@/constants";
+import { twMerge } from "tailwind-merge";
 
 const Portfolio = () => {
-  const [isMobileView, setIsMobileView] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobileView(window.innerWidth <= 768);
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <section id="portfolio">
-      <div className="container">
-        <h2>История о наших проектов</h2>
-        {!isMobileView ? null : <SliderNav />}
-        {!isMobileView ? (
-          <Book />
-        ) : (
-          <Swiper
-            modules={[Navigation]}
-            spaceBetween={50}
-            slidesPerView={1}
-            navigation={{
-              prevEl: ".slider-button-prev",
-              nextEl: ".slider-button-next",
-            }}
-            className="mt-xxs"
+      <div className="container flex flex-col gap-md">
+        <h2>Наши реализованные кейсы</h2>
+        {CASE.map(({ id, title, description, image, url, data, advantages }) => (
+          <div
+            key={id}
+            className={twMerge(
+              "border-b-2 border-black flex md:flex-col gap-sm justify-between pb-xs",
+              id % 2 === 0 ? "flex-row-reverse" : null
+            )}
           >
-            {PAGES.map(({ id, title, url, image, description, data }) => (
-              <SwiperSlide key={id} aria-labelledby={`slide-${id}`}>
-                <div className="flex flex-col gap-xxxs">
-                  <h5>{title}</h5>
-                  <Link href={url} target="_blank" className="underline">
-                    {url}
-                  </Link>
-                  <Image
-                    src={image}
-                    alt={"главный экран сайта " + url}
-                    width={768}
-                    height={250}
-                    priority={id === PAGES[0].id}
-                    className="rounded-3xl w-full"
-                  />
-                  {description.map(({ subject, text }, index) => (
-                    <p key={index}>
-                      <b>{subject}</b> {text}
-                    </p>
-                  ))}
-                  <div>{data}</div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        )}
+            <div className="w-2/4 md:w-full flex flex-col gap-xxs">
+              <div>
+                <span>{data}</span>
+                <h3>{title}</h3>
+              </div>
+              <Link href={url} target="_blank">
+                {url}
+              </Link>
+              <div className="flex flex-wrap gap-xxxs">
+                {advantages.map((item, index) => (
+                  <span key={index} className="bg-black font-bold px-2 py-1 text-TextLight rounded-full">
+                    {item}
+                  </span>
+                ))}
+              </div>
+              {description.map(({ subject, text }, index) => (
+                <p key={index}>
+                  <b>{subject} </b>
+                  {text}
+                </p>
+              ))}
+              <Button type="black">Хочу так же!</Button>
+            </div>
+            <div className="flex flex-wrap gap-xs lg:gap-xxs xs:gap-xxxs justify-between w-2/4 md:w-full">
+              {image.map((item, index) => (
+                <Image
+                  key={index}
+                  src={item}
+                  alt=""
+                  width={200}
+                  height={100}
+                  className="w-[48%] lg:w-[47.5%] object-contain rounded-3xl border-2 border-black"
+                />
+              ))}
+            </div>
+          </div>
+        ))}
+        <Button type="lightBlue" className="m-auto block">
+          Смотреть ещё
+        </Button>
       </div>
     </section>
   );

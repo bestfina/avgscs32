@@ -1,4 +1,4 @@
-import { TAdvantages, TAdvantagesMain, TFaq, TFeedbacks, TFields, TLink, TPages, TService } from "@/types";
+import { TAdvantages, TAdvantagesMain, TCase, TFaq, TFeedbacks, TFields, TLink, TService } from "@/types";
 
 export const LINK: TLink[] = [
   {
@@ -79,7 +79,7 @@ export const ADVANTAGES: TAdvantages[] = [
   {
     id: 6,
     icon: "/assets/icons/tilda.svg",
-    title: "Использование no-code решений для малого бизнеса",
+    title: "Использование no-code решений",
     description:
       "Внедрение no-code платформ для быстрого создания сайтов без написания кода, что может значительно сократить расходы на разработку.",
   },
@@ -124,285 +124,156 @@ export const SERVICE: TService[] = [
   },
 ];
 
-export const PAGES: TPages[] = [
-  {
-    id: 10,
-    image: "/assets/images/work-2.webp",
-    title: "Vintage cottage",
-    url: "https://vintage-cottage.eu",
-    description: [
-      {
-        subject: "Поставленная задача:",
-        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом.
-        В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
-      },
-      {
-        subject: "Стек:",
-        text: `Wordpress, php, woocommerce, javaScript`,
-      },
-      {
-        subject: "Результат:",
-        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
-         repellendus harum quibusdam architecto maiores ad quaerat quis sit eligendi aspernatur cumque,
-          perferendis labore illum odio officia vel fugit incidunt!`,
-      },
-    ],
-    data: "01.05.2024",
-  },
-  {
-    id: 9,
-    image: "/assets/images/work-2.webp",
-    title: "Vintage cottage",
-    url: "https://vintage-cottage.eu",
-    description: [
-      {
-        subject: "Поставленная задача:",
-        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом.
-        В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
-      },
-      {
-        subject: "Стек:",
-        text: `Wordpress, php, woocommerce, javaScript`,
-      },
-      {
-        subject: "Результат:",
-        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
-         repellendus harum quibusdam architecto maiores ad quaerat quis sit eligendi aspernatur cumque,
-          perferendis labore illum odio officia vel fugit incidunt!`,
-      },
-    ],
-    data: "01.05.2024",
-  },
-  {
-    id: 8,
-    image: "/assets/images/work-2.webp",
-    title: "Vintage cottage",
-    url: "https://vintage-cottage.eu",
-    description: [
-      {
-        subject: "Поставленная задача:",
-        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом.
-        В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
-      },
-      {
-        subject: "Стек:",
-        text: `Wordpress, php, woocommerce, javaScript`,
-      },
-      {
-        subject: "Результат:",
-        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
-         repellendus harum quibusdam architecto maiores ad quaerat quis sit eligendi aspernatur cumque,
-          perferendis labore illum odio officia vel fugit incidunt!`,
-      },
-    ],
-    data: "01.05.2024",
-  },
-  {
-    id: 7,
-    image: "/assets/images/work-2.webp",
-    title: "Vintage cottage",
-    url: "https://vintage-cottage.eu",
-    description: [
-      {
-        subject: "Поставленная задача:",
-        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом.
-        В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
-      },
-      {
-        subject: "Стек:",
-        text: `Wordpress, php, woocommerce, javaScript`,
-      },
-      {
-        subject: "Результат:",
-        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
-         repellendus harum quibusdam architecto maiores ad quaerat quis sit eligendi aspernatur cumque,
-          perferendis labore illum odio officia vel fugit incidunt!`,
-      },
-    ],
-    data: "01.05.2024",
-  },
-  {
-    id: 6,
-    image: "/assets/images/work-2.webp",
-    title: "Vintage cottage",
-    url: "https://vintage-cottage.eu",
-    description: [
-      {
-        subject: "Поставленная задача:",
-        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом.
-        В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
-      },
-      {
-        subject: "Стек:",
-        text: `Wordpress, php, woocommerce, javaScript`,
-      },
-      {
-        subject: "Результат:",
-        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
-         repellendus harum quibusdam architecto maiores ad quaerat quis sit eligendi aspernatur cumque,
-          perferendis labore illum odio officia vel fugit incidunt!`,
-      },
-    ],
-    data: "01.05.2024",
-  },
-  {
-    id: 5,
-    image: "/assets/images/work-3.webp",
-    title: "Vintage cottage",
-    url: "https://vintage-cottage.eu",
-    description: [
-      {
-        subject: "Поставленная задача:",
-        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом.`,
-      },
-      {
-        subject: "Стек:",
-        text: `Wordpress, php, woocommerce, javaScript`,
-      },
-      {
-        subject: "Результат:",
-        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
-         repellendus harum quibusdam architecto maiores `,
-      },
-    ],
-    data: "01.05.2024",
-  },
-  {
-    id: 4,
-    image: "/assets/images/bg-personalised-solution.png",
-    title: "Vintage cottage",
-    url: "https://vintage-cottage.eu",
-    description: [
-      {
-        subject: "Поставленная задача:",
-        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом. 
-        В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
-      },
-      {
-        subject: "Стек:",
-        text: `Wordpress, php, woocommerce, javaScript`,
-      },
-    ],
-    data: "01.05.2024",
-  },
-  {
-    id: 3,
-    image: "/assets/images/work-3.webp",
-    title: "Тц Малибу",
-    url: "https://malibu-trc.ru",
-    description: [
-      {
-        subject: "Поставленная задача:",
-        text: `Нужно было сделать вёрстку, а сам сайт интегрировать на удобную систему управления контентом. 
-        В качестве cms выбрали Wordpress со специальным плагином woocommerce.`,
-      },
-      {
-        subject: "Стек:",
-        text: `Wordpress, php, woocommerce, javaScript`,
-      },
-    ],
-    data: "01.05.2024",
-  },
-  {
-    id: 2,
-    image: "/assets/images/work-2.webp",
-    title: "Cybertribe",
-    url: "https://www.cybertribe.uk",
-    description: [
-      {
-        subject: "Поставленная задача:",
-        text: `Вёрстку корпоративного сайта с посадкой на cms`,
-      },
-      {
-        subject: "Стек:",
-        text: `Wordpress, php, woocommerce, javaScript`,
-      },
-      {
-        subject: "Результат:",
-        text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde amet,
-         repellendus harum quibusdam architecto maiores ad quaerat quis sit eligendi aspernatur cumque,
-          perferendis labore illum odio officia vel fugit incidunt!`,
-      },
-    ],
-    data: "25.03.2024",
-  },
-  {
-    id: 1,
-    image: "/assets/images/work-1.webp",
-    title: "Бизнес совет",
-    url: "https://bisovet.pro",
-    description: [
-      {
-        subject: "Поставленная задача:",
-        text: `Вёрстка корпоративного сайта по уже готовому макету в фигма. Натяжка на удобную cms.`,
-      },
-      {
-        subject: "Стек:",
-        text: `Html, css, javaScript, wordpress, php`,
-      },
-      {
-        subject: "Результат:",
-        text: `Данный сайт планировался для выступления на закрытом форуме и будущей раскрутки компании "Бизнес совет" 
-        с её юридицескими услугами. Вся работа была готова раньше срока, чтобы было важно покупателю. 
-        Сам форум по словам заказчика прошёл вполне себе успешно :)`,
-      },
-    ],
-    data: "14.10.2023",
-  },
-];
-
 export const FAQ: TFaq[] = [
   {
     id: 1,
-    title: "Какие этапы работы есть ?",
-    text: `1. Seo - Веб-сайт, который нельзя обнаружить в Интернете, фактически не считается существующим. 
-    По этой причине крайне важно обращать внимание не только на визуальную привлекательность сайта, но и на его оптимизацию 
-    для поисковых систем. Это обеспечивает легкий доступ пользователей к сайту и, в определенных случаях, помогает поднять его 
-    на лидирующие позиции в поисковой выдаче.
-    1. Вёрстка - Веб-сайт, который нельзя обнаружить в Интернете, фактически не считается существующим. 
-    По этой причине крайне важно обращать внимание не только на визуальную привлекательность сайта, но и на его оптимизацию 
-    для поисковых систем. Это обеспечивает легкий доступ пользователей к сайту и, в определенных случаях, помогает поднять его 
-    на лидирующие позиции в поисковой выдаче.`,
+    title: "Как проходит процесс разработки сайта?",
+    description: [
+      {
+        subject: "",
+        text: `Если вы заказали услугу полного цикла, то разработка сайта в нашей студии состоит из нескольких этапов, чтобы обеспечить качественный 
+        результат и соответствие ожиданиям клиента:`,
+      },
+      {
+        subject: "1. Анализ и брифинг: ",
+        text: `Мы начинаем с изучения вашего бизнеса, целей проекта и целевой аудитории.
+          С вами заполняется бриф, где обсуждаются детали: функционал сайта, стиль дизайна, предпочтения по цветам и примеры понравившихся решений.
+          Проводим анализ конкурентов, чтобы понять, как выделить ваш проект.
+          Результат: сформированное техническое задание (ТЗ), где описаны все требования к сайту.`,
+      },
+      {
+        subject: "2. Прототипирование: ",
+        text: `Разрабатываем структуру сайта: определяем, как будут расположены блоки и страницы.
+Создаем черно-белый прототип в Figma или другом инструменте, чтобы утвердить логику и UX.
+Результат: согласованный прототип, который станет основой дизайна.`,
+      },
+      {
+        subject: "3. Дизайн: ",
+        text: `Разработка визуального стиля на основе ваших пожеланий и брендбука.
+Создание уникального дизайна для главной страницы, а затем внутренних страниц.
+Учтены принципы UX/UI-дизайна, чтобы пользователям было удобно и приятно пользоваться сайтом.
+Результат: полностью утвержденные макеты, готовые к разработке.`,
+      },
+      {
+        subject: "4. Разработка: ",
+        text: `Верстка: превращаем макеты в адаптивный и кроссбраузерный HTML/CSS-код.
+Программирование: подключаем функционал (формы обратной связи, онлайн-магазин, личные кабинеты и т.д.).
+Интеграция с CMS: например, WordPress, если требуется управление контентом.
+Результат: готовый сайт, который работает на всех устройствах.`,
+      },
+      {
+        subject: "5. Тестирование: ",
+        text: `Проверяем сайт на всех устройствах (десктопы, планшеты, смартфоны) и браузерах.
+Тестируем функционал: формы, кнопки, загрузку страниц, анимации.
+Устраняем ошибки и оптимизируем скорость загрузки.
+Результат: стабильный и функциональный сайт, готовый к запуску.`,
+      },
+      {
+        subject: "6. Запуск и поддержка: ",
+        text: `Настраиваем домен, хостинг и SSL-сертификат для безопасности.
+Переносим сайт на ваш сервер и делаем финальные проверки.
+Обучаем вас работе с сайтом (если используется CMS) и предоставляем техническую поддержку.
+Результат: сайт полностью готов к работе и продвижению.`,
+      },
+      {
+        subject: "7. Отдельные услуги: ",
+        text: `Так же вы можете заказать у нас продвижение или организацию рекламы на вашем сайте.`,
+      },
+    ],
   },
   {
     id: 2,
-    title: "Какими способами происходит оплата ?",
-    text: `Веб-сайт, который нельзя обнаружить в Интернете, фактически не считается существующим. 
-    По этой причине крайне важно обращать внимание не только на визуальную привлекательность сайта, но и на его оптимизацию 
-    для поисковых систем. Это обеспечивает легкий доступ пользователей к сайту и, в определенных случаях, помогает поднять его 
-    на лидирующие позиции в поисковой выдаче.`,
+    title: "Чем ваш подход отличается от других веб-студий?",
+    description: [
+      {
+        subject: "",
+        text: `Наш подход отличается тем, что мы фокусируемся не только на создании красивого дизайна, но и на решении бизнес-задач клиента.`,
+      },
+      {
+        subject: "Глубокое погружение в проект: ",
+        text: `Мы начинаем с детального анализа вашего бизнеса, целевой аудитории и конкурентов, чтобы понять, как именно сайт может стать инструментом
+         для достижения ваших целей.`,
+      },
+      {
+        subject: "Индивидуальные решения: ",
+        text: `Мы не используем шаблоны — каждый проект создается с нуля, чтобы максимально отразить уникальность вашего бренда.`,
+      },
+      {
+        subject: "Команда экспертов: ",
+        text: `В нашей команде работают специалисты с опытом в дизайне, разработке, маркетинге и UX/UI. Это позволяет нам предлагать
+         комплексные решения.`,
+      },
+      {
+        subject: "Прозрачность и коммуникация: ",
+        text: `Мы держим вас в курсе на всех этапах разработки, предоставляем понятные отчеты и учитываем ваши пожелания.`,
+      },
+      {
+        subject: "Ориентация на результат: ",
+        text: `Наша цель — не просто запустить сайт, а сделать его эффективным. Мы анализируем данные, чтобы вы получили максимальную отдачу 
+        от вашего проекта.`,
+      },
+    ],
   },
   {
     id: 3,
-    title: "Какой у вас стек технологий ?",
-    text: `Веб-сайт, который нельзя обнаружить в Интернете, фактически не считается существующим. 
-    По этой причине крайне важно обращать внимание не только на визуальную привлекательность сайта, но и на его оптимизацию 
-    для поисковых систем. Это обеспечивает легкий доступ пользователей к сайту и, в определенных случаях, помогает поднять его 
-    на лидирующие позиции в поисковой выдаче.`,
+    title: "Какие технологии вы используете для разработки?",
+    description: [
+      {
+        subject: "",
+        text: `Html, Css, Bootstrap, Tailwind, Sass/Scss, Less, JavaScript, TypeScript, React.js, React Native, Next.js, Vue.js, Nuxt.js, jQuery, Node.js, Php, Python, 
+        Flask, Django MySQL, PostgreSQL, MongoDB, WordPress, Joomla, Drupal, Custom CMS, Lighthouse, Selenium, Cypress, Gulp/Webpack, AMP, Fsd, Vercel, Netlify, AWS,
+        Google Cloud, Azure, GSAP (GreenSock), Three.js, Lottie, Figma, Adobe XD, Git, GitHub/GitLab + другие технологии, инструменты и библиотеки.`,
+      },
+    ],
   },
   {
     id: 4,
-    title: "Какой у вас стек технологий ?",
-    text: `Веб-сайт, который нельзя обнаружить в Интернете, фактически не считается существующим. 
-    По этой причине крайне важно обращать внимание не только на визуальную привлекательность сайта, но и на его оптимизацию 
-    для поисковых систем. Это обеспечивает легкий доступ пользователей к сайту и, в определенных случаях, помогает поднять его 
-    на лидирующие позиции в поисковой выдаче.`,
+    title: "Вы работаете только с компаниями или с частными лицами тоже?",
+    description: [
+      {
+        subject: "",
+        text: `Мы работаем со всеми — как с компаниями, так и с частными лицами.
+
+Наша студия подходит к каждому проекту индивидуально, независимо от его масштаба. Вот как мы строим работу:
+
+С компаниями:
+Мы создаем корпоративные сайты, интернет-магазины, порталы и сложные системы для бизнеса. Учитываем специфику отрасли, брендинг и задачи, чтобы разработать сайт, который станет инструментом роста.
+
+С частными лицами:
+Помогаем реализовать личные проекты — от персональных блогов и портфолио до лендингов для стартапов. Даже небольшой проект мы разрабатываем с вниманием к деталям и профессиональным подходом.
+
+Почему это удобно для всех?
+Мы гибки в работе и всегда подстраиваемся под бюджет и потребности клиента, будь то крупная корпорация, индивидуальный предприниматель или частное лицо. Вы получаете профессиональный продукт независимо от масштаба задачи.
+
+Если у вас есть идея или проект, мы готовы помочь воплотить его в жизнь!`,
+      },
+    ],
   },
   {
     id: 5,
-    title: "Какой у вас стек технологий ?",
-    text: `Веб-сайт, который нельзя обнаружить в Интернете, фактически не считается существующим. 
-    По этой причине крайне важно обращать внимание не только на визуальную привлекательность сайта, но и на его оптимизацию 
-    для поисковых систем. Это обеспечивает легкий доступ пользователей к сайту и, в определенных случаях, помогает поднять его 
-    на лидирующие позиции в поисковой выдаче.`,
+    title: "Можно ли заказать срочную разработку сайта?",
+    description: [
+      {
+        subject: "",
+        text: `Да, мы принимаем заказы на срочную разработку сайтов! Мы понимаем, что иногда проекты требуют быстрого запуска. В таких случаях мы: Ускоряем процессы, 
+        увеличиваем ресурсы команды, сохраняем качество, обсуждаем реалистичные сроки. Если вам нужен сайт в кратчайшие сроки, свяжитесь с нами, и мы предложим лучшее решение.`,
+      },
+    ],
   },
   {
     id: 6,
-    title: "Какой у вас стек технологий ?",
-    text: `Веб-сайт, который нельзя обнаружить в Интернете, фактически не считается существующим. 
-    По этой причине крайне важно обращать внимание не только на визуальную привлекательность сайта, но и на его оптимизацию 
-    для поисковых систем. Это обеспечивает легкий доступ пользователей к сайту и, в определенных случаях, помогает поднять его 
-    на лидирующие позиции в поисковой выдаче.`,
+    title: "Какие способы сотрудничества и оплаты у вас?",
+    description: [
+      {
+        subject: "",
+        text: `Мы практически всегда работаем по договору, чтобы обеспечить прозрачность и комфорт сотрудничества. Исключение можем сделать только для малых проектов и доработок. 
+        Заключение договора и гибкая система оплаты обеспечат комфортное и безопасное сотрудничество. Мы ценим доверие наших клиентов и делаем процесс максимально удобным.`,
+      },
+      {
+        subject: "Мы принимаем оплату через: ",
+        text: `Онлайн-платежи, безопасная сделка через сервисы, криптовалюта.`,
+      },
+    ],
   },
 ];
 
@@ -411,7 +282,7 @@ export const FEEDBACKS: TFeedbacks[] = [
     id: 1,
     name: "Андрей2",
     avatar: "/assets/images/avatar.webp",
-    poster: "/assets/images/work-4.webp",
+    poster: "/assets/images/bg-personalised-solution.webp",
     video: [
       "/video/webm/mixkit-code-on-green-letters-on-screen-49122-hd-ready.webm",
       "mixkit-code-on-green-letters-on-screen-49122-hd-ready.mp4",
@@ -420,14 +291,14 @@ export const FEEDBACKS: TFeedbacks[] = [
   {
     id: 2,
     name: "Андрей",
-    avatar: "/assets/images/work-4.webp",
-    poster: "/assets/images/work-4.webp",
+    avatar: "/assets/images/avatar.webp",
+    poster: "/assets/images/bg-personalised-solution.webp",
   },
   {
     id: 3,
     name: "Андрей",
-    avatar: "/assets/images/work-4.webp",
-    poster: "",
+    avatar: "/assets/images/avatar.webp",
+    poster: "/assets/images/bg-personalised-solution.webp",
     video: [
       "/video/webm/mixkit-code-on-green-letters-on-screen-49122-hd-ready.webm",
       "mixkit-code-on-green-letters-on-screen-49122-hd-ready.mp4",
@@ -436,14 +307,14 @@ export const FEEDBACKS: TFeedbacks[] = [
   {
     id: 4,
     name: "Андрей",
-    avatar: "/assets/images/work-4.webp",
-    poster: "",
+    avatar: "/assets/images/avatar.webp",
+    poster: "/assets/images/bg-personalised-solution.webp",
   },
   {
     id: 5,
     name: "Андрей",
-    avatar: "/assets/images/work-4.webp",
-    poster: "",
+    avatar: "/assets/images/avatar.webp",
+    poster: "/assets/images/bg-personalised-solution.webp",
   },
 ];
 
@@ -465,5 +336,108 @@ export const FIELDS: TFields[] = [
     type: "email",
     placeholder: "Почта",
     icon: "/assets/icons/email.svg",
+  },
+];
+
+export const CASE: TCase[] = [
+  {
+    id: 1,
+    title: "Bavin",
+    image: [
+      "/assets/images/work-Bavin/1.webp",
+      "/assets/images/work-Bavin/2.webp",
+      "/assets/images/work-Bavin/3.webp",
+      "/assets/images/work-Bavin/4.webp",
+    ],
+    url: "https://bavin.pro",
+    description: [
+      {
+        subject: "Задача:",
+        text: `Разработка лендинга под ключ. Сам лендинг должен был быть быстрым, минималистичным и с удобной структурой, для этого выбрали 
+        самые минимальные технологии. Так же нужно было подключить метрики и интеграцию в crm Bitrix24.`,
+      },
+      {
+        subject: "Результат:",
+        text: `Сайт под конец разработки соответствовал всем требованиям. Так же лидов от рекламы получилось в разы больше, чем ожидалось изначально.
+        Заказчик планирует продолжать вкладываться в данный сайт, так как увидел возможности и отдачу в этой нише.`,
+      },
+    ],
+    advantages: ["HTML", "SCSS", "JAVASCRIPT", "CRM BITRIX"],
+    data: "15.09.2024",
+  },
+  {
+    id: 2,
+    title: "Бизнес Совет",
+    image: [
+      "/assets/images/work-Бизнес/1.webp",
+      "/assets/images/work-Бизнес/2.webp",
+      "/assets/images/work-Бизнес/3.webp",
+      "/assets/images/work-Бизнес/4.webp",
+    ],
+    url: "https://bisovet.pro",
+    description: [
+      {
+        subject: "Задача:",
+        text: `Срочная разработка корпоративного сайта для выступления на форуме и последующего развития бренда. Так же планировалась
+         посадка на удобную систему управления контентом и подключение различных метрик и тестирование/поддержка.`,
+      },
+      {
+        subject: "Результат:",
+        text: `Работа была выполнена даже на несколько дней раньше срока, чем все были очень довольны. Сам сайт учитывая сроки получился
+         не менее качественным ( можете сами убедиться ). На форуме все были крайне удовлетворены продуктивной и качественным продуктом.`,
+      },
+    ],
+    advantages: ["JAVASCRIPT", "PHP", "ACF", "WORDPRESS"],
+    data: "01.10.2023",
+  },
+  {
+    id: 3,
+    title: "CortexDigital v3",
+    image: [
+      "/assets/images/bg-personalised-solution.webp",
+      "/assets/images/bg-personalised-solution.webp",
+      "/assets/images/bg-personalised-solution.webp",
+      "/assets/images/bg-personalised-solution.webp",
+    ],
+    url: "https://cortexdigital.net",
+    description: [
+      {
+        subject: "Задача:",
+        text: `Да да, мы решили оставить в нашем портфолио одно место для нашего сайта, так как гордимся этой работой. Мы решили вложить 
+        в него все силы и использовать самые современные технологии. Нам была важна скорость и будущее нашего продукта!`,
+      },
+      {
+        subject: "Результат:",
+        text: `Сайт получился с максимальными показателями скорости, его легко поддерживать и добавлять любые нововведения. Поэтому и вам рекомендуем в 
+        первую очередь думать о качестве и будущем вашего продукта, так как иногда экономия может привести к большим убыткам.`,
+      },
+    ],
+    advantages: ["TAILWIND", "NEXT JS", "TYPESCRIPT", "NODE JS"],
+    data: "01.07.2022",
+  },
+  {
+    id: 4,
+    title: "Vintage Cottage",
+    image: [
+      "/assets/images/work-Vintage/1.webp",
+      "/assets/images/work-Vintage/2.webp",
+      "/assets/images/work-Vintage/3.webp",
+      "/assets/images/work-Vintage/4.webp",
+    ],
+    url: "https://vintage-cottage.eu",
+    description: [
+      {
+        subject: "Задача:",
+        text: "Нужно было доработать вёрстку, добавить функционал в интернет-магазине с бекендом и интегрировать на cms Wordpress.",
+      },
+      {
+        subject: "Результат:",
+        text: `Получился мультиязычный и мультивалютный интернет-магазин. Для более удобного решения на Wordpress решили 
+        использовать популярный плагин woocommerce, благодаря чему теперь легко контролировать заказы и интегрировать
+        другой функционал. Оплату сделали с помощью интернет-эквайринга и модуля woo.`,
+      },
+    ],
+    advantages: ["JAVASCRIPT", "WORDPRESS", "PHP", "WOOCOMMERCE"],
+    data: "20.11.2022",
   },
 ];

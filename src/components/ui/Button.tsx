@@ -6,7 +6,7 @@ import PopupForm from "./PopupForm";
 
 interface ButtonProps {
   children: ReactNode;
-  type: "white" | "blue" | "lightBlue" | "none";
+  type: "white" | "blue" | "lightBlue" | "black" | "none";
   className?: string;
 }
 
@@ -19,6 +19,8 @@ const Button = ({ children, type, className }: ButtonProps) => {
     color = "text-TextLight bg-AccentDark";
   } else if (type === "lightBlue") {
     color = "text-TextLight bg-AccentLight";
+  } else if (type === "black") {
+    color = "text-TextLight bg-black";
   }
 
   return (

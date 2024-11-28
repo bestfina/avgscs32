@@ -20,33 +20,6 @@ const PopupForm = () => {
       alert("Пожалуйста, согласитесь с правилами обработки данных.");
       return;
     }
-
-    const formData = {
-      name: "Имя пользователя", // Подставьте реальные данные
-      phone: "+7 (999) 999-99-99", // Пример номера
-      details: "Сообщение пользователя", // Пример сообщения
-    };
-
-    try {
-      const res = await fetch("/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await res.json();
-      if (result.success) {
-        alert("Заявка успешно отправлена!");
-      } else {
-        alert("Ошибка при отправке заявки: " + result.error);
-      }
-    } catch (error) {
-      if (error instanceof Error) {
-        alert("Произошла ошибка: " + error.message);
-      } else {
-        console.error("Неизвестная ошибка:", error);
-      }
-    }
   };
 
   return (

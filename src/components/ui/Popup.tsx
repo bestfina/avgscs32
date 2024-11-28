@@ -9,11 +9,11 @@ const Popup: React.FC = () => {
 
   return (
     <div
-      className="fixed inset-0 cursor-pointer bg-black backdrop-blur bg-opacity-50 flex justify-center items-center z-50"
+      className="fixed inset-0 cursor-pointer p-xxxs bg-black backdrop-blur bg-opacity-50 flex justify-center items-center z-50"
       onClick={closePopup}
     >
       <button
-        className="bg-AccentDark rounded-full w-16 h-16 absolute top-xs right-xs text-TextLight"
+        className="bg-AccentDark rounded-full w-16 h-16 sm:w-12 sm:h-12 absolute top-xs right-xs text-TextLight"
         onClick={closePopup}
       >
         ✖

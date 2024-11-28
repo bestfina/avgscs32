@@ -43,8 +43,15 @@ const Footer = () => (
           <Social className="hidden md:flex" />
         </div>
         <div className="flex gap-xxxs md:hidden">
-          <Link href="mailto:info@CortexDigital">Телеграм</Link>
-          <Link href="tel:+7 999 999 99 99">Вацап</Link>
+          <Link href="https://t.me/CORTEX_DIGITAL" target="_blank">
+            Телеграм
+          </Link>
+          <Link
+            href="https://wa.me/79950203385?text=%D0%95%D0%B6%D0%B5%D0%B4%D0%BD%D0%B5%D0%B2%D0%BD%D0%BE%20%D1%81%209%3A00%20%D0%B4%D0%BE%2019%3A00"
+            target="_blank"
+          >
+            Вацап
+          </Link>
         </div>
         <Link href="/privacy" scroll={false} className="font-semibold">
           Политика конфиденциальности

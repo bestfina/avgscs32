@@ -32,16 +32,16 @@ const AboutInCount = () => {
   return (
     <div ref={sectionRef} className="flex gap-md xxl:gap-sm xl:gap-xs lg:gap-xxs md:flex-col">
       <div className="text-6xl xxl:text-5xl lg:text-4xl font-bold">
-        {startCount ? <CountUp className="text-6xl xxl:text-5xl lg:text-4xl" end={100} duration={4} /> : "0"}+
+        {startCount ? <CountUp className="text-6xl xxl:text-5xl lg:text-4xl" end={25} duration={4} /> : "0"}+
         <div className="xxl:text-base lg:text-sm">постоянных клиентов</div>
       </div>
       <div className="text-6xl xxl:text-5xl  lg:text-4xl font-bold">
-        {startCount ? <CountUp className="text-6xl lg:text-4xl xxl:text-5xl" end={5} duration={4} /> : "0"} лет
+        {startCount ? <CountUp className="text-6xl lg:text-4xl xxl:text-5xl" end={4} duration={4} /> : "0"} лет
         <div className="xxl:text-base lg:text-sm">средний опыт сотрудников</div>
       </div>
       <div className="text-6xl xxl:text-5xl lg:text-4xl font-bold">
-        Более {startCount ? <CountUp className="text-6xl xxl:text-5xl lg:text-4xl" end={500} duration={4} /> : "0"}
-        <div className="xxltext-base lg:text-sm">успешно завершённых проектов</div>
+        Более {startCount ? <CountUp className="text-6xl xxl:text-5xl lg:text-4xl" end={100} duration={4} /> : "0"}
+        <div className="xxl:text-base lg:text-sm">успешно завершённых проектов</div>
       </div>
     </div>
   );

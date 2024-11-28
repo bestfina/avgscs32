@@ -8,9 +8,7 @@
     } */
 
   h1,
-  h2,
-  h3,
-  h4 {
+  h2 {
     @apply font-press;
   }
 
@@ -23,7 +21,7 @@
   }
 
   h3 {
-    @apply text-[32px];
+    @apply text-[32px] xl:text-3xl lg:text-2xl sm:text-xl;
   }
 
   h4 {
@@ -59,7 +57,7 @@
   }
 
   section:not(:first-child) {
-    @apply py-32 px-8 lg:px-xxxs lg:py-16 xs:py-12;
+    @apply py-32 px-7 lg:px-xxxs lg:py-16 xs:py-12;
   }
 
   .rotate-page {
@@ -71,7 +69,7 @@
   }
 
   .input-style {
-    @apply py-xs px-md border-2 border-AccentDark focus:outline-none rounded-full text-TextDark
+    @apply py-xs px-md border-2 border-AccentDark focus:outline-none rounded-full text-TextDark;
   }
 
   .next-section-btn:hover .bounce {
@@ -81,7 +79,6 @@
   }
 
   @keyframes bounce {
-
     0%,
     20%,
     50%,
