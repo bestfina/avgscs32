@@ -48,6 +48,7 @@ const Portfolio = () => {
                   alt=""
                   width={200}
                   height={100}
+                  loading="lazy"
                   className="w-[48%] lg:w-[47.5%] object-contain rounded-3xl border-2 border-black"
                 />
               ))}
