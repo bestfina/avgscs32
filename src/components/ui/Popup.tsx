@@ -13,13 +13,13 @@ const Popup: React.FC = () => {
       onClick={closePopup}
     >
       <button
-        className="bg-AccentDark rounded-full w-16 h-16 sm:w-12 sm:h-12 absolute top-xs right-xs text-TextLight"
+        className="bg-AccentDark rounded-full w-16 h-16 sm:w-12 sm:h-12 z-10 absolute top-xs right-xs sm:top-xxxs sm:right-xxxs text-TextLight"
         onClick={closePopup}
       >
         ✖
       </button>
       <div
-        className="bg-white animate-slide-in cursor-default overflow-hidden rounded-3xl shadow-lg relative"
+        className="bg-white animate-slide-in cursor-default overflow-hidden overflow-y-auto rounded-3xl shadow-lg relative max-w-[1000px] max-h-[650px] lg:max-h-[500px] lg:max-w-[800px]"
         onClick={e => e.stopPropagation()}
       >
         {content}

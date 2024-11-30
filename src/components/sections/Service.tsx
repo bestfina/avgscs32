@@ -5,7 +5,7 @@ import { twMerge } from "tailwind-merge";
 
 const Service = () => (
   <section id="service">
-    <div className="container flex flex-col gap-md lg:gap-xs">
+    <div className="container flex flex-col">
       <h2>Наши услуги и цены</h2>
       <div className="flex flex-wrap gap-sm lg:gap-xs justify-between">
         {SERVICE.map(({ id, image, title, advantages }) => (

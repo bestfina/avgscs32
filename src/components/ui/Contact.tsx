@@ -7,7 +7,7 @@ interface ContactProps {
 
 const Contact = ({ className }: ContactProps) => {
   return (
-    <div className={twMerge("flex gap-xxs w-fit", className)}>
+    <div className={twMerge("flex gap-xxs w-fit sm:flex-col sm:gap-xxxs text-TextLight", className)}>
       <Link href="mailto:info@CortexDigital" className="text-2xl sm:text-xl">
         info@CortexDigital
       </Link>

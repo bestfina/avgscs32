@@ -1,4 +1,14 @@
-import { TAdvantages, TAdvantagesMain, TCase, TFaq, TFeedbacks, TFields, TLink, TService } from "@/types";
+import {
+  TAboutInNumber,
+  TAdvantages,
+  TAdvantagesMain,
+  TCase,
+  TFaq,
+  TFeedbacks,
+  TFields,
+  TLink,
+  TService,
+} from "@/types";
 
 export const LINK: TLink[] = [
   {
@@ -7,7 +17,7 @@ export const LINK: TLink[] = [
     id: 1,
   },
   {
-    title: "О компании",
+    title: "О нас",
     url: "about",
     id: 2,
   },
@@ -31,15 +41,15 @@ export const LINK: TLink[] = [
 export const MAIN_ADVANTAGES: TAdvantagesMain[] = [
   {
     id: 1,
-    title: "Реализуем всё в срок",
+    title: "Индивидуальный подход",
   },
   {
     id: 2,
-    title: "Гарантии и качество",
+    title: "Прозрачность работы",
   },
   {
     id: 3,
-    title: "Поддержка после запуска",
+    title: "Поддержка и обучение после запуска",
   },
 ];
 
@@ -175,10 +185,6 @@ export const FAQ: TFaq[] = [
 Обучаем вас работе с сайтом (если используется CMS) и предоставляем техническую поддержку.
 Результат: сайт полностью готов к работе и продвижению.`,
       },
-      {
-        subject: "7. Отдельные услуги: ",
-        text: `Так же вы можете заказать у нас продвижение или организацию рекламы на вашем сайте.`,
-      },
     ],
   },
   {
@@ -271,7 +277,7 @@ export const FAQ: TFaq[] = [
       },
       {
         subject: "Мы принимаем оплату через: ",
-        text: `Онлайн-платежи, безопасная сделка через сервисы, криптовалюта.`,
+        text: `Онлайн-платежи, безопасная сделка через сервисы, криптовалюту и другие удобные для вас способы :)`,
       },
     ],
   },
@@ -280,41 +286,41 @@ export const FAQ: TFaq[] = [
 export const FEEDBACKS: TFeedbacks[] = [
   {
     id: 1,
-    name: "Андрей2",
-    avatar: "/assets/images/avatar.webp",
-    poster: "/assets/images/bg-personalised-solution.webp",
-    video: [
-      "/video/webm/mixkit-code-on-green-letters-on-screen-49122-hd-ready.webm",
-      "mixkit-code-on-green-letters-on-screen-49122-hd-ready.mp4",
-    ],
+    name: "Kwork",
+    avatar: "/assets/images/avatar-kwork.webp",
+    poster: "/assets/images/poster-kwork.webp",
+    video: ["/video/webm/review-kwork.webm", "/video/mp4/review-kwork.mp4"],
   },
   {
     id: 2,
-    name: "Андрей",
+    name: "Cyber",
     avatar: "/assets/images/avatar.webp",
-    poster: "/assets/images/bg-personalised-solution.webp",
+    poster: "/assets/images/poster-cyber.webp",
   },
   {
     id: 3,
-    name: "Андрей",
-    avatar: "/assets/images/avatar.webp",
-    poster: "/assets/images/bg-personalised-solution.webp",
-    video: [
-      "/video/webm/mixkit-code-on-green-letters-on-screen-49122-hd-ready.webm",
-      "mixkit-code-on-green-letters-on-screen-49122-hd-ready.mp4",
-    ],
+    name: "В.А.Лебедев",
+    avatar: "/assets/images/avatar-man1.webp",
+    poster: "/assets/images/poster-man1.webp",
+    video: ["/video/webm/review-man1.webm", "/video/mp4/review-man1.mp4"],
   },
   {
     id: 4,
-    name: "Андрей",
-    avatar: "/assets/images/avatar.webp",
-    poster: "/assets/images/bg-personalised-solution.webp",
+    name: "Vintage",
+    avatar: "/assets/images/avatar-semenov.webp",
+    poster: "/assets/images/poster-semenov.webp",
   },
   {
     id: 5,
-    name: "Андрей",
-    avatar: "/assets/images/avatar.webp",
-    poster: "/assets/images/bg-personalised-solution.webp",
+    name: "П.Р.Старшинов",
+    avatar: "/assets/images/avatar-gratitude.webp",
+    poster: "/assets/images/poster-gratitude.webp",
+  },
+  {
+    id: 6,
+    name: "A.Д.Семенов",
+    avatar: "/assets/images/avatar-vintage.webp",
+    poster: "/assets/images/poster-vintage.webp",
   },
 ];
 
@@ -439,5 +445,82 @@ export const CASE: TCase[] = [
     ],
     advantages: ["JAVASCRIPT", "WORDPRESS", "PHP", "WOOCOMMERCE"],
     data: "20.11.2022",
+  },
+  {
+    id: 5,
+    title: "Vintage Cottage",
+    image: [
+      "/assets/images/work-Vintage/1.webp",
+      "/assets/images/work-Vintage/2.webp",
+      "/assets/images/work-Vintage/3.webp",
+      "/assets/images/work-Vintage/4.webp",
+    ],
+    url: "https://vintage-cottage.eu",
+    description: [
+      {
+        subject: "Задача:",
+        text: "Нужно было доработать вёрстку, добавить функционал в интернет-магазине с бекендом и интегрировать на cms Wordpress.",
+      },
+      {
+        subject: "Результат:",
+        text: `Получился мультиязычный и мультивалютный интернет-магазин. Для более удобного решения на Wordpress решили 
+        использовать популярный плагин woocommerce, благодаря чему теперь легко контролировать заказы и интегрировать
+        другой функционал. Оплату сделали с помощью интернет-эквайринга и модуля woo.`,
+      },
+    ],
+    advantages: ["JAVASCRIPT", "WORDPRESS", "PHP", "WOOCOMMERCE"],
+    data: "20.11.2022",
+  },
+  {
+    id: 6,
+    title: "Vintage Cottage",
+    image: [
+      "/assets/images/work-Vintage/1.webp",
+      "/assets/images/work-Vintage/2.webp",
+      "/assets/images/work-Vintage/3.webp",
+      "/assets/images/work-Vintage/4.webp",
+    ],
+    url: "https://vintage-cottage.eu",
+    description: [
+      {
+        subject: "Задача:",
+        text: "Нужно было доработать вёрстку, добавить функционал в интернет-магазине с бекендом и интегрировать на cms Wordpress.",
+      },
+      {
+        subject: "Результат:",
+        text: `Получился мультиязычный и мультивалютный интернет-магазин. Для более удобного решения на Wordpress решили 
+        использовать популярный плагин woocommerce, благодаря чему теперь легко контролировать заказы и интегрировать
+        другой функционал. Оплату сделали с помощью интернет-эквайринга и модуля woo.`,
+      },
+    ],
+    advantages: ["JAVASCRIPT", "WORDPRESS", "PHP", "WOOCOMMERCE"],
+    data: "20.11.2022",
+  },
+];
+
+export const ABOUT_IN_NUMBERS: TAboutInNumber[] = [
+  {
+    id: 1,
+    title: "+",
+    count: 25,
+    text: "постоянных клиентов",
+  },
+  {
+    id: 2,
+    title: " года",
+    count: 4,
+    text: "средний опыт сотрудников",
+  },
+  {
+    id: 3,
+    title: "Около ",
+    count: 110,
+    text: "успешно завершённых проектов",
+  },
+  {
+    id: 4,
+    title: "Более ",
+    count: 20,
+    text: "используемых технологий",
   },
 ];

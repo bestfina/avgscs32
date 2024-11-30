@@ -16,11 +16,13 @@ export const PopupProvider = ({ children }: { children: ReactNode }) => {
   const [content, setContent] = useState<ReactNode>(null);
 
   const openPopup = (content: ReactNode) => {
+    document.body.style.overflow = "hidden";
     setContent(content);
     setIsOpen(true);
   };
 
   const closePopup = () => {
+    document.body.style.overflow = "";
     setContent(null);
     setIsOpen(false);
   };

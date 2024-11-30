@@ -9,7 +9,7 @@ const Footer = () => (
   <footer className="border-t border-TextDark">
     <div className="container flex sm:flex-col sm:gap-xxs justify-between items-center py-sm xl:py-xs">
       <div className="flex flex-col h-36 sm:h-fit justify-between sm:justify-start sm:gap-xxxxs sm:items-center sm:order-3">
-        <p className="sm:text-center max-w-64 xl:max-w-[230px] lg:max-w-[205px] sm:hidden">
+        <p className="sm:text-center max-w-64 xl:max-w-[230px] lg:max-w-[205px] sm:hidden sm:mb-xxxxs">
           Режим работы: Ежедневно с 9:00 до 19:00
         </p>
         <FirstSection>
@@ -33,10 +33,12 @@ const Footer = () => (
           Заполнить бриф
         </Button>
       </div>
-      <div className="flex flex-col h-36 sm:h-fit justify-between sm:gap-xxxxs sm:justify-start items-end sm:items-center sm:order-2">
+      <div className="flex flex-col h-36 sm:h-fit justify-between sm:gap-xxxs sm:justify-start items-end sm:items-center sm:order-2">
         <div className="flex items-end sm:items-center gap-xxxs flex-col sm:gap-xxxxs">
           <div className="flex flex-col items-end sm:items-center sm:gap-xxxxs">
-            <p className="text-center max-w-[205px] hidden sm:block">Режим работы: Ежедневно с 9:00 до 19:00</p>
+            <p className="text-center max-w-[205px] hidden sm:block xs:max-w-[180px]">
+              Режим работы: Ежедневно с 9:00 до 19:00
+            </p>
             <Link href="mailto:info@CortexDigital">info@CortexDigital</Link>
             <Link href="tel:+7 999 999 99 99">+7 999 999 99 99</Link>
           </div>

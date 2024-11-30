@@ -7,8 +7,6 @@ const NextSection = () => {
     const nextSection = document.getElementById("hero")?.nextElementSibling;
     if (nextSection?.id) {
       smoothFn(nextSection.id);
-    } else {
-      console.error("Следующий раздел или его ID не найдены.");
     }
   };
 

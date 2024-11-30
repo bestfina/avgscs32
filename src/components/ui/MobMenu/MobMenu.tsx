@@ -20,7 +20,7 @@ const MobMenu = () => {
         <Navbar targetButtonRef={targetButtonRef} />
         <Button type="blue">Бесплатная консультация</Button>
         <Social className="burger-soc" />
-        <Contact className="burger-contact" />
+        <Contact className="burger-contact items-center" />
       </div>
     </div>
   );

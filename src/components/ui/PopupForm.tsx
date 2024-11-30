@@ -23,15 +23,15 @@ const PopupForm = () => {
   };
 
   return (
-    <div className="p-md flex flex-col gap-sm">
+    <div className="p-md lg:p-xs flex flex-col gap-sm">
       <h5>
         Менеджер свяжется с Вами
         <div>в рабочее время: Ежедневно с 9:00 до 19:00</div>
       </h5>
       <form onSubmit={handleSubmit} className="flex flex-col gap-sm">
-        <div className="flex gap-sm">
+        <div className="flex gap-xs sm:flex-wrap">
           {FIELDS.map(({ id, type, placeholder, icon }) => (
-            <div key={id} className="w-1/3 relative flex items-center">
+            <div key={id} className="w-1/3 relative flex items-center sm:w-full">
               <Image src={icon} width={20} height={20} alt="иконка" className="absolute ml-6" />
               {id !== 2 ? (
                 <input type={type} placeholder={placeholder} className="input-style w-full" />
@@ -46,16 +46,8 @@ const PopupForm = () => {
             </div>
           ))}
         </div>
-        <div>
-          Дополнительная информация <b>( По желанию )</b>:
-        </div>
-        <div className="flex gap-md">
-          <textarea
-            name="details"
-            placeholder="Опишите подробности"
-            className="input-style mb-sm w-2/4 h-44"
-          ></textarea>
-          <div className="w-2/4 flex flex-col gap-sm">
+        <div className="flex gap-md xl:gap-sm">
+          <div className="flex flex-col gap-xxxs">
             <div>Мне удобнее общаться:</div>
             <div className="flex flex-wrap gap-md">
               <CustomCheckbox isAgreed={isMessengerT} setIsAgreed={setMessengerT}>
@@ -77,19 +69,21 @@ const PopupForm = () => {
             </div>
           </div>
         </div>
-        <CustomCheckbox isAgreed={isAgreed} setIsAgreed={setIsAgreed}>
-          <p>
-            Соглашаюсь с правилами&nbsp;
-            <Link href="/privacy">обработки данных</Link>
-          </p>
-        </CustomCheckbox>
-        <button
-          type="submit"
-          className="text-TextLight bg-AccentDark rounded-full font-semibold w-80 py-3 
+        <div className="flex flex-col gap-xxxs">
+          <button
+            type="submit"
+            className="text-TextLight bg-AccentDark rounded-full font-semibold w-80 py-3 
           hover:opacity-80 duration-500 xl:w-72 lg:w-60 xl:py-2"
-        >
-          Отправить заявку
-        </button>
+          >
+            Отправить заявку
+          </button>
+          <CustomCheckbox isAgreed={isAgreed} setIsAgreed={setIsAgreed}>
+            <p>
+              Соглашаюсь с правилами&nbsp;
+              <Link href="/privacy">обработки данных</Link>
+            </p>
+          </CustomCheckbox>
+        </div>
       </form>
     </div>
   );

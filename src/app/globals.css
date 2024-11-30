@@ -29,7 +29,7 @@
   }
 
   h5 {
-    @apply font-semibold text-[26px] xl:text-2xl lg:text-xl xs:text-base;
+    @apply font-semibold text-[26px] xl:text-2xl lg:text-xl sm:text-lg xs:text-base;
   }
 
   a {
@@ -45,11 +45,11 @@
   }
 
   .timer-text {
-    @apply font-semibold text-5xl xxl:text-4xl xl:text-3xl lg:text-2xl md:text-lg;
+    @apply font-semibold text-5xl xxl:text-4xl xl:text-3xl lg:text-2xl md:text-xl xs:text-lg;
   }
 
   .container {
-    @apply px-16 xl:px-9 lg:px-4 sm:px-xxxs;
+    @apply px-16 xl:px-9 lg:px-4 sm:px-xxxs gap-md lg:gap-xs xs:gap-xxxs;
   }
 
   footer {
@@ -57,7 +57,7 @@
   }
 
   section:not(:first-child) {
-    @apply py-32 px-7 lg:px-xxxs lg:py-16 xs:py-12;
+    @apply py-32 px-6 lg:px-xxxs lg:py-16 sm:py-12;
   }
 
   .rotate-page {
@@ -66,6 +66,18 @@
 
   .page-side {
     transform: translateZ(1px);
+  }
+
+  .faq-rewiew {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+  }
+
+  .faq-rewiew::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
 
   .input-style {
@@ -79,6 +91,7 @@
   }
 
   @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -98,7 +111,7 @@
 
   .slider-button-next,
   .slider-button-prev {
-    @apply flex justify-center items-center bg-AccentLight rounded-full w-16 h-16 sm:w-12 sm:h-12;
+    @apply flex justify-center items-center bg-AccentLight rounded-full w-16 h-16 lg:w-14 lg:h-14 sm:w-11 sm:h-11;
   }
 
   .slider-button-prev.swiper-button-disabled,

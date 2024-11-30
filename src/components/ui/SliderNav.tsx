@@ -4,7 +4,7 @@ interface SliderNavProps {
   className?: string;
 }
 const SliderNav = ({ className }: SliderNavProps) => (
-  <div className={twMerge("flex gap-sm sm:gap-xxxs", className)}>
+  <div className={twMerge("flex gap-sm lg:gap-xxs sm:gap-xxxs", className)}>
     <button className="slider-button-prev" aria-label="Previous Slide">
       <ArrowNav className="text-TextLight rotate-90" />
     </button>

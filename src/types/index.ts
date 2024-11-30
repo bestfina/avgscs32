@@ -53,3 +53,8 @@ export type TFields = {
   placeholder: string;
   icon: string;
 };
+
+export type TAboutInNumber = BaseEntity & {
+  count: number;
+  text: string;
+};

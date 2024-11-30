@@ -13,7 +13,7 @@ const Navbar = ({ className, targetButtonRef }: NavbarProps) => (
   <nav className={className}>
     <ul className="flex gap-sm xl:gap-xs lg:gap-xxs">
       {LINK.map(({ title, id, url }) => (
-        <li key={id}>
+        <li key={id} className=" hover:-translate-y-1 duration-500">
           <Link
             href={"#" + url}
             className="text-[19px] xl:text-[17px] lg:text-[15px] md:text-TextLight md:text-xl"

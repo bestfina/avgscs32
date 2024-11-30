@@ -2,6 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import Button from "../ui/Button";
 import { twMerge } from "tailwind-merge";
+import { motion } from "framer-motion";
 
 // Константы для секунд в днях, часах и минутах
 const SECONDS_IN_A_DAY = 86400;
@@ -61,7 +62,11 @@ const TaimerBlock = ({ className }: TaimerBlockProps) => {
   const { days, hours, minutes, seconds } = formatTime(timeLeft);
 
   return (
-    <div
+    <motion.div
+      initial={{ scale: 0.8, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
       className={twMerge(
         `flex flex-col px-xxs w-2/4 md:w-full h-fit gap-sm lg:gap-xs md:gap-xxs xs:gap-xxxs
          items-center py-16 xxl:py-14 xl:py-9 md:px-4 md:p-3 text-TextLight bg-AccentLight/55 rounded-3xl`,
@@ -74,7 +79,7 @@ const TaimerBlock = ({ className }: TaimerBlockProps) => {
           Ваш сайт не даёт нужных результатов? Мы проведём <b>бесплатный</b> аудит и покажем, что можно улучшить!
         </p>
       </div>
-      <div className="flex items-center gap-md xxl:gap-sm lg:gap-xs md:gap-xxs sm:gap-2 text-center text-TextLight timer-text">
+      <div className="flex items-center gap-md xxl:gap-sm lg:gap-xs md:gap-xxs sm:gap-3 xs:gap-2 text-center text-TextLight timer-text">
         <div className="timer-text">
           {days} <div>Дней</div>
         </div>
@@ -92,7 +97,7 @@ const TaimerBlock = ({ className }: TaimerBlockProps) => {
         </div>
       </div>
       <Button type="white">Получить аудит</Button>
-    </div>
+    </motion.div>
   );
 };
 
