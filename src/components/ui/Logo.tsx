@@ -21,6 +21,7 @@ const Logo = ({ scroll, big = false }: LogoProps) => (
       alt="logo"
       width={50}
       height={50}
+      loading="eager"
       quality={100}
       className={twMerge("mb-px xl:w-11 lg:w-10 xs:w-9", big ? "[&&]:w-14 xl:[&&]:w-12" : null)}
     />

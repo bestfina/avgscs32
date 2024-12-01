@@ -15,7 +15,7 @@ const Forma = () => (
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="rounded-3xl overflow-hidden bg-[url('/assets/images/bg-forma.webp')] bg-fixed bg-cover bg-center"
+        className="rounded-3xl overflow-hidden bg-[url('/assets/images/bg-forma.webp')] bg-cover bg-center"
       >
         <div className="flex gap-md p-md xl:p-sm xl:gap-sm md:flex-wrap sm:p-xxs bg-black/40">
           <div className="flex flex-col gap-sm w-2/4 md:w-full md:gap-xxs">

@@ -35,8 +35,9 @@ export type TFaq = BaseEntity & {
 };
 
 export type TService = BaseEntity & {
-  image: Image;
-  advantages: [string, string, string, string];
+  price: string;
+  deadline: string;
+  advantages: string[];
 };
 
 export type TFeedbacks = {
