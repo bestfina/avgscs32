@@ -1,4 +1,3 @@
-"use client";
 import { useEffect } from "react";
 
 const YandexMetrika = () => {
@@ -19,6 +18,7 @@ const YandexMetrika = () => {
           a.parentNode?.insertBefore(k, a);
         })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         window.ym &&
           window.ym(99095541, "init", {
             clickmap: true,
