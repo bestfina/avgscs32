@@ -13,7 +13,7 @@ const Logo = ({ scroll, big = false }: LogoProps) => (
   <Link
     href="/"
     className={twMerge("flex flex-col items-center w-fit")}
-    scroll={false}
+    scroll={scroll}
     onClick={() => scroll && smoothFn("hero")}
   >
     <Image

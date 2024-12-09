@@ -7,7 +7,7 @@ const About = () => {
         <h2>Немного о нас</h2>
         <div className="flex gap-md xxl:gap-sm md:flex-col">
           <div className="flex flex-col justify-center gap-sm w-full xl:gap-xs md:w-full">
-            <p className="leading-10 lg:leading-8 xs:leading-7">
+            <p className="leading-8 lg:leading-6">
               CortexDigital — веб-студия, создающая сайты, которые работают на результат. Мы специализируемся на
               разработке современных и уникальных решений для бизнеса: от ярких лендингов до сложных корпоративных
               порталов. Наш подход основан на глубоком анализе и понимании задач клиента. Мы объединяем креативный

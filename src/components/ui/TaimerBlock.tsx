@@ -68,7 +68,7 @@ const TaimerBlock = ({ className }: TaimerBlockProps) => {
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
       className={twMerge(
-        `flex flex-col px-xxs w-2/4 md:w-full h-fit gap-sm lg:gap-xs md:gap-xxs xs:gap-xxxs
+        `flex flex-col px-sm w-2/4 md:w-full h-fit gap-sm lg:gap-xs md:gap-xxs xs:gap-xxxs
          items-center py-16 xxl:py-14 xl:py-9 md:px-4 md:p-3 text-TextLight bg-AccentLight/55 rounded-3xl`,
         className
       )}

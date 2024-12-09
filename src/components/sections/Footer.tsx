@@ -55,7 +55,7 @@ const Footer = () => (
             Вацап
           </Link>
         </div>
-        <Link href="/privacy" scroll={false} className="font-semibold">
+        <Link href="/privacy" className="font-semibold">
           Политика конфиденциальности
         </Link>
       </div>

@@ -50,7 +50,7 @@ export const MAIN_ADVANTAGES: TAdvantagesMain[] = [
   },
   {
     id: 3,
-    title: "Поддержка и обучение после запуска",
+    title: "Работаем удалённо по всему миру",
   },
 ];
 
@@ -100,13 +100,14 @@ export const SERVICE: TService[] = [
   {
     id: 1,
     title: "Комплексная разработка сайта под ключ",
-    price: "От 90.000 руб.",
-    deadline: "от 14 дней",
+    price: "От 80.000 руб.",
+    deadline: "от 10 дней",
     advantages: [
-      "Уникален, быстр и функционален",
-      "Адаптирован и SEO-оптимизирован",
-      "Технически стабилен и сопровождаем",
-      "Наполнен, протестирован с запущенной рекламой",
+      "Создаем сайты, которые работают",
+      "Уникальный дизайн, высокая скорость, адаптивность",
+      "SEO-оптимизация и техническая стабильность",
+      "Полный запуск: от идеи до первых клиентов с рекламы",
+      "Гарантируем поддержку и развитие вашего проекта",
     ],
   },
   {
@@ -115,21 +116,24 @@ export const SERVICE: TService[] = [
     price: "От 20.000 руб.",
     deadline: "от 3 дней",
     advantages: [
-      "Функционален, адаптивен, удобен и красив",
-      "Собран на платформе",
-      "Легко управляем",
-      "Сразу готов к запуску любой рекламы",
+      "No code — ваш быстрый и минимальный старт в онлайн",
+      "Эффективность, адаптивность и стиль",
+      "SEO-оптимизация и интеграция с сервисами",
+      "Гибкая настройка под ваши нужды",
+      "Масштабируем ваш проект за считанные дни",
     ],
   },
   {
     id: 3,
     title: "Техническая поддержка",
-    price: "От 1.800 руб.",
+    price: "От 1.900 руб.",
     deadline: "от 1 часа",
     advantages: [
-      "Ускорен, оптимизирован, почищен и обезопасен",
-      "Больше не повторит баг и не доставит головной боли",
-      "Доработан любой функционал, интерфейс",
+      "Доработка любого функционала и модуля на сайте",
+      "Оперативная помощь 24/7",
+      "Обеспечение стабильной работы вашего проекта",
+      "Регулярное обновление и устранение ошибок",
+      "Гарантия долгосрочной стабильности",
     ],
   },
   {
@@ -137,7 +141,13 @@ export const SERVICE: TService[] = [
     title: "Дизайн или прототипирование",
     price: "От 7.500 руб.",
     deadline: "от 2 дней",
-    advantages: ["Сделан редизайн, доработаны любые старые элементы", "Уникален, красив, современен и не надоедлив"],
+    advantages: [
+      "Создаем уникальные и удобные дизайны для вашего проекта",
+      "Разрабатываем прототипы, которые помогут визуализировать идеи",
+      "Профессиональный дизайн с учетом последних трендов",
+      "Детализированное прототипирование для точного результата",
+      "Тестируем и оптимизируем интерфейсы для лучшего опыта",
+    ],
   },
   {
     id: 5,
@@ -145,8 +155,11 @@ export const SERVICE: TService[] = [
     price: "От 12.000 руб.",
     deadline: "от 3 дней",
     advantages: [
-      "Реклама эффективна, оптимизирована и приносит заявки",
-      "Запустим рекламные кампании на подходящих площадках ",
+      "Запускаем рекламу, которая приводит клиентов",
+      "Эффективные маркетинговые стратегии для роста вашего бизнеса",
+      "Привлекаем внимание к вашему бренду на всех платформах",
+      "Анализируем результаты и оптимизируем кампании",
+      "Создаем креативные решения для максимальной отдачи",
     ],
   },
   {
@@ -154,7 +167,13 @@ export const SERVICE: TService[] = [
     title: "Индивидуальное веб-решений",
     price: "Обсуждаемая",
     deadline: "после согласования",
-    advantages: ["Разработаем любое веб-приложение, стартап с нуля", "Поможем в маркетинге и других веб сферах"],
+    advantages: [
+      "Создаем функциональные и уникальные веб-системы",
+      "Интеграция с вашими процессами и сервисами",
+      "Инновационные технологии для повышения эффективности",
+      "Максимальная производительность и простота использования",
+      "Гибкая настройка под любые процессы и задачи",
+    ],
   },
 ];
 
@@ -208,6 +227,11 @@ export const FAQ: TFaq[] = [
   Переносим сайт на ваш сервер и делаем финальные проверки.
   Обучаем вас работе с сайтом (если используется CMS) и предоставляем техническую поддержку.
   Результат: сайт полностью готов к работе и продвижению.`,
+      },
+      {
+        subject: "",
+        text: `Если услуга не полного цикла, то какие-то пункты отпадают для экономии бюджета. Тут всё зависит от вашей задачи, поэтому напишите 
+        нам о ней и мы распишем подробный план действий индивидуально под Вас.`,
       },
     ],
   },
@@ -328,59 +352,45 @@ export const FAQ: TFaq[] = [
 export const FEEDBACKS: TFeedbacks[] = [
   {
     id: 1,
-    name: "Михаил",
-    avatar: "/assets/images/avatar-man2.webp",
-    poster: "/assets/images/poster-man2.webp",
-    video: ["/video/webm/review-man2.webm", "/video/mp4/review-man2.mp4"],
+    name: "Citisit",
+    avatar: "/assets/images/avatar-kwork.webp",
+    poster: "/assets/images/poster-citisit.webp",
   },
   {
     id: 2,
-    name: "denisE82",
-    avatar: "/assets/images/avatar-kwork.webp",
-    poster: "/assets/images/poster-denis.webp",
-  },
-  {
-    id: 3,
     name: "Cyber",
     avatar: "/assets/images/avatar.webp",
     poster: "/assets/images/poster-cyber.webp",
   },
   {
-    id: 4,
-    name: "В.А.Лебедев",
-    avatar: "/assets/images/avatar-man1.webp",
-    poster: "/assets/images/poster-man1.webp",
-    video: ["/video/webm/review-man1.webm", "/video/mp4/review-man1.mp4"],
+    id: 3,
+    name: "denisE82",
+    avatar: "/assets/images/avatar-kwork.webp",
+    poster: "/assets/images/poster-denis.webp",
   },
   {
-    id: 5,
+    id: 4,
     name: "Vintage",
     avatar: "/assets/images/avatar-semenov.webp",
     poster: "/assets/images/poster-semenov.webp",
   },
   {
-    id: 6,
+    id: 5,
     name: "az-web",
     avatar: "/assets/images/avatar-kwork.webp",
     poster: "/assets/images/poster-az_web.webp",
   },
   {
-    id: 7,
-    name: "П.Р.Старшинов",
-    avatar: "/assets/images/avatar-gratitude.webp",
-    poster: "/assets/images/poster-gratitude.webp",
+    id: 6,
+    name: "yavrep",
+    avatar: "/assets/images/avatar-kwork.webp",
+    poster: "/assets/images/poster-yavrep.webp",
   },
   {
-    id: 8,
+    id: 7,
     name: "A.Д.Семенов",
     avatar: "/assets/images/avatar-vintage.webp",
     poster: "/assets/images/poster-vintage.webp",
-  },
-  {
-    id: 9,
-    name: "Citisit",
-    avatar: "/assets/images/avatar-kwork.webp",
-    poster: "/assets/images/poster-citisit.webp",
   },
 ];
 
@@ -409,12 +419,7 @@ export const CASE: TCase[] = [
   {
     id: 1,
     title: "Bavin",
-    image: [
-      "/assets/images/work-Bavin/1.webp",
-      "/assets/images/work-Bavin/2.webp",
-      "/assets/images/work-Bavin/3.webp",
-      "/assets/images/work-Bavin/4.webp",
-    ],
+    image: "/assets/images/work-Bavin/1.webp",
     url: "https://bavin.pro",
     description: [
       {
@@ -425,7 +430,7 @@ export const CASE: TCase[] = [
       {
         subject: "Результат:",
         text: `Сайт под конец разработки соответствовал всем требованиям. Так же лидов от рекламы получилось в разы больше, чем ожидалось изначально.
-        Заказчик планирует продолжать вкладываться в данный сайт, так как увидел возможности и отдачу в этой нише.`,
+        Заказчик планирует продолжать вкладываться в данный сайт, так как увидел возможности и отдачу в этой ниши.`,
       },
     ],
     advantages: ["HTML", "SCSS", "JAVASCRIPT", "CRM BITRIX"],
@@ -434,23 +439,18 @@ export const CASE: TCase[] = [
   {
     id: 2,
     title: "Бизнес Совет",
-    image: [
-      "/assets/images/work-Бизнес/1.webp",
-      "/assets/images/work-Бизнес/2.webp",
-      "/assets/images/work-Бизнес/3.webp",
-      "/assets/images/work-Бизнес/4.webp",
-    ],
+    image: "/assets/images/work-Бизнес/1.webp",
     url: "https://bisovet.pro",
     description: [
       {
         subject: "Задача:",
         text: `Срочная разработка корпоративного сайта для выступления на форуме и последующего развития бренда. Так же планировалась
-         посадка на удобную систему управления контентом и подключение различных метрик и тестирование/поддержка.`,
+         посадка на удобную систему управления контентом и подключение различных метрик c тестированием/поддержкой.`,
       },
       {
         subject: "Результат:",
         text: `Работа была выполнена даже на несколько дней раньше срока, чем все были очень довольны. Сам сайт учитывая сроки получился
-         не менее качественным ( можете сами убедиться ). На форуме все были крайне удовлетворены продуктивной и качественным продуктом.`,
+         не менее качественным ( можете сами убедиться ). На форуме все были крайне удовлетворены качественным продуктом.`,
       },
     ],
     advantages: ["JAVASCRIPT", "PHP", "ACF", "WORDPRESS"],
@@ -459,12 +459,7 @@ export const CASE: TCase[] = [
   {
     id: 3,
     title: "CortexDigital v3",
-    image: [
-      "/assets/images/bg-personalised-solution.webp",
-      "/assets/images/bg-personalised-solution.webp",
-      "/assets/images/bg-personalised-solution.webp",
-      "/assets/images/bg-personalised-solution.webp",
-    ],
+    image: "/assets/images/work-Cortex/1.webp",
     url: "https://cortexdigital.net",
     description: [
       {
@@ -484,12 +479,7 @@ export const CASE: TCase[] = [
   {
     id: 4,
     title: "Vintage Cottage",
-    image: [
-      "/assets/images/work-Vintage/1.webp",
-      "/assets/images/work-Vintage/2.webp",
-      "/assets/images/work-Vintage/3.webp",
-      "/assets/images/work-Vintage/4.webp",
-    ],
+    image: "/assets/images/work-Vintage/1.webp",
     url: "https://vintage-cottage.eu",
     description: [
       {
@@ -508,53 +498,21 @@ export const CASE: TCase[] = [
   },
   {
     id: 5,
-    title: "Vintage Cottage",
-    image: [
-      "/assets/images/work-Vintage/1.webp",
-      "/assets/images/work-Vintage/2.webp",
-      "/assets/images/work-Vintage/3.webp",
-      "/assets/images/work-Vintage/4.webp",
-    ],
-    url: "https://vintage-cottage.eu",
+    title: "Cybertribe",
+    image: "/assets/images/work-Cyber/1.webp",
+    url: "https://www.cybertribe.uk",
     description: [
       {
         subject: "Задача:",
-        text: "Нужно было доработать вёрстку, добавить функционал в интернет-магазине с бекендом и интегрировать на cms Wordpress.",
+        text: "Заказчик несколько раз обращался за разными доработками по вёрстке. Основаное - это доработка формы, ускорение и поддержка работоспособности сайта.",
       },
       {
         subject: "Результат:",
-        text: `Получился мультиязычный и мультивалютный интернет-магазин. Для более удобного решения на Wordpress решили 
-        использовать популярный плагин woocommerce, благодаря чему теперь легко контролировать заказы и интегрировать
-        другой функционал. Оплату сделали с помощью интернет-эквайринга и модуля woo.`,
+        text: `Если заказчик возвращался, то значит качество ему нравилось :) Сайт был в 3.5 раза ускорен, чем было изначально. Долгое время был на поддержке, где проект был внешне доработан после аудита, был перенесён на vps сервер - там происходил постоянный мониторинг ресурсов.`,
       },
     ],
-    advantages: ["JAVASCRIPT", "WORDPRESS", "PHP", "WOOCOMMERCE"],
-    data: "20.11.2022",
-  },
-  {
-    id: 6,
-    title: "Vintage Cottage",
-    image: [
-      "/assets/images/work-Vintage/1.webp",
-      "/assets/images/work-Vintage/2.webp",
-      "/assets/images/work-Vintage/3.webp",
-      "/assets/images/work-Vintage/4.webp",
-    ],
-    url: "https://vintage-cottage.eu",
-    description: [
-      {
-        subject: "Задача:",
-        text: "Нужно было доработать вёрстку, добавить функционал в интернет-магазине с бекендом и интегрировать на cms Wordpress.",
-      },
-      {
-        subject: "Результат:",
-        text: `Получился мультиязычный и мультивалютный интернет-магазин. Для более удобного решения на Wordpress решили 
-        использовать популярный плагин woocommerce, благодаря чему теперь легко контролировать заказы и интегрировать
-        другой функционал. Оплату сделали с помощью интернет-эквайринга и модуля woo.`,
-      },
-    ],
-    advantages: ["JAVASCRIPT", "WORDPRESS", "PHP", "WOOCOMMERCE"],
-    data: "20.11.2022",
+    advantages: ["JAVASCRIPT", "HTML", "CSS", "PHP"],
+    data: "01.04.2021",
   },
 ];
 

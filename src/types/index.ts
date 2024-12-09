@@ -18,7 +18,7 @@ interface Description {
 }
 
 export type TCase = BaseEntity & {
-  image: [Image, Image, Image, Image];
+  image: Image;
   url: URL;
   description: Description[];
   advantages: [string, string, string, string];

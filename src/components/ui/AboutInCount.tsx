@@ -31,7 +31,7 @@ const AboutInCount = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="flex gap-md xxl:gap-sm xl:gap-xs md:flex-wrap md:m-0 lg:gap-xxs m-auto">
+    <div ref={sectionRef} className="flex gap-md md:flex-wrap md:m-0 lg:gap-xxs m-auto">
       {ABOUT_IN_NUMBERS.map(({ id, count, text, title }) => (
         <div key={id} className="text-6xl xxl:text-5xl lg:text-4xl font-bold md:w-[48%] sm:w-full">
           {id === 1 || id === 2 ? (
