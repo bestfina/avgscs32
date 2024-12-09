@@ -39,8 +39,7 @@ const Footer = () => (
             <p className="text-center max-w-[205px] hidden sm:block xs:max-w-[180px]">
               Режим работы: Ежедневно с 9:00 до 19:00
             </p>
-            <Link href="mailto:info@CortexDigital">info@CortexDigital</Link>
-            <Link href="tel:+7 999 999 99 99">+7 999 999 99 99</Link>
+            <Link href="mailto:info@cortexdigital.net">info@cortexdigital.net</Link>
           </div>
           <Social className="hidden md:flex" />
         </div>

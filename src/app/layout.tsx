@@ -36,7 +36,7 @@ const RootLayout = ({
   return (
     <html lang="ru">
       <head>
-        <YandexMetrika counterId={99095541} />
+        <YandexMetrika />
         <meta name="yandex-verification" content="8cf8659d30ac0744" />
       </head>
       <body className={twMerge(raleway.className, pressStart2P.variable, "antialiased text-TextDark")}>
