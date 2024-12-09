@@ -10,7 +10,7 @@ const Footer = () => (
     <div className="container flex sm:flex-col sm:gap-xxs justify-between items-center py-sm xl:py-xs">
       <div className="flex flex-col h-36 sm:h-fit justify-between sm:justify-start sm:gap-xxxxs sm:items-center sm:order-3">
         <p className="sm:text-center max-w-64 xl:max-w-[230px] lg:max-w-[205px] sm:hidden sm:mb-xxxxs">
-          Режим работы: Ежедневно с 9:00 до 19:00
+          Режим работы: Ежедневно с 8:00 до 22:00
         </p>
         <FirstSection>
           Наверх
@@ -37,7 +37,7 @@ const Footer = () => (
         <div className="flex items-end sm:items-center gap-xxxs flex-col sm:gap-xxxxs">
           <div className="flex flex-col items-end sm:items-center sm:gap-xxxxs">
             <p className="text-center max-w-[205px] hidden sm:block xs:max-w-[180px]">
-              Режим работы: Ежедневно с 9:00 до 19:00
+              Режим работы: Ежедневно с 8:00 до 22:00
             </p>
             <Link href="mailto:info@cortexdigital.net">info@cortexdigital.net</Link>
             <Link href="tel:+7(995)020-33-85">+7 (995) 020-33-85</Link>

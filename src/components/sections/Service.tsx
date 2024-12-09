@@ -46,7 +46,9 @@ const Service = () => (
                 </li>
               ))}
             </ul>
-            <Button type="black">Получить услугу</Button>
+            <Button type="black" className="xs:w-full">
+              Получить услугу
+            </Button>
           </motion.div>
         ))}
       </div>

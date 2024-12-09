@@ -16,9 +16,9 @@ const NextSection = () => {
    text-TextLight absolute bottom-sm xl:bottom-xs"
       onClick={handleNextSectionClick}
     >
-      <div className="bg-BgLight w-12 h-12 rounded-full flex items-center justify-center xl:w-10 xl:h-10">
+      <span className="bg-BgLight w-12 h-12 rounded-full flex items-center justify-center xl:w-10 xl:h-10">
         <ArrowIcon className="text-TextDark bounce" />
-      </div>
+      </span>
       Далее
     </button>
   );

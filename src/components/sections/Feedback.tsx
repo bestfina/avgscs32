@@ -5,7 +5,7 @@ const Feedback = () => (
   <section id="feedback">
     <div className="container flex flex-col">
       <div className="flex justify-between items-center sm:flex-col sm:justify-start sm:items-start sm:gap-xxxs">
-        <h2>Настоящие отзывы от клиетов</h2>
+        <h2>Ваши отзывы — наша гордость</h2>
         <SliderNav />
       </div>
       <div>

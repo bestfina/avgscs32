@@ -392,6 +392,12 @@ export const FEEDBACKS: TFeedbacks[] = [
     avatar: "/assets/images/avatar-vintage.webp",
     poster: "/assets/images/poster-vintage.webp",
   },
+  {
+    id: 8,
+    name: "Рамис Хуснуллин",
+    avatar: "/assets/images/avatar-ramis.webp",
+    poster: "/assets/images/poster-ramis.webp",
+  },
 ];
 
 export const FIELDS: TFields[] = [
