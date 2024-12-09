@@ -40,6 +40,7 @@ const Footer = () => (
               Режим работы: Ежедневно с 9:00 до 19:00
             </p>
             <Link href="mailto:info@cortexdigital.net">info@cortexdigital.net</Link>
+            <Link href="tel:+7(995)020-33-85">+7 (995) 020-33-85</Link>
           </div>
           <Social className="hidden md:flex" />
         </div>
