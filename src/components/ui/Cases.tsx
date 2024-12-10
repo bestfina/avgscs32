@@ -1,7 +1,6 @@
 "use client";
 import { CASE } from "@/constants";
 import { twMerge } from "tailwind-merge";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Button from "./Button";
 import Image from "next/image";
@@ -11,12 +10,8 @@ const Cases = () => {
     <>
       {CASE.map(({ id, title, description, image, url, data, advantages }) => {
         return (
-          <motion.div
+          <div
             key={id}
-            initial={{ scale: 0.8, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
             className={twMerge(
               "flex md:flex-col gap-sm sm:gap-xs justify-between items-center mb-sm",
               id % 2 === 0 ? "flex-row-reverse" : null
@@ -53,7 +48,7 @@ const Cases = () => {
               loading="lazy"
               className="rounded-3xl object-cover h-full w-2/4 border-4 border-dotted border-black md:w-full"
             />
-          </motion.div>
+          </div>
         );
       })}
     </>

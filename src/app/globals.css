@@ -81,7 +81,7 @@
   }
 
   .input-style {
-    @apply py-xs px-md border-2 border-AccentDark focus:outline-none rounded-full text-TextDark;
+    @apply py-xxs px-10 lg:py-xxxs border-2 border-AccentDark focus:outline-none rounded-full text-TextDark;
   }
 
   .next-section-btn:hover .bounce {

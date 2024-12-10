@@ -9,7 +9,6 @@ import {
   TLink,
   TService,
 } from "@/types";
-import { Variants } from "framer-motion";
 
 export const LINK: TLink[] = [
   {
@@ -113,7 +112,7 @@ export const SERVICE: TService[] = [
   {
     id: 2,
     title: "No code решение",
-    price: "От 20.000 руб.",
+    price: "От 16.000 руб.",
     deadline: "от 3 дней",
     advantages: [
       "No code — ваш быстрый и минимальный старт в онлайн",
@@ -548,16 +547,3 @@ export const ABOUT_IN_NUMBERS: TAboutInNumber[] = [
     text: "используемых технологий",
   },
 ];
-
-export const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-      delay: index * 0.2,
-    },
-  }),
-};

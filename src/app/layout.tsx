@@ -12,6 +12,8 @@ const raleway = Raleway({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "600"],
+  preload: true,
+  adjustFontFallback: false,
 });
 
 const pressStart2P = Press_Start_2P({
@@ -19,6 +21,7 @@ const pressStart2P = Press_Start_2P({
   display: "swap",
   weight: ["400"],
   variable: "--font-press",
+  preload: true,
 });
 
 export const metadata: Metadata = {

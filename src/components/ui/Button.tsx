@@ -1,6 +1,8 @@
 "use client";
+import { usePopup } from "@/context/PopupContext";
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
+import PopupForm from "./PopupForm";
 
 interface ButtonProps {
   children: ReactNode;
@@ -9,6 +11,7 @@ interface ButtonProps {
 }
 
 const Button = ({ children, type, className }: ButtonProps) => {
+  const { openPopup } = usePopup();
   let color = null;
   if (type === "white") {
     color = "text-TextDark bg-BgLight";
@@ -22,10 +25,10 @@ const Button = ({ children, type, className }: ButtonProps) => {
 
   return (
     <button
-      onClick={() => window.open("https://t.me/CORTEX_DIGITAL", "_blank")}
+      onClick={() => openPopup(<PopupForm />)}
       className={twMerge(
         type !== "none"
-          ? "rounded-full font-semibold w-80 py-3 hover:opacity-80 duration-500 xl:w-72 lg:w-60 xl:py-2"
+          ? "rounded-full font-semibold w-80 py-3 hover:opacity-60 duration-500 xl:w-72 lg:w-60 xl:py-2"
           : "",
         color,
         className
