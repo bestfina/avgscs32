@@ -21,14 +21,14 @@ const Service = () => (
             key={id}
             className="w-[27%] xxl:p-xs xl:w-[31.7%] md:w-[48%] sm:w-full flex flex-col gap-xxs p-md border-dotted justify-between border-4 border-black rounded-3xl"
           >
-            <h5>{title}</h5>
+            <h5 className="sm:text-[22px] xs:text-xl">{title}</h5>
             <div className="flex flex-col gap-xxxxs">
               <InnerSpan className="text-2xl bg-black font-bold lg:text-xl">{price}</InnerSpan>
               <i className="text-base">Сроки: {deadline}</i>
             </div>
             <ul className="list-disc flex flex-col gap-xxxs">
               {advantages.map((item, index) => (
-                <li key={index} className="ml-xxs text-lg lg:text-base">
+                <li key={index} className="ml-xxs text-lg lg:text-base sm:text-sm">
                   {item}
                 </li>
               ))}

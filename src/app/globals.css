@@ -17,7 +17,7 @@
   }
 
   h2 {
-    @apply text-[38px] xl:text-3xl md:text-2xl sm:text-xl xs:text-lg;
+    @apply text-[38px] xl:text-3xl md:text-2xl sm:text-lg xs:text-[17px];
   }
 
   h3 {
@@ -41,7 +41,7 @@
   span,
   a,
   button {
-    @apply text-xl xl:text-lg lg:text-base xs:text-sm;
+    @apply text-xl xl:text-lg lg:text-base sm:text-[15px] xs:text-sm;
   }
 
   .timer-text {

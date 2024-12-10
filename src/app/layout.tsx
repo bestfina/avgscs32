@@ -29,6 +29,7 @@ export const metadata: Metadata = {
   description:
     "Бесплатные консультации и аудиты. Огромное портфолио. Контекстная реклама и SEO. Создание сайта полным циклом!",
   keywords: "Разработка сайта ключ",
+  icons: "/favicon.ico",
   other: {
     "yandex-verification": "8cf8659d30ac0744",
   },
