@@ -11,12 +11,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     // Настройка SMTP-транспорта
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
+      host: "sm26.hosting.reg.ru",
       port: 465,
       secure: true,
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: "info@cortexdigital.net",
+        pass: "yM0jL3tP2zlU3jV5",
       },
     });
 
