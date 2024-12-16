@@ -9,9 +9,9 @@ import Forma from "@/components/sections/Forma";
 const Home = () => (
   <>
     <Hero />
-    <Portfolio />
-    <About />
     <Service />
+    <About />
+    <Portfolio />
     <Feedback />
     <Forma />
     <Faq />

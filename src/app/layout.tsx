@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Raleway, Press_Start_2P } from "next/font/google";
+import { Raleway, Exo_2 } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import { PopupProvider } from "@/context/PopupContext";
@@ -16,10 +16,10 @@ const raleway = Raleway({
   adjustFontFallback: false,
 });
 
-const pressStart2P = Press_Start_2P({
+const pressStart2P = Exo_2({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400"],
+  weight: ["600"],
   variable: "--font-press",
   preload: true,
 });

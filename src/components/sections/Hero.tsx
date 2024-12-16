@@ -1,8 +1,7 @@
-import AdvantagesMiniBlock from "../ui/AdvantagesBlock";
+import Image from "next/image";
+import InnerSpan from "../ui/InnerSpan";
 import NextSection from "../ui/NextSection";
 import TaimerBlock from "../ui/TaimerBlock";
-import { MAIN_ADVANTAGES } from "@/constants";
-import { twMerge } from "tailwind-merge";
 
 const Hero = () => (
   <section id="hero" className="relative bg-black flex items-center bg-no-repeat bg-cover">
@@ -19,27 +18,55 @@ const Hero = () => (
     </video>
     <div
       className="relative flex items-center px-[25px] lg:p-xxxs xs:px-xxxxs w-full h-screen bg-opacity-50
-       bg-black min-h-[700px] max-h-[1000px] lg:min-h-[600px] md:h-fit md:min-h-fit md:pt-32 md:pb-sm xs:pt-24"
+       bg-black min-h-[800px] max-h-[1180px] xl:min-h-[630px] md:h-fit md:min-h-fit md:pt-32 md:pb-sm xs:pt-24"
     >
-      <div className="container md:flex-col md:items-start sm:h-fit h-full flex items-center">
-        <div className="flex flex-col w-2/4 xxl:w-4/6 gap-sm xxl:gap-xs md:w-full">
-          <h1 className="text-TextLight max-w-4xl">Создаём проекты, которые работают на Вас 24/7</h1>
+      <div className="container gap-sm md:flex-col md:items-start sm:h-fit h-full flex items-center">
+        <div className="flex flex-col w-3/5 lg:w-[55%] gap-md xl:gap-sm md:w-full">
+          <h1 className="text-TextLight">
+            Создаём{" "}
+            <InnerSpan className="text-7xl xxl:text-6xl xl:text-5xl lg:text-[39px] sm:text-4xl">прибыльные</InnerSpan>{" "}
+            сайты – от идеи до запуска
+          </h1>
           <div className="flex flex-wrap justify-between gap-xs xl:gap-xxs sm:gap-xxxs">
-            {MAIN_ADVANTAGES.map(({ id, title }) => (
-              <AdvantagesMiniBlock
-                key={id}
-                className={twMerge(
-                  "w-[48%] sm:w-full",
-                  id === 3 ? "w-full" : null,
-                  id === 2 ? "sm:bg-BgLight sm:text-AccentDark" : "sm:hover:bg-transparent sm:hover:text-TextLight"
-                )}
-              >
-                {title}
-              </AdvantagesMiniBlock>
-            ))}
+            <ul className="flex flex-col gap-xs xl:gap-xxs">
+              <li className="advantages-main">
+                <Image
+                  src="/assets/icons/document.svg"
+                  alt=""
+                  width={50}
+                  height={50}
+                  className="w-11 h-11 lg:w-8 lg:h-8"
+                />{" "}
+                Подробный отчёт по каждому этапу проекта без скрытых доплат
+              </li>
+              <li className="advantages-main">
+                <Image
+                  src="/assets/icons/target.svg"
+                  alt=""
+                  width={50}
+                  height={50}
+                  className="w-11 h-11 lg:w-8 lg:h-8"
+                />{" "}
+                Индивидуальные решения для роста и масштабирования бизнеса
+              </li>
+              <li className="advantages-main">
+                <Image
+                  src="/assets/icons/chart.svg"
+                  alt=""
+                  width={50}
+                  height={50}
+                  className="w-11 h-11 lg:w-8 lg:h-8"
+                />{" "}
+                Гарантируем рост клиентов на 20-50% уже с первого месяца
+              </li>
+            </ul>
           </div>
         </div>
-        <TaimerBlock />
+        <TaimerBlock
+          title="Новогодняя скидка 15%"
+          text="Успейте запустить прибыльный сайт до 1 января и начните зарабатывать уже в следующем месяце!"
+          textBtn="Забронировать скидку"
+        />
         <NextSection />
       </div>
     </div>

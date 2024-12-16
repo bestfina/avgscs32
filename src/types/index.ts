@@ -10,8 +10,6 @@ export type TLink = BaseEntity & {
   url: URL;
 };
 
-export type TAdvantagesMain = BaseEntity;
-
 interface Description {
   subject: string;
   text: string;

@@ -8,7 +8,12 @@ interface InnerSpan {
 
 const InnerSpan = ({ className, children }: InnerSpan) => {
   return (
-    <span className={twMerge("bg-AccentDark text-TextLight px-3 py-1 w-fit whitespace-nowrap rounded-full", className)}>
+    <span
+      className={twMerge(
+        "bg-AccentDark text-TextLight px-3 py-1 w-fit whitespace-nowrap inline-block rounded-full",
+        className
+      )}
+    >
       {children}
     </span>
   );

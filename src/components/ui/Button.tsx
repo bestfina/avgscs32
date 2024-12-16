@@ -28,7 +28,7 @@ const Button = ({ children, type, className }: ButtonProps) => {
       onClick={() => openPopup(<PopupForm />)}
       className={twMerge(
         type !== "none"
-          ? "rounded-full font-semibold w-80 py-3 hover:opacity-60 duration-500 xl:w-72 lg:w-60 xl:py-2"
+          ? "rounded-full font-semibold w-80 py-3 hover:opacity-70 duration-500 xl:w-72 lg:w-60 xl:py-2"
           : "",
         color,
         className
