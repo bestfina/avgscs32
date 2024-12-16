@@ -16,7 +16,7 @@ const raleway = Raleway({
   adjustFontFallback: false,
 });
 
-const pressStart2P = Exo_2({
+const Exo2 = Exo_2({
   subsets: ["latin"],
   display: "swap",
   weight: ["600"],
@@ -42,7 +42,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="ru">
-      <body className={twMerge(raleway.className, pressStart2P.variable, "antialiased text-TextDark")}>
+      <body className={twMerge(raleway.className, Exo2.variable, "antialiased text-TextDark")}>
         <YandexMetrika />
         <PopupProvider>
           <Header />
