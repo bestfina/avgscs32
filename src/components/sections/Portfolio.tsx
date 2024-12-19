@@ -3,7 +3,7 @@ import Cases from "../ui/Cases";
 
 const Portfolio = () => {
   return (
-    <section id="portfolio">
+    <section id="portfolio" className=" overflow-hidden">
       <div className="container flex flex-col">
         <h2>Наши реализованные кейсы</h2>
         <Cases />

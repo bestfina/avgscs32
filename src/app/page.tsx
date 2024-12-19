@@ -5,6 +5,7 @@ import Service from "@/components/sections/Service";
 import Faq from "@/components/sections/Faq";
 import Feedback from "@/components/sections/Feedback";
 import Forma from "@/components/sections/Forma";
+import MobileLink from "@/components/ui/MobileLink";
 
 const Home = () => (
   <>
@@ -15,6 +16,7 @@ const Home = () => (
     <Feedback />
     <Forma />
     <Faq />
+    <MobileLink />
   </>
 );
 

@@ -65,7 +65,7 @@
   }
 
   section:not(:first-child) {
-    @apply py-32 xl:py-24 px-6 lg:px-xxxs lg:py-16 sm:py-12;
+    @apply py-32 xl:py-24 px-6 lg:px-xxxs lg:py-16 sm:py-12 xs:px-xxxxs;
   }
 
   .rotate-page {

@@ -9,7 +9,7 @@ const Service = () => {
   // Анимация карточек
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
 
   // Анимация контейнера
@@ -45,7 +45,7 @@ const Service = () => {
               initial="hidden"
               whileInView="visible"
               variants={cardVariants}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.05 }}
             >
               <Image src={icon} alt="" width={50} height={50} />
               <h5 className="sm:text-[22px] xs:text-xl">{title}</h5>
