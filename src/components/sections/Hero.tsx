@@ -35,6 +35,7 @@ const Hero = () => (
                   alt=""
                   width={50}
                   height={50}
+                  loading="eager"
                   className="w-11 h-11 lg:w-8 lg:h-8"
                 />{" "}
                 Подробный отчёт по каждому этапу проекта без скрытых доплат
@@ -45,6 +46,7 @@ const Hero = () => (
                   alt=""
                   width={50}
                   height={50}
+                  loading="eager"
                   className="w-11 h-11 lg:w-8 lg:h-8"
                 />{" "}
                 Индивидуальные решения для роста и масштабирования бизнеса
@@ -55,6 +57,7 @@ const Hero = () => (
                   alt=""
                   width={50}
                   height={50}
+                  loading="eager"
                   className="w-11 h-11 lg:w-8 lg:h-8"
                 />{" "}
                 Гарантируем рост клиентов на 20-50% уже с первого месяца

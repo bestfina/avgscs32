@@ -68,7 +68,7 @@ const TaimerBlock = ({
       )}
     >
       <div className="flex flex-col items-center gap-3 xxl:gap-2 xs:gap-xxxxs">
-        <Image src="/assets/icons/santa.svg" alt="" width={50} height={50} />
+        <Image src="/assets/icons/santa.svg" alt="" width={50} height={50} loading="eager" />
         <h6 className="font-semibold text-center text-3xl xl:text-2xl xl:text-[22px] md:text-xl sm:text-xl">{title}</h6>
         <p className="max-w-[580px] xl:max-w-[583px] text-center xl:text-base sm:text-sm">{text}</p>
       </div>

@@ -33,6 +33,7 @@ export type TFaq = BaseEntity & {
 };
 
 export type TService = BaseEntity & {
+  icon: Image;
   price: string;
   deadline: string;
   advantages: string[];

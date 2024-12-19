@@ -1,16 +1,21 @@
 "use client";
 
 import { FAQ } from "@/constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InnerIcon from "../ui/InnerIcon";
 import { twMerge } from "tailwind-merge";
 
 const Questions = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(1);
 
+  useEffect(() => {
+    setActiveIndex(window.innerWidth > 1022 ? 1 : 0);
+  }, []);
+
   const toggleAccordion = (id: number) => {
     setActiveIndex(activeIndex === id ? null : id);
   };
+
   return (
     <div className="flex flex-col gap-xs md:gap-xxxs">
       {FAQ.map(({ id, title, description }) => (

@@ -6,7 +6,7 @@ import Image from "next/image";
 import Button from "../ui/Button";
 
 const Footer = () => (
-  <footer className="border-t border-TextDark">
+  <footer className="border-t border-TextDark" id="contact">
     <div className="container flex sm:flex-col sm:gap-xxs justify-between items-center py-sm xl:py-xs">
       <div className="flex flex-col h-36 sm:h-fit justify-between sm:justify-start sm:gap-xxxxs sm:items-center sm:order-3">
         <p className="sm:text-center max-w-64 xl:max-w-[230px] lg:max-w-[205px] sm:hidden sm:mb-xxxxs">
