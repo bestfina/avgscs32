@@ -69,7 +69,7 @@ const CallbackWidget = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
               >
-                <Image src="/assets/icons/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
+                <Image src="/assets/icons/whatsApp.svg" alt="WhatsApp" width={24} height={24} />
                 WhatsApp
               </Link>
               <Link href="tel:+7(995)020-33-85" className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg">
