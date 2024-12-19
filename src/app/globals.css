@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
   h1,
   h2 {
     @apply font-press;
@@ -42,7 +41,15 @@
   }
 
   .advantages-main {
-    @apply text-TextLight text-2xl xl:text-xl lg:text-[15px] flex items-center gap-xs lg:gap-xxxs sm:text-sm;
+    @apply text-TextLight text-xl xxl:text-[19px] xl:text-lg lg:text-[15px] flex items-center gap-xs lg:gap-xxxs sm:text-sm;
+  }
+
+  .advantages-main-image {
+    @apply w-11 h-11 lg:w-8 lg:h-8 duration-300;
+  }
+
+  .advantages-main:hover .advantages-main-image {
+    @apply scale-125;
   }
 
   .timer-text {
@@ -92,7 +99,6 @@
   }
 
   @keyframes bounce {
-
     0%,
     20%,
     50%,

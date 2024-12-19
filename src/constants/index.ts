@@ -83,9 +83,9 @@ export const SERVICE: TService[] = [
   {
     id: 1,
     title: "Комплексная разработка сайта под ключ",
-    price: "От 200.000 руб.",
+    price: "От 150.000 руб.",
     icon: "/assets/icons/key.svg",
-    deadline: "от 30 дней",
+    deadline: "от 3-х недель",
     advantages: [
       "Корпоративные сайты",
       "Интернет-магазины (E-commerce)",
@@ -99,8 +99,8 @@ export const SERVICE: TService[] = [
     id: 2,
     title: "Сложная разработка веб-приложений",
     icon: "/assets/icons/gear-setting.svg",
-    price: "От 1.000.000 руб.",
-    deadline: "от 90 дней",
+    price: "От 700.000 руб.",
+    deadline: "от 2-х месяцев",
     advantages: [
       "Веб-приложения ( CRM-системы, ERP )",
       "Онлайн-сервисы",
@@ -115,7 +115,7 @@ export const SERVICE: TService[] = [
     title: "Техническая поддержка и доработка сайтов",
     icon: "/assets/icons/wrench.svg",
     price: "От 25.000 руб.",
-    deadline: "от 14 дней",
+    deadline: "от 2-х недель",
     advantages: [
       "Доработка любого функционала",
       "Оперативная помощь 24/7",
@@ -129,8 +129,8 @@ export const SERVICE: TService[] = [
     id: 4,
     title: "UX/UI Дизайн",
     icon: "/assets/icons/artist-palette.svg",
-    price: "От 60.000 руб.",
-    deadline: "от 10 дней",
+    price: "От 50.000 руб.",
+    deadline: "от 1 недели",
     advantages: ["Веб-интерфейсы", "Прототипы", "Редизайны", "Юзабилити-тестирование", "Фирменный стиль", "Брендинг"],
   },
   {
@@ -138,7 +138,7 @@ export const SERVICE: TService[] = [
     title: "SEO, реклама и маркетинг",
     icon: "/assets/icons/growth.svg",
     price: "От 100.000 руб.",
-    deadline: "от 30 дней",
+    deadline: "от 1 месяца",
     advantages: [
       "Продвижение в поиске",
       "Контекстная реклама",

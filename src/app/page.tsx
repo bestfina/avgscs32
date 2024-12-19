@@ -10,8 +10,8 @@ const Home = () => (
   <>
     <Hero />
     <Service />
-    <About />
     <Portfolio />
+    <About />
     <Feedback />
     <Forma />
     <Faq />

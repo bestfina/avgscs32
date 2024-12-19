@@ -36,7 +36,7 @@ const Hero = () => (
                   width={50}
                   height={50}
                   loading="eager"
-                  className="w-11 h-11 lg:w-8 lg:h-8"
+                  className="advantages-main-image"
                 />{" "}
                 Подробный отчёт по каждому этапу проекта без скрытых доплат
               </li>
@@ -47,7 +47,7 @@ const Hero = () => (
                   width={50}
                   height={50}
                   loading="eager"
-                  className="w-11 h-11 lg:w-8 lg:h-8"
+                  className="advantages-main-image"
                 />{" "}
                 Индивидуальные решения для роста и масштабирования бизнеса
               </li>
@@ -58,16 +58,16 @@ const Hero = () => (
                   width={50}
                   height={50}
                   loading="eager"
-                  className="w-11 h-11 lg:w-8 lg:h-8"
+                  className="advantages-main-image"
                 />{" "}
-                Гарантируем рост клиентов на 20-50% уже с первого месяца
+                Гарантируем рост клиентов на 20-50% уже с первого месяца, иначе вернём деньги
               </li>
             </ul>
           </div>
         </div>
         <TaimerBlock
-          title="Новогодняя скидка 15%"
-          text="Успейте запустить прибыльный сайт до 1 января и начните зарабатывать уже в следующем месяце!"
+          title="Скидка 15% до 1 января"
+          text="Успейте запустить прибыльный сайт и начните зарабатывать уже в следующем месяце!"
           textBtn="Забронировать скидку"
         />
         <NextSection />
