@@ -7,9 +7,11 @@ import { twMerge } from "tailwind-merge";
 interface LogoProps {
   scroll?: boolean;
   big?: boolean;
+  atTop?: boolean;
+  isOpen?: boolean;
 }
 
-const Logo = ({ scroll, big = false }: LogoProps) => (
+const Logo = ({ scroll, big = false, atTop, isOpen }: LogoProps) => (
   <Link
     href="/"
     className={twMerge("flex flex-col items-center w-fit")}
@@ -17,7 +19,7 @@ const Logo = ({ scroll, big = false }: LogoProps) => (
     onClick={() => scroll && smoothFn("hero")}
   >
     <Image
-      src="/assets/images/logo.webp"
+      src="/assets/images/logo.png"
       alt="logo"
       width={50}
       height={50}
@@ -28,15 +30,19 @@ const Logo = ({ scroll, big = false }: LogoProps) => (
     <div
       className={twMerge(
         "font-semibold xl:leading-4 xl:mt-[2px] xs:mt-1 xs:text-[15px] xs:leading-3",
-        big ? "text-2xl [&&]:leading-5 [&&]:mt-2 xl:[&&]:text-xl xl:[&&]:mt-1 xl:[&&]:leading-4" : null
+        atTop ? "text-TextLight" : "text-TextDark",
+        isOpen && "text-TextDark duration-500",
+        big ? "text-TextDark text-2xl [&&]:leading-5 [&&]:mt-2 xl:[&&]:text-xl xl:[&&]:mt-1 xl:[&&]:leading-4" : null
       )}
     >
       CortexDigital
     </div>
     <div
       className={twMerge(
-        "text-sm tracking-[4px] ml-2 leading-[10px] xl:text-xs xs:text-[11px]",
-        big ? "[&&]:text-lg xl:[&&]:text-base" : null
+        "text-TextLight text-sm tracking-[4px] ml-2 leading-[10px] xl:text-xs xs:text-[11px]",
+        atTop ? "text-TextLight" : "text-TextDark",
+        isOpen && "text-TextDark duration-500",
+        big ? "text-TextDark [&&]:text-lg xl:[&&]:text-base" : null
       )}
     >
       company

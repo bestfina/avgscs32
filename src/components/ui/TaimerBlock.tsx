@@ -63,7 +63,7 @@ const TaimerBlock = ({
       }}
       className={twMerge(
         `flex flex-col px-xs w-2/5 lg:w-[45%] md:w-full h-fit gap-sm xl:gap-xs lg:gap-xxs md:gap-xxs xs:gap-xxxs
-         items-center py-8 xl:p-[18px] md:p-3 text-TextLight bg-AccentLight/60 rounded-3xl`,
+         items-center py-8 xl:p-[18px] md:p-3 text-TextLight bg-AccentLight/70 rounded-3xl`,
         className
       )}
     >
@@ -74,7 +74,7 @@ const TaimerBlock = ({
       </div>
       <div
         className="flex items-center gap-sm xl:gap-xs md:gap-xxs sm:gap-3 text-center text-TextLight timer-text"
-        style={{ minHeight: "40px" }} // Резервируем место под таймер
+        style={{ minHeight: "40px" }}
       >
         <div className="timer-text">
           {days} <div>Дней</div>

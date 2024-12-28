@@ -7,6 +7,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import Popup from "@/components/ui/Popup";
 import YandexMetrika from "@/components/sections/YandexMetrika";
+import MobileLink from "@/components/ui/MobileLink";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -48,6 +49,7 @@ const RootLayout = ({
           <Header />
           <main>{children}</main>
           <Footer />
+          <MobileLink />
           <Popup />
         </PopupProvider>
       </body>

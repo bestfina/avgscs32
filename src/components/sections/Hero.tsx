@@ -14,17 +14,19 @@ const Hero = () => (
       loop
     >
       <source src="/video/webm/bg-hero.webm" type="video/webm" />
-      <source src="/video/mp4/bg-hero.mp4" type="video/mp4" />
+      <source src="/video/mp4/5778-185369732.mp4" type="video/mp4" />
     </video>
     <div
-      className="relative flex items-center px-[25px] lg:p-xxxs xs:px-xxxxs w-full h-screen bg-opacity-50
+      className="relative flex items-center w-full h-screen bg-opacity-40
        bg-black min-h-[800px] max-h-[1180px] xl:min-h-[630px] md:h-fit md:min-h-fit md:pt-32 md:pb-sm xs:pt-24"
     >
       <div className="container gap-sm md:flex-col md:items-start sm:h-fit h-full flex items-center">
         <div className="flex flex-col w-3/5 lg:w-[55%] gap-md xl:gap-sm md:w-full">
           <h1 className="text-TextLight">
             Создаём{" "}
-            <InnerSpan className="text-7xl xxl:text-6xl xl:text-5xl lg:text-[39px] sm:text-4xl">прибыльные</InnerSpan>{" "}
+            <InnerSpan className="text-7xl pb-3 lg:pb-2 xxl:text-6xl xl:text-5xl lg:text-[39px] sm:text-4xl">
+              прибыльные
+            </InnerSpan>{" "}
             сайты – от идеи до запуска
           </h1>
           <div className="flex flex-wrap justify-between gap-xs xl:gap-xxs sm:gap-xxxs">

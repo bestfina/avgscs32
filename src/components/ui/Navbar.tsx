@@ -3,20 +3,23 @@ import { LINK } from "@/constants";
 import smoothFn from "@/lib/smoothFn";
 import Link from "next/link";
 import { RefObject } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface NavbarProps {
   className?: string;
   targetButtonRef?: RefObject<HTMLLabelElement>;
+  atTop?: boolean;
+  classNameList?: string;
 }
 
-const Navbar = ({ className, targetButtonRef }: NavbarProps) => (
+const Navbar = ({ className, classNameList, targetButtonRef, atTop }: NavbarProps) => (
   <nav className={className}>
-    <ul className="flex gap-sm xl:gap-xs lg:gap-xxs">
+    <ul className={twMerge("flex gap-md lg:gap-sm", classNameList)}>
       {LINK.map(({ title, id, url }) => (
-        <li key={id} className=" hover:-translate-y-1 duration-500">
+        <li key={id} className="hover:-translate-y-1 duration-500">
           <Link
             href={"#" + url}
-            className="text-[19px] xl:text-[17px] lg:text-[15px] md:text-TextLight md:text-xl"
+            className={twMerge("md:text-xl", atTop ? "text-TextLight" : "text-TextDark")}
             scroll={false}
             onClick={() => {
               if (targetButtonRef?.current) {

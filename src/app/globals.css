@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+
   h1,
   h2 {
     @apply font-press;
@@ -60,12 +61,8 @@
     @apply px-16 xl:px-9 lg:px-4 sm:px-xxxs gap-md lg:gap-xs xs:gap-xxxs;
   }
 
-  footer {
-    @apply px-8 lg:px-xxxs xs:px-xxxxs;
-  }
-
   section:not(:first-child) {
-    @apply py-32 xl:py-24 px-6 lg:px-xxxs lg:py-16 sm:py-12 xs:px-xxxxs;
+    @apply py-32 xl:py-24 lg:py-16 sm:py-12;
   }
 
   .rotate-page {
@@ -99,6 +96,7 @@
   }
 
   @keyframes bounce {
+
     0%,
     20%,
     50%,

@@ -11,13 +11,13 @@ const Forma = () => (
           <div className="flex flex-col gap-sm w-3/5 md:w-full md:gap-xxs">
             <h2 className="text-TextLight">
               Оставьте заявку, после чего вы получите{" "}
-              <InnerSpan className="text-6xl leading-[80px] xxl:text-5xl xl:text-4xl xl:leading-[55px] md:text-3xl xs:text-2xl">
+              <InnerSpan className="text-6xl xxl:text-5xl xl:text-4xl md:text-3xl xs:text-2xl pb-2 xl:pb-1">
                 бесплатный
               </InnerSpan>{" "}
               аудит или скидку 15% на любую услугу
             </h2>
             <Social />
-            <Contact />
+            <Contact className="text-TextLight" />
           </div>
           <TaimerBlock />
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import InputMask from "react-input-mask";
+import PhoneInput from "react-phone-input-2";
 import { FIELDS } from "@/constants";
 import CustomCheckbox from "./CustomCheckbox";
 import { useState } from "react";
@@ -33,7 +33,6 @@ const PopupForm = () => {
       if (response.ok) {
         setIsFormSubmitted(true);
       } else {
-        // const data = await response.json();
         setIsFormSubmitted(false);
       }
     } catch {
@@ -63,13 +62,16 @@ const PopupForm = () => {
                       onChange={e => (id === 1 ? setName(e.target.value) : id === 3 ? setEmail(e.target.value) : null)}
                     />
                   ) : (
-                    <InputMask
-                      mask="+7 (999) 999-99-99"
-                      placeholder={placeholder}
-                      className="input-style w-full"
+                    <PhoneInput
                       value={tel}
-                      onChange={e => setTel(e.target.value)}
-                      required
+                      onChange={value => setTel(value)}
+                      placeholder="Телефон"
+                      specialLabel=""
+                      inputProps={{
+                        required: true,
+                        name: "phone",
+                      }}
+                      inputClass="input-style w-full"
                     />
                   )}
                 </div>

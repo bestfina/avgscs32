@@ -9,20 +9,25 @@ import {
   TService,
 } from "@/types";
 
-export const LINK: TLink[] = [
+export const LINK = [
   {
-    title: "Услуги и цены",
+    title: "Услуги",
     url: "service",
+    subLinks: [
+      { title: "Дизайн", url: "/services/design" },
+      { title: "Разработка", url: "/services/development" },
+      { title: "Маркетинг", url: "/services/marketing" },
+    ],
     id: 1,
-  },
-  {
-    title: "О нас",
-    url: "about",
-    id: 2,
   },
   {
     title: "Портфолио",
     url: "portfolio",
+    id: 2,
+  },
+  {
+    title: "О нас",
+    url: "about",
     id: 3,
   },
   {
@@ -31,7 +36,7 @@ export const LINK: TLink[] = [
     id: 4,
   },
   {
-    title: "Вопросы и ответы",
+    title: "Контакты",
     url: "faq",
     id: 5,
   },

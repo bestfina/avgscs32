@@ -6,7 +6,7 @@ import PopupForm from "./PopupForm";
 
 interface ButtonProps {
   children: ReactNode;
-  type: "white" | "blue" | "lightBlue" | "black" | "none";
+  type: "white" | "blue" | "black" | "border-white" | "none" | string;
   className?: string;
 }
 
@@ -14,13 +14,13 @@ const Button = ({ children, type, className }: ButtonProps) => {
   const { openPopup } = usePopup();
   let color = null;
   if (type === "white") {
-    color = "text-TextDark bg-BgLight";
+    color = "bg-TextLight text-TextDark";
   } else if (type === "blue") {
-    color = "text-TextLight bg-AccentDark";
-  } else if (type === "lightBlue") {
-    color = "text-TextLight bg-AccentLight";
+    color = "bg-AccentDark";
   } else if (type === "black") {
-    color = "text-TextLight bg-black";
+    color = "bg-black";
+  } else if (type === "border-white") {
+    color = "border-2 hover:bg-TextLight hover:text-TextDark hover:opacity-1";
   }
 
   return (
@@ -28,7 +28,7 @@ const Button = ({ children, type, className }: ButtonProps) => {
       onClick={() => openPopup(<PopupForm />)}
       className={twMerge(
         type !== "none"
-          ? "rounded-full font-semibold w-80 py-3 hover:opacity-70 duration-500 xl:w-72 lg:w-60 xl:py-2"
+          ? "text-TextLight rounded-full font-semibold w-80 py-3 hover:opacity-70 duration-500 xl:w-72 lg:w-60 xl:py-2"
           : "",
         color,
         className

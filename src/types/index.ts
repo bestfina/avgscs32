@@ -8,6 +8,7 @@ interface BaseEntity {
 
 export type TLink = BaseEntity & {
   url: URL;
+  children?: [];
 };
 
 interface Description {
