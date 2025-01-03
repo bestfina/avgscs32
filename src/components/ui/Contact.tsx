@@ -11,7 +11,7 @@ const Contact = ({ className, size, atTop }: ContactProps) => {
   return (
     <div
       className={twMerge(
-        "flex gap-xxs w-fit sm:flex-col sm:gap-xxxs text-TextLight",
+        "flex gap-xxs w-fit sm:flex-col sm:gap-xxxxs text-TextLight",
         atTop ? "text-TextLight" : "text-TextDark",
         className
       )}

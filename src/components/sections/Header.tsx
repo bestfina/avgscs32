@@ -18,11 +18,20 @@ const Header = () => {
   const handleScroll = useCallback(() => {
     const currentScrollPos = window.scrollY;
     const isScrollingUp = currentScrollPos < prevScrollPos;
-
-    setIsVisible(isScrollingUp || currentScrollPos < 120);
-    setAtTop(currentScrollPos < 120);
+    if (window.innerWidth > 1200) {
+      setIsVisible(isScrollingUp || currentScrollPos < 120);
+      setAtTop(currentScrollPos < 120);
+    } else {
+      setIsVisible(isScrollingUp || currentScrollPos < 30);
+      setAtTop(currentScrollPos < 30);
+    }
     setPrevScrollPos(currentScrollPos);
   }, [prevScrollPos]);
+
+  useEffect(() => {
+    const currentScrollPos = window.scrollY;
+    setAtTop(currentScrollPos < 120);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -51,30 +60,31 @@ const Header = () => {
       className={twMerge(
         "fixed z-10 w-full transition-transform duration-300",
         isVisible ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-full invisible",
-        atTop ? "bg-transparent" : "bg-white border-b-2 border-black",
-        isOpen && "bg-white border-b-2 border-black"
+        atTop ? "bg-transparent" : "bg-white border-b border-black"
       )}
     >
       <div
         className={twMerge(
-          "container flex items-center justify-between py-4 xl:py-[10px] transition-colors duration-300",
-          isOpen && "bg-white border-b-2 border-black"
+          "container flex items-center justify-between py-4 xl:py-xxs md:py-xxxs transition-colors duration-300",
+          isOpen && "sm:bg-slate-100 sm:border-b-2 sm:border-black"
         )}
       >
-        <div className="flex items-center gap-md">
-          <Logo scroll atTop={atTop} isOpen={isOpen} />
-          <Navbar className="md:hidden" atTop={atTop} />
+        <div className="flex items-center gap-md md:gap-xs">
+          <Logo atTop={atTop} isOpen={isOpen} />
+          <Navbar className="sm:hidden" classNameItem="md:text-sm" classNameList="md:gap-[23px]" atTop={atTop} />
         </div>
-        <div className="flex flex-col items-end gap-xxxxs md:hidden">
+        <div className="flex flex-col items-end gap-xxxxs">
           <div className="flex gap-xs xl:gap-xxs lg:gap-xxxs items-center">
-            <Button type={twMerge(atTop ? "border-white" : "black")}>Получить консультацию</Button>
-            <Social />
+            <Button className="sm:hidden" type={twMerge(atTop ? "border-white" : "black")}>
+              Получить консультацию
+            </Button>
+            <Social className="md:hidden" />
           </div>
-          <Contact size="text-lg lg:text-base" atTop={atTop} />
+          <Contact size="text-lg lg:text-base md:hidden" atTop={atTop} />
         </div>
         <button
           className={twMerge(
-            "z-20 focus:outline-none hidden md:block transition-transform duration-300",
+            "z-20 focus:outline-none hidden sm:block transition-transform duration-300",
             isOpen ? "rotate-180" : "rotate-0"
           )}
           onClick={handleToggleMenu}
@@ -84,14 +94,22 @@ const Header = () => {
       </div>
       <div
         className={twMerge(
-          "fixed container inset-0 hidden md:flex bg-white -z-10 h-screen overflow-y-auto pt-28 pb-sm flex-col gap-8 transform transition-transform duration-500",
+          "fixed container inset-0 hidden sm:flex bg-slate-100 -z-10 h-screen overflow-y-auto pt-28 pb-sm flex-col gap-8 md:gap-xs transform transition-transform duration-500",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <Navbar classNameList="flex-col" />
+        <Navbar classNameList="flex-col" classNameItem="text-2xl" onClick={() => setIsOpen(!isOpen)} />
         <Social />
         <Contact />
-        <Button type="blue">Получить консультацию</Button>
+        <Button
+          type="blue"
+          className="x:w-full"
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          Получить консультацию
+        </Button>
       </div>
     </header>
   );

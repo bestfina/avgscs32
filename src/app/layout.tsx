@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Raleway, Exo_2 } from "next/font/google";
+import { Nunito, Exo_2 } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import { PopupProvider } from "@/context/PopupContext";
@@ -9,7 +9,7 @@ import Popup from "@/components/ui/Popup";
 import YandexMetrika from "@/components/sections/YandexMetrika";
 import MobileLink from "@/components/ui/MobileLink";
 
-const raleway = Raleway({
+const raleway = Nunito({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "600"],

@@ -25,7 +25,13 @@ const Questions = () => {
             className="w-full cursor-pointer flex gap-xxxxs justify-between items-center p-4 md:p-3 text-left text-TextDark font-medium"
           >
             <h5 className="w-fit">{title}</h5>
-            <InnerIcon className={activeIndex === id ? "bg-AccentDark pb-[6px]" : ""}>
+            <InnerIcon
+              className={
+                activeIndex === id
+                  ? "bg-AccentLight pb-[2px]"
+                  : "bg-AccentLight/55 hover:bg-AccentLight sm:hover:bg-AccentLight/55"
+              }
+            >
               {activeIndex === id ? "−" : "+"}
             </InnerIcon>
           </div>

@@ -24,8 +24,8 @@ const TaimerBlock = ({
 }: TaimerBlockProps) => {
   const calculateTimeLeft = () => {
     const now = new Date();
-    const nextYear = now.getFullYear() + 1;
-    const newYear = new Date(`January 1, ${nextYear} 00:00:00`).getTime();
+    const nextYear = now.getFullYear();
+    const newYear = new Date(`January 15, ${nextYear} 00:00:00`).getTime();
     const currentTime = now.getTime();
     return Math.max(0, Math.floor((newYear - currentTime) / 1000));
   };
@@ -63,7 +63,7 @@ const TaimerBlock = ({
       }}
       className={twMerge(
         `flex flex-col px-xs w-2/5 lg:w-[45%] md:w-full h-fit gap-sm xl:gap-xs lg:gap-xxs md:gap-xxs xs:gap-xxxs
-         items-center py-8 xl:p-[18px] md:p-3 text-TextLight bg-AccentLight/70 rounded-3xl`,
+         items-center py-8 xl:p-[18px] md:p-3 text-TextLight bg-white/10 backdrop-blur-sm rounded-3xl`,
         className
       )}
     >
@@ -92,7 +92,9 @@ const TaimerBlock = ({
           {seconds} <div>Секунд</div>
         </div>
       </div>
-      <Button type="white">{textBtn}</Button>
+      <Button type="blue" className="x:w-full">
+        {textBtn}
+      </Button>
     </motion.div>
   );
 };

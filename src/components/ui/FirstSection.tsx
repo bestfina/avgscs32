@@ -8,7 +8,7 @@ interface FirstSectionProps {
 
 const FirstSection = ({ children }: FirstSectionProps) => {
   return (
-    <button onClick={() => smoothFn("hero")} className="flex gap-xxxs items-center w-fit">
+    <button onClick={() => smoothFn("hero")} className="flex gap-xxxxs items-center w-fit text-base sm:text-sm">
       {children}
     </button>
   );

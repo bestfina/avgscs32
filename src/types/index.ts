@@ -8,7 +8,6 @@ interface BaseEntity {
 
 export type TLink = BaseEntity & {
   url: URL;
-  children?: [];
 };
 
 interface Description {
@@ -17,11 +16,9 @@ interface Description {
 }
 
 export type TCase = BaseEntity & {
-  image: Image;
+  video: Image;
   url: URL;
-  description: Description[];
-  advantages: [string, string, string, string];
-  data: string;
+  description: string;
 };
 
 export type TAdvantages = BaseEntity & {
@@ -35,8 +32,8 @@ export type TFaq = BaseEntity & {
 
 export type TService = BaseEntity & {
   icon: Image;
-  price: string;
-  deadline: string;
+  url: URL;
+  description: string;
   advantages: string[];
 };
 
