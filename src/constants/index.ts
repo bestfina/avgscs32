@@ -372,6 +372,22 @@ export const CASE: TCase[] = [
     description:
       "Международный интернет-магазин с товарами для дома. Сделан на площадке woocommerce, мультивалютный и мультиязычный.",
   },
+  {
+    id: 4,
+    title: "Vintage Cottage",
+    video: "/video/mp4/project/vintageCottage.mp4",
+    url: "https://vintage-cottage.eu",
+    description:
+      "Международный интернет-магазин с товарами для дома. Сделан на площадке woocommerce, мультивалютный и мультиязычный.",
+  },
+  {
+    id: 5,
+    title: "Vintage Cottage",
+    video: "/video/mp4/project/vintageCottage.mp4",
+    url: "https://vintage-cottage.eu",
+    description:
+      "Международный интернет-магазин с товарами для дома. Сделан на площадке woocommerce, мультивалютный и мультиязычный.",
+  },
 ];
 
 export const ABOUT_IN_NUMBERS: TAboutInNumber[] = [
