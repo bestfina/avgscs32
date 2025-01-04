@@ -23,7 +23,7 @@ export const LINK: TLink[] = [
   },
   {
     title: "Контакты",
-    url: "/#faq",
+    url: "/contact",
     id: 5,
   },
 ];
