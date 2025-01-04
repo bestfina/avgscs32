@@ -50,14 +50,19 @@ const FeedbackSlider = () => {
             </div>
             <div
               style={{ backgroundImage: `url("${poster}")` }}
-              className="flex items-center justify-center bg-cover h-full"
+              className="flex items-center justify-center bg-cover bg-left-bottom h-full"
             >
               <InnerIcon
-                className="pl-1"
+                className="pl-1 bg-AccentDark hover:scale-[1.20]"
                 onClick={() =>
                   openPopup(
                     video ? (
-                      <video className="h-full w-full object-contain" autoPlay controls playsInline>
+                      <video
+                        className="max-h-[650px] xxl:max-h-[550px] sm:max-h-[400px] w-full object-contain"
+                        autoPlay
+                        controls
+                        playsInline
+                      >
                         <source src={video[0]} type="video/webm" />
                         <source src={video[1]} type="video/mp4" />
                       </video>

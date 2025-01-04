@@ -63,7 +63,7 @@ const TaimerBlock = ({
       }}
       className={twMerge(
         `flex flex-col px-xs w-2/5 lg:w-[45%] md:w-full h-fit gap-sm xl:gap-xs lg:gap-xxs md:gap-xxs xs:gap-xxxs
-         items-center py-8 xl:p-[18px] md:p-3 text-TextLight bg-white/10 backdrop-blur-sm rounded-3xl`,
+         items-center py-8 xl:p-[18px] md:p-3 text-TextLight bg-white/15 backdrop-blur-sm rounded-3xl`,
         className
       )}
     >

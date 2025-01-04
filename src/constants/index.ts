@@ -283,15 +283,16 @@ export const FEEDBACKS: TFeedbacks[] = [
   },
   {
     id: 2,
-    name: "Cyber",
+    name: "Glassen-IT",
     avatar: "/assets/images/avatar.webp",
-    poster: "/assets/images/poster-cyber.webp",
+    poster: "/assets/images/reviews/glassenIT.png",
+    video: ["/video/mp4/reviews/GlassenIT.mp4", ""],
   },
   {
     id: 3,
-    name: "denisE82",
+    name: "yavrep",
     avatar: "/assets/images/avatar-kwork.webp",
-    poster: "/assets/images/poster-denis.webp",
+    poster: "/assets/images/poster-yavrep.webp",
   },
   {
     id: 4,
@@ -307,9 +308,9 @@ export const FEEDBACKS: TFeedbacks[] = [
   },
   {
     id: 6,
-    name: "yavrep",
+    name: "denisE82",
     avatar: "/assets/images/avatar-kwork.webp",
-    poster: "/assets/images/poster-yavrep.webp",
+    poster: "/assets/images/poster-denis.webp",
   },
   {
     id: 7,
