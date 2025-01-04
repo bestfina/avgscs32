@@ -7,6 +7,7 @@ import { twMerge } from "tailwind-merge";
 
 interface LogoProps {
   big?: boolean;
+<<<<<<< HEAD
   atTop?: boolean;
   isOpen?: boolean;
 }
@@ -19,6 +20,31 @@ const Logo = ({ big = false, atTop, isOpen }: LogoProps) => {
       className={twMerge("flex flex-col items-center w-fit")}
       scroll={false}
       onClick={() => smoothFn("/#hero", currentPath)}
+=======
+}
+
+const Logo = ({ scroll, big = false }: LogoProps) => (
+  <Link
+    href="/"
+    className={twMerge("flex flex-col items-center w-fit")}
+    scroll={scroll}
+    onClick={() => scroll && smoothFn("hero")}
+  >
+    <Image
+      src="/assets/images/logo.webp"
+      alt="logo"
+      width={50}
+      height={50}
+      loading="eager"
+      quality={100}
+      className={twMerge("mb-px xl:w-11 lg:w-10 xs:w-9", big ? "[&&]:w-14 xl:[&&]:w-12" : null)}
+    />
+    <div
+      className={twMerge(
+        "font-semibold xl:leading-4 xl:mt-[2px] xs:mt-1 xs:text-[15px] xs:leading-3",
+        big ? "text-2xl [&&]:leading-5 [&&]:mt-2 xl:[&&]:text-xl xl:[&&]:mt-1 xl:[&&]:leading-4" : null
+      )}
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
     >
       <Image
         src="/assets/images/logo.png"

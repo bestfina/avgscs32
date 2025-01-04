@@ -24,8 +24,13 @@ const TaimerBlock = ({
 }: TaimerBlockProps) => {
   const calculateTimeLeft = () => {
     const now = new Date();
+<<<<<<< HEAD
     const nextYear = now.getFullYear();
     const newYear = new Date(`January 15, ${nextYear} 00:00:00`).getTime();
+=======
+    const nextYear = now.getFullYear() + 1;
+    const newYear = new Date(`January 1, ${nextYear} 00:00:00`).getTime();
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
     const currentTime = now.getTime();
     return Math.max(0, Math.floor((newYear - currentTime) / 1000));
   };
@@ -63,11 +68,16 @@ const TaimerBlock = ({
       }}
       className={twMerge(
         `flex flex-col px-xs w-2/5 lg:w-[45%] md:w-full h-fit gap-sm xl:gap-xs lg:gap-xxs md:gap-xxs xs:gap-xxxs
+<<<<<<< HEAD
          items-center py-8 xl:p-[18px] md:p-3 text-TextLight bg-white/15 backdrop-blur-sm rounded-3xl`,
+=======
+         items-center py-8 xl:p-[18px] md:p-3 text-TextLight bg-AccentLight/60 rounded-3xl`,
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
         className
       )}
     >
       <div className="flex flex-col items-center gap-3 xxl:gap-2 xs:gap-xxxxs">
+<<<<<<< HEAD
         <Image
           src="/assets/icons/santa.svg"
           alt=""
@@ -76,12 +86,19 @@ const TaimerBlock = ({
           loading="eager"
           className="sm:w-10 sm:h-10"
         />
+=======
+        <Image src="/assets/icons/santa.svg" alt="" width={50} height={50} loading="eager" />
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
         <h6 className="font-semibold text-center text-3xl xl:text-2xl xl:text-[22px] md:text-xl sm:text-xl">{title}</h6>
         <p className="max-w-[580px] xl:max-w-[500px] text-center xl:text-base sm:text-sm">{text}</p>
       </div>
       <div
         className="flex items-center gap-sm xl:gap-xs md:gap-xxs sm:gap-3 text-center text-TextLight timer-text"
+<<<<<<< HEAD
         style={{ minHeight: "40px" }}
+=======
+        style={{ minHeight: "40px" }} // Резервируем место под таймер
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
       >
         <div className="timer-text">
           {days} <div>Дней</div>
@@ -99,9 +116,13 @@ const TaimerBlock = ({
           {seconds} <div>Секунд</div>
         </div>
       </div>
+<<<<<<< HEAD
       <Button type="blue" className="x:w-full">
         {textBtn}
       </Button>
+=======
+      <Button type="white">{textBtn}</Button>
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
     </motion.div>
   );
 };

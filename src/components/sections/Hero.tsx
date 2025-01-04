@@ -1,4 +1,8 @@
 import Image from "next/image";
+<<<<<<< HEAD
+=======
+import InnerSpan from "../ui/InnerSpan";
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
 import NextSection from "../ui/NextSection";
 import TaimerBlock from "../ui/TaimerBlock";
 
@@ -12,6 +16,7 @@ const Hero = () => (
       playsInline
       loop
     >
+<<<<<<< HEAD
       <source src="/video/mp4/bg-hero.mp4" type="video/mp4" />
     </video>
     <div
@@ -25,6 +30,24 @@ const Hero = () => (
           </h1>
           <div className="flex flex-wrap justify-between gap-xs xl:gap-xxs sm:gap-xxxs">
             <ul className="flex flex-col gap-xs">
+=======
+      <source src="/video/webm/bg-hero.webm" type="video/webm" />
+      <source src="/video/mp4/bg-hero.mp4" type="video/mp4" />
+    </video>
+    <div
+      className="relative flex items-center px-[25px] lg:p-xxxs xs:px-xxxxs w-full h-screen bg-opacity-50
+       bg-black min-h-[800px] max-h-[1180px] xl:min-h-[630px] md:h-fit md:min-h-fit md:pt-32 md:pb-sm xs:pt-24"
+    >
+      <div className="container gap-sm md:flex-col md:items-start sm:h-fit h-full flex items-center">
+        <div className="flex flex-col w-3/5 lg:w-[55%] gap-md xl:gap-sm md:w-full">
+          <h1 className="text-TextLight">
+            Создаём{" "}
+            <InnerSpan className="text-7xl xxl:text-6xl xl:text-5xl lg:text-[39px] sm:text-4xl">прибыльные</InnerSpan>{" "}
+            сайты – от идеи до запуска
+          </h1>
+          <div className="flex flex-wrap justify-between gap-xs xl:gap-xxs sm:gap-xxxs">
+            <ul className="flex flex-col gap-xs xl:gap-xxs">
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
               <li className="advantages-main">
                 <Image
                   src="/assets/icons/document.svg"
@@ -33,7 +56,11 @@ const Hero = () => (
                   height={50}
                   loading="eager"
                   className="advantages-main-image"
+<<<<<<< HEAD
                 />
+=======
+                />{" "}
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
                 Подробный отчёт по каждому этапу проекта без скрытых доплат
               </li>
               <li className="advantages-main">
@@ -44,25 +71,41 @@ const Hero = () => (
                   height={50}
                   loading="eager"
                   className="advantages-main-image"
+<<<<<<< HEAD
                 />
+=======
+                />{" "}
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
                 Индивидуальные решения для роста и масштабирования бизнеса
               </li>
               <li className="advantages-main">
                 <Image
+<<<<<<< HEAD
                   src="/assets/icons/growth.svg"
+=======
+                  src="/assets/icons/chart.svg"
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
                   alt=""
                   width={50}
                   height={50}
                   loading="eager"
                   className="advantages-main-image"
+<<<<<<< HEAD
                 />
+=======
+                />{" "}
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
                 Гарантируем рост клиентов на 20-50% уже с первого месяца, иначе вернём деньги
               </li>
             </ul>
           </div>
         </div>
         <TaimerBlock
+<<<<<<< HEAD
           title="Нг скидка 15% до 15 января"
+=======
+          title="Скидка 15% до 1 января"
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
           text="Успейте запустить прибыльный сайт и начните зарабатывать уже в следующем месяце!"
           textBtn="Забронировать скидку"
         />

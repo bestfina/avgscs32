@@ -16,9 +16,17 @@ interface Description {
 }
 
 export type TCase = BaseEntity & {
+<<<<<<< HEAD
   video: Image;
   url: URL;
   description: string;
+=======
+  image: Image;
+  url: URL;
+  description: Description[];
+  advantages: [string, string, string, string];
+  data: string;
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
 };
 
 export type TAdvantages = BaseEntity & {
@@ -32,8 +40,13 @@ export type TFaq = BaseEntity & {
 
 export type TService = BaseEntity & {
   icon: Image;
+<<<<<<< HEAD
   url: URL;
   description: string;
+=======
+  price: string;
+  deadline: string;
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
   advantages: string[];
 };
 

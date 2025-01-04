@@ -1,6 +1,7 @@
 "use client";
 import smoothFn from "@/lib/smoothFn";
 import ArrowIcon from "./icon/ArrowIcon";
+<<<<<<< HEAD
 import { usePathname } from "next/navigation";
 
 const NextSection = () => {
@@ -9,6 +10,14 @@ const NextSection = () => {
     const nextSection = document.getElementById("hero")?.nextElementSibling;
     if (nextSection?.id) {
       smoothFn("/#" + nextSection.id, currentPath);
+=======
+
+const NextSection = () => {
+  const handleNextSectionClick = () => {
+    const nextSection = document.getElementById("hero")?.nextElementSibling;
+    if (nextSection?.id) {
+      smoothFn(nextSection.id);
+>>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
     }
   };
 
