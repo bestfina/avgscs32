@@ -1,18 +1,11 @@
 "use client";
 import Image from "next/image";
-<<<<<<< HEAD
 import PhoneInput from "react-phone-input-2";
-=======
-import InputMask from "react-input-mask";
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
 import { FIELDS } from "@/constants";
 import CustomCheckbox from "./CustomCheckbox";
 import { useState } from "react";
 import Link from "next/link";
-<<<<<<< HEAD
 import Button from "./Button";
-=======
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
 
 const PopupForm = () => {
   const [name, setName] = useState<string>("");
@@ -41,10 +34,6 @@ const PopupForm = () => {
       if (response.ok) {
         setIsFormSubmitted(true);
       } else {
-<<<<<<< HEAD
-=======
-        // const data = await response.json();
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
         setIsFormSubmitted(false);
       }
     } catch {
@@ -74,7 +63,6 @@ const PopupForm = () => {
                       onChange={e => (id === 1 ? setName(e.target.value) : id === 3 ? setEmail(e.target.value) : null)}
                     />
                   ) : (
-<<<<<<< HEAD
                     <PhoneInput
                       value={tel}
                       onChange={value => setTel(value)}
@@ -86,15 +74,6 @@ const PopupForm = () => {
                       }}
                       containerClass="w-full"
                       inputClass="input-style w-full"
-=======
-                    <InputMask
-                      mask="+7 (999) 999-99-99"
-                      placeholder={placeholder}
-                      className="input-style w-full"
-                      value={tel}
-                      onChange={e => setTel(e.target.value)}
-                      required
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
                     />
                   )}
                 </div>
@@ -144,10 +123,7 @@ const PopupForm = () => {
         <>
           <h5 className="text-center">Спасибо{name && ", " + name}! Ваша заявка успешно отправлена.</h5>
           <p className="text-center">Наш менеджер свяжется с вами в ближайшее время</p>
-<<<<<<< HEAD
           <Button type="blue">Смотреть все услуги</Button>
-=======
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
         </>
       ) : !isFormSubmitted ? (
         <>
@@ -156,10 +132,7 @@ const PopupForm = () => {
             Проверьте данные и попробуйте ещё раз. Если снова не получится, напишите нам напрямую — мы обязательно
             поможем!
           </p>
-<<<<<<< HEAD
           <Button type="blue">Смотреть все услуги</Button>
-=======
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
         </>
       ) : null}
     </div>

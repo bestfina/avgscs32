@@ -1,16 +1,10 @@
 "use client";
 
-<<<<<<< HEAD
 import { ABOUT_IN_NUMBERS, ADVANTAGES } from "@/constants";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import CountUp from "react-countup";
 import { twMerge } from "tailwind-merge";
-=======
-import { ABOUT_IN_NUMBERS } from "@/constants";
-import { useState, useEffect, useRef } from "react";
-import CountUp from "react-countup";
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
 
 const AboutInCount = () => {
   const [startCount, setStartCount] = useState(false);
@@ -39,7 +33,6 @@ const AboutInCount = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
     <div ref={sectionRef} className="flex sm:flex-col justify-between gap-md xl:gap-sm w-full lg:gap-xxs">
       <div className="flex justify-between gap-md xl:gap-sm flex-wrap w-2/4 lg:w-3/12 sm:w-full sm:gap-xxs sm:gap-y-sm">
         {ABOUT_IN_NUMBERS.map(({ id, count, text, title }) => (
@@ -93,25 +86,6 @@ const AboutInCount = () => {
           </div>
         ))}
       </div>
-=======
-    <div ref={sectionRef} className="flex gap-md md:flex-wrap md:m-0 lg:gap-xxs m-auto">
-      {ABOUT_IN_NUMBERS.map(({ id, count, text, title }) => (
-        <div key={id} className="text-6xl xxl:text-5xl lg:text-4xl font-bold md:w-[48%] sm:w-full">
-          {id === 1 || id === 2 ? (
-            <>
-              {startCount ? <CountUp className="text-6xl xxl:text-5xl lg:text-4xl" end={count} duration={2} /> : "0"}
-              {title}
-            </>
-          ) : (
-            <>
-              {title}
-              {startCount ? <CountUp className="text-6xl xxl:text-5xl lg:text-4xl" end={count} duration={2} /> : "0"}
-            </>
-          )}
-          <div className="xxl:text-base lg:text-sm">{text}</div>
-        </div>
-      ))}
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
     </div>
   );
 };

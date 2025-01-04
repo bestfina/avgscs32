@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-<<<<<<< HEAD
 import { Nunito, Exo_2 } from "next/font/google";
-=======
-import { Raleway, Exo_2 } from "next/font/google";
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import { PopupProvider } from "@/context/PopupContext";
@@ -11,10 +7,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import Popup from "@/components/ui/Popup";
 import YandexMetrika from "@/components/sections/YandexMetrika";
-<<<<<<< HEAD
 import MobileLink from "@/components/ui/MobileLink";
-=======
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
 
 const raleway = Nunito({
   subsets: ["latin"],
@@ -56,10 +49,7 @@ const RootLayout = ({
           <Header />
           <main>{children}</main>
           <Footer />
-<<<<<<< HEAD
           <MobileLink />
-=======
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
           <Popup />
         </PopupProvider>
       </body>

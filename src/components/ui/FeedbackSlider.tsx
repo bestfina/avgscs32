@@ -40,11 +40,7 @@ const FeedbackSlider = () => {
     >
       {FEEDBACKS.map(({ id, name, avatar, poster, video }) => (
         <SwiperSlide key={id}>
-<<<<<<< HEAD
           <div className="flex flex-col border border-TextDark rounded-3xl h-[650px] xxl:h-[550px] lg:h-[480px] sm:h-[400px] overflow-hidden">
-=======
-          <div className="flex flex-col border-2 border-TextDark rounded-3xl h-[650px] xxl:h-[550px] lg:h-[480px] sm:h-[400px] overflow-hidden">
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
             <div className="flex items-center gap-xxxs pl-md xl:pl-sm sm:pl-xxs sm:gap-xxxxs py-3 border-b-2 border-TextDark">
               <div
                 style={{ backgroundImage: `url("${avatar}")` }}
@@ -54,7 +50,6 @@ const FeedbackSlider = () => {
             </div>
             <div
               style={{ backgroundImage: `url("${poster}")` }}
-<<<<<<< HEAD
               className="flex items-center justify-center bg-cover bg-left-bottom h-full"
             >
               <InnerIcon
@@ -68,16 +63,6 @@ const FeedbackSlider = () => {
                         controls
                         playsInline
                       >
-=======
-              className="flex items-center justify-center bg-cover h-full"
-            >
-              <InnerIcon
-                className="pl-1"
-                onClick={() =>
-                  openPopup(
-                    video ? (
-                      <video className="h-full w-full object-contain" autoPlay controls playsInline>
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
                         <source src={video[0]} type="video/webm" />
                         <source src={video[1]} type="video/mp4" />
                       </video>

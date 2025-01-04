@@ -4,18 +4,13 @@
 
 @layer base {
   h1,
-<<<<<<< HEAD
   h2,
   h3,
   h4 {
-=======
-  h2 {
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
     @apply font-press;
   }
 
   h1 {
-<<<<<<< HEAD
     @apply text-7xl leading-[90px] xxl:text-6xl xxl:leading-[65px] xl:text-[54px] lg:text-[40px] lg:leading-[50px] xs:text-4xl;
   }
 
@@ -33,25 +28,6 @@
 
   h5 {
     @apply font-semibold text-[26px] xl:text-[22px] lg:text-xl md:text-[17px] md:leading-5;
-=======
-    @apply text-7xl leading-[80px] xxl:text-6xl xl:text-5xl xl:leading-[62px] lg:text-[39px] lg:leading-[55px] xs:text-4xl xs:leading-[50px];
-  }
-
-  h2 {
-    @apply text-6xl leading-[80px] xxl:text-5xl xl:text-4xl xl:leading-[55px] md:text-3xl xs:text-2xl;
-  }
-
-  h3 {
-    @apply text-[32px] xl:text-3xl lg:text-2xl sm:text-xl;
-  }
-
-  h4 {
-    @apply text-[28px];
-  }
-
-  h5 {
-    @apply font-semibold text-[26px] xl:text-2xl lg:text-xl sm:text-lg xs:text-base;
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
   }
 
   a {
@@ -67,23 +43,11 @@
   }
 
   .advantages-main {
-<<<<<<< HEAD
     @apply text-TextLight text-xl xxl:text-[19px] xl:text-lg xl:leading-6 lg:text-[15px] flex items-center gap-xs lg:gap-xxxs sm:text-sm;
   }
 
   .advantages-main-image {
     @apply w-11 h-11 lg:w-10 lg:h-10 sm:w-8 sm:h-8 duration-300 hover:scale-125 md:hover:scale-100;
-=======
-    @apply text-TextLight text-xl xxl:text-[19px] xl:text-lg lg:text-[15px] flex items-center gap-xs lg:gap-xxxs sm:text-sm;
-  }
-
-  .advantages-main-image {
-    @apply w-11 h-11 lg:w-8 lg:h-8 duration-300;
-  }
-
-  .advantages-main:hover .advantages-main-image {
-    @apply scale-125;
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
   }
 
   .timer-text {
@@ -94,17 +58,8 @@
     @apply px-16 xl:px-9 lg:px-4 sm:px-xxxs gap-md lg:gap-xs xs:gap-xxxs;
   }
 
-<<<<<<< HEAD
   section:not(:first-child) {
     @apply py-32 xl:py-24 lg:py-16 sm:py-12;
-=======
-  footer {
-    @apply px-8 lg:px-xxxs xs:px-xxxxs;
-  }
-
-  section:not(:first-child) {
-    @apply py-32 xl:py-24 px-6 lg:px-xxxs lg:py-16 sm:py-12 xs:px-xxxxs;
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
   }
 
   .rotate-page {
@@ -115,7 +70,6 @@
     transform: translateZ(1px);
   }
 
-<<<<<<< HEAD
   .service-item:hover .service-link {
     @apply scale-110 w-14 bg-AccentDark text-TextLight lg:w-11 sm:w-7 sm:bg-transparent sm:text-TextDark sm:scale-100;
   }
@@ -130,11 +84,6 @@
 
   .faq-rewiew {
     scrollbar-width: none;
-=======
-  .faq-rewiew {
-    scrollbar-width: none;
-    /* Firefox */
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
     -ms-overflow-style: none;
     /* Internet Explorer 10+ */
   }
@@ -154,7 +103,6 @@
     animation: bounce 1.2s infinite;
   }
 
-<<<<<<< HEAD
   .scrolling-wrapper {
     display: flex;
     gap: 1rem;
@@ -174,8 +122,6 @@
     }
   }
 
-=======
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
   @keyframes bounce {
     0%,
     20%,
@@ -194,11 +140,7 @@
     }
   }
 
-<<<<<<< HEAD
   /* .slider-button-next,
-=======
-  .slider-button-next,
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
   .slider-button-prev {
     @apply flex justify-center items-center bg-AccentLight rounded-full w-16 h-16 lg:w-14 lg:h-14 sm:w-11 sm:h-11;
   }
@@ -207,11 +149,7 @@
   .slider-button-next.swiper-button-disabled {
     opacity: 0.65;
     cursor: not-allowed;
-<<<<<<< HEAD
   } */
-=======
-  }
->>>>>>> 6615dc08a92a2914ac62c6439352fc5dd202defc
 
   @keyframes slideFromTop {
     from {
