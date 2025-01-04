@@ -283,9 +283,10 @@ export const FEEDBACKS: TFeedbacks[] = [
   },
   {
     id: 2,
-    name: "Cyber",
+    name: "Glassen-IT",
     avatar: "/assets/images/avatar.webp",
-    poster: "/assets/images/poster-cyber.webp",
+    poster: "/assets/images/reviews/glassenIT.png",
+    video: ["/video/mp4/reviews/GlassenIT.mp4", ""],
   },
   {
     id: 3,
