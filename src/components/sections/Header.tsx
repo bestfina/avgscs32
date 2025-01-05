@@ -8,8 +8,10 @@ import { twMerge } from "tailwind-merge";
 import Contact from "../ui/Contact";
 import CloseIcon from "../ui/icon/CloseIcon";
 import BurgerMenuIcon from "../ui/icon/BurgerMenuIcon";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -29,20 +31,17 @@ const Header = () => {
   }, [prevScrollPos]);
 
   useEffect(() => {
-    const currentScrollPos = window.scrollY;
-    setAtTop(currentScrollPos < 120);
-  }, []);
-
-  useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
-
+    if (pathname !== "/") {
+      setAtTop(false);
+    }
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isOpen]);
+  }, [isOpen, pathname]);
 
   useEffect(() => {
-    if (!isOpen) {
+    if (!isOpen && pathname === "/") {
       window.addEventListener("scroll", handleScroll);
     } else {
       window.removeEventListener("scroll", handleScroll);
@@ -51,7 +50,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [handleScroll, isOpen]);
+  }, [handleScroll, isOpen, pathname]);
 
   const handleToggleMenu = () => setIsOpen(prev => !prev);
 
@@ -66,7 +65,7 @@ const Header = () => {
       <div
         className={twMerge(
           "container flex items-center justify-between py-4 xl:py-xxs md:py-xxxs transition-colors duration-300",
-          isOpen && "sm:bg-slate-100 sm:border-b-2 sm:border-black"
+          isOpen && "sm:bg-slate-100 sm:border-b sm:border-black"
         )}
       >
         <div className="flex items-center gap-md md:gap-xs">
@@ -94,7 +93,7 @@ const Header = () => {
       </div>
       <div
         className={twMerge(
-          "fixed container inset-0 hidden sm:flex bg-slate-100 -z-10 h-screen overflow-y-auto pt-28 pb-sm flex-col gap-8 md:gap-xs transform transition-transform duration-500",
+          "fixed container inset-0 hidden sm:flex bg-slate-100 -z-10 h-screen overflow-y-auto pt-32 pb-sm flex-col gap-8 md:gap-xs transform transition-transform duration-500",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
