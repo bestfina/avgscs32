@@ -1,13 +1,18 @@
 "use client";
-import { CASE } from "@/constants";
 import ArrowIcon from "./icon/ArrowIcon";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { TCase } from "@/types";
 
-const Cases = () => {
+interface CasesProps {
+  caseArr: TCase[];
+  main?: boolean;
+}
+
+const Cases = ({ caseArr, main }: CasesProps) => {
   const containerRef = useRef(null);
-  const isInView = useInView(containerRef, { margin: "0px 0px -100px 0px" }); // Срабатывание за 100px до появления
+  const isInView = useInView(containerRef, { margin: "0px 0px -100px 0px" });
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -21,7 +26,7 @@ const Cases = () => {
   return (
     <>
       <div ref={containerRef} className="flex flex-wrap justify-between gap-md xxl:gap-sm md:gap-xs">
-        {CASE.map(({ id, title, video, url, description }) => (
+        {caseArr.map(({ id, title, video, url, description }) => (
           <motion.a
             href={url}
             key={id}
@@ -37,22 +42,20 @@ const Cases = () => {
             <video className="w-full object-cover rounded-3xl" autoPlay controls={false} muted playsInline loop>
               <source src={video} type="video/mp4" />
             </video>
-            {/* <div className="absolute inset-0 bg-black bg-opacity-80 sm:hidden flex items-center justify-center gap-xxxs opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <span className="text-TextLight text-4xl font-semibold xl:text-3xl">Посмотреть</span>
-              <Image src="/assets/icons/eye.svg" alt="" width={40} height={40} />
-            </div> */}
           </motion.a>
         ))}
-        <motion.a
-          href="/portfolio"
-          className="w-[48.5%] lg:w-[48.4%] md:w-[48%] sm:w-full sm:p-2 bg-black/80 hover:bg-black duration-300 rounded-3xl flex justify-center gap-xxs md:gap-xxxxs items-center text-TextLight text-6xl xl:text-5xl lg:text-4xl md:text-3xl sm:rounded-full sm:text-xl sm:h-fit"
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={cardVariants}
-          whileHover={{ scale: 1.02 }}
-        >
-          Смотреть ещё <ArrowIcon className="-rotate-90 w-10 h-10 md:w-8 md:h-8 sm:w-6 sm:h-6" />
-        </motion.a>
+        {!main && (
+          <motion.a
+            href="/portfolio"
+            className="w-[48.5%] lg:w-[48.4%] md:w-[48%] sm:w-full sm:p-2 bg-black/80 hover:bg-black duration-300 rounded-3xl flex justify-center gap-xxs md:gap-xxxxs items-center text-TextLight text-6xl xl:text-5xl lg:text-4xl md:text-3xl sm:rounded-full sm:text-xl sm:h-fit"
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={cardVariants}
+            whileHover={{ scale: 1.02 }}
+          >
+            Смотреть ещё <ArrowIcon className="-rotate-90 w-10 h-10 md:w-8 md:h-8 sm:w-6 sm:h-6" />
+          </motion.a>
+        )}
       </div>
     </>
   );

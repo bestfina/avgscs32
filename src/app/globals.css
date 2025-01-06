@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
   /* липкий футер */
   html,
   body {
@@ -33,7 +32,6 @@
 
   /* конец липкого футера */
 
-
   h1,
   h2,
   h3,
@@ -58,7 +56,7 @@
   }
 
   h5 {
-    @apply font-semibold text-[26px] xl:text-[22px] lg:text-xl md:text-[17px] md:leading-5;
+    @apply font-semibold text-[26px] xl:text-[22px] md:text-xl xs:text-lg md:leading-5;
   }
 
   a {
@@ -116,7 +114,6 @@
   .faq-rewiew {
     scrollbar-width: none;
     -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
   }
 
   .faq-rewiew::-webkit-scrollbar {
@@ -125,7 +122,7 @@
   }
 
   .input-style {
-    @apply py-xxs px-10 lg:py-xxxs border-2 border-AccentDark focus:outline-none rounded-full text-TextDark;
+    @apply py-xxs pl-[25px] text-lg lg:py-xxxs lg:pl-xxs lg:text-base border-2 border-black focus:outline-none rounded-full text-TextDark;
   }
 
   .next-section-btn:hover .bounce {
@@ -155,7 +152,6 @@
   }
 
   @keyframes bounce {
-
     0%,
     20%,
     50%,
@@ -172,17 +168,6 @@
       transform: translateY(-5px);
     }
   }
-
-  /* .slider-button-next,
-  .slider-button-prev {
-    @apply flex justify-center items-center bg-AccentLight rounded-full w-16 h-16 lg:w-14 lg:h-14 sm:w-11 sm:h-11;
-  }
-
-  .slider-button-prev.swiper-button-disabled,
-  .slider-button-next.swiper-button-disabled {
-    opacity: 0.65;
-    cursor: not-allowed;
-  } */
 
   @keyframes slideFromTop {
     from {

@@ -32,8 +32,10 @@ const Header = () => {
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
-    if (pathname !== "/") {
+    if (pathname === "/contacts" || pathname === "/portfolio" || pathname === "/privacy") {
       setAtTop(false);
+    } else {
+      setAtTop(window.scrollY < 120);
     }
     return () => {
       document.body.style.overflow = "";
@@ -41,7 +43,7 @@ const Header = () => {
   }, [isOpen, pathname]);
 
   useEffect(() => {
-    if (!isOpen && pathname === "/") {
+    if (!isOpen && pathname !== "/contacts" && pathname !== "/portfolio" && pathname !== "/privacy") {
       window.addEventListener("scroll", handleScroll);
     } else {
       window.removeEventListener("scroll", handleScroll);

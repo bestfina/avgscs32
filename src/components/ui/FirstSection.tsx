@@ -11,7 +11,7 @@ const FirstSection = ({ children }: FirstSectionProps) => {
   const currentPath = usePathname();
   return (
     <button
-      onClick={() => smoothFn("hero", currentPath)}
+      onClick={() => smoothFn(currentPath + "#", currentPath)}
       className="flex gap-xxxxs items-center w-fit text-base sm:text-sm"
     >
       {children}

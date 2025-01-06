@@ -49,7 +49,6 @@ export type TFields = {
   id: number;
   type: string;
   placeholder: string;
-  icon: string;
 };
 
 export type TAboutInNumber = BaseEntity & {

@@ -65,7 +65,7 @@ export const SERVICE: TService[] = [
     description: `Разрабатываем современные интернет-магазины, которые помогают вашему бизнесу расти и привлекать клиентов. Наша команда
              создаёт уникальные решения, адаптированные под ваши задачи: от удобного пользовательского интерфейса до мощных интеграций с системами
               учёта и аналитики.`,
-    url: "#",
+    url: "/e-commerce",
     advantages: ["E-commerce", "Bitrix", "Интеграция с 1С", "WooCommerce", "Платёжная система", "Shopify"],
   },
   {
@@ -195,22 +195,6 @@ export const FAQ: TFaq[] = [
   },
   {
     id: 3,
-    title: "Какие технологии вы используете для разработки?",
-    description: [
-      {
-        subject: "",
-        text: `Html, Css, Bootstrap, Tailwind, Sass/Scss, Less, JavaScript, TypeScript, React.js, React Native, Next.js, Vue.js, Nuxt.js, jQuery, Node.js, Php, Python, 
-        Flask, Django MySQL, PostgreSQL, MongoDB, WordPress, Joomla, Drupal, Custom CMS, Lighthouse, Selenium, Cypress, Gulp/Webpack, AMP, Vercel, Netlify, AWS,
-        Google Cloud, Azure, GSAP (GreenSock), Three.js, Lottie, Figma, Adobe XD, Git, GitHub/GitLab.`,
-      },
-      {
-        subject: "И многие другие технологии, инструменты и библиотеки.",
-        text: ``,
-      },
-    ],
-  },
-  {
-    id: 4,
     title: "Можно ли заказать срочную разработку сайта?",
     description: [
       {
@@ -221,7 +205,7 @@ export const FAQ: TFaq[] = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     title: "Какие способы сотрудничества и оплаты у вас?",
     description: [
       {
@@ -236,7 +220,7 @@ export const FAQ: TFaq[] = [
     ],
   },
   {
-    id: 6,
+    id: 5,
     title: "Как я могу следить за прогрессом разработки?",
     description: [
       {
@@ -331,23 +315,63 @@ export const FIELDS: TFields[] = [
     id: 1,
     type: "text",
     placeholder: "Имя",
-    icon: "/assets/icons/person.svg",
   },
   {
     id: 2,
     type: "tel",
     placeholder: "Телефон*",
-    icon: "/assets/icons/phone.svg",
   },
   {
     id: 3,
     type: "email",
     placeholder: "Почта",
-    icon: "/assets/icons/email.svg",
   },
 ];
 
-export const CASE: TCase[] = [
+export const CASE_MAIN: TCase[] = [
+  {
+    id: 1,
+    title: "Антон Бавин",
+    video: "/video/mp4/project/bavin.mp4",
+    url: "https://bavin.pro",
+    description:
+      'Лендинг для продажи услуг "Освобождение от долгов" на голом коде с интеграциями различных аналитик и настройкой заявок на bitrix24.',
+  },
+  {
+    id: 2,
+    title: "Бизнес Совет",
+    video: "/video/mp4/project/bisovet.mp4",
+    url: "https://bisovet.pro",
+    description:
+      "Корпоративный сайт для B2B юридической компании. Сайт сделан на wordpress с кастомными полями для удобства наполнения.",
+  },
+  {
+    id: 3,
+    title: "ФГОС",
+    video: "/video/mp4/project/fgos.mp4",
+    url: "https://fgosonline.ru",
+    description:
+      'Улучшения сайта для услуг "Повышения квалификации". Разработали на главной странице первый баннер, поправили некоторые баги в вёрстке сайта.',
+  },
+  {
+    id: 4,
+    title: "CyberTribe",
+    video: "/video/mp4/project/cybertribe.mp4",
+    url: "https://www.cybertribe.uk",
+    description:
+      "Лендинг для крупной маркетинговой компании. Разработан на чистом коде без трудного функционала, но зато с хорошим ux/ui для ЦА.",
+  },
+  {
+    id: 5,
+    title: "ТЦ Малибу",
+    video: "/video/mp4/project/malibu.mp4",
+    url: "https://malibu-trc.ru",
+    description:
+      "Корпоративный сайт для огромного торгового центра в Липецке. Сделан на wordress с помощью конструктора elementor и кастомного функционала.",
+  },
+];
+
+export const CASE_FULL: TCase[] = [
   {
     id: 1,
     title: "Антон Бавин",
@@ -374,19 +398,83 @@ export const CASE: TCase[] = [
   },
   {
     id: 4,
-    title: "Vintage Cottage",
-    video: "/video/mp4/project/vintageCottage.mp4",
-    url: "https://vintage-cottage.eu",
+    title: "CyberTribe",
+    video: "/video/mp4/project/cybertribe.mp4",
+    url: "https://www.cybertribe.uk",
     description:
-      "Международный интернет-магазин с товарами для дома. Сделан на площадке woocommerce, мультивалютный и мультиязычный.",
+      "Лендинг для крупной маркетинговой компании. Разработан на чистом коде без трудного функционала, но зато с хорошим ux/ui для ЦА.",
   },
   {
     id: 5,
-    title: "Vintage Cottage",
-    video: "/video/mp4/project/vintageCottage.mp4",
-    url: "https://vintage-cottage.eu",
+    title: "ТЦ Малибу",
+    video: "/video/mp4/project/malibu.mp4",
+    url: "https://malibu-trc.ru",
     description:
-      "Международный интернет-магазин с товарами для дома. Сделан на площадке woocommerce, мультивалютный и мультиязычный.",
+      "Корпоративный сайт для огромного торгового центра в Липецке. Сделан на wordress с помощью конструктора elementor и кастомного функционала.",
+  },
+  {
+    id: 6,
+    title: "ФГОС",
+    video: "/video/mp4/project/fgos.mp4",
+    url: "https://fgosonline.ru",
+    description:
+      'Улучшения сайта для услуг "Повышения квалификации". Разработали на главной странице первый баннер, поправили некоторые баги в вёрстке сайта.',
+  },
+  {
+    id: 7,
+    title: "Гипсокартон и малярка",
+    video: "/video/mp4/project/all-all.mp4",
+    url: "https://all-all.ru/",
+    description:
+      "Сайт-визитка для малярщика. Пародия на инстаграмм, с функционалом подписчиков и бесконечным авто-парсингом историй из ТГ.",
+  },
+  {
+    id: 8,
+    title: "Sattva YOGA",
+    video: "/video/mp4/project/satva.mp4",
+    url: "https://sattva-centr.ru",
+    description:
+      "Разработали сайт с функционал бронирования занятия йогой со специалистом. Сделан на чистом коде с натяжкой на wordress.",
+  },
+  {
+    id: 9,
+    title: "Trava-murava",
+    video: "/video/mp4/project/trava-murava.mp4",
+    url: "https://hotel-divnogorie.ru",
+    description:
+      "Сайт для бронирования гостевых домов в Воронеже. Сделан на плагинах wp, а так же была проведена seo оптимизация.",
+  },
+  {
+    id: 10,
+    title: "Магазин ФОП",
+    video: "/video/mp4/project/fop.mp4",
+    url: "https://fop.solncesvet.ru",
+    description:
+      "Доработка интернет-магазина для Международного педагогического портала. Сделали каталог, акции, главные баннеры и многое другое.",
+  },
+  {
+    id: 11,
+    title: "МЦОиП",
+    video: "/video/mp4/project/moip.mp4",
+    url: "https://mcoip.ru",
+    description:
+      "Частичная доработка образовательной платформы. Реализовали вёрстку некоторых блоков, исправили баги, дали рекомендации.",
+  },
+  {
+    id: 12,
+    title: "ACHARGE",
+    video: "/video/mp4/project/acharge.mp4",
+    url: "https://www.zolotarevka.ru",
+    description:
+      "Вёрстка сайта для продажи зарядных станций в РФ. Сайт сделан на чистом коде с отправкой писем на почту через php.",
+  },
+  {
+    id: 13,
+    title: "GloSkin",
+    video: "/video/mp4/project/gloSkin.mp4",
+    url: "https://gloskin.ru",
+    description:
+      "Корректировка и добавления функционала для магазин косметики. Сделали функционал доставки с добавлением стоимости, главный баннер и другое.",
   },
 ];
 

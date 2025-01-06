@@ -3,6 +3,7 @@ import Link from "next/link";
 import ServiceCard from "../ui/ServiceCard";
 import { SERVICE } from "@/constants";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -20,6 +21,12 @@ const cardVariants = {
 };
 
 const Service = () => {
+  const [amount, setAmount] = useState(0.2);
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setAmount(0.1);
+    }
+  }, []);
   return (
     <section id="service">
       <motion.div
@@ -27,7 +34,7 @@ const Service = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount }}
       >
         <div className="w-1/3 flex flex-col gap-md xxl:gap-sm xl:gap-xs lg:gap-xxs md:w-full">
           <div>

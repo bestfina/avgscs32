@@ -14,17 +14,7 @@ interface ServiceCardProps {
   active?: boolean;
 }
 
-const ServiceCard = ({
-  title,
-  description,
-  url,
-  // templatePrice,
-  // turnKeyPrice,
-  icon,
-  advantages,
-  className,
-  active,
-}: ServiceCardProps) => {
+const ServiceCard = ({ title, description, url, icon, advantages, className, active }: ServiceCardProps) => {
   return (
     <Link
       href={url}
@@ -79,20 +69,6 @@ const ServiceCard = ({
             {description}
           </p>
         </div>
-        {/* Блок цен */}
-        {/* <div className="overflow-hidden transition-[max-height] duration-300 max-h-0 group-hover:max-h-40">
-          <div className="flex justify-between gap-md border-t-2 pt-xxxs border-black p-0">
-            <div>
-              <h4>Шаблон:</h4>
-              <div className="mt-xxxxs">{templatePrice}</div>
-            </div>
-            <div className="border-l-2 border-black"></div>
-            <div>
-              <h4 className="text-end">Под ключ:</h4>
-              <div className="mt-xxxxs text-end">{turnKeyPrice}</div>
-            </div>
-          </div>
-        </div> */}
       </div>
     </Link>
   );

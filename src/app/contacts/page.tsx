@@ -13,8 +13,14 @@ const Contacts = () => {
             Для связи с нами выберите удобный для вас способ: позвоните, напишите на email, или отправьте сообщение
             через Telegram или WhatsApp. Мы обязательно ответим вам в течение рабочего дня!
           </p>
-          <div className="flex items-center gap-xxs text-4xl xl:text-3xl lg:gap-xxxs lg:text-2xl x:text-xl mt-xs md:mt-xxxs">
-            <Image src="/assets/icons/clock-contact.svg" alt="" width={40} height={40} className="lg:w-8 lg:h-8" />{" "}
+          <div className="flex items-center gap-xxs text-4xl xl:text-3xl lg:gap-xxxs lg:text-2xl x:text-xl xs:text-lg mt-xs md:mt-xxxs">
+            <Image
+              src="/assets/icons/clock-contact.svg"
+              alt=""
+              width={40}
+              height={40}
+              className="xl:w-9 xl:h-9 lg:w-8 lg:h-8"
+            />
             Ежедневно: с 9:00 до 21:00 (Мск)
           </div>
           <Contact className="flex-col xl:my-xxxs md:my-xxxxs md:gap-xxxxs x:my-0s" size="x:text-base" />
@@ -23,13 +29,12 @@ const Contacts = () => {
             Оставить заявку
           </Button>
         </div>
-        <Image
-          src="/assets/images/contact-image.jpg"
-          alt=""
-          width={1000}
-          height={300}
-          className="w-2/4 md:w-full rounded-3xl object-cover lg:h-96 x:h-80"
-        />
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A65e590b90a2e998c208acbf7a6acdfcf16f8d0d5dde35ef30da86ae7ea7e6cb9&amp;source=constructor"
+          width="100%"
+          height="400"
+          className="w-2/4 rounded-3xl md:w-full x:h-80"
+        ></iframe>
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ const NextSection = () => {
   const handleNextSectionClick = () => {
     const nextSection = document.getElementById("hero")?.nextElementSibling;
     if (nextSection?.id) {
-      smoothFn("/#" + nextSection.id, currentPath);
+      smoothFn(currentPath + "#" + nextSection.id, currentPath);
     }
   };
 

@@ -69,7 +69,7 @@ const TaimerBlock = ({
     >
       <div className="flex flex-col items-center gap-3 xxl:gap-2 xs:gap-xxxxs">
         <Image
-          src="/assets/icons/santa.svg"
+          src="/assets/icons/snowflake.svg"
           alt=""
           width={50}
           height={50}

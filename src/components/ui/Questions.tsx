@@ -22,16 +22,10 @@ const Questions = () => {
         <div key={id} className="border-2 border-black rounded-3xl shadow-sm">
           <div
             onClick={() => toggleAccordion(id)}
-            className="w-full cursor-pointer flex gap-xxxxs justify-between items-center p-4 md:p-3 text-left text-TextDark font-medium"
+            className="w-full cursor-pointer flex gap-xxxxs justify-between items-center p-4 md:p-3 text-left text-TextLight font-medium"
           >
-            <h5 className="w-fit">{title}</h5>
-            <InnerIcon
-              className={
-                activeIndex === id
-                  ? "bg-AccentLight pb-[2px]"
-                  : "bg-AccentLight/55 hover:bg-AccentLight sm:hover:bg-AccentLight/55"
-              }
-            >
+            <h5 className="w-fit text-TextDark">{title}</h5>
+            <InnerIcon className={activeIndex === id ? "bg-black pb-[2px]" : "bg-black/80 hover:bg-black"}>
               {activeIndex === id ? "−" : "+"}
             </InnerIcon>
           </div>

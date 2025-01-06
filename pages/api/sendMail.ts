@@ -6,9 +6,19 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(405).json({ message: "Метод не поддерживается" });
   }
 
-  const { name, email, tel, isAgreed } = req.body;
+  const { name, email, tel, preferredContactMethods } = req.body;
 
   try {
+    // Преобразуем preferredContactMethods в читаемый список
+
+    const contactMethods =
+      preferredContactMethods && typeof preferredContactMethods === "object"
+        ? Object.entries(preferredContactMethods)
+            .filter(([, value]) => value)
+            .map(([key]) => key) // Берем только ключи
+            .join(", ") || "Не указаны" // Преобразуем в строку или указываем "Не указаны", если пусто
+        : "Не указаны";
+
     // Настройка SMTP-транспорта
     const transporter = nodemailer.createTransport({
       host: "sm26.hosting.reg.ru",
@@ -22,10 +32,15 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     // Отправка письма
     await transporter.sendMail({
-      from: `"Cortex Digital" <your-email@domain.com>`, // Отправитель
+      from: `"Cortex Digital" <info@cortexdigital.net>`, // Отправитель
       to: "info@cortexdigital.net", // Получатель
       subject: "Новая заявка с сайта", // Тема письма
-      text: `Имя: ${name}\nEmail: ${email}\nТелефон: ${tel}\nСоглашение: ${isAgreed}`, // Текст письма
+      text: `
+        Имя: ${name || "Не указано"}
+        Email: ${email || "Не указан"}
+        Телефон: ${tel || "Не указан"}
+        Способы связи: ${contactMethods}
+      `,
     });
 
     return res.status(200).json({ message: "Письмо отправлено" });
