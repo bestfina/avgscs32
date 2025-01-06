@@ -261,52 +261,52 @@ export const FAQ: TFaq[] = [
 export const FEEDBACKS: TFeedbacks[] = [
   {
     id: 1,
-    name: "Citisit",
-    avatar: "/assets/images/avatar-kwork.webp",
-    poster: "/assets/images/poster-citisit.webp",
-  },
-  {
-    id: 2,
     name: "Glassen-IT",
     avatar: "/assets/images/avatar.webp",
     poster: "/assets/images/reviews/glassenIT.png",
     video: ["/video/mp4/reviews/GlassenIT.mp4", ""],
   },
   {
+    id: 2,
+    name: "Citisit",
+    avatar: "/assets/images/avatar-kwork.webp",
+    poster: "/assets/images/poster-citisit.webp",
+  },
+  {
     id: 3,
+    name: "Рамис Хуснуллин",
+    avatar: "/assets/images/avatar-ramis.webp",
+    poster: "/assets/images/poster-ramis.webp",
+  },
+  {
+    id: 4,
     name: "yavrep",
     avatar: "/assets/images/avatar-kwork.webp",
     poster: "/assets/images/poster-yavrep.webp",
   },
   {
-    id: 4,
+    id: 5,
     name: "Vintage",
     avatar: "/assets/images/avatar-semenov.webp",
     poster: "/assets/images/poster-semenov.webp",
   },
   {
-    id: 5,
+    id: 6,
     name: "az-web",
     avatar: "/assets/images/avatar-kwork.webp",
     poster: "/assets/images/poster-az_web.webp",
   },
   {
-    id: 6,
+    id: 7,
     name: "denisE82",
     avatar: "/assets/images/avatar-kwork.webp",
     poster: "/assets/images/poster-denis.webp",
   },
   {
-    id: 7,
+    id: 8,
     name: "A.Д.Семенов",
     avatar: "/assets/images/avatar-vintage.webp",
     poster: "/assets/images/poster-vintage.webp",
-  },
-  {
-    id: 8,
-    name: "Рамис Хуснуллин",
-    avatar: "/assets/images/avatar-ramis.webp",
-    poster: "/assets/images/poster-ramis.webp",
   },
 ];
 

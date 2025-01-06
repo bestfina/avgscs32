@@ -1,17 +1,33 @@
-import Advantages from "@/components/sections/Advantages";
 import Faq from "@/components/sections/Faq";
+import Feedback from "@/components/sections/Feedback";
 import Forma from "@/components/sections/Forma";
-import HeroEcommerce from "@/components/sections/HeroEcommerce";
+import Hero from "@/components/sections/Hero";
 import Portfolio from "@/components/sections/Portfolio";
 
 const Corporate = () => {
   return (
     <>
-      <HeroEcommerce />
-      <Advantages />
+      <Hero title="Корпоративные сайты, которые работают на ваш бизнес" video="/video/mp4/bg-corporate.mp4">
+        <p className="text-TextLight">
+          Корпоративный сайт — это лицо вашей компании в интернете. Мы делаем его привлекательным, функциональным и
+          запоминающимся.
+        </p>
+        <div className="text-TextLight flex gap-xxs">
+          <div>
+            Шаблон:
+            <div className="font-bold"> от 30.000 рублей</div>
+          </div>
+          <div className="w-px bg-white"></div>
+          <div>
+            Под ключ:
+            <div className="font-bold"> от 120.000 рублей</div>
+          </div>
+        </div>
+      </Hero>
       <Portfolio />
-      <Forma />
       <Faq />
+      <Forma />
+      <Feedback />
     </>
   );
 };
