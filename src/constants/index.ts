@@ -73,7 +73,7 @@ export const SERVICE: TService[] = [
     title: "Корпоративный сайт",
     icon: "/assets/icons/office-briefcase.svg",
     description: `Создаём корпоративные сайты, которые отражают стиль и ценности вашей компании, обеспечивая удобство для клиентов и партнёров.`,
-    url: "#",
+    url: "/corporate",
     advantages: ["Фирменный стиль", "Интеграция с CRM", "Сайт для бизнеса"],
   },
   {
@@ -81,7 +81,7 @@ export const SERVICE: TService[] = [
     title: "Лендинг",
     icon: "/assets/icons/web-page.svg",
     description: `Мы делаем эффективные лендинги, которые увеличивают конверсии.`,
-    url: "#",
+    url: "/landing-page",
     advantages: ["Быстрый старт", "Высокая конверсия"],
   },
   {
@@ -89,7 +89,7 @@ export const SERVICE: TService[] = [
     title: "Сайт-визитка",
     icon: "/assets/icons/business-card.svg",
     description: `Сделаем стильные и информативные сайты-визитки.`,
-    url: "#",
+    url: "/visiting-page",
     advantages: ["Личный бренд", "Презентация"],
   },
   {
@@ -274,9 +274,9 @@ export const FEEDBACKS: TFeedbacks[] = [
   },
   {
     id: 3,
-    name: "denisE82",
+    name: "yavrep",
     avatar: "/assets/images/avatar-kwork.webp",
-    poster: "/assets/images/poster-denis.webp",
+    poster: "/assets/images/poster-yavrep.webp",
   },
   {
     id: 4,
@@ -292,9 +292,9 @@ export const FEEDBACKS: TFeedbacks[] = [
   },
   {
     id: 6,
-    name: "yavrep",
+    name: "denisE82",
     avatar: "/assets/images/avatar-kwork.webp",
-    poster: "/assets/images/poster-yavrep.webp",
+    poster: "/assets/images/poster-denis.webp",
   },
   {
     id: 7,

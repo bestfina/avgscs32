@@ -46,7 +46,11 @@ const Service = () => {
           <motion.div className="flex flex-wrap justify-between gap-xxxs h-full" variants={containerVariants}>
             {SERVICE.map(({ id, title, description, url, icon, advantages }) =>
               id === 1 ? (
-                <motion.div key={id} variants={cardVariants}>
+                <motion.div key={id} className="md:w-[49%] sm:w-full" variants={cardVariants}>
+                  <ServiceCard title={title} description={description} url={url} advantages={advantages} icon={icon} />
+                </motion.div>
+              ) : id === 5 ? (
+                <motion.div key={id} variants={cardVariants} className="w-full hidden md:block">
                   <ServiceCard
                     title={title}
                     description={description}
@@ -57,7 +61,7 @@ const Service = () => {
                   />
                 </motion.div>
               ) : (
-                <motion.div key={id} variants={cardVariants} className="md:w-[49%] x:w-full hidden md:block">
+                <motion.div key={id} variants={cardVariants} className="md:w-[49%] sm:w-full hidden md:block">
                   <ServiceCard title={title} description={description} url={url} advantages={advantages} icon={icon} />
                 </motion.div>
               )
@@ -69,7 +73,7 @@ const Service = () => {
             <ServiceCard
               title="Корпоративный сайт"
               description="Создаём корпоративные сайты, которые отражают стиль и ценности вашей компании, обеспечивая удобство для клиентов и партнёров."
-              url="/"
+              url="/corporate"
               advantages={["Фирменный стиль", "Интеграция с CRM", "Сайт для бизнеса"]}
               icon="/assets/icons/office-briefcase.svg"
             />
@@ -90,6 +94,7 @@ const Service = () => {
               url="/"
               advantages={["Тех. поддержка", "Seo", "Яндекс директ", "Erp"]}
               icon="/assets/icons/support.svg"
+              active
             />
           </motion.div>
         </div>
