@@ -8,7 +8,11 @@ import Portfolio from "@/components/sections/Portfolio";
 const VisitingPage = () => {
   return (
     <>
-      <Hero title="Сайт-визитка, который выгодно представляет ваш бизнес" video="/video/mp4/bg-visiting.mp4">
+      <Hero
+        title="Сайт-визитка, который выгодно представляет ваш бизнес"
+        video="/video/mp4/bg-visiting.mp4"
+        poster="/assets/images/poster/visiting-page.png"
+      >
         <p className="text-TextLight">
           Ваш бизнес заслуживает профессионального представительства в интернете. Мы создаём сайты-визитки, которые
           выглядят стильно и легко воспринимаются.

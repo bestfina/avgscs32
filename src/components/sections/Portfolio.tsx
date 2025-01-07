@@ -1,4 +1,4 @@
-import { CASE_MAIN } from "@/constants";
+import { CASE } from "@/constants";
 import Cases from "../ui/Cases";
 
 const Portfolio = () => {
@@ -6,7 +6,7 @@ const Portfolio = () => {
     <section id="portfolio">
       <div className="container flex flex-col">
         <h2>Проекты, которыми мы гордимся</h2>
-        <Cases caseArr={CASE_MAIN} />
+        <Cases caseArr={CASE.slice(0, 3)} />
       </div>
     </section>
   );

@@ -17,6 +17,7 @@ interface Description {
 
 export type TCase = BaseEntity & {
   video: Image;
+  poster: string;
   url: URL;
   description: string;
 };

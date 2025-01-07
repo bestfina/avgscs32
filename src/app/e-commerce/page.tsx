@@ -7,7 +7,11 @@ import Portfolio from "@/components/sections/Portfolio";
 const Ecommerce = () => {
   return (
     <>
-      <Hero video="/video/mp4/bg-ecommerce.mp4" title="Разработаем интернет-магазин, который действительно продает">
+      <Hero
+        video="/video/mp4/bg-ecommerce.mp4"
+        title="Разработаем интернет-магазин, который действительно продает"
+        poster="/assets/images/poster/e-commerce.png"
+      >
         <p className="text-TextLight">
           Мы разрабатываем интернет-магазины, которые идеально подходят вашему бизнесу: от современных интерфейсов до
           автоматизации продаж. Вы получите уникальный дизайн, высокую скорость и максимальную прибыль.

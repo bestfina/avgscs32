@@ -328,11 +328,12 @@ export const FIELDS: TFields[] = [
   },
 ];
 
-export const CASE_MAIN: TCase[] = [
+export const CASE: TCase[] = [
   {
     id: 1,
     title: "Антон Бавин",
     video: "/video/mp4/project/bavin.mp4",
+    poster: "/assets/images/poster/bavin.png",
     url: "https://bavin.pro",
     description:
       'Лендинг для продажи услуг "Освобождение от долгов" на голом коде с интеграциями различных аналитик и настройкой заявок на bitrix24.',
@@ -341,140 +342,109 @@ export const CASE_MAIN: TCase[] = [
     id: 2,
     title: "Бизнес Совет",
     video: "/video/mp4/project/bisovet.mp4",
+    poster: "/assets/images/poster/bisovet.png",
     url: "https://bisovet.pro",
     description:
       "Корпоративный сайт для B2B юридической компании. Сайт сделан на wordpress с кастомными полями для удобства наполнения.",
   },
   {
     id: 3,
-    title: "ФГОС",
-    video: "/video/mp4/project/fgos.mp4",
-    url: "https://fgosonline.ru",
+    title: "МЦОиП",
+    video: "/video/mp4/project/moip.mp4",
+    poster: "/assets/images/poster/moip.png",
+    url: "https://mcoip.ru",
     description:
-      'Улучшения сайта для услуг "Повышения квалификации". Разработали на главной странице первый баннер, поправили некоторые баги в вёрстке сайта.',
+      "Частичная доработка образовательной платформы. Реализовали вёрстку некоторых блоков, исправили баги, дали рекомендации.",
   },
   {
     id: 4,
     title: "CyberTribe",
     video: "/video/mp4/project/cybertribe.mp4",
+    poster: "/assets/images/poster/cyber.png",
     url: "https://www.cybertribe.uk",
     description:
       "Лендинг для крупной маркетинговой компании. Разработан на чистом коде без трудного функционала, но зато с хорошим ux/ui для ЦА.",
   },
   {
     id: 5,
-    title: "ТЦ Малибу",
-    video: "/video/mp4/project/malibu.mp4",
-    url: "https://malibu-trc.ru",
+    title: "GloSkin",
+    video: "/video/mp4/project/gloSkin.mp4",
+    poster: "/assets/images/poster/gloskin.png",
+    url: "https://gloskin.ru",
     description:
-      "Корпоративный сайт для огромного торгового центра в Липецке. Сделан на wordress с помощью конструктора elementor и кастомного функционала.",
-  },
-];
-
-export const CASE_FULL: TCase[] = [
-  {
-    id: 1,
-    title: "Антон Бавин",
-    video: "/video/mp4/project/bavin.mp4",
-    url: "https://bavin.pro",
-    description:
-      'Лендинг для продажи услуг "Освобождение от долгов" на голом коде с интеграциями различных аналитик и настройкой заявок на bitrix24.',
-  },
-  {
-    id: 2,
-    title: "Бизнес Совет",
-    video: "/video/mp4/project/bisovet.mp4",
-    url: "https://bisovet.pro",
-    description:
-      "Корпоративный сайт для B2B юридической компании. Сайт сделан на wordpress с кастомными полями для удобства наполнения.",
-  },
-  {
-    id: 3,
-    title: "Vintage Cottage",
-    video: "/video/mp4/project/vintageCottage.mp4",
-    url: "https://vintage-cottage.eu",
-    description:
-      "Международный интернет-магазин с товарами для дома. Сделан на площадке woocommerce, мультивалютный и мультиязычный.",
-  },
-  {
-    id: 4,
-    title: "CyberTribe",
-    video: "/video/mp4/project/cybertribe.mp4",
-    url: "https://www.cybertribe.uk",
-    description:
-      "Лендинг для крупной маркетинговой компании. Разработан на чистом коде без трудного функционала, но зато с хорошим ux/ui для ЦА.",
-  },
-  {
-    id: 5,
-    title: "ТЦ Малибу",
-    video: "/video/mp4/project/malibu.mp4",
-    url: "https://malibu-trc.ru",
-    description:
-      "Корпоративный сайт для огромного торгового центра в Липецке. Сделан на wordress с помощью конструктора elementor и кастомного функционала.",
+      "Корректировка и добавления функционала для магазин косметики. Сделали функционал доставки с добавлением стоимости, главный баннер и другое.",
   },
   {
     id: 6,
     title: "ФГОС",
     video: "/video/mp4/project/fgos.mp4",
+    poster: "/assets/images/poster/fgos.png",
     url: "https://fgosonline.ru",
     description:
       'Улучшения сайта для услуг "Повышения квалификации". Разработали на главной странице первый баннер, поправили некоторые баги в вёрстке сайта.',
   },
   {
     id: 7,
-    title: "Гипсокартон и малярка",
-    video: "/video/mp4/project/all-all.mp4",
-    url: "https://all-all.ru/",
+    title: "Vintage Cottage",
+    video: "/video/mp4/project/vintageCottage.mp4",
+    poster: "/assets/images/poster/vintage.png",
+    url: "https://vintage-cottage.eu",
     description:
-      "Сайт-визитка для малярщика. Пародия на инстаграмм, с функционалом подписчиков и бесконечным авто-парсингом историй из ТГ.",
+      "Международный интернет-магазин с товарами для дома. Сделан на площадке woocommerce, мультивалютный и мультиязычный.",
   },
   {
     id: 8,
+    title: "ТЦ Малибу",
+    video: "/video/mp4/project/malibu.mp4",
+    poster: "/assets/images/poster/malibu.png",
+    url: "https://malibu-trc.ru",
+    description:
+      "Корпоративный сайт для огромного торгового центра в Липецке. Сделан на wordress с помощью конструктора elementor и кастомного функционала.",
+  },
+  {
+    id: 9,
     title: "Sattva YOGA",
     video: "/video/mp4/project/satva.mp4",
+    poster: "/assets/images/poster/sattva.png",
     url: "https://sattva-centr.ru",
     description:
       "Разработали сайт с функционал бронирования занятия йогой со специалистом. Сделан на чистом коде с натяжкой на wordress.",
   },
   {
-    id: 9,
-    title: "Trava-murava",
-    video: "/video/mp4/project/trava-murava.mp4",
-    url: "https://hotel-divnogorie.ru",
-    description:
-      "Сайт для бронирования гостевых домов в Воронеже. Сделан на плагинах wp, а так же была проведена seo оптимизация.",
-  },
-  {
     id: 10,
     title: "Магазин ФОП",
     video: "/video/mp4/project/fop.mp4",
+    poster: "/assets/images/poster/fop.png",
     url: "https://fop.solncesvet.ru",
     description:
       "Доработка интернет-магазина для Международного педагогического портала. Сделали каталог, акции, главные баннеры и многое другое.",
   },
   {
     id: 11,
-    title: "МЦОиП",
-    video: "/video/mp4/project/moip.mp4",
-    url: "https://mcoip.ru",
+    title: "Гипсокартон и малярка",
+    video: "/video/mp4/project/all-all.mp4",
+    poster: "/assets/images/poster/all.png",
+    url: "https://all-all.ru/",
     description:
-      "Частичная доработка образовательной платформы. Реализовали вёрстку некоторых блоков, исправили баги, дали рекомендации.",
+      "Сайт-визитка для малярщика. Пародия на инстаграмм, с функционалом подписчиков и бесконечным авто-парсингом историй из ТГ.",
   },
   {
     id: 12,
     title: "ACHARGE",
     video: "/video/mp4/project/acharge.mp4",
+    poster: "/assets/images/poster/acharge.png",
     url: "https://www.zolotarevka.ru",
     description:
       "Вёрстка сайта для продажи зарядных станций в РФ. Сайт сделан на чистом коде с отправкой писем на почту через php.",
   },
   {
     id: 13,
-    title: "GloSkin",
-    video: "/video/mp4/project/gloSkin.mp4",
-    url: "https://gloskin.ru",
+    title: "Trava-murava",
+    video: "/video/mp4/project/trava-murava.mp4",
+    poster: "/assets/images/poster/trava-murava.png",
+    url: "https://hotel-divnogorie.ru",
     description:
-      "Корректировка и добавления функционала для магазин косметики. Сделали функционал доставки с добавлением стоимости, главный баннер и другое.",
+      "Сайт для бронирования гостевых домов в Воронеже. Сделан на плагинах wp, а так же была проведена seo оптимизация.",
   },
 ];
 

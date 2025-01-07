@@ -7,7 +7,11 @@ import Portfolio from "@/components/sections/Portfolio";
 const Corporate = () => {
   return (
     <>
-      <Hero title="Корпоративные сайты, которые работают на ваш бизнес" video="/video/mp4/bg-corporate.mp4">
+      <Hero
+        title="Корпоративные сайты, которые работают на ваш бизнес"
+        video="/video/mp4/bg-corporate.mp4"
+        poster="/assets/images/poster/corporate.png"
+      >
         <p className="text-TextLight">
           Корпоративный сайт — это лицо вашей компании в интернете. Мы делаем его привлекательным, функциональным и
           запоминающимся.
