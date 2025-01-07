@@ -16,7 +16,6 @@ const CallbackWidget = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Анимация кнопки для привлечения внимания
   const attentionVariants = {
     normal: { rotate: 0 },
     attention: {
@@ -25,7 +24,6 @@ const CallbackWidget = () => {
     },
   };
 
-  // Анимации для меню
   const menuVariants = {
     hidden: { opacity: 0, y: 20, scale: 0.9 },
     visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.3, ease: "easeOut" } },
@@ -60,7 +58,7 @@ const CallbackWidget = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
               >
-                <Image src="/assets/icons/telegram.svg" alt="Telegram" width={24} height={24} />
+                <Image src="/assets/icons/telegram.svg" alt="Telegram" loading="eager" width={24} height={24} />
                 Telegram
               </Link>
               <Link
@@ -69,18 +67,18 @@ const CallbackWidget = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
               >
-                <Image src="/assets/icons/whatsApp.svg" alt="WhatsApp" width={24} height={24} />
+                <Image src="/assets/icons/whatsApp.svg" alt="WhatsApp" loading="eager" width={24} height={24} />
                 WhatsApp
               </Link>
               <Link href="tel:+7(995)020-33-85" className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg">
-                <Image src="/assets/icons/phone.svg" alt="Phone" width={24} height={24} />
+                <Image src="/assets/icons/phone.svg" alt="телефон" loading="eager" width={24} height={24} />
                 Телефон
               </Link>
               <Link
                 href="mailto:info@cortexdigital.net"
                 className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
               >
-                <Image src="/assets/icons/email.svg" alt="Email" width={24} height={24} />
+                <Image src="/assets/icons/email.svg" alt="почта" loading="eager" width={24} height={24} />
                 Почта
               </Link>
             </motion.div>
