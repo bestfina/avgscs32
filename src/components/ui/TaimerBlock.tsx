@@ -11,17 +11,11 @@ const SECONDS_IN_A_MINUTE = 60;
 
 interface TaimerBlockProps {
   className?: string;
-  text?: string;
   title?: string;
   textBtn?: string;
 }
 
-const TaimerBlock = ({
-  className,
-  text = "Ваш сайт не даёт нужных результатов? Мы проведём бесплатный аудит и покажем, что можно улучшить!",
-  title = "Бесплатный аудит сайта",
-  textBtn = "Получить аудит",
-}: TaimerBlockProps) => {
+const TaimerBlock = ({ className, title = "Бесплатный аудит сайта", textBtn = "Получить аудит" }: TaimerBlockProps) => {
   const calculateTimeLeft = () => {
     const now = new Date();
     const nextYear = now.getFullYear();
@@ -62,8 +56,8 @@ const TaimerBlock = ({
         ease: "easeInOut",
       }}
       className={twMerge(
-        `flex flex-col px-xs w-2/5 lg:w-[45%] md:w-full h-fit gap-sm xl:gap-xs lg:gap-xxs md:gap-xxs xs:gap-xxxs
-         items-center py-8 xl:p-[18px] md:p-3 text-TextLight bg-white/15 backdrop-blur-sm rounded-3xl`,
+        `flex flex-col px-xs w-2/5 lg:w-[45%] md:w-full h-fit gap-sm xl:gap-xs lg:gap-xxs md:gap-xxs
+         items-center py-8 xl:py-[18px] xl:px-10 md:p-3 text-TextLight bg-white/15 backdrop-blur-sm rounded-3xl`,
         className
       )}
     >
@@ -76,8 +70,7 @@ const TaimerBlock = ({
           loading="eager"
           className="sm:w-10 sm:h-10"
         />
-        <h6 className="font-semibold text-center text-3xl xl:text-2xl xl:text-[22px] md:text-xl sm:text-xl">{title}</h6>
-        <p className="max-w-[580px] xl:max-w-[500px] text-center xl:text-base sm:text-sm">{text}</p>
+        <h6 className="font-semibold text-center text-3xl xl:text-2xl md:text-xl x:text-lg">{title}</h6>
       </div>
       <div
         className="flex items-center gap-sm xl:gap-xs md:gap-xxs sm:gap-3 text-center text-TextLight timer-text"

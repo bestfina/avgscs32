@@ -16,10 +16,13 @@ const Contact = ({ className, size, atTop }: ContactProps) => {
         className
       )}
     >
-      <Link href="mailto:info@cortexdigital.net" className={twMerge("text-2xl lg:text-xl", size)}>
+      <Link
+        href="mailto:info@cortexdigital.net"
+        className={twMerge("text-2xl lg:text-xl sm:text-lg xs:text-base", size)}
+      >
         info@cortexdigital.net
       </Link>
-      <Link href="tel:+7(995)020-33-85" className={twMerge("text-2xl lg:text-xl", size)}>
+      <Link href="tel:+7(995)020-33-85" className={twMerge("text-2xl lg:text-xl sm:text-lg xs:text-base", size)}>
         +7 (995) 020-33-85
       </Link>
     </div>

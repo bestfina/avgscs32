@@ -31,11 +31,7 @@ const Hero = ({ video, title, children, poster }: HeroProps) => (
           <h1 className="text-TextLight xxl:max-w-[900px] xl:max-w-[775px] lg:max-w-[625px] md:max-w-full">{title}</h1>
           {children}
         </div>
-        <TaimerBlock
-          title="Cкидка 15% до 15 января"
-          text="Успейте запустить прибыльный сайт и начните зарабатывать уже в следующем месяце!"
-          textBtn="Забронировать скидку"
-        />
+        <TaimerBlock title="Новогодняя скидка 15%" textBtn="Забронировать скидку" />
         <NextSection />
       </div>
     </div>
