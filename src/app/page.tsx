@@ -8,7 +8,11 @@ import Image from "next/image";
 
 const Home = () => (
   <>
-    <Hero video="/video/mp4/bg-hero.mp4" title="Создаём прибыльные сайты – от идеи до запуска">
+    <Hero
+      video="/video/mp4/bg-hero.mp4"
+      title="Создаём прибыльные сайты – от идеи до запуска"
+      poster="/assets/images/bg.png"
+    >
       <div className="flex flex-wrap justify-between gap-xs xl:gap-xxs sm:gap-xxxs">
         <ul className="flex flex-col gap-xs">
           <li className="advantages-main">

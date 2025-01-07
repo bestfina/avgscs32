@@ -5,10 +5,11 @@ import { ReactNode } from "react";
 interface HeroProps {
   video: string;
   title: string;
+  poster: string;
   children: ReactNode;
 }
 
-const Hero = ({ video, title, children }: HeroProps) => (
+const Hero = ({ video, title, children, poster }: HeroProps) => (
   <section id="hero" className="relative bg-black flex items-center bg-no-repeat bg-cover">
     <video
       className="absolute top-0 left-0 h-full w-full object-cover"
@@ -17,6 +18,7 @@ const Hero = ({ video, title, children }: HeroProps) => (
       muted
       playsInline
       loop
+      poster={poster}
     >
       <source src={video} type="video/mp4" />
     </video>
