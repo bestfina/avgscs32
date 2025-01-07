@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 interface HeroProps {
   video: string;
   title: string;
-  poster: string;
+  poster?: string;
   children: ReactNode;
 }
 
