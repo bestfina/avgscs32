@@ -11,8 +11,12 @@ const Home = () => (
     <Hero
       video="/video/mp4/bg-hero.mp4"
       title="Создаём прибыльные сайты – от идеи до запуска"
-      poster="/assets/images/poster/hero.png"
+      poster="/assets/images/poster/hero.webp"
     >
+      {/* <p className="text-TextLight">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laborum rerum pariatur nulla alias quam culpa
+        quibusdam repudiandae quaerat. Enim consequuntur non sit illum harum neque aspernatur quia tenetur quos?
+      </p> */}
       <div className="flex flex-wrap justify-between gap-xs xl:gap-xxs sm:gap-xxxs">
         <ul className="flex flex-col gap-xs">
           <li className="advantages-main">
