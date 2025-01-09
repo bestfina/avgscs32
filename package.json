@@ -4,13 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "cross-env ANALYZE=true next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "^15.1.4",
     "framer-motion": "^11.13.3",
     "gsap": "^3.12.5",
     "next": "^14.2.22",
