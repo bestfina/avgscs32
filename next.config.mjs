@@ -1,4 +1,4 @@
-const nextConfig = withBundleAnalyzer({
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
@@ -26,6 +26,6 @@ const nextConfig = withBundleAnalyzer({
       },
     ];
   },
-});
+};
 
 export default nextConfig;
