@@ -333,7 +333,7 @@ export const CASE: TCase[] = [
     id: 1,
     title: "Антон Бавин",
     video: "/video/mp4/project/bavin.mp4",
-    poster: "/assets/images/poster/bavin.png",
+    poster: "/assets/images/poster/bavin.webp",
     url: "https://bavin.pro",
     description:
       'Лендинг для продажи услуг "Освобождение от долгов" на голом коде с интеграциями различных аналитик и настройкой заявок на bitrix24.',
@@ -342,7 +342,7 @@ export const CASE: TCase[] = [
     id: 2,
     title: "Бизнес Совет",
     video: "/video/mp4/project/bisovet.mp4",
-    poster: "/assets/images/poster/bisovet.png",
+    poster: "/assets/images/poster/bisovet.webp",
     url: "https://bisovet.pro",
     description:
       "Корпоративный сайт для B2B юридической компании. Сайт сделан на wordpress с кастомными полями для удобства наполнения.",
@@ -351,7 +351,7 @@ export const CASE: TCase[] = [
     id: 3,
     title: "МЦОиП",
     video: "/video/mp4/project/moip.mp4",
-    poster: "/assets/images/poster/moip.png",
+    poster: "/assets/images/poster/moip.webp",
     url: "https://mcoip.ru",
     description:
       "Частичная доработка образовательной платформы. Реализовали вёрстку некоторых блоков, исправили баги, дали рекомендации.",
@@ -360,7 +360,7 @@ export const CASE: TCase[] = [
     id: 4,
     title: "CyberTribe",
     video: "/video/mp4/project/cybertribe.mp4",
-    poster: "/assets/images/poster/cyber.png",
+    poster: "/assets/images/poster/cyber.webp",
     url: "https://www.cybertribe.uk",
     description:
       "Лендинг для крупной маркетинговой компании. Разработан на чистом коде без трудного функционала, но зато с хорошим ux/ui для ЦА.",
@@ -369,7 +369,7 @@ export const CASE: TCase[] = [
     id: 5,
     title: "GloSkin",
     video: "/video/mp4/project/gloSkin.mp4",
-    poster: "/assets/images/poster/gloskin.png",
+    poster: "/assets/images/poster/gloskin.webp",
     url: "https://gloskin.ru",
     description:
       "Корректировка и добавления функционала для магазин косметики. Сделали функционал доставки с добавлением стоимости, главный баннер и другое.",
@@ -378,7 +378,7 @@ export const CASE: TCase[] = [
     id: 6,
     title: "ФГОС",
     video: "/video/mp4/project/fgos.mp4",
-    poster: "/assets/images/poster/fgos.png",
+    poster: "/assets/images/poster/fgos.webp",
     url: "https://fgosonline.ru",
     description:
       'Улучшения сайта для услуг "Повышения квалификации". Разработали на главной странице первый баннер, поправили некоторые баги в вёрстке сайта.',
@@ -387,7 +387,7 @@ export const CASE: TCase[] = [
     id: 7,
     title: "Vintage Cottage",
     video: "/video/mp4/project/vintageCottage.mp4",
-    poster: "/assets/images/poster/vintage.png",
+    poster: "/assets/images/poster/vintage.webp",
     url: "https://vintage-cottage.eu",
     description:
       "Международный интернет-магазин с товарами для дома. Сделан на площадке woocommerce, мультивалютный и мультиязычный.",
@@ -396,7 +396,7 @@ export const CASE: TCase[] = [
     id: 8,
     title: "ТЦ Малибу",
     video: "/video/mp4/project/malibu.mp4",
-    poster: "/assets/images/poster/malibu.png",
+    poster: "/assets/images/poster/malibu.webp",
     url: "https://malibu-trc.ru",
     description:
       "Корпоративный сайт для огромного торгового центра в Липецке. Сделан на wordress с помощью конструктора elementor и кастомного функционала.",
@@ -405,7 +405,7 @@ export const CASE: TCase[] = [
     id: 9,
     title: "Sattva YOGA",
     video: "/video/mp4/project/satva.mp4",
-    poster: "/assets/images/poster/sattva.png",
+    poster: "/assets/images/poster/sattva.webp",
     url: "https://sattva-centr.ru",
     description:
       "Разработали сайт с функционал бронирования занятия йогой со специалистом. Сделан на чистом коде с натяжкой на wordress.",
@@ -414,7 +414,7 @@ export const CASE: TCase[] = [
     id: 10,
     title: "Магазин ФОП",
     video: "/video/mp4/project/fop.mp4",
-    poster: "/assets/images/poster/fop.png",
+    poster: "/assets/images/poster/fop.webp",
     url: "https://fop.solncesvet.ru",
     description:
       "Доработка интернет-магазина для Международного педагогического портала. Сделали каталог, акции, главные баннеры и многое другое.",
@@ -423,7 +423,7 @@ export const CASE: TCase[] = [
     id: 11,
     title: "Гипсокартон и малярка",
     video: "/video/mp4/project/all-all.mp4",
-    poster: "/assets/images/poster/all.png",
+    poster: "/assets/images/poster/all.webp",
     url: "https://all-all.ru/",
     description:
       "Сайт-визитка для малярщика. Пародия на инстаграмм, с функционалом подписчиков и бесконечным авто-парсингом историй из ТГ.",
@@ -432,7 +432,7 @@ export const CASE: TCase[] = [
     id: 12,
     title: "ACHARGE",
     video: "/video/mp4/project/acharge.mp4",
-    poster: "/assets/images/poster/acharge.png",
+    poster: "/assets/images/poster/acharge.webp",
     url: "https://www.zolotarevka.ru",
     description:
       "Вёрстка сайта для продажи зарядных станций в РФ. Сайт сделан на чистом коде с отправкой писем на почту через php.",
@@ -441,7 +441,7 @@ export const CASE: TCase[] = [
     id: 13,
     title: "Trava-murava",
     video: "/video/mp4/project/trava-murava.mp4",
-    poster: "/assets/images/poster/trava-murava.png",
+    poster: "/assets/images/poster/trava-murava.webp",
     url: "https://hotel-divnogorie.ru",
     description:
       "Сайт для бронирования гостевых домов в Воронеже. Сделан на плагинах wp, а так же была проведена seo оптимизация.",

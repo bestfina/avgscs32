@@ -21,7 +21,7 @@ const Logo = ({ big = false, atTop, isOpen }: LogoProps) => {
       onClick={() => smoothFn("/#hero", currentPath)}
     >
       <Image
-        src="/assets/images/logo.png"
+        src="/assets/images/logo.webp"
         alt="logo"
         width={50}
         height={50}
