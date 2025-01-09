@@ -25,7 +25,7 @@ const Home = () => (
               alt=""
               width={50}
               height={50}
-              loading="eager"
+              priority
               className="advantages-main-image"
             />
             Подробный отчёт по каждому этапу проекта без скрытых доплат
@@ -36,7 +36,7 @@ const Home = () => (
               alt=""
               width={50}
               height={50}
-              loading="eager"
+              priority
               className="advantages-main-image"
             />
             Индивидуальные решения для роста и масштабирования бизнеса
@@ -47,7 +47,7 @@ const Home = () => (
               alt=""
               width={50}
               height={50}
-              loading="eager"
+              priority
               className="advantages-main-image"
             />
             Гарантируем рост клиентов на 20-50% уже с первого месяца, иначе вернём деньги

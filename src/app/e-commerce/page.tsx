@@ -10,7 +10,7 @@ const Ecommerce = () => {
       <Hero
         video="/video/mp4/bg-ecommerce.mp4"
         title="Разработаем интернет-магазин, который действительно продает"
-        poster="/assets/images/poster/e-commerce.png"
+        poster="/assets/images/poster/e-commerce.webp"
       >
         <p className="text-TextLight">
           Мы разрабатываем интернет-магазины, которые идеально подходят вашему бизнесу: от современных интерфейсов до

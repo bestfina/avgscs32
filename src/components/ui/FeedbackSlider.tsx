@@ -42,10 +42,9 @@ const FeedbackSlider = () => {
         <SwiperSlide key={id}>
           <div className="flex flex-col border border-TextDark rounded-3xl h-[650px] xxl:h-[550px] lg:h-[480px] sm:h-[400px] overflow-hidden">
             <div className="flex items-center gap-xxxs pl-md xl:pl-sm sm:pl-xxs sm:gap-xxxxs py-3 border-b-2 border-TextDark">
-              <div
-                style={{ backgroundImage: `url("${avatar}")` }}
-                className="w-11 h-11 sm:w-9 sm:h-9 bg-black rounded-full bg-center bg-cover"
-              ></div>
+              <div className="w-11 h-11 sm:w-9 sm:h-9 bg-black overflow-hidden rounded-full">
+                <Image src={avatar} alt={"аватар клиента:" + name} width={44} height={44} priority={false} />
+              </div>
               {name}
             </div>
             <div
@@ -72,6 +71,7 @@ const FeedbackSlider = () => {
                         width={1000}
                         height={650}
                         alt="постер"
+                        priority={false}
                         className="w-full h-full max-h-[650px] lg:max-h-[500px] object-contain"
                       />
                     )
