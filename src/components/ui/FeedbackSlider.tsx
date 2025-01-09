@@ -47,12 +47,17 @@ const FeedbackSlider = () => {
               </div>
               {name}
             </div>
-            <div
-              style={{ backgroundImage: `url("${poster}")` }}
-              className="flex items-center justify-center bg-cover bg-left-bottom h-full"
-            >
+            <div className="flex items-center justify-center bg-cover bg-left-bottom h-full overflow-hidden relative">
+              <Image
+                src={poster}
+                alt=""
+                width={800}
+                height={650}
+                priority={false}
+                className="absolute w-full h-full object-cover"
+              />
               <InnerIcon
-                className="pl-1 bg-AccentDark hover:scale-[1.20]"
+                className="pl-1 bg-AccentDark hover:scale-[1.20] z-10"
                 onClick={() =>
                   openPopup(
                     video ? (
