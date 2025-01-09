@@ -9,12 +9,10 @@ const Landing = () => {
     <>
       <Hero
         title="Эффективные лендинги для мгновенных продаж и заявок"
-        video="/video/mp4/bg-landing.mp4"
+        video={["", "/video/mp4/bg-landing.mp4"]}
+        description="Доверяйте нам создание лендинга, который не просто выглядит красиво, а работает на результат для вас 24 на 7."
         poster="/assets/images/poster/langing.webp"
       >
-        <p className="text-TextLight">
-          Доверяйте нам создание лендинга, который не просто выглядит красиво, а работает на результат для вас 24 на 7.
-        </p>
         <div className="text-TextLight flex gap-xxs">
           <div>
             Шаблон:

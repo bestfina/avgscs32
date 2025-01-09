@@ -1,16 +1,16 @@
 import Image from "next/image";
 import NextSection from "../ui/NextSection";
-import TaimerBlock from "../ui/TaimerBlock";
 import { ReactNode } from "react";
 
 interface HeroProps {
-  video: string;
+  video: string[];
   title: string;
+  description: string;
   poster: string;
   children: ReactNode;
 }
 
-const Hero = ({ video, title, children, poster }: HeroProps) => (
+const Hero = ({ video, title, description, children, poster }: HeroProps) => (
   <section id="hero" className="relative bg-black flex items-center bg-no-repeat bg-cover">
     <Image
       src={poster}
@@ -29,23 +29,19 @@ const Hero = ({ video, title, children, poster }: HeroProps) => (
       loop
       preload="none"
     >
-      <source src={video} type="video/mp4" />
+      <source src={video[0]} type="video/webm" />
+      <source src={video[1]} type="video/mp4" />
     </video>
     <div
-      className="relative flex items-center w-full h-screen bg-opacity-60
-       bg-black min-h-[800px] max-h-[1180px] xl:min-h-[630px] md:h-fit md:min-h-fit md:pt-28 sm:pt-24 md:pb-sm"
+      className="relative flex items-center w-full h-screen bg-opacity-45
+       bg-black min-h-[800px] max-h-[1180px] xl:min-h-[630px] md:h-fit"
     >
       <div className="container gap-20 md:flex-col md:items-start sm:h-fit h-full flex items-center">
-        <div className="flex flex-col w-3/5 lg:w-[55%] gap-md xl:gap-sm sm:gap-xs md:w-full">
-          {/* <div className="flex gap-xs">
-            <div className="bg-slate-100 rounded-full px-xxs py-xxxxs">Скорость</div>
-            <div className="bg-slate-100 rounded-full px-xxs py-xxxxs">Качество</div>
-            <div className="bg-slate-100 rounded-full px-xxs py-xxxxs">Надежность</div>
-          </div> */}
+        <div className="flex flex-col w-3/5 md:w-3/4 sm:w-full">
           <h1 className="text-TextLight xxl:max-w-[900px] xl:max-w-[775px] lg:max-w-[625px] md:max-w-full">{title}</h1>
+          <p className="text-TextLight mt-xs mb-md xl:mt-xxs md:mb-sm">{description}</p>
           {children}
         </div>
-        <TaimerBlock title="Новогодняя скидка 15%" textBtn="Забронировать скидку" />
         <NextSection />
       </div>
     </div>

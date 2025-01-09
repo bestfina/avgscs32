@@ -10,13 +10,11 @@ const VisitingPage = () => {
     <>
       <Hero
         title="Сайт-визитка, который выгодно представляет ваш бизнес"
-        video="/video/mp4/bg-visiting.mp4"
+        video={["", "/video/mp4/bg-visiting.mp4"]}
+        description="Ваш бизнес заслуживает профессионального представительства в интернете. Мы создаём сайты-визитки, которые
+          выглядят стильно и легко воспринимаются."
         poster="/assets/images/poster/visiting-page.png"
       >
-        <p className="text-TextLight">
-          Ваш бизнес заслуживает профессионального представительства в интернете. Мы создаём сайты-визитки, которые
-          выглядят стильно и легко воспринимаются.
-        </p>
         <div className="text-TextLight flex gap-xxs">
           <div>
             Шаблон:

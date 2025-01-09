@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+
   /* липкий футер */
   html,
   body {
@@ -40,7 +41,7 @@
   }
 
   h1 {
-    @apply text-7xl leading-[90px] xxl:text-6xl xxl:leading-[65px] xl:text-[54px] lg:text-[40px] lg:leading-[50px] xs:text-4xl;
+    @apply text-7xl leading-[90px] xxl:text-6xl xxl:leading-[65px] xl:text-[54px] lg:text-[40px] lg:leading-[50px] xs:text-4xl xs:leading-[46px];
   }
 
   h2 {
@@ -50,14 +51,16 @@
   h3 {
     @apply text-[40px] leading-[45px] xxl:text-3xl xl:text-[26px] lg:text-[22px] xs:text-xl;
   }
+
   .t {
-    background: -webkit-linear-gradient(90deg, #38b6ff, #004aff); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      90deg,
-      #38b6ff,
-      #004aff
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(90deg, #38b6ff, #004aff);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(90deg,
+        #38b6ff,
+        #004aff);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
+
   h4 {
     @apply text-4xl xxl:text-[27px];
   }
@@ -75,7 +78,7 @@
   span,
   a,
   button {
-    @apply text-xl xl:text-lg lg:text-base sm:text-[15px] xs:text-sm;
+    @apply text-xl xl:text-base lg:text-[15px] sm:text-sm xs:text-xs;
   }
 
   .advantages-main {
@@ -159,6 +162,7 @@
   }
 
   @keyframes bounce {
+
     0%,
     20%,
     50%,

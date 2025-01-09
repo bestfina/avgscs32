@@ -9,13 +9,11 @@ const Corporate = () => {
     <>
       <Hero
         title="Корпоративные сайты, которые работают на ваш бизнес"
-        video="/video/mp4/bg-corporate.mp4"
+        video={["", "/video/mp4/bg-corporate.mp4"]}
+        description="Корпоративный сайт — это лицо вашей компании в интернете. Мы делаем его привлекательным, функциональным и
+          запоминающимся."
         poster="/assets/images/poster/corporate.png"
       >
-        <p className="text-TextLight">
-          Корпоративный сайт — это лицо вашей компании в интернете. Мы делаем его привлекательным, функциональным и
-          запоминающимся.
-        </p>
         <div className="text-TextLight flex gap-xxs">
           <div>
             Шаблон:
