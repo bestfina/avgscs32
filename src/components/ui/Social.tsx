@@ -12,8 +12,8 @@ const Social = ({ className }: SocialProps) => {
       <Link href="https://wa.me/79950203385" className="hover:scale-90 duration-500" target="_blank">
         <Image
           src="/assets/icons/whatsApp.svg"
-          width={45}
-          height={45}
+          width={50}
+          height={50}
           alt="whatsApp"
           className="xl:w-10 lg:w-9 xs:w-7"
         />
@@ -21,8 +21,8 @@ const Social = ({ className }: SocialProps) => {
       <Link href="https://t.me/CORTEX_DIGITAL" className="hover:scale-90 duration-500" target="_blank">
         <Image
           src="/assets/icons/telegram.svg"
-          width={45}
-          height={45}
+          width={50}
+          height={50}
           alt="telegram"
           className="xl:w-10 lg:w-9 xs:w-7"
         />

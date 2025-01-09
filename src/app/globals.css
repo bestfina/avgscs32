@@ -50,7 +50,14 @@
   h3 {
     @apply text-[40px] leading-[45px] xxl:text-3xl xl:text-[26px] lg:text-[22px] xs:text-xl;
   }
-
+  .t {
+    background: -webkit-linear-gradient(90deg, #38b6ff, #004aff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      90deg,
+      #38b6ff,
+      #004aff
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
   h4 {
     @apply text-4xl xxl:text-[27px];
   }
