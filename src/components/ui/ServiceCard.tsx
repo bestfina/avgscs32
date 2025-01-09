@@ -30,7 +30,7 @@ const ServiceCard = ({ title, description, url, icon, advantages, className, act
               alt={"иконка " + title}
               width={60}
               height={60}
-              loading="lazy"
+              priority
               className="xxl:w-12 xxl:h-12 lg:w-9 lg:h-9"
             />
             <h3 className="text-TextLight">{title}</h3>
@@ -72,7 +72,7 @@ const ServiceCard = ({ title, description, url, icon, advantages, className, act
               alt={"иконка " + title}
               width={60}
               height={60}
-              loading="lazy"
+              priority
               className="xxl:w-12 xxl:h-12 lg:w-9 lg:h-9"
             />
             <h3 className={twMerge(active && "text-TextLight")}>{title}</h3>

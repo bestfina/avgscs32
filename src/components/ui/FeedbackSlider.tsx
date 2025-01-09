@@ -72,7 +72,7 @@ const FeedbackSlider = () => {
                         width={1000}
                         height={650}
                         alt="постер"
-                        className="w-full h-full max-h-[650px] lg:max-h-[500px] object-contain "
+                        className="w-full h-full max-h-[650px] lg:max-h-[500px] object-contain"
                       />
                     )
                   )
@@ -84,6 +84,7 @@ const FeedbackSlider = () => {
                     width={20}
                     height={28}
                     alt="проигрыватель"
+                    priority={false}
                     className="lg:w-4 lg:h-6"
                   />
                 ) : (
@@ -92,6 +93,7 @@ const FeedbackSlider = () => {
                     width={30}
                     height={28}
                     alt="приблизить"
+                    priority={false}
                     className="lg:w-7 lg:h-6"
                   />
                 )}

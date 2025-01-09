@@ -79,7 +79,14 @@ const AboutInCount = () => {
         {ADVANTAGES.map(({ id, title, description, icon }) => (
           <div key={id} className="w-[48%] xxl:w-[47.8%] sm:w-[47%] x:w-full xl:text-base md:text-sm">
             <div className="lg:flex lg:items-center lg:gap-xxxs md:gap-xxxxs lg:mb-xxxxs x:gap-xxxs">
-              <Image src={icon} alt="" width={60} height={60} className="xxl:w-12 xxl:h-12 lg:w-9 lg:h-9" />
+              <Image
+                src={icon}
+                alt=""
+                width={60}
+                height={60}
+                loading="lazy"
+                className="xxl:w-12 xxl:h-12 lg:w-9 lg:h-9"
+              />
               <h5 className="my-xxxs lg:m-0">{title}</h5>
             </div>
             {description}

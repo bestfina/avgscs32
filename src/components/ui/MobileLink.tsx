@@ -40,7 +40,7 @@ const CallbackWidget = () => {
           animate="attention"
           variants={attentionVariants}
         >
-          <Image src="/assets/icons/phone.svg" alt="Обратный звонок" width={30} height={30} />
+          <Image src="/assets/icons/phone.svg" alt="Обратный звонок" priority width={30} height={30} />
         </motion.div>
 
         <AnimatePresence>
@@ -58,7 +58,7 @@ const CallbackWidget = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
               >
-                <Image src="/assets/icons/telegram.svg" alt="Telegram" loading="eager" width={24} height={24} />
+                <Image src="/assets/icons/telegram.svg" alt="Telegram" width={24} height={24} />
                 Telegram
               </Link>
               <Link
@@ -67,18 +67,18 @@ const CallbackWidget = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
               >
-                <Image src="/assets/icons/whatsApp.svg" alt="WhatsApp" loading="eager" width={24} height={24} />
+                <Image src="/assets/icons/whatsApp.svg" alt="WhatsApp" width={24} height={24} />
                 WhatsApp
               </Link>
               <Link href="tel:+7(995)020-33-85" className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg">
-                <Image src="/assets/icons/phone.svg" alt="телефон" loading="eager" width={24} height={24} />
+                <Image src="/assets/icons/phone.svg" alt="телефон" width={24} height={24} />
                 Телефон
               </Link>
               <Link
                 href="mailto:info@cortexdigital.net"
                 className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
               >
-                <Image src="/assets/icons/email.svg" alt="почта" loading="eager" width={24} height={24} />
+                <Image src="/assets/icons/email.svg" alt="почта" width={24} height={24} />
                 Почта
               </Link>
             </motion.div>

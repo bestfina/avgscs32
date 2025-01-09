@@ -23,6 +23,7 @@ const Exo2 = Exo_2({
   weight: ["600"],
   variable: "--font-press",
   preload: true,
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {

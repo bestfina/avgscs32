@@ -1,6 +1,6 @@
 # *
 User-agent: *
-Allow: /favicon.ico
+Allow: /
 
 # Host
 Host: https://cortexdigital.net
