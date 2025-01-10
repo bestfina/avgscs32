@@ -4,19 +4,16 @@ import About from "@/components/sections/About";
 import Service from "@/components/sections/Service";
 import Feedback from "@/components/sections/Feedback";
 import Forma from "@/components/sections/Forma";
-import Button from "@/components/ui/Button";
 
 const Home = () => (
   <>
     <Hero
       video={["/video/webm/bg-hero.webm", "/video/mp4/bg-hero.mp4"]}
       title="Создаём любые виды сайтов – от идеи до запуска"
-      description="Доступные цены на сайты с профессиональным подходом. Инвестируйте в инструмент, который окупается с первого
-        месяца. Работаем прозрачно: от брифа до результата. Гарантируем поддержку 24/7"
+      description="Наша команда реализует проекты любого уровня сложности по доступным ценам – от креативной концепции до запуска и дальнейшего
+       сопровождения. Мы гарантируем высококачественную работу на каждом этапе разработки, сдачу задачи в срок и последующую поддержку проекта."
       poster="/assets/images/poster/hero-block.webp"
-    >
-      <Button type="blue">Рассчитать стоимость</Button>
-    </Hero>
+    ></Hero>
     <Portfolio />
     <Service />
     <About />

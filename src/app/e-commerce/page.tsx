@@ -3,28 +3,19 @@ import Feedback from "@/components/sections/Feedback";
 import Forma from "@/components/sections/Forma";
 import Hero from "@/components/sections/Hero";
 import Portfolio from "@/components/sections/Portfolio";
+import PriceMini from "@/components/ui/PriceMini";
 
 const Ecommerce = () => {
   return (
     <>
       <Hero
-        video={["", "/video/mp4/bg-ecommerce.mp4"]}
-        description="Мы разрабатываем интернет-магазины, которые идеально подходят вашему бизнесу: от современных интерфейсов до
-          автоматизации продаж. Вы получите уникальный дизайн, высокую скорость и максимальную прибыль."
-        title="Разработаем интернет-магазин, который действительно продает"
+        video={["/video/webm/bg-ecommerce.webm", "/video/mp4/bg-ecommerce.mp4"]}
+        description="Мы создаём интернет-магазин под ключ, полностью сопровождая процесс. От анализа ниши, разработки дизайна и функционала
+         до интеграции с системами, настройки рекламы и дальнейшей поддержки."
+        title="Интернет-магазин под ключ: от идеи до первой продажи"
         poster="/assets/images/poster/e-commerce.webp"
       >
-        <div className="text-TextLight flex gap-xxs">
-          <div>
-            Шаблон:
-            <div className="font-bold"> от 50.000 рублей</div>
-          </div>
-          <div className="w-px bg-white"></div>
-          <div>
-            Под ключ:
-            <div className="font-bold"> от 240.000 рублей</div>
-          </div>
-        </div>
+        <PriceMini minPrice="50.000" maxPrice="240.000" />
       </Hero>
       <Portfolio />
       <Faq />

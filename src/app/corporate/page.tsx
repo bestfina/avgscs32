@@ -3,28 +3,19 @@ import Feedback from "@/components/sections/Feedback";
 import Forma from "@/components/sections/Forma";
 import Hero from "@/components/sections/Hero";
 import Portfolio from "@/components/sections/Portfolio";
+import PriceMini from "@/components/ui/PriceMini";
 
 const Corporate = () => {
   return (
     <>
       <Hero
-        title="Корпоративные сайты, которые работают на ваш бизнес"
-        video={["", "/video/mp4/bg-corporate.mp4"]}
-        description="Корпоративный сайт — это лицо вашей компании в интернете. Мы делаем его привлекательным, функциональным и
-          запоминающимся."
-        poster="/assets/images/poster/corporate.png"
+        title="Корпоративный сайт под ключ: всё в одном решении"
+        video={["/video/webm/bg-corporate.webm", "/video/mp4/bg-corporate.mp4"]}
+        description="Берём на себя весь процесс: от анализа бизнеса и проектирования структуры до создания современного дизайна 
+        и интеграции с внутренними системами компании."
+        poster="/assets/images/poster/corporate.webp"
       >
-        <div className="text-TextLight flex gap-xxs">
-          <div>
-            Шаблон:
-            <div className="font-bold"> от 30.000 рублей</div>
-          </div>
-          <div className="w-px bg-white"></div>
-          <div>
-            Под ключ:
-            <div className="font-bold"> от 120.000 рублей</div>
-          </div>
-        </div>
+        <PriceMini minPrice="30.000" maxPrice="120.000" />
       </Hero>
       <Portfolio />
       <Faq />

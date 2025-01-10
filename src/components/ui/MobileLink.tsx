@@ -32,15 +32,15 @@ const CallbackWidget = () => {
 
   return (
     isMobile && (
-      <div className="fixed bottom-[25px] right-[25px] xs:right-[15px] xs:bottom-[15px] z-[100000]">
+      <div className="fixed bottom-[20px] right-[20px] xs:right-[15px] xs:bottom-[15px] z-[100000]">
         <motion.div
-          className="bg-white shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)] w-16 h-16 xs:w-14 xs:h-14 rounded-full flex justify-center items-center cursor-pointer"
+          className="bg-AccentLight w-16 h-16 xs:w-14 xs:h-14 rounded-full flex justify-center items-center cursor-pointer"
           onClick={toggleMenu}
           initial="normal"
           animate="attention"
           variants={attentionVariants}
         >
-          <Image src="/assets/icons/phone.svg" alt="Обратный звонок" priority width={30} height={30} />
+          <Image src="/assets/icons/message.svg" alt="Обратный звонок" priority width={35} height={35} />
         </motion.div>
 
         <AnimatePresence>
