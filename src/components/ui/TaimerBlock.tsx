@@ -15,7 +15,11 @@ interface TaimerBlockProps {
   textBtn?: string;
 }
 
-const TaimerBlock = ({ className, title = "Бесплатный аудит сайта", textBtn = "Получить аудит" }: TaimerBlockProps) => {
+const TaimerBlock = ({
+  className,
+  title = "Получите 20% скидки",
+  textBtn = "Забронировать скидку",
+}: TaimerBlockProps) => {
   const calculateTimeLeft = () => {
     const now = new Date();
     const nextYear = now.getFullYear();
@@ -57,7 +61,7 @@ const TaimerBlock = ({ className, title = "Бесплатный аудит са�
       }}
       className={twMerge(
         `flex flex-col px-xs w-2/5 lg:w-[45%] md:w-full h-fit gap-sm xl:gap-xs lg:gap-xxs md:gap-xxs
-         items-center py-12 xl:py-[18px] xl:px-10 md:p-3 text-TextLight bg-white/15 backdrop-blur-sm rounded-3xl`,
+         items-center py-12 xl:py-[18px] xl:px-10 md:p-3 text-TextLight bg-white/25 backdrop-blur-sm rounded-3xl`,
         className
       )}
     >

@@ -6,7 +6,7 @@ const Portfolio = () => {
     <section id="portfolio">
       <div className="container flex flex-col">
         <h2>Проекты, которыми мы гордимся</h2>
-        <Cases caseArr={CASE.slice(0, 3)} />
+        <Cases caseArr={CASE.slice(0, 5)} />
       </div>
     </section>
   );

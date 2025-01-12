@@ -3,6 +3,7 @@ import Feedback from "@/components/sections/Feedback";
 import Forma from "@/components/sections/Forma";
 import Hero from "@/components/sections/Hero";
 import Portfolio from "@/components/sections/Portfolio";
+import Tariffs from "@/components/sections/Tariffs";
 import PriceMini from "@/components/ui/PriceMini";
 
 const Ecommerce = () => {
@@ -15,9 +16,10 @@ const Ecommerce = () => {
         title="Интернет-магазин под ключ: от идеи до первой продажи"
         poster="/assets/images/poster/e-commerce.webp"
       >
-        <PriceMini minPrice="50.000" maxPrice="240.000" />
+        <PriceMini minPrice="45.000" maxPrice="240.000" />
       </Hero>
       <Portfolio />
+      <Tariffs />
       <Faq />
       <Forma />
       <Feedback />

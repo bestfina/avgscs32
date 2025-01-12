@@ -36,7 +36,7 @@ const Service = () => {
         whileInView="visible"
         viewport={{ once: true, amount }}
       >
-        <div className="w-1/3 flex flex-col gap-md xxl:gap-sm xl:gap-xs lg:gap-xxs md:w-full">
+        <div className="w-1/3 flex flex-col gap-md xxl:gap-sm xl:gap-xs xs:gap-xxs md:w-full">
           <div>
             <Link href="/portfolio" className="font-semibold underline md:text-[13px]">
               более 110 успешных проектов

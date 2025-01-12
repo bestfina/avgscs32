@@ -14,8 +14,8 @@ const Home = () => (
        сопровождения. Мы гарантируем высококачественную работу на каждом этапе разработки, сдачу задачи в срок и последующую поддержку проекта."
       poster="/assets/images/poster/hero-block.webp"
     ></Hero>
-    <Portfolio />
     <Service />
+    <Portfolio />
     <About />
     <Forma />
     <Feedback />

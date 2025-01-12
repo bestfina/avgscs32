@@ -16,7 +16,7 @@ const PopupForm = () => {
     email: false,
   });
   const [isFormSubmitted, setIsFormSubmitted] = useState<boolean | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false); // Добавлено состояние
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   const toggleContactMethod = (method: keyof typeof preferredContactMethods) => {
     setPreferredContactMethods(prev => ({
@@ -137,7 +137,9 @@ const PopupForm = () => {
               </button>
               <p>
                 Отправляя форму я соглашаюсь с правилами&nbsp;
-                <Link href="/privacy">обработки данных</Link>
+                <Link href="/privacy" className="underline">
+                  обработки данных
+                </Link>
               </p>
             </div>
           </form>

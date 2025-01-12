@@ -26,7 +26,7 @@ const Logo = ({ big = false, atTop, isOpen }: LogoProps) => {
         width={50}
         height={50}
         priority
-        className={twMerge("mb-px xl:w-11 lg:w-10 xs:w-9", big ? "[&&]:w-14 xl:[&&]:w-12" : null)}
+        className={twMerge("mb-px xxl:w-12 xl:w-10 lg:w-9", big ? "[&&]:w-14 xl:[&&]:w-12" : null)}
       />
       <div
         className={twMerge(

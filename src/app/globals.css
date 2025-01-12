@@ -45,7 +45,7 @@
   }
 
   h2 {
-    @apply text-6xl leading-[80px] xxl:text-5xl xxl:leading-[60px] xl:text-4xl xl:leading-[48px] md:text-3xl xs:text-2xl;
+    @apply text-6xl leading-[80px] xxl:text-5xl xxl:leading-[60px] xl:text-[40px] xl:leading-[52px] lg:text-4xl lg:leading-[46px] md:text-3xl xs:text-2xl;
   }
 
   h3 {
@@ -94,7 +94,7 @@
   }
 
   .container {
-    @apply px-16 xl:px-9 lg:px-4 sm:px-xxxs gap-md lg:gap-xs xs:gap-xxxs;
+    @apply px-16 xl:px-9 lg:px-4 sm:px-xxxs gap-md lg:gap-xs xs:gap-xxs;
   }
 
   section:not(:first-child) {
