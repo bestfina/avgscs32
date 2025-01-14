@@ -5,138 +5,29 @@ const Tariffs = () => {
     <section id="tariffs">
       <div className="container flex flex-col">
         <h2>Цены на разработку</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse bg-white shadow-md">
-            <thead>
-              <tr>
-                <th className="border border-black"></th>
-                <th className="border border-black px-6 py-4 text-left bg-slate-100">
-                  <h5>Интернет-магазин на шаблоне</h5>
-                  <p className="text-AccentDark font-bold">от 45.000 рублей</p>
-                  <p className="text-sm text-gray-600">
-                    Для тех, кому срочно нужен продающий сайт с минимальными затратами.
-                  </p>
-                  <Button type="blue" className="mt-xxs w-full">
-                    Заказать
-                  </Button>
-                </th>
-                <th className="border border-black px-6 py-4 text-left bg-slate-100">
-                  <h5>Интернет-магазин с нуля</h5>
-                  <p className="text-AccentDark font-bold">от 240.000 рублей</p>
-                  <p className="text-sm text-gray-600">
-                    В первую очередь решение ориентировано на уже существующий торговый бизнес.
-                  </p>
-                  <Button type="blue" className="mt-xxs w-full">
-                    Заказать
-                  </Button>
-                </th>
-                <th className="border border-black px-6 py-4 text-left bg-slate-100">
-                  <h5>Индивидуальное решение</h5>
-                  <p className="text-AccentDark font-bold">от 450.000 рублей</p>
-                  <p className="text-sm text-gray-600">
-                    Индивидуальные веб-проекты, рассчитанные на масштабные онлайн-продажи.
-                  </p>
-                  <Button type="blue" className="mt-xxs w-full">
-                    Заказать
-                  </Button>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-black px-6 py-4 font-medium">Адаптивная версия и высокая скорость</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-              </tr>
-              <tr>
-                <td className="border border-black px-6 py-4 font-medium">Каталог товаров, корзина, лк и промокоды</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-              </tr>
-              <tr>
-                <td className="border border-black px-6 py-4 font-medium">Онлайн-оплата</td>
-                <td className="border border-black px-6 py-4 text-center">✅ (стандартный модуль)</td>
-                <td className="border border-black px-6 py-4 text-center">✅ (включен 1 нестандартный модуль)</td>
-                <td className="border border-black px-6 py-4 text-center">✅ (включено 2 нестандартных модуля)</td>
-              </tr>
-              <tr>
-                <td className="border border-black px-6 py-4 font-medium">Гарантия на работу</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-              </tr>
-              <tr>
-                <td className="border border-black px-6 py-4 font-medium">Документация для работы с сайтом</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-              </tr>
-              <tr>
-                <td className="border border-black px-6 py-4 font-medium">CMS ( Wordpress или Bitrix )</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-              </tr>
-              <tr>
-                <td className="border border-black px-6 py-4 font-medium">Индивидуальный дизайн</td>
-                <td className="border border-black px-6 py-4 text-center">❌</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-              </tr>
-              <tr>
-                <td className="border border-black px-6 py-4 font-medium">Базовое Seo</td>
-                <td className="border border-black px-6 py-4 text-center">❌</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-              </tr>
-              <tr>
-                <td className="border border-black px-6 py-4 font-medium">
-                  Уникальный контент ( картинки, иконки и др. )
-                </td>
-                <td className="border border-black px-6 py-4 text-center">❌</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-              </tr>
-              <tr>
-                <td className="border border-black px-6 py-4 font-medium">Базовая интеграция с 1С и CRM</td>
-                <td className="border border-black px-6 py-4 text-center">❌</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-              </tr>
-              <tr>
-                <td className="border border-black px-6 py-4 font-medium">Интеграция с внешней ERP-системой</td>
-                <td className="border border-black px-6 py-4 text-center">❌</td>
-                <td className="border border-black px-6 py-4 text-center">❌</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-              </tr>
-              <tr>
-                <td className="border border-black px-6 py-4 font-medium">Полная интеграция с 1С и CRM</td>
-                <td className="border border-black px-6 py-4 text-center">❌</td>
-                <td className="border border-black px-6 py-4 text-center">❌</td>
-                <td className="border border-black px-6 py-4 text-center">✅</td>
-              </tr>
-              <tr>
-                <td className="border border-black px-6 py-4 font-medium">Фиксированная цена и сроки</td>
-                <td className="border border-black px-6 py-4 text-center">
-                  <Button type="blue" className="w-full">
-                    Получить расчёт
-                  </Button>
-                </td>
-                <td className="border border-black px-6 py-4 text-center">
-                  <Button type="blue" className="w-full">
-                    Получить расчёт
-                  </Button>
-                </td>
-                <td className="border border-black px-6 py-4 text-center">
-                  <Button type="blue" className="w-full">
-                    Получить расчёт
-                  </Button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="flex justify-between flex-wrap gap-md xl:gap-sm md:gap-xs">
+          <div className="flex flex-col justify-between bg-slate-100 rounded-3xl p-sm xl:p-xs w-[48%] sm:w-full">
+            <div>
+              <h3>Разработка на шаблоне</h3>
+              <h3 className="text-AccentDark mt-xxs xl:mt-xxxxs">От 50.000 руб./5 дней</h3>
+              <p className="mt-sm mb-md xl:mt-xs xl:mb-10 lg:mt-xxxs lg:mb-sm">
+                Это идеальный выбор для тех, кто хочет максимально быстро и недорого запустить интернет-магазин с
+                базовым функционалом.
+              </p>
+            </div>
+            <Button type="blue">Обсудить проект</Button>
+          </div>
+          <div className="flex flex-col justify-between bg-black/80 rounded-3xl p-sm xl:p-xs w-[48%] sm:w-full text-TextLight">
+            <div>
+              <h3>Кастомная разработка</h3>
+              <h3 className="mt-xxs xl:mt-xxxxs">От 240.000 руб./30 дней</h3>
+              <p className="mt-sm mb-md xl:mt-xs xl:mb-10 lg:mt-xxxs lg:mb-sm">
+                Подойдет для тех, кто хочет получить уникальный интернет-магазин, полностью адаптированный под
+                бизнес-задачи, с индивидуальным дизайном.
+              </p>
+            </div>
+            <Button type="blue">Обсудить проект</Button>
+          </div>
         </div>
       </div>
     </section>

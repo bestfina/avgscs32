@@ -21,7 +21,7 @@ const MainCta = () => {
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
       className="flex gap-sm xl:gap-xs md:gap-xxs x:gap-xxxs x:flex-col mt-md xl:mt-10 lg:mt-sm"
     >
-      <Button type="blue" className="x:w-full">
+      <Button type="blue" className="x:w-full btn-grow">
         Рассчитать стоимость
       </Button>
       {isMain ? (

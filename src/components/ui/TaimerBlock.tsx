@@ -96,7 +96,7 @@ const TaimerBlock = ({
           {seconds} <div>Секунд</div>
         </div>
       </div>
-      <Button type="blue" className="x:w-full">
+      <Button type="blue" className="x:w-full btn-grow">
         {textBtn}
       </Button>
     </motion.div>

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import NextSection from "../ui/NextSection";
-import { ReactNode } from "react";
 import MainCta from "../ui/MainCta";
 
 interface HeroProps {
@@ -8,10 +7,9 @@ interface HeroProps {
   title: string;
   description: string;
   poster: string;
-  children?: ReactNode;
 }
 
-const Hero = ({ video, title, description, children, poster }: HeroProps) => (
+const Hero = ({ video, title, description, poster }: HeroProps) => (
   <section id="hero" className="relative bg-black flex items-center bg-no-repeat bg-cover">
     <Image
       src={poster}
@@ -40,7 +38,6 @@ const Hero = ({ video, title, description, children, poster }: HeroProps) => (
           <p className="text-TextLight leading-8 xl:leading-7 lg:leading-6 x:leading-5 xs:leading-[18px] mt-xs xl:mt-xxs">
             {description}
           </p>
-          {children}
           <MainCta />
         </div>
         <NextSection />
