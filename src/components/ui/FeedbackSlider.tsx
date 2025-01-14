@@ -40,7 +40,7 @@ const FeedbackSlider = () => {
     >
       {FEEDBACKS.map(({ id, name, avatar, poster, video }) => (
         <SwiperSlide key={id}>
-          <div className="flex flex-col border border-TextDark rounded-3xl h-[650px] xxl:h-[550px] lg:h-[480px] sm:h-[400px] overflow-hidden">
+          <div className="flex flex-col border border-TextDark rounded-3xl h-[650px] xxl:h-[550px] xl:h-[600px] lg:h-[480px] sm:h-[550px] xs:h-[480px] overflow-hidden">
             <div className="flex items-center gap-xxxs pl-md xl:pl-sm sm:pl-xxs sm:gap-xxxxs py-3 border-b border-TextDark">
               <div className="w-11 h-11 sm:w-9 sm:h-9 bg-black overflow-hidden rounded-full">
                 <Image src={avatar} alt={"аватар клиента:" + name} width={44} height={44} priority={false} />

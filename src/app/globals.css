@@ -49,7 +49,7 @@
   }
 
   h3 {
-    @apply text-[40px] leading-[45px] xxl:text-3xl xl:text-[26px] lg:text-[22px] xs:text-xl;
+    @apply text-[40px] leading-[45px] xxl:text-[34px] xl:text-[27px] xl:leading-8 lg:text-[22px] lg:leading-6 xs:text-xl xs:leading-5;
   }
 
   .gradient-forma {
@@ -62,7 +62,7 @@
   }
 
   h4 {
-    @apply text-3xl xxl:text-[28px];
+    @apply text-3xl xxl:text-[28px] xl:text-xl lg:text-lg xs:text-base;
   }
 
   h5 {
@@ -110,7 +110,7 @@
   }
 
   .service-item:hover .service-link {
-    @apply scale-110 w-14 bg-AccentDark text-TextLight lg:w-11 sm:w-7 sm:bg-transparent sm:text-TextDark sm:scale-100;
+    @apply scale-110 w-14 xl:w-12 bg-AccentDark text-TextLight lg:w-11 sm:w-7 sm:bg-transparent sm:text-TextDark sm:scale-100;
   }
 
   .service-item:hover .service-icon {

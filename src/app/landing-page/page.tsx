@@ -3,6 +3,7 @@ import Feedback from "@/components/sections/Feedback";
 import Forma from "@/components/sections/Forma";
 import Hero from "@/components/sections/Hero";
 import Portfolio from "@/components/sections/Portfolio";
+import Tariffs from "@/components/sections/Tariffs";
 
 const Landing = () => {
   return (
@@ -15,6 +16,7 @@ const Landing = () => {
         poster="/assets/images/poster/langing.webp"
       />
       <Portfolio />
+      <Tariffs priceTemplate="От 20.000 руб./3 дней" priceCustom="От 80.000 руб./14 дней" />
       <Faq />
       <Forma />
       <Feedback />

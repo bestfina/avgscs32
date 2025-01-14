@@ -16,7 +16,7 @@ const Ecommerce = () => {
         poster="/assets/images/poster/e-commerce.webp"
       />
       <Portfolio />
-      <Tariffs />
+      <Tariffs priceTemplate="От 50.000 руб./5 дней" priceCustom="От 240.000 руб./30 дней" />
       <Faq />
       <Forma />
       <Feedback />

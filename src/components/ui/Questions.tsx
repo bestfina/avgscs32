@@ -13,7 +13,7 @@ const Questions = () => {
   };
 
   return (
-    <div className="flex flex-col gap-xs md:gap-xxxs">
+    <div className="flex flex-col gap-xs md:gap-xxs">
       {FAQ.map(({ id, title, description }) => (
         <div key={id} className="border border-black rounded-3xl shadow-sm">
           <div
