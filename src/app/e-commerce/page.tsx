@@ -15,10 +15,10 @@ const Ecommerce = () => {
         title="Интернет-магазин под ключ: от идеи до первой продажи"
         poster="/assets/images/poster/e-commerce.webp"
       />
-      <Portfolio />
       <Tariffs priceTemplate="От 50.000 руб./5 дней" priceCustom="От 240.000 руб./30 дней" />
-      <Faq />
+      <Portfolio />
       <Forma />
+      <Faq />
       <Feedback />
     </>
   );

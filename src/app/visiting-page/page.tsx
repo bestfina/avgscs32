@@ -15,10 +15,10 @@ const VisitingPage = () => {
           выглядят стильно и легко воспринимаются."
         poster="/assets/images/poster/visiting-page.webp"
       />
-      <Portfolio />
       <Tariffs priceTemplate="От 18.000 руб./3 дней" priceCustom="От 60.000 руб./12 дней" />
-      <Faq />
+      <Portfolio />
       <Forma />
+      <Faq />
       <Feedback />
     </>
   );

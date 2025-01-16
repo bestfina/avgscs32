@@ -279,15 +279,16 @@ export const FEEDBACKS: TFeedbacks[] = [
   },
   {
     id: 2,
-    name: "Citisit",
-    avatar: "/assets/images/reviews/avatar/kwork.webp",
-    poster: "/assets/images/reviews/poster/citisit.webp",
+    name: "Vintage",
+    avatar: "/assets/images/reviews/avatar/ramis.webp",
+    poster: "/assets/images/reviews/poster/ramis.webp",
   },
   {
     id: 3,
     name: "Рамис Хуснуллин",
-    avatar: "/assets/images/reviews/avatar/ramis.webp",
-    poster: "/assets/images/reviews/poster/ramis.webp",
+    avatar: "/assets/images/reviews/avatar/semenov.webp",
+    poster: "/assets/images/reviews/poster/ramis-video.webp",
+    video: ["/video/mp4/reviews/ramis.mp4", ""],
   },
   {
     id: 4,
@@ -297,27 +298,27 @@ export const FEEDBACKS: TFeedbacks[] = [
   },
   {
     id: 5,
-    name: "Vintage",
-    avatar: "/assets/images/reviews/avatar/semenov.webp",
-    poster: "/assets/images/reviews/poster/semenov.webp",
+    name: "Citisit",
+    avatar: "/assets/images/reviews/avatar/kwork.webp",
+    poster: "/assets/images/reviews/poster/citisit.webp",
   },
   {
     id: 6,
+    name: "A.Д.Семенов",
+    avatar: "/assets/images/reviews/avatar/vintage.webp",
+    poster: "/assets/images/reviews/poster/vintage.webp",
+  },
+  {
+    id: 7,
     name: "az-web",
     avatar: "/assets/images/reviews/avatar/kwork.webp",
     poster: "/assets/images/reviews/poster/az_web.webp",
   },
   {
-    id: 7,
+    id: 8,
     name: "denisE82",
     avatar: "/assets/images/reviews/avatar/kwork.webp",
     poster: "/assets/images/reviews/poster/denis.webp",
-  },
-  {
-    id: 8,
-    name: "A.Д.Семенов",
-    avatar: "/assets/images/reviews/avatar/vintage.webp",
-    poster: "/assets/images/reviews/poster/vintage.webp",
   },
 ];
 
@@ -343,7 +344,7 @@ export const CASE: TCase[] = [
   {
     id: 1,
     title: "Бизнес Совет",
-    video: "/video/mp4/project/bisovet.mp4",
+    video: ["/video/mp4/project/bisovet.mp4", ""],
     poster: "/assets/images/poster/bisovet.webp",
     url: "https://bisovet.pro",
     description:
@@ -352,7 +353,7 @@ export const CASE: TCase[] = [
   {
     id: 2,
     title: "GloSkin",
-    video: "/video/mp4/project/gloSkin.mp4",
+    video: ["/video/mp4/project/gloSkin.mp4", "/video/webm/project/gloSkin.webm"],
     poster: "/assets/images/poster/gloskin.webp",
     url: "https://gloskin.ru",
     description:
@@ -361,7 +362,7 @@ export const CASE: TCase[] = [
   {
     id: 3,
     title: "CyberTribe",
-    video: "/video/mp4/project/cybertribe.mp4",
+    video: ["/video/mp4/project/cybertribe.mp4", ""],
     poster: "/assets/images/poster/cyber.webp",
     url: "https://www.cybertribe.uk",
     description:
@@ -370,7 +371,7 @@ export const CASE: TCase[] = [
   {
     id: 4,
     title: "МЦОиП",
-    video: "/video/mp4/project/moip.mp4",
+    video: ["/video/mp4/project/moip.mp4", ""],
     poster: "/assets/images/poster/moip.webp",
     url: "https://mcoip.ru",
     description:
@@ -379,7 +380,7 @@ export const CASE: TCase[] = [
   {
     id: 5,
     title: "ТЦ Малибу",
-    video: "/video/mp4/project/malibu.mp4",
+    video: ["/video/mp4/project/malibu.mp4", "/video/webm/project/malibu.webm"],
     poster: "/assets/images/poster/malibu.webp",
     url: "https://malibu-trc.ru",
     description:
@@ -388,7 +389,7 @@ export const CASE: TCase[] = [
   {
     id: 6,
     title: "Vintage Cottage",
-    video: "/video/mp4/project/vintageCottage.mp4",
+    video: ["/video/mp4/project/vintageCottage.mp4", "/video/webm/project/vintageCottage.webm"],
     poster: "/assets/images/poster/vintage.webp",
     url: "https://vintage-cottage.eu",
     description:
@@ -397,7 +398,7 @@ export const CASE: TCase[] = [
   {
     id: 7,
     title: "ФГОС",
-    video: "/video/mp4/project/fgos.mp4",
+    video: ["/video/mp4/project/fgos.mp4", ""],
     poster: "/assets/images/poster/fgos.webp",
     url: "https://fgosonline.ru",
     description:
@@ -406,7 +407,7 @@ export const CASE: TCase[] = [
   {
     id: 8,
     title: "Антон Бавин",
-    video: "/video/mp4/project/bavin.mp4",
+    video: ["/video/mp4/project/bavin.mp4", ""],
     poster: "/assets/images/poster/bavin.webp",
     url: "https://bavin.pro",
     description:
@@ -415,7 +416,7 @@ export const CASE: TCase[] = [
   {
     id: 9,
     title: "Sattva YOGA",
-    video: "/video/mp4/project/satva.mp4",
+    video: ["/video/mp4/project/satva.mp4", ""],
     poster: "/assets/images/poster/sattva.webp",
     url: "https://sattva-centr.ru",
     description:
@@ -424,7 +425,7 @@ export const CASE: TCase[] = [
   {
     id: 10,
     title: "Магазин ФОП",
-    video: "/video/mp4/project/fop.mp4",
+    video: ["/video/mp4/project/fop.mp4", ""],
     poster: "/assets/images/poster/fop.webp",
     url: "https://fop.solncesvet.ru",
     description:
@@ -433,7 +434,7 @@ export const CASE: TCase[] = [
   {
     id: 11,
     title: "Гипсокартон и малярка",
-    video: "/video/mp4/project/all-all.mp4",
+    video: ["/video/mp4/project/all-all.mp4", ""],
     poster: "/assets/images/poster/all.webp",
     url: "https://all-all.ru/",
     description:
@@ -442,7 +443,7 @@ export const CASE: TCase[] = [
   {
     id: 12,
     title: "ACHARGE",
-    video: "/video/mp4/project/acharge.mp4",
+    video: ["/video/mp4/project/acharge.mp4", ""],
     poster: "/assets/images/poster/acharge.webp",
     url: "https://www.zolotarevka.ru",
     description:
@@ -451,7 +452,7 @@ export const CASE: TCase[] = [
   {
     id: 13,
     title: "Trava-murava",
-    video: "/video/mp4/project/trava-murava.mp4",
+    video: ["/video/mp4/project/trava-murava.mp4", ""],
     poster: "/assets/images/poster/trava-murava.webp",
     url: "https://hotel-divnogorie.ru",
     description:

@@ -58,7 +58,12 @@ const Cases = ({ caseArr, main }: CasesProps) => {
               loop
               poster={poster}
             >
-              {isVisible && <source src={video} type="video/mp4" />}
+              {isVisible && (
+                <>
+                  <source src={video[1]} type="video/webm" />
+                  <source src={video[0]} type="video/mp4" />
+                </>
+              )}
             </video>
           </motion.a>
         );
