@@ -7,15 +7,7 @@ interface AdvantagesBlockProps {
 }
 
 const AdvantagesBlock = ({ children, className }: AdvantagesBlockProps) => (
-  <div
-    className={twMerge(
-      `bg-transparent text-TextLight border-[1px]
-       border-BgLight font-semibold py-2 px-5 xxl:px-4 text-center flex items-center justify-center rounded-full`,
-      className
-    )}
-  >
-    {children}
-  </div>
+  <div className={twMerge(`font-semibold py-2 px-5 xxl:px-4 text-center rounded-full`, className)}>{children}</div>
 );
 
 export default AdvantagesBlock;

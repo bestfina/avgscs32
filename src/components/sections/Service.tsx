@@ -44,25 +44,28 @@ const Service = () => {
             <h2>Наши услуги в веб-разработке</h2>
           </div>
           <motion.div className="flex flex-wrap justify-between gap-xxxs h-full" variants={containerVariants}>
-            {SERVICE.map(({ id, title, description, url, icon, advantages }) =>
+            {SERVICE.map(({ id, title, description, url, icon, price, advantages }) =>
               id === 1 ? (
                 <motion.div key={id} className="md:w-[49%] sm:w-full" variants={cardVariants}>
-                  <ServiceCard title={title} description={description} url={url} advantages={advantages} icon={icon} />
-                </motion.div>
-              ) : id === 5 ? (
-                <motion.div key={id} variants={cardVariants} className="w-full hidden md:block">
                   <ServiceCard
                     title={title}
                     description={description}
                     url={url}
-                    advantages={advantages}
                     icon={icon}
-                    active
+                    price={price}
+                    advantages={advantages}
                   />
                 </motion.div>
               ) : (
                 <motion.div key={id} variants={cardVariants} className="md:w-[49%] sm:w-full hidden md:block">
-                  <ServiceCard title={title} description={description} url={url} advantages={advantages} icon={icon} />
+                  <ServiceCard
+                    title={title}
+                    description={description}
+                    url={url}
+                    icon={icon}
+                    price={price}
+                    advantages={advantages}
+                  />
                 </motion.div>
               )
             )}
@@ -74,28 +77,26 @@ const Service = () => {
               title="Корпоративный сайт"
               description="Создаём корпоративные сайты, которые отражают стиль и ценности вашей компании, обеспечивая удобство для клиентов и партнёров."
               url="/corporate"
-              advantages={["Фирменный стиль", "Интеграция с CRM", "Сайт для бизнеса"]}
+              price="От 45.000 руб./4 дней"
               icon="/assets/icons/office-briefcase.svg"
+              advantages={["Фирменный стиль", "Интеграция с CRM", "Сайт для бизнеса"]}
             />
           </motion.div>
           <motion.div className="flex gap-md xxl:gap-sm xl:gap-xs lg:gap-xxs" variants={containerVariants}>
-            {SERVICE.map(({ id, title, description, url, icon, advantages }) =>
+            {SERVICE.map(({ id, title, description, url, icon, price, advantages }) =>
               id === 3 || id === 4 ? (
                 <motion.div key={id} variants={cardVariants} className="w-2/4">
-                  <ServiceCard title={title} description={description} url={url} advantages={advantages} icon={icon} />
+                  <ServiceCard
+                    title={title}
+                    description={description}
+                    url={url}
+                    icon={icon}
+                    price={price}
+                    advantages={advantages}
+                  />
                 </motion.div>
               ) : null
             )}
-          </motion.div>
-          <motion.div variants={cardVariants}>
-            <ServiceCard
-              title="Другое"
-              description="Так же мы предлагаем широкий спектр дополнительных услуг для развития вашего бизнеса в интернете. От технической поддержки до маркетинга — решаем задачи любой сложности."
-              url="/"
-              advantages={["Тех. поддержка", "Seo", "Яндекс директ", "Erp"]}
-              icon="/assets/icons/support.svg"
-              active
-            />
           </motion.div>
         </div>
       </motion.div>

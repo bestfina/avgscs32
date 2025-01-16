@@ -35,6 +35,7 @@ export type TService = BaseEntity & {
   icon: Image;
   url: URL;
   description: string;
+  price: string;
   advantages: string[];
 };
 
