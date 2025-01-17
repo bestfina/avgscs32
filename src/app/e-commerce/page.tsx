@@ -3,6 +3,7 @@ import Feedback from "@/components/sections/Feedback";
 import Forma from "@/components/sections/Forma";
 import Hero from "@/components/sections/Hero";
 import Portfolio from "@/components/sections/Portfolio";
+import Steps from "@/components/sections/Steps";
 import Tariffs from "@/components/sections/Tariffs";
 
 const Ecommerce = () => {
@@ -17,6 +18,7 @@ const Ecommerce = () => {
       />
       <Tariffs priceTemplate="От 50.000 руб./5 дней" priceCustom="От 240.000 руб./30 дней" />
       <Portfolio />
+      <Steps />
       <Forma />
       <Faq />
       <Feedback />

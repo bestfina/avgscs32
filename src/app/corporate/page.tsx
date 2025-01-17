@@ -3,6 +3,7 @@ import Feedback from "@/components/sections/Feedback";
 import Forma from "@/components/sections/Forma";
 import Hero from "@/components/sections/Hero";
 import Portfolio from "@/components/sections/Portfolio";
+import Steps from "@/components/sections/Steps";
 import Tariffs from "@/components/sections/Tariffs";
 
 const Corporate = () => {
@@ -17,6 +18,7 @@ const Corporate = () => {
       />
       <Tariffs priceTemplate="От 45.000 руб./4 дней" priceCustom="От 130.000 руб./20 дней" />
       <Portfolio />
+      <Steps />
       <Forma />
       <Faq />
       <Feedback />

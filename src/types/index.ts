@@ -57,3 +57,8 @@ export type TAboutInNumber = BaseEntity & {
   count: number;
   text: string;
 };
+
+export type TSteps = BaseEntity & {
+  icon: Image;
+  description: string;
+};
