@@ -75,11 +75,11 @@ const Service = () => {
           <motion.div variants={cardVariants}>
             <ServiceCard
               title="Корпоративный сайт"
-              description="Создаём корпоративные сайты, которые отражают стиль и ценности вашей компании, обеспечивая удобство для клиентов и партнёров."
+              description="Создаём корпоративные сайты, которые отражают стиль и ценности вашей компании, обеспечивая удобство для любых посетителей."
               url="/corporate"
               price="От 45.000 руб./4 дней"
               icon="/assets/icons/office-briefcase.svg"
-              advantages={["Фирменный стиль", "Интеграция с CRM", "Сайт для бизнеса"]}
+              advantages={["Удобство для клиентов и партнёров", "Подчеркнём статус компании"]}
             />
           </motion.div>
           <motion.div className="flex gap-md xxl:gap-sm xl:gap-xs lg:gap-xxs" variants={containerVariants}>

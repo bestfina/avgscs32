@@ -101,7 +101,7 @@ const Cases = ({ caseArr, main }: CasesProps) => {
             })}
             whileHover={{ scale: 1.02 }}
           >
-            <h3 className="sm:underline">{title}</h3>
+            <h3 className="underline">{title}</h3>
             <p className="mb-xs mt-xxxs xl:mb-xxs">{description}</p>
             <video
               ref={el => {

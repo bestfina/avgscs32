@@ -41,15 +41,7 @@ const ServiceCard = ({ title, description, url, icon, className, price, advantag
         </div>
       </div>
       <div className="flex gap-xxs xxl:gap-xxxs lg:gap-[8px] flex-wrap">
-        {advantages &&
-          advantages.map((item, index) => (
-            <AdvantagesBlock
-              key={index}
-              className="border border-black w-fit font-semibold text-[22px] xxl:text-[20px] xl:text-[17px] lg:text-[14.7px] xl:py-1 xl:px-3 lg:px-2"
-            >
-              {item}
-            </AdvantagesBlock>
-          ))}
+        {advantages && advantages.map((item, index) => <AdvantagesBlock key={index}>{item}</AdvantagesBlock>)}
       </div>
       <p className="leading-9 text-2xl xxl:leading-8 xxl:text-[22px] xl:text-[19px] xl:leading-7 lg:text-base text-TextDark font-extralight">
         {description}
