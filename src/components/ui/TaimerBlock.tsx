@@ -23,7 +23,7 @@ const TaimerBlock = ({
   const calculateTimeLeft = () => {
     const now = new Date();
     const nextYear = now.getFullYear();
-    const newYear = new Date(`January 20, ${nextYear} 00:00:00`).getTime();
+    const newYear = new Date(`January 31, ${nextYear} 00:00:00`).getTime();
     const currentTime = now.getTime();
     return Math.max(0, Math.floor((newYear - currentTime) / 1000));
   };

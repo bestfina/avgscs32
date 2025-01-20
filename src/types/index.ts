@@ -19,6 +19,7 @@ export type TCase = BaseEntity & {
   video: [string, string];
   poster: string;
   url: URL;
+  category: string;
   description: string;
 };
 

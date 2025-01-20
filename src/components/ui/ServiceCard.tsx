@@ -54,7 +54,7 @@ const ServiceCard = ({ title, description, url, icon, className, price, advantag
       <p className="leading-9 text-2xl xxl:leading-8 xxl:text-[22px] xl:text-[19px] xl:leading-7 lg:text-base text-TextDark font-extralight">
         {description}
       </p>
-      <h4 className="mt-auto text-AccentDark">{price}</h4>
+      <h4 className="mt-auto">{price}</h4>
     </div>
   </Link>
 );

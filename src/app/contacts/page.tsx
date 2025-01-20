@@ -25,12 +25,20 @@ const Contacts = () => {
             Оставить заявку
           </Button>
         </div>
-        <iframe
+        <Image
+          src="/assets/images/team.webp"
+          alt=""
+          width={800}
+          height={400}
+          priority={false}
+          className="w-2/4 rounded-3xl md:w-full x:h-80 object-cover"
+        />
+        {/* <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A65e590b90a2e998c208acbf7a6acdfcf16f8d0d5dde35ef30da86ae7ea7e6cb9&amp;source=constructor"
           width="100%"
           height="400"
           className="w-2/4 rounded-3xl md:w-full x:h-80"
-        ></iframe>
+        ></iframe> */}
       </div>
     </section>
   );

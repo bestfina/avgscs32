@@ -11,11 +11,24 @@ import BurgerMenuIcon from "../ui/icon/BurgerMenuIcon";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
-  const pathname = usePathname();
+  const pathname = usePathname() || "";
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [atTop, setAtTop] = useState(true);
+
+  // Список известных путей
+  const knownPaths = [
+    "/",
+    "/contacts",
+    "/portfolio",
+    "/privacy",
+    "/e-commerce",
+    "/corporate",
+    "/landing-page",
+    "/visiting-page",
+  ];
+  const is404Page = !knownPaths.includes(pathname);
 
   const handleScroll = useCallback(() => {
     const currentScrollPos = window.scrollY;
@@ -32,18 +45,22 @@ const Header = () => {
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
-    if (pathname === "/contacts" || pathname === "/portfolio" || pathname === "/privacy") {
+
+    if (is404Page) {
+      setAtTop(false);
+    } else if (pathname === "/contacts" || pathname === "/portfolio" || pathname === "/privacy") {
       setAtTop(false);
     } else {
       setAtTop(window.scrollY < 120);
     }
+
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isOpen, pathname]);
+  }, [isOpen, pathname, is404Page]);
 
   useEffect(() => {
-    if (!isOpen && pathname !== "/contacts" && pathname !== "/portfolio" && pathname !== "/privacy") {
+    if (!isOpen && !is404Page && pathname !== "/contacts" && pathname !== "/portfolio" && pathname !== "/privacy") {
       window.addEventListener("scroll", handleScroll);
     } else {
       window.removeEventListener("scroll", handleScroll);
@@ -52,7 +69,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [handleScroll, isOpen, pathname]);
+  }, [handleScroll, isOpen, pathname, is404Page]);
 
   const handleToggleMenu = () => setIsOpen(prev => !prev);
 

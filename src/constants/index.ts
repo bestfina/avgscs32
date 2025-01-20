@@ -294,8 +294,9 @@ export const CASE: TCase[] = [
     video: ["/video/mp4/project/bisovet.mp4", ""],
     poster: "/assets/images/poster/bisovet.webp",
     url: "https://bisovet.pro",
+    category: "Корпоративные сайты",
     description:
-      "Корпоративный сайт для B2B юридической компании. Сайт сделан на wordpress с кастомными полями для удобства наполнения.",
+      "Корпоративный сайт для юридической компании (B2B). Сделан на cms wordpress с кастомными полями для удобства наполнения.",
   },
   {
     id: 2,
@@ -303,6 +304,7 @@ export const CASE: TCase[] = [
     video: ["/video/mp4/project/gloSkin.mp4", "/video/webm/project/gloSkin.webm"],
     poster: "/assets/images/poster/gloskin.webp",
     url: "https://gloskin.ru",
+    category: "Интернет-магазины",
     description:
       "Корректировка и добавления функционала для магазина косметики. Сделали функционал доставки с добавлением стоимости, главный баннер и др.",
   },
@@ -312,6 +314,7 @@ export const CASE: TCase[] = [
     video: ["/video/mp4/project/cybertribe.mp4", ""],
     poster: "/assets/images/poster/cyber.webp",
     url: "https://www.cybertribe.uk",
+    category: "Лендинги",
     description:
       "Лендинг для крупной маркетинговой компании. Разработан на чистом коде без трудного функционала, но зато с хорошим ux/ui для ЦА.",
   },
@@ -321,17 +324,19 @@ export const CASE: TCase[] = [
     video: ["/video/mp4/project/moip.mp4", ""],
     poster: "/assets/images/poster/moip.webp",
     url: "https://mcoip.ru",
+    category: "Корпоративные сайты",
     description:
       "Частичная доработка образовательной платформы. Реализовали вёрстку некоторых блоков, исправили баги, дали рекомендации.",
   },
   {
     id: 5,
-    title: "ТЦ Малибу",
-    video: ["/video/mp4/project/malibu.mp4", "/video/webm/project/malibu.webm"],
-    poster: "/assets/images/poster/malibu.webp",
-    url: "https://malibu-trc.ru",
+    title: "Denis Sanko",
+    video: ["/video/mp4/project/denisSanko.mp4", "/video/webm/project/denisSanko.webm"],
+    poster: "/assets/images/poster/denisSanko.webp",
+    url: "https://denissanko.com/kouching-pervyh-licz/",
+    category: "Лендинги",
     description:
-      "Корпоративный сайт для огромного торгового центра в Липецке. Сделан на wordress с помощью конструктора elementor и кастомного функционала.",
+      "Сделали отдельную страницу и интегрировали её на wordress в корпоративный сайт бизнес-коуча Дениса Санько.",
   },
   {
     id: 6,
@@ -339,6 +344,7 @@ export const CASE: TCase[] = [
     video: ["/video/mp4/project/vintageCottage.mp4", "/video/webm/project/vintageCottage.webm"],
     poster: "/assets/images/poster/vintage.webp",
     url: "https://vintage-cottage.eu",
+    category: "Интернет-магазины",
     description:
       "Международный интернет-магазин с товарами для дома. Сделан на площадке woocommerce, мультивалютный и мультиязычный.",
   },
@@ -348,6 +354,7 @@ export const CASE: TCase[] = [
     video: ["/video/mp4/project/fgos.mp4", ""],
     poster: "/assets/images/poster/fgos.webp",
     url: "https://fgosonline.ru",
+    category: "Корпоративные сайты",
     description:
       'Улучшения сайта для услуг "Повышения квалификации". Разработали на главной странице первый баннер, поправили некоторые баги в вёрстке сайта.',
   },
@@ -357,8 +364,9 @@ export const CASE: TCase[] = [
     video: ["/video/mp4/project/bavin.mp4", ""],
     poster: "/assets/images/poster/bavin.webp",
     url: "https://bavin.pro",
+    category: "Визитки",
     description:
-      'Лендинг для продажи услуг "Освобождение от долгов" на голом коде с интеграциями различных аналитик и настройкой заявок на bitrix24.',
+      'Сайт-визитка для продажи услуг "Освобождение от долгов" на голом коде с интеграциями различных аналитик и настройкой заявок на bitrix24.',
   },
   {
     id: 9,
@@ -366,6 +374,7 @@ export const CASE: TCase[] = [
     video: ["/video/mp4/project/satva.mp4", ""],
     poster: "/assets/images/poster/sattva.webp",
     url: "https://sattva-centr.ru",
+    category: "Интернет-магазины",
     description:
       "Разработали сайт с функционал бронирования занятия йогой со специалистом. Сделан на чистом коде с натяжкой на wordress.",
   },
@@ -375,6 +384,7 @@ export const CASE: TCase[] = [
     video: ["/video/mp4/project/fop.mp4", ""],
     poster: "/assets/images/poster/fop.webp",
     url: "https://fop.solncesvet.ru",
+    category: "Интернет-магазины",
     description:
       "Доработка интернет-магазина для Международного педагогического портала. Сделали каталог, акции, главные баннеры и многое другое.",
   },
@@ -384,6 +394,7 @@ export const CASE: TCase[] = [
     video: ["/video/mp4/project/all-all.mp4", ""],
     poster: "/assets/images/poster/all.webp",
     url: "https://all-all.ru/",
+    category: "Визитки",
     description:
       "Сайт-визитка для малярщика. Пародия на инстаграмм, с функционалом подписчиков и бесконечным авто-парсингом историй из ТГ.",
   },
@@ -393,6 +404,7 @@ export const CASE: TCase[] = [
     video: ["/video/mp4/project/acharge.mp4", ""],
     poster: "/assets/images/poster/acharge.webp",
     url: "https://www.zolotarevka.ru",
+    category: "Корпоративные сайты",
     description:
       "Вёрстка сайта для продажи зарядных станций в РФ. Сайт сделан на чистом коде с отправкой писем на почту через php.",
   },
@@ -402,9 +414,54 @@ export const CASE: TCase[] = [
     video: ["/video/mp4/project/trava-murava.mp4", ""],
     poster: "/assets/images/poster/trava-murava.webp",
     url: "https://hotel-divnogorie.ru",
+    category: "Корпоративные сайты",
     description:
       "Сайт для бронирования гостевых домов в Воронеже. Сделан на плагинах wp, а так же была проведена seo оптимизация.",
   },
+  {
+    id: 14,
+    title: "TRadeCDB",
+    video: ["/video/mp4/project/TRadeCDB.mp4", "/video/webm/project/TRadeCDB.webm"],
+    poster: "/assets/images/poster/tradeCDB.webp",
+    url: "https://tradecdb.com",
+    category: "Лендинги",
+    description:
+      "Разработали личный кабинет (админу, менеджеру и пользователю) и доработали лендинг для международной инвестиционной компании.",
+  },
+  {
+    id: 15,
+    title: "ТЦ Малибу",
+    video: ["/video/mp4/project/malibu.mp4", "/video/webm/project/malibu.webm"],
+    poster: "/assets/images/poster/malibu.webp",
+    url: "https://malibu-trc.ru",
+    category: "Корпоративные сайты",
+    description:
+      "Корпоративный сайт для огромного торгового центра в Липецке. Сделан на wordress с помощью конструктора elementor и кастомного функционала.",
+  },
+  {
+    id: 16,
+    title: "Курсы от Татьяны Величко",
+    video: ["/video/mp4/project/tatyanaVelichko.mp4", "/video/webm/project/tatyanaVelichko.webm"],
+    poster: "/assets/images/poster/tatyanaVelichko.webp",
+    url: "https://tatyana-velichko.ru/",
+    category: "Интернет-магазины",
+    description:
+      "С полного нуля сделали сайт с возможностью покупки и просмотра онлайн курсов по массажу от Татьяны Величко.",
+  },
+  {
+    id: 17,
+    title: "CortexDigital",
+    video: ["/video/mp4/project/cortexDigital.mp4", "/video/webm/project/cortexDigital.webm"],
+    poster: "/assets/images/poster/cortexDigital.webp",
+    url: "/",
+    category: "Корпоративные сайты",
+    description:
+      "Наш сайт отражает весь наш накопленный опыт и нам не стыдно добавить его в портфолио. Разработан на современных технологиях ( next.js, ts и др. )",
+  },
+  // https://nataliy-beate.ru/
+  // https://beatris-odegda.ru/
+  // https://cortexdigital.net/
+  // https://www.g-mc.ru/kosmetologiya-i-dermatologiya/
 ];
 
 export const ABOUT_IN_NUMBERS: TAboutInNumber[] = [

@@ -41,7 +41,7 @@
   }
 
   h1 {
-    @apply text-7xl leading-[90px] xxl:text-6xl xxl:leading-[65px] xl:text-[54px] lg:text-[40px] lg:leading-[50px] xs:text-4xl xs:leading-[46px];
+    @apply text-7xl leading-[90px] xxl:text-6xl xxl:leading-[65px] xl:text-[54px] lg:text-[40px] lg:leading-[50px] xs:text-4xl xs:leading-[46px] break-words;
   }
 
   h2 {
