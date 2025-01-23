@@ -5,16 +5,30 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const CallbackWidget = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth < 1023) {
-      setIsMobile(true);
-    }
-  }, []);
+  const [isVisible, setIsVisible] = useState(true);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  useEffect(() => {
+    // Обработчик прокрутки
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      if (scrollPosition >= documentHeight - 100) {
+        setIsVisible(false); // Скрываем кнопку, если пользователь у нижней границы страницы
+      } else {
+        setIsVisible(true); // Показываем кнопку, если пользователь не внизу
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll); // Удаляем обработчик при размонтировании компонента
+    };
+  }, []);
 
   const attentionVariants = {
     normal: { rotate: 0 },
@@ -31,15 +45,17 @@ const CallbackWidget = () => {
   };
 
   return (
-    isMobile && (
-      <div className="fixed bottom-[20px] right-[20px] xs:right-[15px] xs:bottom-[15px] z-[100000]">
+    isVisible && (
+      <div className="fixed bottom-7 right-16 xl:right-9 lg:right-4 lg:bottom-5 xs:right-[15px] xs:bottom-[15px] z-[100000]">
         <motion.div
-          className="bg-AccentLight w-16 h-16 xs:w-14 xs:h-14 rounded-full flex justify-center items-center cursor-pointer"
+          className="relative bg-AccentLight w-16 h-16 xs:w-14 xs:h-14 rounded-full flex justify-center items-center cursor-pointer"
           onClick={toggleMenu}
           initial="normal"
           animate="attention"
           variants={attentionVariants}
         >
+          {/* Пульсирующий круг */}
+          <div className="absolute inset-0 z-[-1] rounded-full animate-pulseRing"></div>
           <Image src="/assets/icons/message.svg" alt="Обратный звонок" priority width={35} height={35} />
         </motion.div>
 

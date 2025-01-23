@@ -300,13 +300,13 @@ export const CASE: TCase[] = [
   },
   {
     id: 2,
-    title: "GloSkin",
-    video: ["/video/mp4/project/gloSkin.mp4", "/video/webm/project/gloSkin.webm"],
-    poster: "/assets/images/poster/gloskin.webp",
-    url: "https://gloskin.ru",
-    category: "Интернет-магазины",
+    title: "TRadeCDB",
+    video: ["/video/mp4/project/TRadeCDB.mp4", "/video/webm/project/TRadeCDB.webm"],
+    poster: "/assets/images/poster/tradeCDB.webp",
+    url: "https://tradecdb.com",
+    category: "Лендинги",
     description:
-      "Корректировка и добавления функционала для магазина косметики. Сделали функционал доставки с добавлением стоимости, главный баннер и др.",
+      "Разработали личный кабинет (админу, менеджеру и пользователю) и доработали лендинг для международной инвестиционной компании.",
   },
   {
     id: 3,
@@ -420,13 +420,13 @@ export const CASE: TCase[] = [
   },
   {
     id: 14,
-    title: "TRadeCDB",
-    video: ["/video/mp4/project/TRadeCDB.mp4", "/video/webm/project/TRadeCDB.webm"],
-    poster: "/assets/images/poster/tradeCDB.webp",
-    url: "https://tradecdb.com",
-    category: "Лендинги",
+    title: "GloSkin",
+    video: ["/video/mp4/project/gloSkin.mp4", "/video/webm/project/gloSkin.webm"],
+    poster: "/assets/images/poster/gloskin.webp",
+    url: "https://gloskin.ru",
+    category: "Интернет-магазины",
     description:
-      "Разработали личный кабинет (админу, менеджеру и пользователю) и доработали лендинг для международной инвестиционной компании.",
+      "Корректировка и добавления функционала для магазина косметики. Сделали функционал доставки с добавлением стоимости, главный баннер и др.",
   },
   {
     id: 15,
