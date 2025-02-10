@@ -7,9 +7,9 @@ const Forma = () => (
     <div className="container">
       <div className="flex gap-28 p-md xl:p-sm xl:gap-20 md:gap-sm md:flex-wrap sm:p-xs rounded-3xl overflow-hidden bg-AccentDark/80 bg-[url('/assets/images/show.webp')]">
         <div className="flex flex-col w-2/4 md:w-full">
-          <h2 className="text-TextLight">Новогодняя акция</h2>
+          <h2 className="text-TextLight">Зимняя акция</h2>
           <p className="text-TextLight text-lg xl:text-base md:text-sm xs:text-xs mt-xxxxs sm:mt-xxxs">
-            Оставьте заявку и мы подарим Вам <b>20% скидки</b> на разработку любого сайта в честь{" "}
+            Оставьте заявку и мы подарим Вам <b>15% скидки</b> на разработку любого сайта в честь{" "}
             <b>новогодних праздников. </b>
             Инвестируйте ресурсы в сайт, который окупится сразу!
           </p>

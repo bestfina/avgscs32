@@ -17,7 +17,7 @@ const Popup: React.FC = () => {
       onClick={closePopup}
     >
       <button
-        className="bg-black text-[26px] rounded-full w-16 h-16 sm:w-12 sm:h-12 z-10 absolute top-xs right-xs sm:top-xxxs sm:right-xxxs text-TextLight"
+        className="bg-white text-[26px] rounded-full w-16 h-16 sm:w-12 sm:h-12 z-10 absolute top-xs right-xs sm:top-xxxs sm:right-xxxs text-TextDark"
         onClick={closePopup}
       >
         ✖

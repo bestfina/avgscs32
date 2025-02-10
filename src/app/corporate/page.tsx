@@ -16,7 +16,7 @@ const Corporate = () => {
         и интеграции с внутренними системами компании."
         poster="/assets/images/poster/corporate.webp"
       />
-      <Tariffs priceTemplate="От 45.000 руб./4 дней" priceCustom="От 130.000 руб./20 дней" />
+      <Tariffs priceTemplate="От 120.000 руб./30 дней" priceCustom="От 400.000 руб./60 дней" />
       <Portfolio />
       <Steps />
       <Forma />

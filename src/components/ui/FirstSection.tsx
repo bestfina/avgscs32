@@ -1,6 +1,4 @@
-"use client";
-import smoothFn from "@/lib/smoothFn";
-import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { ReactNode } from "react";
 
 interface FirstSectionProps {
@@ -8,14 +6,10 @@ interface FirstSectionProps {
 }
 
 const FirstSection = ({ children }: FirstSectionProps) => {
-  const currentPath = usePathname();
   return (
-    <button
-      onClick={() => smoothFn(currentPath + "#", currentPath)}
-      className="flex gap-xxxxs items-center w-fit text-base sm:text-sm"
-    >
+    <Link href="#hero" className="flex gap-xxxxs items-center w-fit text-base sm:text-sm">
       {children}
-    </button>
+    </Link>
   );
 };
 

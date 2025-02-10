@@ -2,30 +2,32 @@ import Image from "next/image";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import ArrowLink from "./icon/ArrowLink";
-import AdvantagesBlock from "./AdvantagesBlock";
+import Button from "./Button";
 
 interface ServiceCardProps {
   title: string;
   description: string;
   url: string;
   icon: string;
-  advantages?: string[];
   price: string;
   className?: string;
 }
 
-const ServiceCard = ({ title, description, url, icon, className, price, advantages }: ServiceCardProps) => (
-  <Link
-    href={url}
+const ServiceCard = ({ title, description, url, icon, className, price }: ServiceCardProps) => (
+  <div
     aria-label={`Подробнее об услуге "${title}"`}
-    className={twMerge("rounded-3xl overflow-hidden bg-center bg-cover service-item group", className)}
+    className={twMerge(
+      "rounded-3xl overflow-hidden bg-center bg-cover service-item flex flex-col h-full group",
+      className
+    )}
   >
-    <div
-      className="bg-slate-100 rounded-3xl hover:bg-black/10 duration-500 p-[25px] xl:p-xs lg:p-xxs flex flex-col gap-sm 
-          xxl:gap-xs xl:gap-xxs sm:gap-xxxs h-full"
-    >
+    <div className="bg-slate-100 rounded-3xl p-[25px] xl:p-xs lg:p-xxs flex flex-col h-full">
       <div className="flex items-center md:items-end">
-        <div className="flex items-center gap-xxs md:flex-col md:items-start md:gap-px">
+        <Link
+          href={url}
+          scroll={url ? true : false}
+          className="flex items-center gap-xxs md:flex-col md:items-start md:gap-px"
+        >
           <Image
             src={icon}
             alt={"иконка " + title}
@@ -34,21 +36,35 @@ const ServiceCard = ({ title, description, url, icon, className, price, advantag
             priority
             className="xxl:w-12 xxl:h-12 lg:w-9 lg:h-9"
           />
-          <h3>{title}</h3>
-        </div>
-        <div className="service-link text-TextDark duration-300 rounded-3xl w-11 h-11 xxl:h-9 xxl:w-9 lg:w-7 lg:h-7 flex justify-center items-center ml-auto">
-          <ArrowLink />
-        </div>
+          <h3 className="relative">
+            {title}
+            {/* Кастомное подчеркивание */}
+            {url && (
+              <span className="absolute -mb-[3px] bottom-0 left-0 w-0 h-[2px] bg-black transition-all group-hover:w-[102%]"></span>
+            )}
+          </h3>
+        </Link>
+
+        {url && (
+          <Link
+            href={url}
+            className="service-link text-TextDark duration-300 rounded-3xl w-11 h-11 xxl:h-9 xxl:w-9 lg:w-7 lg:h-7 flex justify-center items-center ml-auto"
+          >
+            <ArrowLink />
+          </Link>
+        )}
       </div>
-      <div className="flex gap-xxs xxl:gap-xxxs lg:gap-[8px] flex-wrap">
-        {advantages && advantages.map((item, index) => <AdvantagesBlock key={index}>{item}</AdvantagesBlock>)}
-      </div>
-      <p className="leading-9 text-2xl xxl:leading-8 xxl:text-[22px] xl:text-[19px] xl:leading-7 lg:text-base text-TextDark font-extralight">
+      <p className="mt-xxxs leading-9 text-2xl xxl:leading-8 xxl:text-[22px] xl:text-[19px] xl:leading-7 lg:text-base text-TextDark font-extralight">
         {description}
       </p>
-      <h4 className="mt-auto">{price}</h4>
+      <div className="mt-auto">
+        <div className="mt-6 mb-xxs text-3xl xxl:text-[28px] xl:text-xl lg:text-lg xs:text-base font-bold">{price}</div>
+        <div onClick={e => e.stopPropagation()}>
+          <Button type="border-black">Заказать</Button>
+        </div>
+      </div>
     </div>
-  </Link>
+  </div>
 );
 
 export default ServiceCard;

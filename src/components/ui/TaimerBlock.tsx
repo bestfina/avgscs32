@@ -17,13 +17,13 @@ interface TaimerBlockProps {
 
 const TaimerBlock = ({
   className,
-  title = "Получите 20% скидки",
+  title = "Получите 15% скидки",
   textBtn = "Забронировать скидку",
 }: TaimerBlockProps) => {
   const calculateTimeLeft = () => {
     const now = new Date();
     const nextYear = now.getFullYear();
-    const newYear = new Date(`January 31, ${nextYear} 00:00:00`).getTime();
+    const newYear = new Date(`February 23, ${nextYear} 00:00:00`).getTime();
     const currentTime = now.getTime();
     return Math.max(0, Math.floor((newYear - currentTime) / 1000));
   };

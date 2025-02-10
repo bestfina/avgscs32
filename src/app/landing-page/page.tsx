@@ -16,7 +16,7 @@ const Landing = () => {
         готовность к запуску рекламы для максимальной конверсии."
         poster="/assets/images/poster/langing.webp"
       />
-      <Tariffs priceTemplate="От 20.000 руб./3 дней" priceCustom="От 80.000 руб./14 дней" />
+      <Tariffs priceTemplate="От 50.000 руб./10 дней" priceCustom="От 210.000 руб./25 дней" />
       <Portfolio />
       <Steps />
       <Forma />

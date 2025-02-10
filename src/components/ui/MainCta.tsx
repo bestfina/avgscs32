@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import Button from "./Button";
-import smoothFn from "@/lib/smoothFn";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -26,9 +25,7 @@ const MainCta = () => {
       </Button>
       {isMain ? (
         <Link
-          href="/"
-          scroll={false}
-          onClick={() => smoothFn("/#service", currentPath)}
+          href="/#service"
           className="bg-TextLight text-center rounded-full font-bold w-80 py-3 hover:opacity-70 duration-500 xl:w-72 lg:w-60 md:w-56 xl:py-2 x:w-full"
         >
           Смотреть все услуги

@@ -37,7 +37,6 @@ export type TService = BaseEntity & {
   url: URL;
   description: string;
   price: string;
-  advantages: string[];
 };
 
 export type TFeedbacks = {

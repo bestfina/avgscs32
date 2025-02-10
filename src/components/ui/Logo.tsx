@@ -1,8 +1,6 @@
 "use client";
-import smoothFn from "@/lib/smoothFn";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 
 interface LogoProps {
@@ -12,14 +10,8 @@ interface LogoProps {
 }
 
 const Logo = ({ big = false, atTop, isOpen }: LogoProps) => {
-  const currentPath = usePathname();
   return (
-    <Link
-      href="/"
-      className={twMerge("flex flex-col items-center w-fit")}
-      scroll={false}
-      onClick={() => smoothFn("/#hero", currentPath)}
-    >
+    <Link href="/#hero" className={twMerge("flex flex-col items-center w-fit")}>
       <Image
         src="/assets/images/logo.webp"
         alt="logo"
