@@ -19,11 +19,11 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            source ~/.bashrc
-            cat ~/.bashrc
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            cd ${{ secrets.SERVER_DIR }}
             git fetch
             git pull
-            cd ${{ secrets.SERVER_DIR }}
             npm install
             npm run build
             pm2 restart next-app
