@@ -29,6 +29,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
+            source ~/.bashrc
             cd ${{ secrets.SERVER_DIR }}
             npm install
             npm run build
