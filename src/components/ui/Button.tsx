@@ -25,7 +25,7 @@ const Button = ({ children, type, className, onClick }: ButtonProps) => {
   } else if (type === "border-white") {
     color = "border hover:bg-TextLight hover:text-TextDark hover:opacity-1";
   } else if (type === "border-black") {
-    color = "border text-TextDark border-black hover:bg-black hover:text-TextLight hover:opacity-1";
+    color = "border text-TextDark border-black hover:bg-black/80 hover:text-TextLight hover:opacity-1";
   }
 
   return (

@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Button from "../ui/Button";
+import AdvantagesBlock from "../ui/AdvantagesBlock";
 
 interface TariffsProps {
   priceTemplate: string;
@@ -19,7 +20,7 @@ const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
         <h2>Стоимость разработки</h2>
         <div className="flex justify-between flex-wrap gap-md xl:gap-sm md:gap-xs">
           <motion.div
-            className="flex flex-col justify-between rounded-3xl bg-slate-100 p-sm xl:p-xs w-[48%] sm:w-full"
+            className="flex flex-col gap-sm justify-between rounded-3xl bg-slate-100 p-sm xl:p-xs w-[48%] sm:w-full"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -27,16 +28,24 @@ const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
           >
             <div>
               <h3>Оптимальный</h3>
-              <h4 className="mt-xxs xl:mt-xxxxs">{priceTemplate}</h4>
-              <p className="mt-sm mb-md xl:mt-xs xl:mb-10 lg:mt-xxs lg:mb-sm sm:mt-xxxs sm:mb-xs">
-                Идеальное решение для тех, кто хочет запустить готовый сайт с базовым функционалом и индивидуальным
-                дизайном по доступной цене.
-              </p>
+              <h4 className="mt-xxs xl:mt-xxxxs">{priceTemplate} ( -15% скидка )</h4>
             </div>
-            <Button type="black">Обсудить проект</Button>
+            <Button type="blue">Обсудить проект</Button>
+            <div className="h-px bg-black"></div>
+            <p>
+              Идеальное решение для тех, кто хочет запустить готовый сайт с базовым функционалом и индивидуальным
+              дизайном по доступной цене.
+            </p>
+            <div className="flex flex-col gap-xxs">
+              <ul className="list-disc flex flex-col gap-xxxs pl-xs">
+                <li>Уникальный дизайн</li>
+                <li>Уникальный дизайн</li>
+                <li>Уникальный дизайн</li>
+              </ul>
+            </div>
           </motion.div>
           <motion.div
-            className="flex flex-col justify-between rounded-3xl bg-black/80 text-TextLight p-sm xl:p-xs w-[48%] sm:w-full"
+            className="flex flex-col gap-sm justify-between rounded-3xl bg-slate-100 p-sm xl:p-xs w-[48%] sm:w-full"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -45,12 +54,25 @@ const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
             <div>
               <h3>Премиум</h3>
               <h4 className="mt-xxs xl:mt-xxxxs">{priceCustom}</h4>
-              <p className="mt-sm xl:mt-xs lg:mt-xxs lg:mb-sm sm:mt-xxxs sm:mb-xs">
-                Отличный выбор для тех, кому нужна эксклюзивность: уникальный дизайн, сложный функционал, интеграции и
-                премиальные технологии.
-              </p>
             </div>
-            <Button type="blue">Обсудить проект</Button>
+            <Button type="black">Обсудить проект</Button>
+            <div className="h-px bg-black"></div>
+            <p>
+              Отличный выбор для тех, кому нужна эксклюзивность: уникальный дизайн, сложный функционал, интеграции и
+              премиальные технологии.
+            </p>
+            <div className="flex gap-md">
+              <ul className="list-disc flex flex-col gap-xxxs pl-xs">
+                <li>Уникальный дизайн</li>
+                <li>Уникальный дизайн</li>
+                <li>Уникальный дизайн</li>
+              </ul>
+              <ul className="list-disc flex flex-col gap-xxxs pl-xs">
+                <li>Уникальный дизайн</li>
+                <li>Уникальный дизайн</li>
+                <li>Уникальный дизайн</li>
+              </ul>
+            </div>
           </motion.div>
         </div>
       </div>

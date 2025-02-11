@@ -1,7 +1,7 @@
 type URL = string;
 type Image = string;
 
-interface BaseEntity {
+export interface BaseEntity {
   id: number;
   title: string;
 }
