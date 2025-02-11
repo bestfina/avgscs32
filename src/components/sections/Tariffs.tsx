@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import Button from "../ui/Button";
-import AdvantagesBlock from "../ui/AdvantagesBlock";
 
 interface TariffsProps {
   priceTemplate: string;
