@@ -26,7 +26,7 @@ const ServiceCard = ({ title, description, url, icon, className, price }: Servic
         <Link
           href={url}
           scroll={url ? true : false}
-          className="flex items-center gap-xxs md:flex-col md:items-start md:gap-px"
+          className="flex items-center gap-xxs md:flex-col md:items-start md:gap-xxxxs"
         >
           <Image
             src={icon}
@@ -58,7 +58,9 @@ const ServiceCard = ({ title, description, url, icon, className, price }: Servic
         {description}
       </p>
       <div className="mt-auto">
-        <div className="mt-6 mb-xxs text-3xl xxl:text-[28px] xl:text-xl lg:text-lg xs:text-base font-bold">{price}</div>
+        <div className="mt-6 mb-xxs lg:mt-4 lg:mb-xxxs text-3xl xxl:text-[28px] xl:text-xl lg:text-lg xs:text-base font-bold">
+          {price}
+        </div>
         <div onClick={e => e.stopPropagation()}>
           <Button type="border-black">Заказать</Button>
         </div>

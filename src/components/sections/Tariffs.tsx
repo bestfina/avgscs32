@@ -20,7 +20,7 @@ const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
         <h2>Стоимость разработки</h2>
         <div className="flex justify-between flex-wrap gap-md xl:gap-sm md:gap-xs">
           <motion.div
-            className="flex flex-col gap-sm rounded-3xl bg-slate-100 p-sm xl:p-xs w-[48%] sm:w-full"
+            className="flex flex-col gap-sm xl:gap-xs sm:gap-xxs rounded-3xl bg-slate-100 p-sm xl:p-xs w-[48%] md:w-full"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -38,7 +38,7 @@ const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
               SEO-оптимизацию и простоту в управлении контентом, что позволяет малому и среднему бизнесу сфокусироваться
               на развитии без лишних затрат и технических сложностей.
             </p>
-            <div className="flex justify-between mt-auto">
+            <div className="flex justify-between mt-auto flex-wrap gap-xxxs">
               <Link href="#steps" className="underline">
                 Этапы разработки
               </Link>
@@ -48,7 +48,7 @@ const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
             </div>
           </motion.div>
           <motion.div
-            className="flex flex-col gap-sm rounded-3xl bg-slate-100 p-sm xl:p-xs w-[48%] sm:w-full"
+            className="flex flex-col gap-sm xl:gap-xs sm:gap-xxs rounded-3xl bg-slate-100 p-sm xl:p-xs w-[48%] md:w-full"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -65,7 +65,7 @@ const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
               функционал, индивидуальные интеграции и премиальные технологии, которые обеспечат вашему бизнесу
               конкурентное преимущество и максимальную эффективность.
             </p>
-            <div className="flex justify-between mt-auto">
+            <div className="flex justify-between mt-auto flex-wrap gap-xxxs">
               <Link href="#steps" className="underline">
                 Этапы разработки
               </Link>
