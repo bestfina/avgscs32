@@ -284,26 +284,6 @@ export const CASE: TCase[] = [
   },
   {
     id: 3,
-    title: "CyberTribe",
-    video: ["/video/mp4/project/cybertribe.mp4", ""],
-    poster: "/assets/images/poster/cyber.webp",
-    url: "https://www.cybertribe.uk",
-    category: "Лендинги",
-    description:
-      "Лендинг для крупной маркетинговой компании. Разработан на чистом коде без трудного функционала, но зато с хорошим ux/ui для ЦА.",
-  },
-  {
-    id: 4,
-    title: "МЦОиП",
-    video: ["/video/mp4/project/moip.mp4", ""],
-    poster: "/assets/images/poster/moip.webp",
-    url: "https://mcoip.ru",
-    category: "Корпоративные сайты",
-    description:
-      "Частичная доработка образовательной платформы. Реализовали вёрстку некоторых блоков, исправили баги, дали рекомендации.",
-  },
-  {
-    id: 5,
     title: "Denis Sanko",
     video: ["/video/mp4/project/denisSanko.mp4", "/video/webm/project/denisSanko.webm"],
     poster: "/assets/images/poster/denisSanko.webp",
@@ -313,7 +293,37 @@ export const CASE: TCase[] = [
       "Сделали отдельную страницу и интегрировали её на wordress в корпоративный сайт бизнес-коуча Дениса Санько.",
   },
   {
+    id: 4,
+    title: "GloSkin",
+    video: ["/video/mp4/project/gloSkin.mp4", "/video/webm/project/gloSkin.webm"],
+    poster: "/assets/images/poster/gloskin.webp",
+    url: "https://gloskin.ru",
+    category: "Интернет-магазины",
+    description:
+      "Корректировка и добавления функционала для магазина косметики. Сделали функционал доставки с добавлением стоимости, главный баннер и др.",
+  },
+  {
+    id: 5,
+    title: "МЦОиП",
+    video: ["/video/mp4/project/moip.mp4", ""],
+    poster: "/assets/images/poster/moip.webp",
+    url: "https://mcoip.ru",
+    category: "Корпоративные сайты",
+    description:
+      "Частичная доработка образовательной платформы. Реализовали вёрстку некоторых блоков, исправили баги, дали рекомендации.",
+  },
+  {
     id: 6,
+    title: "CyberTribe",
+    video: ["/video/mp4/project/cybertribe.mp4", ""],
+    poster: "/assets/images/poster/cyber.webp",
+    url: "https://www.cybertribe.uk",
+    category: "Лендинги",
+    description:
+      "Лендинг для крупной маркетинговой компании. Разработан на чистом коде без трудного функционала, но зато с хорошим ux/ui для ЦА.",
+  },
+  {
+    id: 7,
     title: "Vintage Cottage",
     video: ["/video/mp4/project/vintageCottage.mp4", "/video/webm/project/vintageCottage.webm"],
     poster: "/assets/images/poster/vintage.webp",
@@ -323,7 +333,7 @@ export const CASE: TCase[] = [
       "Международный интернет-магазин с товарами для дома. Сделан на площадке woocommerce, мультивалютный и мультиязычный.",
   },
   {
-    id: 7,
+    id: 8,
     title: "ФГОС",
     video: ["/video/mp4/project/fgos.mp4", ""],
     poster: "/assets/images/poster/fgos.webp",
@@ -333,7 +343,7 @@ export const CASE: TCase[] = [
       'Улучшения сайта для услуг "Повышения квалификации". Разработали на главной странице первый баннер, поправили некоторые баги в вёрстке сайта.',
   },
   {
-    id: 8,
+    id: 9,
     title: "Антон Бавин",
     video: ["/video/mp4/project/bavin.mp4", ""],
     poster: "/assets/images/poster/bavin.webp",
@@ -343,7 +353,7 @@ export const CASE: TCase[] = [
       'Сайт-визитка для продажи услуг "Освобождение от долгов" на голом коде с интеграциями различных аналитик и настройкой заявок на bitrix24.',
   },
   {
-    id: 9,
+    id: 10,
     title: "Sattva YOGA",
     video: ["/video/mp4/project/satva.mp4", ""],
     poster: "/assets/images/poster/sattva.webp",
@@ -353,7 +363,7 @@ export const CASE: TCase[] = [
       "Разработали сайт с функционал бронирования занятия йогой со специалистом. Сделан на чистом коде с натяжкой на wordress.",
   },
   {
-    id: 10,
+    id: 11,
     title: "Магазин ФОП",
     video: ["/video/mp4/project/fop.mp4", ""],
     poster: "/assets/images/poster/fop.webp",
@@ -363,7 +373,7 @@ export const CASE: TCase[] = [
       "Доработка интернет-магазина для Международного педагогического портала. Сделали каталог, акции, главные баннеры и многое другое.",
   },
   {
-    id: 11,
+    id: 12,
     title: "Гипсокартон и малярка",
     video: ["/video/mp4/project/all-all.mp4", ""],
     poster: "/assets/images/poster/all.webp",
@@ -373,7 +383,7 @@ export const CASE: TCase[] = [
       "Сайт-визитка для малярщика. Пародия на инстаграмм, с функционалом подписчиков и бесконечным авто-парсингом историй из ТГ.",
   },
   {
-    id: 12,
+    id: 13,
     title: "ACHARGE",
     video: ["/video/mp4/project/acharge.mp4", ""],
     poster: "/assets/images/poster/acharge.webp",
@@ -383,7 +393,7 @@ export const CASE: TCase[] = [
       "Вёрстка сайта для продажи зарядных станций в РФ. Сайт сделан на чистом коде с отправкой писем на почту через php.",
   },
   {
-    id: 13,
+    id: 14,
     title: "Trava-murava",
     video: ["/video/mp4/project/trava-murava.mp4", ""],
     poster: "/assets/images/poster/trava-murava.webp",
@@ -391,16 +401,6 @@ export const CASE: TCase[] = [
     category: "Корпоративные сайты",
     description:
       "Сайт для бронирования гостевых домов в Воронеже. Сделан на плагинах wp, а так же была проведена seo оптимизация.",
-  },
-  {
-    id: 14,
-    title: "GloSkin",
-    video: ["/video/mp4/project/gloSkin.mp4", "/video/webm/project/gloSkin.webm"],
-    poster: "/assets/images/poster/gloskin.webp",
-    url: "https://gloskin.ru",
-    category: "Интернет-магазины",
-    description:
-      "Корректировка и добавления функционала для магазина косметики. Сделали функционал доставки с добавлением стоимости, главный баннер и др.",
   },
   {
     id: 15,
@@ -434,7 +434,6 @@ export const CASE: TCase[] = [
   },
   // https://nataliy-beate.ru/
   // https://beatris-odegda.ru/
-  // https://cortexdigital.net/
   // https://www.g-mc.ru/kosmetologiya-i-dermatologiya/
 ];
 

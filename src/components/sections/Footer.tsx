@@ -18,8 +18,8 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="flex justify-between sm:flex-col sm:gap-xxxxs sm:items-center">
-        <p className="text-base sm:order-3 sm:text-sm">CortexDigital © {new Date().getFullYear()}</p>
+      <div className="flex justify-between items-end sm:flex-col sm:gap-xxxxs sm:items-center">
+        <div className="text-base sm:order-3 sm:text-sm">CortexDigital © {new Date().getFullYear()}</div>
         <FirstSection>
           наверх
           <Image
@@ -30,9 +30,12 @@ const Footer = () => (
             className="md:w-3 md:h-3"
           />
         </FirstSection>
-        <Link href="/privacy" className="font-semibold text-base sm:text-sm">
-          Политика конфиденциальности
-        </Link>
+        <div className="flex flex-col gap-xxxxs items-end sm:items-center">
+          <Link href="/privacy" className="font-semibold text-base sm:text-sm">
+            Политика конфиденциальности
+          </Link>
+          <div className="text-base sm:order-3 sm:text-sm">Разработано в CortexDigital</div>
+        </div>
       </div>
     </div>
   </footer>
