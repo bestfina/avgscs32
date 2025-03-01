@@ -274,13 +274,13 @@ export const CASE: TCase[] = [
   },
   {
     id: 2,
-    title: "TRadeCDB",
-    video: ["/video/mp4/project/TRadeCDB.mp4", "/video/webm/project/TRadeCDB.webm"],
-    poster: "/assets/images/poster/tradeCDB.webp",
-    url: "https://tradecdb.com",
-    category: "Лендинги",
+    title: "АльтАква",
+    video: ["/video/mp4/project/altAcva.mp4", ""],
+    poster: "/assets/images/poster/alrAcva.png",
+    url: "https://altaqua.ru/product/membrany_hynamo/",
+    category: "Корпоративные сайты",
     description:
-      "Разработали личный кабинет (админу, менеджеру и пользователю) и доработали лендинг для международной инвестиционной компании.",
+      "Разработали каталог на сайте АльтАква, а после результата, клиенты перешли на полную тех. поддержку сайта на Wordpress.",
   },
   {
     id: 3,
@@ -354,13 +354,13 @@ export const CASE: TCase[] = [
   },
   {
     id: 10,
-    title: "Sattva YOGA",
-    video: ["/video/mp4/project/satva.mp4", ""],
-    poster: "/assets/images/poster/sattva.webp",
-    url: "https://sattva-centr.ru",
-    category: "Интернет-магазины",
+    title: "TRadeCDB",
+    video: ["/video/mp4/project/TRadeCDB.mp4", "/video/webm/project/TRadeCDB.webm"],
+    poster: "/assets/images/poster/tradeCDB.webp",
+    url: "https://tradecdb.com",
+    category: "Лендинги",
     description:
-      "Разработали сайт с функционал бронирования занятия йогой со специалистом. Сделан на чистом коде с натяжкой на wordress.",
+      "Разработали личный кабинет (админу, менеджеру и пользователю) и доработали лендинг для международной инвестиционной компании.",
   },
   {
     id: 11,
@@ -394,14 +394,24 @@ export const CASE: TCase[] = [
   },
   {
     id: 14,
-    title: "Trava-murava",
-    video: ["/video/mp4/project/trava-murava.mp4", ""],
-    poster: "/assets/images/poster/trava-murava.webp",
-    url: "https://hotel-divnogorie.ru",
-    category: "Корпоративные сайты",
+    title: "Sattva YOGA",
+    video: ["/video/mp4/project/satva.mp4", ""],
+    poster: "/assets/images/poster/sattva.webp",
+    url: "https://sattva-centr.ru",
+    category: "Интернет-магазины",
     description:
-      "Сайт для бронирования гостевых домов в Воронеже. Сделан на плагинах wp, а так же была проведена seo оптимизация.",
+      "Разработали сайт с функционал бронирования занятия йогой со специалистом. Сделан на чистом коде с натяжкой на wordress.",
   },
+  // {
+  //   id: 14,
+  //   title: "Trava-murava",
+  //   video: ["/video/mp4/project/trava-murava.mp4", ""],
+  //   poster: "/assets/images/poster/trava-murava.webp",
+  //   url: "https://hotel-divnogorie.ru",
+  //   category: "Корпоративные сайты",
+  //   description:
+  //     "Сайт для бронирования гостевых домов в Воронеже. Сделан на плагинах wp, а так же была проведена seo оптимизация.",
+  // },
   {
     id: 15,
     title: "ТЦ Малибу",

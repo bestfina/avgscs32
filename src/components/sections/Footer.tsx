@@ -34,7 +34,9 @@ const Footer = () => (
           <Link href="/privacy" className="font-semibold text-base sm:text-sm">
             Политика конфиденциальности
           </Link>
-          <div className="text-base sm:order-3 sm:text-sm">Разработано в CortexDigital</div>
+          {/* <Link href="/" className="text-base sm:order-3 sm:text-sm">
+            Разработано в CortexDigital
+          </Link> */}
         </div>
       </div>
     </div>
