@@ -408,7 +408,7 @@ export const CASE: TCase[] = [
   //   video: ["/video/mp4/project/trava-murava.mp4", ""],
   //   poster: "/assets/images/poster/trava-murava.webp",
   //   url: "https://hotel-divnogorie.ru",
-  //   category: "Корпоративные сайты",
+  //   category: "Корпоративные сайтыf",
   //   description:
   //     "Сайт для бронирования гостевых домов в Воронеже. Сделан на плагинах wp, а так же была проведена seo оптимизация.",
   // },
