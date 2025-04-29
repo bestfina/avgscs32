@@ -1,7 +1,7 @@
 import Faq from "@/components/sections/Faq";
 import Feedback from "@/components/sections/Feedback";
-import Forma from "@/components/sections/Forma";
 import Hero from "@/components/sections/Hero";
+import Partners from "@/components/sections/Partners";
 import Portfolio from "@/components/sections/Portfolio";
 import Steps from "@/components/sections/Steps";
 import Tariffs from "@/components/sections/Tariffs";
@@ -16,10 +16,10 @@ const Landing = () => {
         готовность к запуску рекламы для максимальной конверсии."
         poster="/assets/images/poster/langing.webp"
       />
-      <Tariffs priceTemplate="От 50.000 руб./10 дней" priceCustom="От 210.000 руб./25 дней" />
+      <Partners />
+      <Tariffs priceTemplate="От 50.000 руб./10 дней" priceCustom="От 120.000 руб./21 дня" />
       <Portfolio />
       <Steps />
-      <Forma />
       <Faq />
       <Feedback />
     </>

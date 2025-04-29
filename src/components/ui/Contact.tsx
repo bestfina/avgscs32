@@ -22,9 +22,9 @@ const Contact = ({ className, size, atTop }: ContactProps) => {
       >
         info@cortexdigital.net
       </Link>
-      <Link href="tel:+7(995)020-33-85" className={twMerge("text-2xl lg:text-xl sm:text-lg xs:text-base", size)}>
+      {/* <Link href="tel:+7(995)020-33-85" className={twMerge("text-2xl lg:text-xl sm:text-lg xs:text-base", size)}>
         +7 (995) 020-33-85
-      </Link>
+      </Link> */}
     </div>
   );
 };

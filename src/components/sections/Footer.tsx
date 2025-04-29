@@ -19,7 +19,7 @@ const Footer = () => (
       </div>
 
       <div className="flex justify-between items-end sm:flex-col sm:gap-xxxxs sm:items-center">
-        <div className="text-base sm:order-3 sm:text-sm">CortexDigital © {new Date().getFullYear()}</div>
+        <div className="text-base sm:order-3 sm:text-sm">CortexDigital © 2019-{new Date().getFullYear()}</div>
         <FirstSection>
           наверх
           <Image

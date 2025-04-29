@@ -1,8 +1,8 @@
 // import Advantages from "@/components/sections/Advantages";
 import Faq from "@/components/sections/Faq";
 import Feedback from "@/components/sections/Feedback";
-import Forma from "@/components/sections/Forma";
 import Hero from "@/components/sections/Hero";
+import Partners from "@/components/sections/Partners";
 import Portfolio from "@/components/sections/Portfolio";
 import Steps from "@/components/sections/Steps";
 import Tariffs from "@/components/sections/Tariffs";
@@ -58,11 +58,11 @@ const Ecommerce = () => {
         title="Интернет-магазин под ключ: от идеи до первой продажи"
         poster="/assets/images/poster/e-commerce.webp"
       />
-      <Tariffs priceTemplate="От 190.000 руб./30 дней" priceCustom="От 700.000 руб./90 дней" />
+      <Partners />
+      <Tariffs priceTemplate="От 200.000 руб./35 дней" priceCustom="От 500.000 руб./60 дней" />
       <Portfolio />
       {/* <Advantages ADVANTAGES={ADVANTAGES} /> */}
       <Steps />
-      <Forma />
       <Faq />
       <Feedback />
     </>

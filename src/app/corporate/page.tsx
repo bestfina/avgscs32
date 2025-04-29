@@ -1,7 +1,7 @@
 import Faq from "@/components/sections/Faq";
 import Feedback from "@/components/sections/Feedback";
-import Forma from "@/components/sections/Forma";
 import Hero from "@/components/sections/Hero";
+import Partners from "@/components/sections/Partners";
 import Portfolio from "@/components/sections/Portfolio";
 import Steps from "@/components/sections/Steps";
 import Tariffs from "@/components/sections/Tariffs";
@@ -16,10 +16,10 @@ const Corporate = () => {
         и интеграции с внутренними системами компании."
         poster="/assets/images/poster/corporate.webp"
       />
-      <Tariffs priceTemplate="От 120.000 руб./21 дня" priceCustom="От 400.000 руб./60 дней" />
+      <Partners />
+      <Tariffs priceTemplate="От 120.000 руб./18 дней" priceCustom="От 250.000 руб./45 дней" />
       <Portfolio />
       <Steps />
-      <Forma />
       <Faq />
       <Feedback />
     </>

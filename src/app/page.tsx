@@ -3,7 +3,7 @@ import Portfolio from "@/components/sections/Portfolio";
 import About from "@/components/sections/About";
 import Service from "@/components/sections/Service";
 import Feedback from "@/components/sections/Feedback";
-import Forma from "@/components/sections/Forma";
+import Partners from "@/components/sections/Partners";
 
 const Home = () => (
   <>
@@ -14,10 +14,10 @@ const Home = () => (
        сопровождения. Мы гарантируем высококачественную работу на каждом этапе разработки, сдачу задачи в срок и последующую поддержку проекта."
       poster="/assets/images/poster/hero-block.webp"
     ></Hero>
+    <Partners />
     <Service />
     <Portfolio />
     <About />
-    <Forma />
     <Feedback />
   </>
 );
