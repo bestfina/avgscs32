@@ -1,7 +1,10 @@
 "use client";
+import { useTranslations } from "next-intl";
 import ArrowIcon from "./icon/ArrowIcon";
 
 const NextSection = () => {
+  const t = useTranslations("main.hero");
+
   const handleNextSectionClick = () => {
     const nextSection = document.getElementById("hero")?.nextElementSibling;
     if (nextSection) {
@@ -18,7 +21,7 @@ const NextSection = () => {
       <span className="bg-BgLight w-12 h-12 rounded-full flex items-center justify-center xl:w-10 xl:h-10">
         <ArrowIcon className="text-TextDark bounce" />
       </span>
-      Далее
+      {t("next_section")}
     </button>
   );
 };

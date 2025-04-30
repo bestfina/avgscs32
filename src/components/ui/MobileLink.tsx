@@ -1,10 +1,12 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const CallbackWidget = () => {
+  const t = useTranslations("callback_widget");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -33,7 +35,7 @@ const CallbackWidget = () => {
         variants={attentionVariants}
       >
         <div className="absolute inset-0 z-[-1] rounded-full animate-pulseRing"></div>
-        <Image src="/assets/icons/message.svg" alt="Обратный звонок" priority width={35} height={35} />
+        <Image src="/assets/icons/message.svg" alt={t("message_icon_alt")} priority width={35} height={35} />
       </motion.div>
 
       <AnimatePresence>
@@ -45,35 +47,40 @@ const CallbackWidget = () => {
             exit="exit"
             variants={menuVariants}
           >
-            <Link
+            <a
               href="https://t.me/CORTEX_DIGITAL"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
             >
-              <Image src="/assets/icons/telegram.svg" alt="Telegram" width={24} height={24} />
-              Telegram
-            </Link>
-            <Link
+              <Image src="/assets/icons/telegram.svg" alt={t("telegram_icon_alt")} width={24} height={24} />
+              {t("telegram")}
+            </a>
+            <a
               href="https://wa.me/79950203385"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
             >
-              <Image src="/assets/icons/whatsApp.svg" alt="WhatsApp" width={24} height={24} />
-              WhatsApp
-            </Link>
-            <Link href="tel:+7(995)020-33-85" className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg">
-              <Image src="/assets/icons/phone.svg" alt="телефон" width={24} height={24} />
-              Телефон
-            </Link>
-            <Link
+              <Image src="/assets/icons/whatsApp.svg" alt={t("whatsapp_icon_alt")} width={24} height={24} />
+              {t("whatsapp")}
+            </a>
+            <a
+              target="_blank"
+              href="tel:+7(995)020-33-85"
+              className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
+            >
+              <Image src="/assets/icons/phone.svg" alt={t("phone_icon_alt")} width={24} height={24} />
+              {t("phone")}
+            </a>
+            <a
+              target="_blank"
               href="mailto:info@cortexdigital.net"
               className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
             >
-              <Image src="/assets/icons/email.svg" alt="почта" width={24} height={24} />
-              Почта
-            </Link>
+              <Image src="/assets/icons/email.svg" alt={t("email_icon_alt")} width={24} height={24} />
+              {t("email")}
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

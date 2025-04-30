@@ -1,16 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method !== "POST") {
-    return res.status(405).json({ message: "Метод не поддерживается" });
-  }
-
-  const { name, email, tel, preferredContactMethods } = req.body;
+export async function POST(request: Request) {
+  const { name, email, tel, preferredContactMethods } = await request.json();
 
   try {
     // Преобразуем preferredContactMethods в читаемый список
-
     const contactMethods =
       preferredContactMethods && typeof preferredContactMethods === "object"
         ? Object.entries(preferredContactMethods)
@@ -43,11 +37,15 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       `,
     });
 
-    return res.status(200).json({ message: "Письмо отправлено" });
+    return new Response(JSON.stringify({ message: "Письмо отправлено" }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ message: "Ошибка отправки письма" });
+    return new Response(JSON.stringify({ message: "Ошибка отправки письма" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
-};
-
-export default handler;
+}

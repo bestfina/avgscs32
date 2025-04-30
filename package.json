@@ -10,9 +10,12 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "delegate-it": "^6.2.1",
     "framer-motion": "^11.13.3",
     "gsap": "^3.12.5",
     "next": "^14.2.22",
+    "next-intl": "^4.1.0",
     "next-sitemap": "^4.2.3",
     "nodemailer": "^6.9.16",
     "react": "^18",
@@ -23,6 +26,7 @@
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "22.10.1",
     "@types/nodemailer": "^6.4.17",
     "@types/react": "^18",

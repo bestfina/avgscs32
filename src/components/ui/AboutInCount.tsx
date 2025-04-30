@@ -5,8 +5,10 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import CountUp from "react-countup";
 import { twMerge } from "tailwind-merge";
+import { useTranslations } from "next-intl";
 
 const AboutInCount = () => {
+  const t = useTranslations();
   const [startCount, setStartCount] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -54,11 +56,11 @@ const AboutInCount = () => {
                 ) : (
                   "0"
                 )}
-                {title}
+                {t(title)}
               </div>
             ) : (
               <div className="text-6xl xxl:text-5xl lg:text-4xl md:text-3xl xs:text-2xl">
-                {title}
+                {t(title)}
                 {startCount ? (
                   <CountUp
                     className="text-6xl xxl:text-5xl lg:text-4xl md:text-3xl xs:text-2xl"
@@ -70,7 +72,7 @@ const AboutInCount = () => {
                 )}
               </div>
             )}
-            <div className="xxl:text-base lg:text-sm md:text-xs xs:text-[10.9px]">{text}</div>
+            <div className="xxl:text-base lg:text-sm md:text-xs xs:text-[10.9px]">{t(text)}</div>
           </div>
         ))}
       </div>
@@ -87,9 +89,9 @@ const AboutInCount = () => {
                 loading="lazy"
                 className="xxl:w-12 xxl:h-12 lg:w-9 lg:h-9"
               />
-              <h5 className="my-xxxs lg:m-0">{title}</h5>
+              <h5 className="my-xxxs lg:m-0">{t(title)}</h5>
             </div>
-            {description}
+            <p>{t(description)}</p>
           </div>
         ))}
       </div>

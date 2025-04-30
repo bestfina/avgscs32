@@ -24,15 +24,20 @@
     "paths": {
       "@/*": [
         "./src/*"
-      ]
+      ],
+      "public/*": [
+        "./public/*"
+      ],
     },
     "target": "ES2017"
   },
   "include": [
+    "svgr.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "next.congig.mjs",
   ],
   "exclude": [
     "node_modules"

@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import Button from "../ui/Button";
 import { twMerge } from "tailwind-merge";
@@ -15,11 +16,9 @@ interface TaimerBlockProps {
   textBtn?: string;
 }
 
-const TaimerBlock = ({
-  className,
-  title = "Получите 15% скидки",
-  textBtn = "Забронировать скидку",
-}: TaimerBlockProps) => {
+const TaimerBlock = ({ className, title, textBtn }: TaimerBlockProps) => {
+  const t = useTranslations("main.forma.timer");
+
   const calculateTimeLeft = () => {
     const now = new Date();
     const nextYear = now.getFullYear();
@@ -47,7 +46,6 @@ const TaimerBlock = ({
     return { days, hours, minutes, seconds };
   };
 
-  // Если таймер ещё не готов, возвращаем заглушку
   const { days, hours, minutes, seconds } =
     timeLeft !== null ? formatTime(timeLeft) : { days: "--", hours: "--", minutes: "--", seconds: "--" };
 
@@ -68,36 +66,38 @@ const TaimerBlock = ({
       <div className="flex flex-col items-center gap-3 xxl:gap-2 xs:gap-xxxxs">
         <Image
           src="/assets/icons/snowflake.svg"
-          alt=""
+          alt={t("snowflake_alt")}
           width={50}
           height={50}
           loading="eager"
           className="sm:w-10 sm:h-10"
         />
-        <h6 className="font-semibold text-center text-3xl xl:text-2xl md:text-xl x:text-lg">{title}</h6>
+        <h6 className="font-semibold text-center text-3xl xl:text-2xl md:text-xl x:text-lg">
+          {title || t("title")}
+        </h6>
       </div>
       <div
         className="flex items-center gap-sm xl:gap-xs md:gap-xxs sm:gap-3 text-center text-TextLight timer-text"
         style={{ minHeight: "40px" }}
       >
         <div className="timer-text">
-          {days} <div>Дней</div>
+          {days} <div>{t("days")}</div>
         </div>
         :
         <div className="timer-text">
-          {hours} <div>Часов</div>
+          {hours} <div>{t("hours")}</div>
         </div>
         :
         <div className="timer-text">
-          {minutes} <div>Минут</div>
+          {minutes} <div>{t("minutes")}</div>
         </div>
         :
         <div className="timer-text">
-          {seconds} <div>Секунд</div>
+          {seconds} <div>{t("seconds")}</div>
         </div>
       </div>
       <Button type="blue" className="x:w-full btn-grow">
-        {textBtn}
+        {textBtn || t("button")}
       </Button>
     </motion.div>
   );

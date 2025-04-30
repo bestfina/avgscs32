@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import ArrowIcon from "./icon/ArrowIcon";
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
@@ -11,6 +12,7 @@ interface CasesProps {
 }
 
 const Cases = ({ caseArr, main }: CasesProps) => {
+  const t = useTranslations();
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { margin: "0px 0px -100px 0px" });
   const [visibleVideos, setVisibleVideos] = useState<{ [key: number]: boolean }>({});
@@ -47,8 +49,8 @@ const Cases = ({ caseArr, main }: CasesProps) => {
             variants={cardVariants}
             whileHover={{ scale: 1.02 }}
           >
-            <h3 className="underline">{title}</h3>
-            <p className="mb-xs mt-xxxs xl:mt-xxxxs xl:mb-xxs xl:text-base md:text-sm">{description}</p>
+            <h3 className="underline">{t(title)}</h3>
+            <p className="mb-xs mt-xxxs xl:mt-xxxxs xl:mb-xxs xl:text-base md:text-sm">{t(description)}</p>
             <video
               className="w-full object-cover rounded-3xl"
               autoPlay={isVisible}
@@ -77,7 +79,7 @@ const Cases = ({ caseArr, main }: CasesProps) => {
           variants={cardVariants}
           whileHover={{ scale: 1.02 }}
         >
-          Смотреть ещё <ArrowIcon className="-rotate-90 w-10 h-10 md:w-8 md:h-8 sm:w-6 sm:h-6" />
+          {t("main.portfolio.view_more")} <ArrowIcon className="-rotate-90 w-10 h-10 md:w-8 md:h-8 sm:w-6 sm:h-6" />
         </motion.a>
       )}
     </div>

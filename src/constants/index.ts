@@ -1,518 +1,520 @@
-import { TAboutInNumber, TAdvantages, TCase, TFaq, TFeedbacks, TFields, TLink, TService, TSteps } from "@/types";
+import {
+  TAboutInNumber,
+  TAdvantages,
+  TCase,
+  TFaq,
+  TFeedbacks,
+  TFields,
+  TLink,
+  TLocales,
+  TService,
+  TSteps,
+} from "@/types";
+
+export const locales: TLocales[] = ["en", "ru"] as const;
+export const defaultLocale: TLocales = "ru";
 
 export const LINK: TLink[] = [
-  {
-    title: "Услуги",
-    url: "/#service",
-    id: 1,
-  },
-  {
-    title: "Портфолио",
-    url: "/portfolio",
-    id: 2,
-  },
-  {
-    title: "О нас",
-    url: "/#about",
-    id: 3,
-  },
-  {
-    title: "Отзывы",
-    url: "/#feedback",
-    id: 4,
-  },
-  {
-    title: "Контакты",
-    url: "/contacts",
-    id: 5,
-  },
+  { title: "nav.service", url: "/#service", id: 1 },
+  { title: "nav.portfolio", url: "/portfolio", id: 2 },
+  { title: "nav.about", url: "/#about", id: 3 },
+  { title: "nav.feedback", url: "/#feedback", id: 4 },
+  { title: "nav.contacts", url: "/contacts", id: 5 },
 ];
+
+export const ROUTE_TRANSLATE = {
+  "/": "link.main",
+  "#hero": "link.main",
+  portfolio: "nav.portfolio",
+  "e-commerce": "link.ecommerce",
+  "#service": "nav.service",
+  "landing-page": "link.landing",
+  contacts: "nav.contacts",
+  "#about": "nav.about",
+  "#feedback": "nav.feedback",
+  corporate: "link.corporate",
+  privacy: "link.privacy",
+  "not-found": "link.notfound",
+};
+// [
+//   {
+//     value: "/", translated : "link.main",
+//   },
+//   {
+//     value: "#hero", translated : "link.main",
+//   },
+//   {
+//     value: "portfolio", translated : "nav.portfolio",
+//   },
+//   {
+//     value: "e-commerce", translated : "link.ecommerce",
+//   },
+//   {
+//     value: "#service", translated : "nav.service",
+//   },
+//   {
+//     value: "landing-page", translated : "link.landing",
+//   },
+//   {
+//     value: "contacts", translated : "nav.contacts",
+//   },
+//   {
+//     value: "#about", translated : "nav.about",
+//   },
+//   {
+//     value: "#feedback", translated : "nav.feedback",
+//   },
+//   {
+//     value : "corporate" , translated : "link.corporate",
+//   },
+//   {
+//     value : "privacy" , translated : "link.privacy",
+//   },
+//   {
+//     value : "not-found" , translated : "link.notfound",
+//   }
+// ]
 
 export const ADVANTAGES: TAdvantages[] = [
   {
     id: 1,
     icon: "/assets/icons/puzzle.svg",
-    title: "Персонализированные решения",
-    description: "Разработка сайтов и дизайна на основе глубокого понимания Вашего бизнеса, аудитории и целей.",
+    title: "main.advantages.personalizedSolutions.title",
+    description: "main.advantages.personalizedSolutions.description",
   },
   {
     id: 2,
     icon: "/assets/icons/clock.svg",
-    title: "Транспарентность и ясные сроки",
-    description:
-      "Чёткое и понятное описание всех этапов разработки, включая установку реальных сроков и регулярные отчёты о ходе работы.",
+    title: "main.advantages.transparency.title",
+    description: "main.advantages.transparency.description",
   },
   {
     id: 3,
     icon: "/assets/icons/document-settings.svg",
-    title: "Полный цикл услуг",
-    description:
-      "Мы устраняем необходимость для Вас искать разные агентства и других специалистов под отдельные задачи.",
+    title: "main.advantages.fullCycle.title",
+    description: "main.advantages.fullCycle.description",
   },
   {
     id: 4,
     icon: "/assets/icons/tree.svg",
-    title: "Экологичная разработка",
-    description: "Мы сделаем Вам экологичный продукт по принципам устойчивого и удобного развития.",
+    title: "main.advantages.ecoFriendly.title",
+    description: "main.advantages.ecoFriendly.description",
   },
 ];
-
 export const SERVICE: TService[] = [
   {
     id: 1,
-    title: "Интернет-магазин",
+    title: "main.service.ecommerce.title",
     icon: "/assets/icons/store.svg",
-    price: "От 200.000 руб./35 дней",
-    description: `Мы разрабатываем современные интернет-магазины, которые увеличивают продажи минимум на 30% за счет удобного дизайна, SEO-оптимизации и 
-    различных интеграции.`,
+    price: "main.service.ecommerce.price",
+    description: "main.service.ecommerce.description",
     url: "/e-commerce",
   },
   {
     id: 2,
-    title: "Корпоративный сайт",
+    title: "main.service.corporate.title",
     icon: "/assets/icons/office-briefcase.svg",
-    price: "От 120.000 руб./18 дней",
-    description: `Создаём корпоративные сайты, которые отражают стиль и ценности вашей компании, обеспечивая удобство для любых посетителей сайта.`,
+    price: "main.service.corporate.price",
+    description: "main.service.corporate.description",
     url: "/corporate",
   },
   {
     id: 3,
-    title: "Лендинг",
+    title: "main.service.landing.title",
     icon: "/assets/icons/web-page.svg",
-    price: "От 50.000 руб./10 дней",
-    description: `Мы делаем эффективные лендинги, которые дают конверсию от 4% до 15%.`,
+    price: "main.service.landing.price",
+    description: "main.service.landing.description",
     url: "/landing-page",
   },
   {
     id: 4,
-    title: "Другое",
+    title: "main.service.other.title",
     icon: "/assets/icons/business-card.svg",
-    price: "По договорённости",
-    description: `Предоставим комплексный маркетинг или техническую поддержку сайта.`,
+    price: "main.service.other.price",
+    description: "main.service.other.description",
     url: "",
   },
 ];
-
 export const FAQ: TFaq[] = [
   {
     id: 1,
-    title: "Как я могу следить за прогрессом разработки?",
+    title: "main.faq.progressTracking.title",
     description: [
       {
         subject: "",
-        text: `Мы обеспечиваем прозрачность всех этапов разработки проекта и предоставляем нашим клиентам удобные способы отслеживания текущего
-        состояния работы. Вот как это происходит:`,
+        text: "main.faq.progressTracking.description.1.text",
       },
       {
-        subject: "1. Регулярные отчеты. ",
-        text: `Они включают: Список выполненных задач, текущий прогресс по этапам, оставшиеся задачи и их статус, возможные риски или задержки.
-        Частота отчетов обсуждается заранее — это может быть ежедневно, еженедельно или по завершении ключевых этапов.`,
+        subject: "main.faq.progressTracking.description.2.subject",
+        text: "main.faq.progressTracking.description.2.text",
       },
       {
-        subject: "2. Доступ к проектным инструментам. ",
-        text: `Используем современные инструменты управления проектами, такие как Trello ( для отслеживания задач в виде досок и карточек ), 
-        Asana ( для ведения списка задач и назначенных исполнителей ), Jira ( для более сложных технических проектов ). Вы получаете доступ 
-        к этим инструментам, где сможете видеть все задачи и их статусы, а так же оставлять комментарии или предложения`,
+        subject: "main.faq.progressTracking.description.3.subject",
+        text: "main.faq.progressTracking.description.3.text",
       },
       {
-        subject: "3. Личный менеджер проекта. ",
-        text: `С вами работает выделенный менеджер проекта. Вы можете связаться с менеджером по телефону, электронной почте или в мессенджерах.`,
+        subject: "main.faq.progressTracking.description.4.subject",
+        text: "main.faq.progressTracking.description.4.text",
       },
       {
-        subject: "4. Тестовый сервер. ",
-        text: `Предоставляем доступ к тестовому серверу, где размещается промежуточная версия сайта.`,
+        subject: "main.faq.progressTracking.description.5.subject",
+        text: "main.faq.progressTracking.description.5.text",
       },
       {
         subject: "",
-        text: `Наша не маловажная задача - заботимся о том, чтобы вы были в курсе всех процессов разработки. Это позволяет не только обеспечить 
-        прозрачность, но и дает возможность своевременно вносить коррективы для достижения наилучшего результата.`,
+        text: "main.faq.progressTracking.description.6.text",
       },
     ],
   },
   {
     id: 2,
-    title: "Что мне нужно подготовить для начала работы?",
+    title: "main.faq.preparation.title",
     description: [
       {
         subject: "",
-        text: `Для начала работы нам понадобится ваше описание проекта, цели сайта, аудитория, примерная структура страниц и референсы. 
-        Если у вас есть готовый контент (тексты, изображения, логотип), это ускорит процесс, но мы также можем помочь с его созданием.`,
+        text: "main.faq.preparation.description.1.text",
       },
     ],
   },
   {
     id: 3,
-    title: "Какие гарантии вы даёте на свою работу?",
+    title: "main.faq.guarantees.title",
     description: [
       {
         subject: "",
-        text: `Мы предоставляем гарантию от 1 до 12 месяцев на любую нашу работу. В течение этого времени мы бесплатно исправляем выявленные баги, 
-        ошибки верстки или программной логики, если они возникли по нашей вине. Сроки гарантии зависят от сложности и функциональности проект. `,
+        text: "main.faq.guarantees.description.1.text",
       },
     ],
   },
   {
     id: 4,
-    title: "Какие способы сотрудничества и оплаты у вас?",
+    title: "main.faq.collaboration.title",
     description: [
       {
         subject: "",
-        text: `Мы практически всегда работаем по договору, чтобы обеспечить прозрачность и комфорт сотрудничества. Исключение можем сделать только для малых проектов и доработок. 
-        Заключение договора и гибкая система оплаты обеспечат комфортное и безопасное сотрудничество. Мы ценим доверие наших клиентов и делаем процесс максимально удобным.`,
+        text: "main.faq.collaboration.description.1.text",
       },
       {
-        subject: "Мы принимаем оплату через: ",
-        text: `Онлайн-платежи, безопасная сделка через сервисы, криптовалюту и другие удобные для вас способы :)`,
+        subject: "main.faq.collaboration.description.2.subject",
+        text: "main.faq.collaboration.description.2.text",
       },
     ],
   },
   {
     id: 5,
-    title: "Можно ли заказать срочную разработку сайта?",
+    title: "main.faq.urgentDevelopment.title",
     description: [
       {
-        subject: "Да, ",
-        text: `мы принимаем заказы на срочную разработку сайтов! Мы понимаем, что иногда проекты требуют быстрого запуска. В таких случаях мы: Ускоряем 
-        процессы, увеличиваем ресурсы команды, сохраняем качество, обсуждаем реалистичные сроки. Если вам нужен сайт в кратчайшие сроки, свяжитесь 
-        с нами, и мы предложим лучшее решение.`,
+        subject: "main.faq.urgentDevelopment.description.1.subject",
+        text: "main.faq.urgentDevelopment.description.1.text",
       },
     ],
   },
-  // {
-  //   id: 6,
-  //   title: "Что делать, если у меня нет контента?",
-  //   description: [
-  //     {
-  //       subject: "",
-  //       text: `Мы можем помочь: у нас есть копирайтеры для написания текстов и дизайнеры, которые подберут изображения или создадут их с нуля.`,
-  //     },
-  //   ],
-  // },
+  {
+    id: 6,
+    title: "main.faq.noContent.title",
+    description: [
+      {
+        subject: "",
+        text: "main.faq.noContent.description.1.text",
+      },
+    ],
+  },
 ];
-
 export const FEEDBACKS: TFeedbacks[] = [
   {
     id: 1,
-    name: "Glassen-IT",
+    name: "main.feedback.glassenIT.name",
     avatar: "/assets/images/reviews/avatar/glassenIT.webp",
     poster: "/assets/images/reviews/poster/glassenIT.webp",
     video: ["/video/mp4/reviews/GlassenIT.mp4", ""],
   },
   {
     id: 2,
-    name: "Vintage",
+    name: "main.feedback.vintage.name",
     avatar: "/assets/images/reviews/avatar/ramis.webp",
     poster: "/assets/images/reviews/poster/ramis.webp",
   },
   {
     id: 3,
-    name: "Рамис Хуснуллин",
+    name: "main.feedback.ramis.name",
     avatar: "/assets/images/reviews/avatar/semenov.webp",
     poster: "/assets/images/reviews/poster/ramis-video.webp",
     video: ["/video/mp4/reviews/ramis.mp4", ""],
   },
   {
     id: 4,
-    name: "yavrep",
+    name: "main.feedback.yavrep.name",
     avatar: "/assets/images/reviews/avatar/kwork.webp",
     poster: "/assets/images/reviews/poster/yavrep.webp",
   },
   {
     id: 5,
-    name: "Citisit",
+    name: "main.feedback.citisit.name",
     avatar: "/assets/images/reviews/avatar/kwork.webp",
     poster: "/assets/images/reviews/poster/citisit.webp",
   },
   {
     id: 6,
-    name: "A.Д.Семенов",
+    name: "main.feedback.semenov.name",
     avatar: "/assets/images/reviews/avatar/vintage.webp",
     poster: "/assets/images/reviews/poster/vintage.webp",
   },
   {
     id: 7,
-    name: "az-web",
+    name: "main.feedback.azWeb.name",
     avatar: "/assets/images/reviews/avatar/kwork.webp",
     poster: "/assets/images/reviews/poster/az_web.webp",
   },
   {
     id: 8,
-    name: "denisE82",
+    name: "main.feedback.denisE82.name",
     avatar: "/assets/images/reviews/avatar/kwork.webp",
     poster: "/assets/images/reviews/poster/denis.webp",
   },
 ];
-
 export const FIELDS: TFields[] = [
   {
     id: 1,
     type: "text",
-    placeholder: "Имя",
+    placeholder: "popup_form.fields.name_placeholder",
   },
   {
     id: 2,
     type: "tel",
-    placeholder: "Телефон*",
+    placeholder: "popup_form.fields.phone_placeholder",
   },
   {
     id: 3,
     type: "email",
-    placeholder: "Почта",
+    placeholder: "popup_form.fields.email_placeholder",
   },
 ];
-
 export const CASE: TCase[] = [
   {
     id: 1,
-    title: "Бизнес Совет",
+    title: "main.portfolio.bisovet.title",
     video: ["/video/mp4/project/bisovet.mp4", ""],
     poster: "/assets/images/poster/bisovet.webp",
     url: "https://bisovet.pro",
-    category: "Корпоративные сайты",
-    description:
-      "Корпоративный сайт для юридической компании (B2B). Сделан на cms wordpress с кастомными полями для удобства наполнения.",
+    category: "main.portfolio.bisovet.category",
+    description: "main.portfolio.bisovet.description",
   },
   {
     id: 2,
-    title: "АльтАква",
+    title: "main.portfolio.altAcva.title",
     video: ["/video/mp4/project/altAcva.mp4", ""],
     poster: "/assets/images/poster/alrAcva.png",
     url: "https://altaqua.ru/product/membrany_hynamo/",
-    category: "Корпоративные сайты",
-    description:
-      "Разработали каталог на сайте АльтАква, а после результата, клиенты перешли на полную тех. поддержку сайта на Wordpress.",
+    category: "main.portfolio.altAcva.category",
+    description: "main.portfolio.altAcva.description",
   },
   {
     id: 3,
-    title: "Denis Sanko",
+    title: "main.portfolio.denisSanko.title",
     video: ["/video/mp4/project/denisSanko.mp4", "/video/webm/project/denisSanko.webm"],
     poster: "/assets/images/poster/denisSanko.webp",
     url: "https://denissanko.com/kouching-pervyh-licz/",
-    category: "Лендинги",
-    description:
-      "Сделали отдельную страницу и интегрировали её на wordress в корпоративный сайт бизнес-коуча Дениса Санько.",
+    category: "main.portfolio.denisSanko.category",
+    description: "main.portfolio.denisSanko.description",
   },
   {
     id: 4,
-    title: "GloSkin",
+    title: "main.portfolio.gloSkin.title",
     video: ["/video/mp4/project/gloSkin.mp4", "/video/webm/project/gloSkin.webm"],
     poster: "/assets/images/poster/gloskin.webp",
     url: "https://gloskin.ru",
-    category: "Интернет-магазины",
-    description:
-      "Корректировка и добавления функционала для магазина косметики. Сделали функционал доставки с добавлением стоимости, главный баннер и др.",
+    category: "main.portfolio.gloSkin.category",
+    description: "main.portfolio.gloSkin.description",
   },
   {
     id: 5,
-    title: "МЦОиП",
+    title: "main.portfolio.moip.title",
     video: ["/video/mp4/project/moip.mp4", ""],
     poster: "/assets/images/poster/moip.webp",
     url: "https://mcoip.ru",
-    category: "Корпоративные сайты",
-    description:
-      "Частичная доработка образовательной платформы. Реализовали вёрстку некоторых блоков, исправили баги, дали рекомендации.",
+    category: "main.portfolio.moip.category",
+    description: "main.portfolio.moip.description",
   },
   {
     id: 6,
-    title: "CyberTribe",
+    title: "main.portfolio.cyberTribe.title",
     video: ["/video/mp4/project/cybertribe.mp4", ""],
     poster: "/assets/images/poster/cyber.webp",
     url: "https://www.cybertribe.uk",
-    category: "Лендинги",
-    description:
-      "Лендинг для крупной маркетинговой компании. Разработан на чистом коде без трудного функционала, но зато с хорошим ux/ui для ЦА.",
+    category: "main.portfolio.cyberTribe.category",
+    description: "main.portfolio.cyberTribe.description",
   },
   {
     id: 7,
-    title: "Vintage Cottage",
+    title: "main.portfolio.vintageCottage.title",
     video: ["/video/mp4/project/vintageCottage.mp4", "/video/webm/project/vintageCottage.webm"],
     poster: "/assets/images/poster/vintage.webp",
     url: "https://vintage-cottage.eu",
-    category: "Интернет-магазины",
-    description:
-      "Международный интернет-магазин с товарами для дома. Сделан на площадке woocommerce, мультивалютный и мультиязычный.",
+    category: "main.portfolio.vintageCottage.category",
+    description: "main.portfolio.vintageCottage.description",
   },
   {
     id: 8,
-    title: "ФГОС",
+    title: "main.portfolio.fgos.title",
     video: ["/video/mp4/project/fgos.mp4", ""],
     poster: "/assets/images/poster/fgos.webp",
     url: "https://fgosonline.ru",
-    category: "Корпоративные сайты",
-    description:
-      'Улучшения сайта для услуг "Повышения квалификации". Разработали на главной странице первый баннер, поправили некоторые баги в вёрстке сайта.',
+    category: "main.portfolio.fgos.category",
+    description: "main.portfolio.fgos.description",
   },
   {
     id: 9,
-    title: "Антон Бавин",
+    title: "main.portfolio.bavin.title",
     video: ["/video/mp4/project/bavin.mp4", ""],
     poster: "/assets/images/poster/bavin.webp",
     url: "https://bavin.pro",
-    category: "Визитки",
-    description:
-      'Сайт-визитка для продажи услуг "Освобождение от долгов" на голом коде с интеграциями различных аналитик и настройкой заявок на bitrix24.',
+    category: "main.portfolio.bavin.category",
+    description: "main.portfolio.bavin.description",
   },
   {
     id: 10,
-    title: "TRadeCDB",
+    title: "main.portfolio.tradeCDB.title",
     video: ["/video/mp4/project/TRadeCDB.mp4", "/video/webm/project/TRadeCDB.webm"],
     poster: "/assets/images/poster/tradeCDB.webp",
     url: "https://tradecdb.com",
-    category: "Лендинги",
-    description:
-      "Разработали личный кабинет (админу, менеджеру и пользователю) и доработали лендинг для международной инвестиционной компании.",
+    category: "main.portfolio.tradeCDB.category",
+    description: "main.portfolio.tradeCDB.description",
   },
   {
     id: 11,
-    title: "Магазин ФОП",
+    title: "main.portfolio.fop.title",
     video: ["/video/mp4/project/fop.mp4", ""],
     poster: "/assets/images/poster/fop.webp",
     url: "https://fop.solncesvet.ru",
-    category: "Интернет-магазины",
-    description:
-      "Доработка интернет-магазина для Международного педагогического портала. Сделали каталог, акции, главные баннеры и многое другое.",
+    category: "main.portfolio.fop.category",
+    description: "main.portfolio.fop.description",
   },
   {
     id: 12,
-    title: "Гипсокартон и малярка",
+    title: "main.portfolio.allAll.title",
     video: ["/video/mp4/project/all-all.mp4", ""],
     poster: "/assets/images/poster/all.webp",
     url: "https://all-all.ru/",
-    category: "Визитки",
-    description:
-      "Сайт-визитка для малярщика. Пародия на инстаграмм, с функционалом подписчиков и бесконечным авто-парсингом историй из ТГ.",
+    category: "main.portfolio.allAll.category",
+    description: "main.portfolio.allAll.description",
   },
   {
     id: 13,
-    title: "ACHARGE",
+    title: "main.portfolio.acharge.title",
     video: ["/video/mp4/project/acharge.mp4", ""],
     poster: "/assets/images/poster/acharge.webp",
     url: "https://www.zolotarevka.ru",
-    category: "Корпоративные сайты",
-    description:
-      "Вёрстка сайта для продажи зарядных станций в РФ. Сайт сделан на чистом коде с отправкой писем на почту через php.",
+    category: "main.portfolio.acharge.category",
+    description: "main.portfolio.acharge.description",
   },
   {
     id: 14,
-    title: "Sattva YOGA",
+    title: "main.portfolio.sattva.title",
     video: ["/video/mp4/project/satva.mp4", ""],
     poster: "/assets/images/poster/sattva.webp",
     url: "https://sattva-centr.ru",
-    category: "Интернет-магазины",
-    description:
-      "Разработали сайт с функционал бронирования занятия йогой со специалистом. Сделан на чистом коде с натяжкой на wordress.",
+    category: "main.portfolio.sattva.category",
+    description: "main.portfolio.sattva.description",
   },
-  // {
-  //   id: 14,
-  //   title: "Trava-murava",
-  //   video: ["/video/mp4/project/trava-murava.mp4", ""],
-  //   poster: "/assets/images/poster/trava-murava.webp",
-  //   url: "https://hotel-divnogorie.ru",
-  //   category: "Корпоративные сайтыf",
-  //   description:
-  //     "Сайт для бронирования гостевых домов в Воронеже. Сделан на плагинах wp, а так же была проведена seo оптимизация.",
-  // },
   {
     id: 15,
-    title: "ТЦ Малибу",
+    title: "main.portfolio.malibu.title",
     video: ["/video/mp4/project/malibu.mp4", "/video/webm/project/malibu.webm"],
     poster: "/assets/images/poster/malibu.webp",
     url: "https://malibu-trc.ru",
-    category: "Корпоративные сайты",
-    description:
-      "Корпоративный сайт для огромного торгового центра в Липецке. Сделан на wordress с помощью конструктора elementor и кастомного функционала.",
+    category: "main.portfolio.malibu.category",
+    description: "main.portfolio.malibu.description",
   },
   {
     id: 16,
-    title: "Курсы от Татьяны Величко",
+    title: "main.portfolio.tatyanaVelichko.title",
     video: ["/video/mp4/project/tatyanaVelichko.mp4", "/video/webm/project/tatyanaVelichko.webm"],
     poster: "/assets/images/poster/tatyanaVelichko.webp",
     url: "https://tatyana-velichko.ru/",
-    category: "Интернет-магазины",
-    description:
-      "С полного нуля сделали сайт с возможностью покупки и просмотра онлайн курсов по массажу от Татьяны Величко.",
+    category: "main.portfolio.tatyanaVelichko.category",
+    description: "main.portfolio.tatyanaVelichko.description",
   },
   {
     id: 17,
-    title: "CortexDigital",
+    title: "main.portfolio.cortexDigital.title",
     video: ["/video/mp4/project/cortexDigital.mp4", "/video/webm/project/cortexDigital.webm"],
     poster: "/assets/images/poster/cortexDigital.webp",
     url: "/",
-    category: "Корпоративные сайты",
-    description:
-      "Наш сайт отражает весь наш накопленный опыт и нам не стыдно добавить его в портфолио. Разработан на современных технологиях ( next.js, ts и др. )",
+    category: "main.portfolio.cortexDigital.category",
+    description: "main.portfolio.cortexDigital.description",
   },
-  // https://nataliy-beate.ru/
-  // https://beatris-odegda.ru/
-  // https://www.g-mc.ru/kosmetologiya-i-dermatologiya/
+  {
+    id: 18,
+    title: "main.portfolio.travaMurava.title",
+    video: ["/video/mp4/project/trava-murava.mp4", ""],
+    poster: "/assets/images/poster/trava-murava.webp",
+    url: "https://hotel-divnogorie.ru",
+    category: "main.portfolio.travaMurava.category",
+    description: "main.portfolio.travaMurava.description",
+  },
 ];
-
 export const ABOUT_IN_NUMBERS: TAboutInNumber[] = [
   {
     id: 1,
-    title: "+",
+    title: "main.aboutInNumbers.clients.title",
     count: 110,
-    text: "постоянных клиентов",
+    text: "main.aboutInNumbers.clients.text",
   },
   {
     id: 2,
-    title: " лет",
+    title: "main.aboutInNumbers.experience.title",
     count: 6,
-    text: "средний опыт сотрудников",
+    text: "main.aboutInNumbers.experience.text",
   },
   {
     id: 3,
-    title: "Около ",
+    title: "main.aboutInNumbers.projects.title",
     count: 400,
-    text: "успешно завершённых проектов",
+    text: "main.aboutInNumbers.projects.text",
   },
   {
     id: 4,
-    title: "Более ",
+    title: "main.aboutInNumbers.technologies.title",
     count: 30,
-    text: "используемых нами технологий",
+    text: "main.aboutInNumbers.technologies.text",
   },
 ];
-
 export const STEPS: TSteps[] = [
   {
     id: 1,
-    title: "Анализ и брифинг",
+    title: "main.steps.analysis.title",
     icon: "/assets/icons/document-tick.svg",
-    description: "Изучаем бизнес клиента, целевую аудиторию, конкурентов и цели проекта.",
+    description: "main.steps.analysis.description",
   },
   {
     id: 2,
-    title: "Проектирование (UX-дизайн)",
+    title: "main.steps.uxDesign.title",
     icon: "/assets/icons/maths.svg",
-    description: "Разрабатываем структуру сайта, создаем схемы (wireframes) для каждой страницы.",
+    description: "main.steps.uxDesign.description",
   },
   {
     id: 3,
-    title: "Дизайн и наполнение (UI-дизайн)",
+    title: "main.steps.uiDesign.title",
     icon: "/assets/icons/palette.svg",
-    description:
-      "Создаем визуальный стиль сайта: подбираем цвета, шрифты, текста, иконки, иллюстрации и анимации, делая сайт уникальным на 100%.",
+    description: "main.steps.uiDesign.description",
   },
   {
     id: 4,
-    title: "Разработка",
+    title: "main.steps.development.title",
     icon: "/assets/icons/code.svg",
-    description:
-      "Делаем вёрстку макета, добавляем интерактивные элементы (анимации, выпадающие меню). Интегрируем с CMS (например, Tilda, WordPress, 1С-Битрикс).",
+    description: "main.steps.development.description",
   },
   {
     id: 5,
-    title: "Тестирование",
+    title: "main.steps.testing.title",
     icon: "/assets/icons/checklist.svg",
-    description:
-      "Проверяем работу сайта на разных устройствах и браузерах. Исправляем баги, тестируем формы, ссылки, загрузку страниц.",
+    description: "main.steps.testing.description",
   },
   {
     id: 6,
-    title: "Запуск и поддержка",
+    title: "main.steps.launch.title",
     icon: "/assets/icons/rocket.svg",
-    description:
-      "Переносим сайт на сервер (хостинг), подключаем домен, настраиваем SSL-сертификат. Даём гарантию от 2-х недель до 6 месяцев.",
+    description: "main.steps.launch.description",
   },
 ];

@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Button from "./Button";
 import { usePathname } from "next/navigation";
@@ -6,13 +7,16 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const MainCta = () => {
+  const t = useTranslations("main.hero.cta");
   const [isMain, setIsMain] = useState(true);
   const currentPath = usePathname();
+
   useEffect(() => {
     if (currentPath !== "/") {
       setIsMain(false);
     }
   }, [currentPath]);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -20 }}
@@ -21,21 +25,21 @@ const MainCta = () => {
       className="flex gap-sm xl:gap-xs md:gap-xxs x:gap-xxxs x:flex-col mt-md xl:mt-10 lg:mt-sm"
     >
       <Button type="blue" className="x:w-full btn-grow">
-        Рассчитать стоимость
+        {t("calculate_cost")}
       </Button>
       {isMain ? (
         <Link
           href="/#service"
           className="bg-TextLight text-center rounded-full font-bold w-80 py-3 hover:opacity-70 duration-500 xl:w-72 lg:w-60 md:w-56 xl:py-2 x:w-full"
         >
-          Смотреть все услуги
+          {t("view_services")}
         </Link>
       ) : (
         <Link
           href="/portfolio"
           className="bg-TextLight text-center rounded-full font-bold w-80 py-3 hover:opacity-70 duration-500 xl:w-72 lg:w-60 md:w-56 xl:py-2 x:w-full"
         >
-          Смотреть портфолио
+          {t("view_portfolio")}
         </Link>
       )}
     </motion.div>

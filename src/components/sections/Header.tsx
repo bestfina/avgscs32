@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState, useCallback } from "react";
+import { useTranslations } from "next-intl";
+import { useEffect, useState, useCallback, FC } from "react";
 import Logo from "../ui/Logo";
 import Navbar from "../ui/Navbar";
 import Button from "../ui/Button";
@@ -8,16 +9,22 @@ import { twMerge } from "tailwind-merge";
 import Contact from "../ui/Contact";
 import CloseIcon from "../ui/icon/CloseIcon";
 import BurgerMenuIcon from "../ui/icon/BurgerMenuIcon";
-import { usePathname } from "next/navigation";
+import LanguageSelector from "../ui/LanguageSelector";
+import { TLocales } from "@/types";
+import { usePathname } from "@/i18n/navigation";
 
-const Header = () => {
-  const pathname = usePathname() || "";
+type Props = {
+  locale: TLocales;
+};
+
+const Header: FC<Props> = ({ locale }) => {
+  const t = useTranslations("header");
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [atTop, setAtTop] = useState(true);
 
-  // Список известных путей
   const knownPaths = [
     "/",
     "/contacts",
@@ -45,7 +52,6 @@ const Header = () => {
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
-
     if (is404Page) {
       setAtTop(false);
     } else if (pathname === "/contacts" || pathname === "/portfolio" || pathname === "/privacy") {
@@ -53,7 +59,6 @@ const Header = () => {
     } else {
       setAtTop(window.scrollY < 120);
     }
-
     return () => {
       document.body.style.overflow = "";
     };
@@ -65,7 +70,6 @@ const Header = () => {
     } else {
       window.removeEventListener("scroll", handleScroll);
     }
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -93,8 +97,9 @@ const Header = () => {
         </div>
         <div className="flex flex-col items-end gap-xxxxs">
           <div className="flex gap-xs xl:gap-xxs lg:gap-xxxs items-center">
+            <LanguageSelector className="block sm:hidden" locale={locale} />
             <Button className="sm:hidden" type={twMerge(atTop ? "border-white" : "black")}>
-              Получить консультацию
+              {t("consultation")}
             </Button>
             <Social className="md:hidden" />
           </div>
@@ -117,6 +122,9 @@ const Header = () => {
         )}
       >
         <Navbar classNameList="flex-col" classNameItem="text-2xl" onClick={() => setIsOpen(!isOpen)} />
+        <div className="flex items-center justify-center">
+          <LanguageSelector locale={locale} fullWidth />
+        </div>
         <Social />
         <Contact />
         <Button
@@ -126,7 +134,7 @@ const Header = () => {
             setIsOpen(!isOpen);
           }}
         >
-          Получить консультацию
+          {t("consultation")}
         </Button>
       </div>
     </header>

@@ -1,7 +1,8 @@
 "use client";
 import { LINK } from "@/constants";
-
-import Link from "next/link";
+import { LocaleLink } from "@/i18n/navigation";
+import { TransitionLink } from "@/lib/link";
+import { useLocale, useTranslations } from "next-intl";
 import { twMerge } from "tailwind-merge";
 
 interface NavbarProps {
@@ -13,12 +14,15 @@ interface NavbarProps {
 }
 
 const Navbar = ({ className, classNameList, atTop, onClick, classNameItem }: NavbarProps) => {
+  const t = useTranslations()
+  const locale = useLocale();
   return (
     <nav className={className}>
       <ul className={twMerge("flex gap-md lg:gap-sm", classNameList)}>
         {LINK.map(({ title, id, url }) => (
           <li key={id} className="hover:-translate-y-[6px] md:hover:translate-y-0 duration-500">
-            <Link
+            <TransitionLink
+              locale={locale}
               href={url}
               className={twMerge(classNameItem, atTop ? "text-TextLight" : "text-TextDark")}
               onClick={() => {
@@ -27,8 +31,8 @@ const Navbar = ({ className, classNameList, atTop, onClick, classNameItem }: Nav
                 }
               }}
             >
-              {title}
-            </Link>
+              {t(title)}
+            </TransitionLink>
           </li>
         ))}
       </ul>

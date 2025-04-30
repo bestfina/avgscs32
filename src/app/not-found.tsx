@@ -1,14 +1,13 @@
-import Link from "next/link";
+"use client";
 
-const NotFound = () => (
-  <section className="h-[80vh] px-xs flex flex-col items-center justify-center gap-xs">
-    <div className="text-center">
-      <div className="font-bold text-6xl text-center">404</div> Страница не найдена
-    </div>
-    <Link href="/" className="underline">
-      Вернуть на главную
-    </Link>
-  </section>
-);
+import Error from "next/error";
 
-export default NotFound;
+export default function NotFound() {
+  return (
+    <html lang="ru">
+      <body>
+        <Error statusCode={404} />
+      </body>
+    </html>
+  );
+}

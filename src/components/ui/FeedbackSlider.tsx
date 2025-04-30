@@ -7,8 +7,10 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import InnerIcon from "./InnerIcon";
 import { usePopup } from "@/context/PopupContext";
+import { useTranslations } from "next-intl";
 
 const FeedbackSlider = () => {
+  const t = useTranslations()
   const { openPopup } = usePopup();
   const [slides, setSlides] = useState(4);
 
@@ -45,7 +47,7 @@ const FeedbackSlider = () => {
               <div className="w-11 h-11 sm:w-9 sm:h-9 bg-black overflow-hidden rounded-full">
                 <Image src={avatar} alt={"аватар клиента:" + name} width={44} height={44} priority={false} />
               </div>
-              {name}
+              {t(name)}
             </div>
             <div className="flex items-center justify-center bg-cover bg-left-bottom h-full overflow-hidden relative">
               <Image

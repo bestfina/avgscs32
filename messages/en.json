@@ -1,0 +1,599 @@
+{
+  "nav": {
+    "service": "Services",
+    "portfolio": "Portfolio",
+    "about": "About Us",
+    "feedback": "Reviews",
+    "contacts": "Contacts"
+  },
+  "link": {
+    "main": "Main",
+    "ecommerce": "E-commerce",
+    "landing": "Landing & Business Card Website",
+    "corporate": "Corporate Website",
+    "privacy": "Privacy Policy",
+    "notfound": "Redirecting to page"
+  },
+  "header": {
+    "consultation": "Get a Consultation"
+  },
+  "main": {
+    "hero": {
+      "title": "We create all types of websites — from idea to launch",
+      "description": "Our team delivers projects of any complexity at affordable prices — from creative concepts to development and ongoing support. We guarantee high-quality work at every stage, on-time delivery, and continued project maintenance.",
+      "cta": {
+        "calculate_cost": "Calculate Cost",
+        "view_services": "View All Services",
+        "view_portfolio": "View Portfolio"
+      },
+      "next_section": "Next Section",
+      "poster_alt": "Main section background"
+    },
+    "portfolio": {
+      "title": "Projects We’re Proud Of",
+      "view_more": "View More",
+      "bisovet": {
+        "title": "Business Sovet",
+        "poster_alt": "Business Sovet Project Poster",
+        "category": "Corporate Websites",
+        "description": "Corporate website for a legal company (B2B). Built with WordPress CMS using custom fields for easy content management."
+      },
+      "altAcva": {
+        "title": "AltAqua",
+        "poster_alt": "AltAqua Project Poster",
+        "category": "Corporate Websites",
+        "description": "Developed the catalog for AltAqua’s website. After seeing results, the client moved to full technical support on WordPress."
+      },
+      "denisSanko": {
+        "title": "Denis Sanko",
+        "poster_alt": "Denis Sanko Project Poster",
+        "category": "Landing Pages",
+        "description": "Created a dedicated page and integrated it into the WordPress corporate site for business coach Denis Sanko."
+      },
+      "gloSkin": {
+        "title": "GloSkin",
+        "poster_alt": "GloSkin Project Poster",
+        "category": "E-Commerce",
+        "description": "Updated and added functionality to the cosmetics store. Implemented delivery cost calculation, main banners, and more."
+      },
+      "moip": {
+        "title": "MCOiP",
+        "poster_alt": "MCOiP Project Poster",
+        "category": "Corporate Websites",
+        "description": "Partial redevelopment of an educational platform. Implemented block layouts, fixed bugs, and provided recommendations."
+      },
+      "cyberTribe": {
+        "title": "CyberTribe",
+        "poster_alt": "CyberTribe Project Poster",
+        "category": "Landing Pages",
+        "description": "Landing page for a large marketing company. Developed with clean code, no complex functionality, but great UX/UI for the target audience."
+      },
+      "vintageCottage": {
+        "title": "Vintage Cottage",
+        "poster_alt": "Vintage Cottage Project Poster",
+        "category": "E-Commerce",
+        "description": "International home goods e-commerce site. Built on WooCommerce, supports multiple currencies and languages."
+      },
+      "fgos": {
+        "title": "FGOS",
+        "poster_alt": "FGOS Project Poster",
+        "category": "Corporate Websites",
+        "description": "Enhancements to the 'Qualification Improvement' services site. Designed the main banner and fixed layout bugs."
+      },
+      "bavin": {
+        "title": "Anton Bavin",
+        "poster_alt": "Anton Bavin Project Poster",
+        "category": "Business Cards",
+        "description": "Basic website for selling 'Debt Release' services in pure code with integrations for various analytics and Bitrix24 lead setup."
+      },
+      "tradeCDB": {
+        "title": "TRadeCDB",
+        "poster_alt": "TRadeCDB Project Poster",
+        "category": "Landing Pages",
+        "description": "Developed user dashboards (admin, manager, user) and refined the landing for an international investment company."
+      },
+      "fop": {
+        "title": "FOP Shop",
+        "poster_alt": "FOP Shop Project Poster",
+        "category": "E-Commerce",
+        "description": "Refinement of the online store for an International Pedagogical Portal. Created product catalogs, promotions, banners, and more."
+      },
+      "allAll": {
+        "title": "Drywall & Painting",
+        "poster_alt": "Drywall & Painting Project Poster",
+        "category": "Business Cards",
+        "description": "Simple website for painters. Parody of Instagram with follower features and infinite auto-parsed stories from Telegram."
+      },
+      "acharge": {
+        "title": "ACHARGE",
+        "poster_alt": "ACHARGE Project Poster",
+        "category": "Corporate Websites",
+        "description": "HTML/CSS/PHP site for the sale of EV charging stations in Russia. Email sending implemented via PHP."
+      },
+      "sattva": {
+        "title": "Sattva YOGA",
+        "poster_alt": "Sattva YOGA Project Poster",
+        "category": "E-Commerce",
+        "description": "Designed a yoga booking system. Built with clean code and integrated into WordPress."
+      },
+      "malibu": {
+        "title": "Malibu Mall",
+        "poster_alt": "Malibu Mall Project Poster",
+        "category": "Corporate Websites",
+        "description": "Corporate website for a large shopping center in Lipetsk. Built using WordPress and Elementor with custom functionality."
+      },
+      "tatyanaVelichko": {
+        "title": "Tatyana Velichko Courses",
+        "poster_alt": "Tatyana Velichko Courses Project Poster",
+        "category": "E-Commerce",
+        "description": "Built a course platform from scratch where users can buy and watch massage lessons by Tatyana Velichko."
+      },
+      "cortexDigital": {
+        "title": "CortexDigital",
+        "poster_alt": "CortexDigital Project Poster",
+        "category": "Corporate Websites",
+        "description": "Our own website showcasing our accumulated experience. Built with modern technologies such as Next.js, TypeScript, etc."
+      },
+      "travaMurava": {
+        "title": "Trava-murava",
+        "poster_alt": "Trava-murava Project Poster",
+        "category": "Corporate Websites",
+        "description": "Website for booking guest houses in Voronezh. Built using WordPress plugins and optimized for SEO."
+      }
+    },
+    "about": {
+      "title": "A Bit About Us",
+      "description": "CortexDigital is a digital agency that creates results-driven websites. We specialise in developing modern, unique solutions for businesses — from striking landing pages to complex corporate portals. Our approach is based on deep analysis and understanding of your business needs. We combine creative design, intuitive interface, and cutting-edge technology to attract new customers, increase conversion rates, and stand out your brand from the competition. We create websites that inspire and deliver success. Let's bring your idea to life together!"
+    },
+    "advantages": {
+      "personalizedSolutions": {
+        "title": "Personalised Solutions",
+        "description": "Website and design development tailored to your business, audience, and goals."
+      },
+      "transparency": {
+        "title": "Transparency and Clear Deadlines",
+        "description": "Clear explanation of each development phase including realistic timelines and regular progress reports."
+      },
+      "fullCycle": {
+        "title": "Full-Cycle Service",
+        "description": "Eliminates the need to engage multiple agencies or specialists for different tasks."
+      },
+      "ecoFriendly": {
+        "title": "Eco-Friendly Development",
+        "description": "We build sustainable products based on principles of green and efficient development."
+      }
+    },
+    "forma": {
+      "title": "Winter Promotion",
+      "description": "Leave a request and we’ll give you a <b>15% discount</b> on website development for the <b>New Year holidays</b>. Invest resources in a site that will pay off right away!",
+      "timer": {
+        "title": "Get 15% Off",
+        "button": "Reserve Discount",
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds",
+        "snowflake_alt": "Snowflake Icon"
+      }
+    },
+    "mini_forma": {
+      "title": "Get Full Consultation in One Click",
+      "description": "You don’t have to waste time browsing the site — get answers to all your questions directly from our managers within one working day."
+    },
+    "footer": {
+      "copyright": "CortexDigital © {year}",
+      "privacy_policy": "Privacy Policy",
+      "to_top": "top",
+      "arrow_up_alt": "Up Arrow Icon",
+      "developed_by": "Developed by CortexDigital"
+    },
+    "feedback": {
+      "title": "Your Reviews — Our Pride",
+      "slider": {
+        "play_icon_alt": "Play Icon",
+        "zoom_icon_alt": "Zoom Icon"
+      },
+      "glassenIT": {
+        "name": "Glassen-IT",
+        "avatar_alt": "Client Avatar: Glassen-IT",
+        "poster_alt": "Glassen-IT Review Poster"
+      },
+      "vintage": {
+        "name": "Vintage",
+        "avatar_alt": "Client Avatar: Vintage",
+        "poster_alt": "Vintage Review Poster"
+      },
+      "ramis": {
+        "name": "Ramis Khusnulin",
+        "avatar_alt": "Client Avatar: Ramis Khusnulin",
+        "poster_alt": "Ramis Khusnulin Review Poster"
+      },
+      "yavrep": {
+        "name": "yavrep",
+        "avatar_alt": "Client Avatar: yavrep",
+        "poster_alt": "yavrep Review Poster"
+      },
+      "citisit": {
+        "name": "Citisit",
+        "avatar_alt": "Client Avatar: Citisit",
+        "poster_alt": "Citisit Review Poster"
+      },
+      "semenov": {
+        "name": "A.D. Semenov",
+        "avatar_alt": "Client Avatar: A.D. Semenov",
+        "poster_alt": "A.D. Semenov Review Poster"
+      },
+      "azWeb": {
+        "name": "az-web",
+        "avatar_alt": "Client Avatar: az-web",
+        "poster_alt": "az-web Review Poster"
+      },
+      "denisE82": {
+        "name": "denisE82",
+        "avatar_alt": "Client Avatar: denisE82",
+        "poster_alt": "denisE82 Review Poster"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "progressTracking": {
+        "title": "How Can I Track Development Progress?",
+        "description": {
+          "1": {
+            "text": "We ensure transparency throughout the development process and offer convenient ways for clients to monitor their project status. Here’s how:"
+          },
+          "2": {
+            "subject": "1. Regular Reports.",
+            "text": "Includes: List of completed tasks, current progress, remaining items and their status, potential risks or delays. Frequency is agreed in advance – daily, weekly, or after key milestones."
+          },
+          "3": {
+            "subject": "2. Access to Project Tools.",
+            "text": "We use modern project management tools like Trello (for visual task tracking), Asana (task lists and assignees), Jira (for complex technical projects). You get access and can leave comments or suggestions."
+          },
+          "4": {
+            "subject": "3. Dedicated Project Manager.",
+            "text": "You are assigned a personal manager who you can contact by phone, email, or messengers."
+          },
+          "5": {
+            "subject": "4. Staging Server.",
+            "text": "We provide access to a test server where the intermediate version of the website is hosted."
+          },
+          "6": {
+            "text": "Our main goal is to keep you informed throughout the development process. This ensures transparency and allows timely adjustments for optimal results."
+          }
+        }
+      },
+      "preparation": {
+        "title": "What Should I Prepare Before Starting?",
+        "description": {
+          "1": {
+            "text": "To start, we'll need a description of your project, your goals, target audience, approximate structure, and reference examples. Having ready content (texts, images, logo) speeds things up, but we can also help prepare it."
+          }
+        }
+      },
+      "guarantees": {
+        "title": "What Guarantees Do You Offer?",
+        "description": {
+          "1": {
+            "text": "We offer a warranty period between 1 and 12 months depending on the project's complexity. During this time, we fix any bugs or errors caused by us, free of charge."
+          }
+        }
+      },
+      "collaboration": {
+        "title": "What Collaboration and Payment Methods Do You Accept?",
+        "description": {
+          "1": {
+            "text": "We usually work under a contract to ensure clarity and comfort. Exceptions may apply only for small or simple projects. Contractual collaboration with flexible payment options ensures a smooth partnership. We value your trust and make the process as convenient as possible."
+          },
+          "2": {
+            "subject": "We accept payments via:",
+            "text": "Online transfers, secure escrow services, cryptocurrency, and other convenient methods."
+          }
+        }
+      },
+      "urgentDevelopment": {
+        "title": "Can I Order Urgent Website Development?",
+        "description": {
+          "1": {
+            "subject": "Yes,",
+            "text": "we accept urgent website orders! We understand some projects require fast turnaround. In such cases, we: speed up processes, allocate extra resources, maintain quality, and agree on realistic deadlines. If you need a website urgently, contact us and we’ll suggest the best solution."
+          }
+        }
+      },
+      "noContent": {
+        "title": "What if I Don’t Have Content Ready?",
+        "description": {
+          "1": {
+            "text": "No problem — we have copywriters to create texts and designers who can source or create visuals for your project."
+          }
+        }
+      }
+    },
+    "partners": {
+      "title": "Our Clients and Partners"
+    },
+    "service": {
+      "portfolio_link": "over 110 successful projects",
+      "title": "Our Web Development Services",
+      "card_aria_label": "Learn more about \"{title}\" service",
+      "order_button": "Order Now",
+      "ecommerce": {
+        "title": "E-Commerce",
+        "price": "From ₽190,000 / 30 days",
+        "description": "We develop modern e-commerce sites that increase sales by at least 30% through intuitive design, SEO optimisation, and integrations."
+      },
+      "corporate": {
+        "title": "Corporate Website",
+        "price": "From ₽120,000 / 21 days",
+        "description": "Create corporate websites that reflect your brand values while ensuring usability for all visitors."
+      },
+      "landing": {
+        "title": "Landing Page",
+        "price": "From ₽50,000 / 10 days",
+        "description": "We create effective landing pages that deliver conversions of 4–15%."
+      },
+      "other": {
+        "title": "Other",
+        "price": "From ₽25,000 / 14 days",
+        "description": "We offer comprehensive marketing or technical website support."
+      }
+    },
+    "steps": {
+      "title": "Stages of Development: From Idea to Launch",
+      "analysis": {
+        "title": "Analysis and Briefing",
+        "description": "We study the client's business, target audience, competitors, and project goals."
+      },
+      "uxDesign": {
+        "title": "Planning (UX Design)",
+        "description": "We develop the site structure and create wireframes for each page."
+      },
+      "uiDesign": {
+        "title": "Design and Content (UI Design)",
+        "description": "We create the visual identity of the site: choosing colours, fonts, icons, illustrations, animations, making it 100% unique."
+      },
+      "development": {
+        "title": "Development",
+        "description": "We code the layout, add interactive elements (animations, dropdown menus). Integrate with CMS (e.g., Tilda, WordPress, 1C-Bitrix)."
+      },
+      "testing": {
+        "title": "Testing",
+        "description": "We test the site across devices and browsers. Fix bugs, test forms, links, page loads."
+      },
+      "launch": {
+        "title": "Launch and Support",
+        "description": "We deploy the site to a hosting server, connect the domain, configure SSL certificates. Warranty from 2 weeks to 6 months."
+      }
+    },
+    "tariffs": {
+      "title": "Development Prices",
+      "optimal": {
+        "title": "Optimal",
+        "description": "Ideal solution for launching a ready-made site with basic functionality and custom design at an affordable price. Includes everything needed for a quick start: responsive layout, basic SEO optimisation, and user-friendly content management – perfect for SMEs to focus on growth without overhead."
+      },
+      "premium": {
+        "title": "Premium",
+        "description": "Perfect choice for those seeking exclusivity and premium quality: unique design, advanced functionality, custom integrations, and top-tier technologies to give your business a competitive edge and maximum efficiency."
+      },
+      "discuss_project": "Discuss Your Project",
+      "steps_link": "Development Stages",
+      "terms_link": "Payment Terms and Guarantees"
+    },
+    "aboutInNumbers": {
+      "clients": {
+        "title": "+",
+        "text": "Returning clients"
+      },
+      "experience": {
+        "title": " years",
+        "text": "Average employee experience"
+      },
+      "projects": {
+        "title": "Around ",
+        "text": "Completed projects"
+      },
+      "technologies": {
+        "title": "Over ",
+        "text": "Technologies we use"
+      }
+    },
+    "not_found": {
+      "description": "Page not found",
+      "back_to_main": "Go to main"
+    }
+  },
+  "contacts": {
+    "title": "Contacts",
+    "description": "Contact us via your preferred method: call, email, Telegram, or WhatsApp. We will respond within one business day!",
+    "working_hours": "Daily: from 9:00 AM to 9:00 PM (MSK)",
+    "submit_request": "Submit Request",
+    "clock_icon_alt": "Clock Icon",
+    "team_image_alt": "Team Image",
+    "email": "info@cortexdigital.net",
+    "phone": "+7 (995) 020-33-85"
+  },
+  "popup_form": {
+    "title": "Manager Will Contact You",
+    "working_hours": "during business hours: Daily from 9:00 AM to 9:00 PM",
+    "submit_button": "Send Request",
+    "submitting": "Submitting...",
+    "privacy_agreement": "By submitting the form, I agree to the <a href='/privacy'>data processing policy</a>",
+    "success": {
+      "title": "Thank you{name}! Your request has been sent successfully.",
+      "description": "Our manager will contact you shortly",
+      "view_services": "View All Services"
+    },
+    "error": {
+      "title": "Oops! Something went wrong.",
+      "description": "Please check the details and try again. If the issue persists, contact us directly — we're here to help!",
+      "view_services": "View All Services"
+    },
+    "fields": {
+      "name_placeholder": "Name",
+      "phone_placeholder": "Phone*",
+      "email_placeholder": "Email"
+    },
+    "contact_methods": {
+      "label": "Preferred Contact Method (optional):",
+      "telegram": "Telegram",
+      "whatsapp": "WhatsApp",
+      "phone": "Call",
+      "email": "Email"
+    }
+  },
+  "slider_nav": {
+    "prev": "Previous Review",
+    "next": "Next Review"
+  },
+  "callback_widget": {
+    "message_icon_alt": "Callback Widget Icon",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "phone": "Phone",
+    "email": "Email",
+    "telegram_icon_alt": "Telegram Icon",
+    "whatsapp_icon_alt": "WhatsApp Icon",
+    "phone_icon_alt": "Phone Icon",
+    "email_icon_alt": "Email Icon"
+  },
+  "layout": {
+    "metadata": {
+      "title": "Full-Cycle Website Development - CortexDigital",
+      "description": "Free consultations and audits. Large portfolio. Contextual advertising and SEO. Full-cycle website creation!",
+      "keywords": "Website development keyword"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "This Privacy Policy complies with Federal Law No. 152-FZ dated July 27, 2006 \"On Personal Data\" and defines the rules for handling personal data and measures taken by the operator CortexDigital (hereinafter referred to as Operator) to ensure its security.",
+    "sections": {
+      "general": {
+        "title": "1. General Provisions",
+        "p1": "1.1. The main objective of the Operator is to protect individuals’ rights and freedoms when processing personal data.",
+        "p2": "1.2. This policy applies to all information about visitors to the website https://cortexdigital.net."
+      },
+      "definitions": {
+        "title": "2. Key Definitions",
+        "items": {
+          "automated_processing": {
+            "title": "Automated Processing of Personal Data",
+            "description": "Processing performed using computing equipment."
+          },
+          "blocking": {
+            "title": "Blocking of Personal Data",
+            "description": "Temporary suspension of data processing."
+          },
+          "website": {
+            "title": "Website",
+            "description": "The resource https://cortexdigital.net."
+          },
+          "data_system": {
+            "title": "Personal Data Information System",
+            "description": "Databases and tools used for data processing."
+          },
+          "deidentification": {
+            "title": "Anonymization of Personal Data",
+            "description": "Actions that prevent identification of the data subject."
+          },
+          "processing": {
+            "title": "Processing of Personal Data",
+            "description": "Any operations involving personal data."
+          },
+          "operator": {
+            "title": "Operator",
+            "description": "Person or entity processing data."
+          },
+          "personal_data": {
+            "title": "Personal Data",
+            "description": "Information related to a specific user."
+          },
+          "user": {
+            "title": "User",
+            "description": "Visitor of the website https://cortexdigital.net."
+          },
+          "distribution": {
+            "title": "Distribution of Data",
+            "description": "Actions providing access to data to an unspecified group of people."
+          },
+          "cross_border": {
+            "title": "Cross-Border Transfer of Data",
+            "description": "Transfer of data outside the country."
+          },
+          "destruction": {
+            "title": "Data Destruction",
+            "description": "Actions preventing data recovery."
+          }
+        }
+      },
+      "processed_data": {
+        "title": "3. Processed Data",
+        "items": {
+          "name": "First and last name.",
+          "email": "Email address.",
+          "phone": "Phone numbers.",
+          "cookies": "Anonymous data (cookies, analytics)."
+        }
+      },
+      "purposes": {
+        "title": "4. Purpose of Data Processing",
+        "p1": "4.1. Processing data to fulfill agreements and provide access to information.",
+        "p2": "4.2. Sending notifications about products and services (with opt-out option).",
+        "p3": "4.3. Analysing anonymized data to improve website performance."
+      },
+      "legal_basis": {
+        "title": "5. Legal Basis for Processing",
+        "p1": "5.1. Data processing is based on user consent.",
+        "p2": "5.2. Use of anonymized data is permitted by browser settings."
+      },
+      "processing_order": {
+        "title": "6. Data Processing Procedure",
+        "items": {
+          "security": "Security is ensured by legal, organisational, and technical measures.",
+          "no_third_party": "Data is not shared with third parties unless required by law.",
+          "user_update": "Users may update or revoke their data by emailing info@cortexdigital.net"
+        }
+      },
+      "cross_border": {
+        "title": "7. Cross-Border Data Transfer",
+        "p1": "7.1. Data transfer occurs only if subjects' rights are protected.",
+        "p2": "7.2. Exceptions may apply with written user consent."
+      },
+      "conclusion": {
+        "title": "8. Final Provisions",
+        "p1": "8.1. Users may ask questions by sending them to info@cortexdigital.net",
+        "p2": "8.2. This policy is valid indefinitely until replaced by a new version.",
+        "p3": "8.3. The current version is available at https://cortexdigital.net/privacy"
+      }
+    }
+  },
+  "landing": {
+    "hero": {
+      "title": "We Create Landing Pages for Instant Sales and Leads",
+      "description": "We develop landing pages tailored to your audience: unique design, well-thought-out text, configured analytics, and ad-ready for maximum conversion."
+    },
+    "tariffs": {
+      "priceTemplate": "From ₽50,000 / 10 days",
+      "priceCustom": "From ₽120,000 / 21 days"
+    }
+  },
+  "ecommerce": {
+    "hero": {
+      "title": "Turnkey E-Commerce: From Idea to First Sale",
+      "description": "We create e-shops from scratch and fully manage the process — from niche analysis, design and functionality to integration, advertising setup, and ongoing support."
+    },
+    "tariffs": {
+      "priceTemplate": "From ₽200,000 / 35 days",
+      "priceCustom": "From ₽500,000 / 60 days"
+    }
+  },
+  "corporate": {
+    "hero": {
+      "title": "Turnkey Corporate Website: An All-in-One Solution",
+      "description": "We take full responsibility — from business analysis and structure planning to creating a modern design and integrating with internal systems."
+    },
+    "tariffs": {
+      "priceTemplate": "From ₽120,000 / 18 days",
+      "priceCustom": "From ₽250,000 / 45 days"
+    }
+  }
+}

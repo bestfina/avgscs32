@@ -62,3 +62,5 @@ export type TSteps = BaseEntity & {
   icon: Image;
   description: string;
 };
+
+export type TLocales = "ru" | "en"

@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Faq from "@/components/sections/Faq";
 import Feedback from "@/components/sections/Feedback";
 import Hero from "@/components/sections/Hero";
@@ -7,17 +8,18 @@ import Steps from "@/components/sections/Steps";
 import Tariffs from "@/components/sections/Tariffs";
 
 const Corporate = () => {
+  const t = useTranslations("corporate");
+
   return (
     <>
       <Hero
-        title="Корпоративный сайт под ключ: всё в одном решении"
+        title={t("hero.title")}
         video={["/video/webm/bg-corporate.webm", "/video/mp4/bg-corporate.mp4"]}
-        description="Берём на себя весь процесс: от анализа бизнеса и проектирования структуры до создания современного дизайна 
-        и интеграции с внутренними системами компании."
+        description={t("hero.description")}
         poster="/assets/images/poster/corporate.webp"
       />
       <Partners />
-      <Tariffs priceTemplate="От 120.000 руб./18 дней" priceCustom="От 250.000 руб./45 дней" />
+      <Tariffs priceTemplate={t("tariffs.priceTemplate")} priceCustom={t("tariffs.priceCustom")} />
       <Portfolio />
       <Steps />
       <Faq />

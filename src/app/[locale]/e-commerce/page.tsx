@@ -6,6 +6,7 @@ import Partners from "@/components/sections/Partners";
 import Portfolio from "@/components/sections/Portfolio";
 import Steps from "@/components/sections/Steps";
 import Tariffs from "@/components/sections/Tariffs";
+import { useTranslations } from "next-intl";
 
 // const ADVANTAGES = [
 //   {
@@ -49,24 +50,23 @@ import Tariffs from "@/components/sections/Tariffs";
 // ];
 
 const Ecommerce = () => {
+  const t = useTranslations("ecommerce");
+
   return (
     <>
       <Hero
         video={["/video/webm/bg-ecommerce.webm", "/video/mp4/bg-ecommerce.mp4"]}
-        description="Мы создаём интернет-магазин под ключ, полностью сопровождая процесс. От анализа ниши, разработки дизайна и функционала
-         до интеграции с системами, настройки рекламы и дальнейшей поддержки."
-        title="Интернет-магазин под ключ: от идеи до первой продажи"
+        description={t("hero.description")}
+        title={t("hero.title")}
         poster="/assets/images/poster/e-commerce.webp"
       />
       <Partners />
-      <Tariffs priceTemplate="От 200.000 руб./35 дней" priceCustom="От 500.000 руб./60 дней" />
+      <Tariffs priceTemplate={t("tariffs.priceTemplate")} priceCustom={t("tariffs.priceCustom")} />
       <Portfolio />
-      {/* <Advantages ADVANTAGES={ADVANTAGES} /> */}
       <Steps />
       <Faq />
       <Feedback />
     </>
   );
 };
-
 export default Ecommerce;

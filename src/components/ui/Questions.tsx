@@ -1,11 +1,12 @@
 "use client";
-
+import { useTranslations } from "next-intl";
 import { FAQ } from "@/constants";
 import { useState } from "react";
 import InnerIcon from "../ui/InnerIcon";
 import { twMerge } from "tailwind-merge";
 
 const Questions = () => {
+  const t = useTranslations();
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   const toggleAccordion = (id: number) => {
@@ -20,9 +21,9 @@ const Questions = () => {
             onClick={() => toggleAccordion(id)}
             className="w-full cursor-pointer flex gap-xxxxs justify-between items-center p-4 md:p-3 text-left text-TextLight font-medium"
           >
-            <h5 className="w-fit text-TextDark">{title}</h5>
+            <h5 className="w-fit text-TextDark">{t(title)}</h5>
             <InnerIcon className={activeIndex === id ? "bg-black pb-[2px]" : "bg-black/80 hover:bg-black"}>
-              {activeIndex === id ? "−" : "+"}
+              {activeIndex === id ? "-" : "+"}
             </InnerIcon>
           </div>
           <div
@@ -33,8 +34,8 @@ const Questions = () => {
             <div className={twMerge("border-t border-black", activeIndex !== id ? "border-0 duration-100" : null)}>
               {description.map(({ subject, text }, index) => (
                 <p key={index} className="px-4 py-2 first:pt-4 last:pb-4 text-TextDark">
-                  {subject && <b>{subject}</b>}
-                  {text}
+                  {subject && <b>{t(subject)}</b>}
+                  {t(text)}
                 </p>
               ))}
             </div>
