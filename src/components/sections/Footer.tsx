@@ -1,7 +1,6 @@
 'use client'
 
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import Logo from "../ui/Logo";
 import Social from "../ui/Social";
 import Contact from "../ui/Contact";

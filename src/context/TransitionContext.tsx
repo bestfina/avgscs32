@@ -123,17 +123,17 @@ export function TransitionRouter({
     return () => controller.abort();
   }, [auto, handleClick]);
 
-  const entering = async () => {
+  const entering = useCallback(async () => {
     if (typeof leaveRef.current === "function") leaveRef.current();
     leaveRef.current = null;
     enterRef.current = await Promise.resolve(enter(() => setStage("none")));
-  };
+  }, [leaveRef.current, enterRef.current, setStage, enter]);
 
   useEffect(() => {
     if (stage === "entering") {
       entering();
     }
-  }, [stage, enter]);
+  }, [stage, enter, entering,leaveRef.current]);
 
   useEffect(() => {
     return () => {

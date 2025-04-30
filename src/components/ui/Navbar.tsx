@@ -1,6 +1,5 @@
 "use client";
 import { LINK } from "@/constants";
-import { LocaleLink } from "@/i18n/navigation";
 import { TransitionLink } from "@/lib/link";
 import { useLocale, useTranslations } from "next-intl";
 import { twMerge } from "tailwind-merge";

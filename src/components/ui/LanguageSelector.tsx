@@ -1,10 +1,9 @@
-import { useState, useEffect, FC, SVGProps, useTransition } from "react";
+import { useState, useEffect, FC, SVGProps } from "react";
 import { TLocales } from "@/types";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { locales } from "@/constants";
 import EnglishIcon from "public/assets/icons/uk_rounded_icon.svg?svg";
 import RussiaIcon from "public/assets/icons/russia_rounded_icon.svg?svg";
-import { useParams } from "next/navigation";
 import clsx from "clsx";
 
 type Props = {
@@ -22,9 +21,7 @@ const LanguageSelector: FC<Props> = ({ className, locale, fullWidth }) => {
   const [currentLanguage, setCurrentLanguage] = useState(LOCALES_MAP[locale]);
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-  const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
-  const params = useParams();
 
   useEffect(() => {
     const handleClickOutside = () => {
@@ -73,10 +70,8 @@ const LanguageSelector: FC<Props> = ({ className, locale, fullWidth }) => {
                 <button
                   key={lang}
                   onClick={() => changeLanguage(lang)}
-                  disabled={isPending || locale === lang}
-                  className={`${"text-gray-700"} flex items-center w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200 ${
-                    isPending && "transition-opacity [&:disabled]:opacity-30"
-                  }`}
+                  disabled={locale === lang}
+                  className={`${"text-gray-700"} flex items-center w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200`}
                   role="menuitem"
                 >
                   {LOCALES_MAP[lang]}

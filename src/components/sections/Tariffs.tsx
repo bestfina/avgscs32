@@ -2,7 +2,6 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Button from "../ui/Button";
-import Link from "next/link";
 import { TransitionLink } from "@/lib/link";
 
 interface TariffsProps {

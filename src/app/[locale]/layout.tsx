@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Nunito, Exo_2 } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
-import { PopupProvider } from "@/context/PopupContext";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import Popup from "@/components/ui/Popup";
@@ -54,7 +53,6 @@ const Exo2 = Exo_2({
 
 export async function generateMetadata(
   { params: { locale } }: { params: { locale: TLocales } },
-  state: any
 ): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "layout.metadata" });
 

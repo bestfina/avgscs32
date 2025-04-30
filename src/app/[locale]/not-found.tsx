@@ -1,4 +1,3 @@
-import { TransitionLink } from "@/lib/link";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 

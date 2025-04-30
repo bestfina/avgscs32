@@ -1,6 +1,5 @@
 "use client";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import ServiceCard from "../ui/ServiceCard";
 import { SERVICE } from "@/constants";
 import { motion } from "framer-motion";
