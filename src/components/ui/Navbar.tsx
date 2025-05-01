@@ -13,11 +13,11 @@ interface NavbarProps {
 }
 
 const Navbar = ({ className, classNameList, atTop, onClick, classNameItem }: NavbarProps) => {
-  const t = useTranslations()
+  const t = useTranslations();
   const locale = useLocale();
   return (
     <nav className={className}>
-      <ul className={twMerge("flex gap-md lg:gap-sm", classNameList)}>
+      <ul className={twMerge("flex gap-md lg:gap-sm xs825:gap-[9px] sm:gap-sm", classNameList)}>
         {LINK.map(({ title, id, url }) => (
           <li key={id} className="hover:-translate-y-[6px] md:hover:translate-y-0 duration-500">
             <TransitionLink

@@ -18,7 +18,7 @@ const LOCALES_MAP = {
 };
 
 const LanguageSelector: FC<Props> = ({ className, locale, fullWidth }) => {
-  const [currentLanguage, setCurrentLanguage] = useState(LOCALES_MAP[locale]);
+  // const [currentLanguage, setCurrentLanguage] = useState(LOCALES_MAP[locale]);
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
@@ -41,7 +41,7 @@ const LanguageSelector: FC<Props> = ({ className, locale, fullWidth }) => {
   const changeLanguage = (lang: TLocales) => {
     if (!LOCALES_MAP[lang]) return;
 
-    setCurrentLanguage(LOCALES_MAP[lang]);
+    // setCurrentLanguage(LOCALES_MAP[lang]);
     setIsOpen(false);
 
     router.replace({ pathname }, { locale: lang });
@@ -54,16 +54,16 @@ const LanguageSelector: FC<Props> = ({ className, locale, fullWidth }) => {
       <button
         onClick={toggleDropdown}
         className={clsx(
-          "flex items-center space-x-2 bg-white hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-full border border-gray-200 shadow-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500",
+          "flex items-center space-x-2 bg-white hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-full border border-black shadow-sm transition-all duration-300",
           fullWidth ? "w-full" : "w-auto"
         )}
       >
         {locale === "ru" ? <RussiaIcon {...languageProps} /> : <EnglishIcon {...languageProps} />}
-        <span>{currentLanguage}</span>
+        {/* <span>{currentLanguage}</span> */}
       </button>
 
       {isOpen && (
-        <div className="absolute mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-right right-0 z-10 animate-fadeIn">
+        <div className="absolute mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 origin-top-right -right-4 z-10 animate-fadeIn">
           <div className="py-1" role="menu" aria-orientation="vertical">
             {locales.map(lang => {
               return (

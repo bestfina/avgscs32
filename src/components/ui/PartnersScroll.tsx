@@ -17,7 +17,7 @@ const PartnersScroll = () => {
   useEffect(() => {
     if (scrollRef.current) {
       const element = scrollRef.current;
-      const width = element.scrollWidth / 2;
+      const width = element.scrollWidth / 5;
 
       gsap.fromTo(
         element,

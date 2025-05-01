@@ -87,7 +87,7 @@ const Header: FC<Props> = ({ locale }) => {
     >
       <div
         className={twMerge(
-          "container flex items-center justify-between py-4 xl:py-xxs md:py-xxxs transition-colors duration-300",
+          "container flex items-center justify-between py-4 xl:py-xxs md:py-xxxs transition-colors duration-300 ",
           isOpen && "sm:bg-slate-100 sm:border-b sm:border-black"
         )}
       >
@@ -95,25 +95,31 @@ const Header: FC<Props> = ({ locale }) => {
           <Logo atTop={atTop} isOpen={isOpen} />
           <Navbar className="sm:hidden" classNameItem="md:text-sm" classNameList="md:gap-[23px]" atTop={atTop} />
         </div>
-        <div className="flex flex-col items-end gap-xxxxs">
-          <div className="flex gap-xs xl:gap-xxs lg:gap-xxxs items-center">
-            <LanguageSelector className="block sm:hidden" locale={locale} />
-            <Button className="sm:hidden" type={twMerge(atTop ? "border-white" : "black")}>
-              {t("consultation")}
-            </Button>
-            <Social className="md:hidden" />
+        <div className="flex items-center gap-xxxs">
+          <div className="flex flex-col items-end gap-xxxxs">
+            <div className="flex gap-xs xl:gap-xxs lg:gap-xxxs items-center">
+              <LanguageSelector locale={locale} />
+              <Button className="sm:hidden" type={twMerge(atTop ? "border-white" : "black")}>
+                {t("consultation")}
+              </Button>
+              <Social className="md:hidden" />
+            </div>
+            <Contact size="text-lg lg:text-base md:hidden" atTop={atTop} />
           </div>
-          <Contact size="text-lg lg:text-base md:hidden" atTop={atTop} />
+          <button
+            className={twMerge(
+              "z-20 focus:outline-none hidden sm:block transition-transform duration-300",
+              isOpen ? "rotate-180" : "rotate-0"
+            )}
+            onClick={handleToggleMenu}
+          >
+            {isOpen ? (
+              <CloseIcon />
+            ) : (
+              <BurgerMenuIcon className={twMerge(atTop ? "text-TextLight" : "text-TextDark")} />
+            )}
+          </button>
         </div>
-        <button
-          className={twMerge(
-            "z-20 focus:outline-none hidden sm:block transition-transform duration-300",
-            isOpen ? "rotate-180" : "rotate-0"
-          )}
-          onClick={handleToggleMenu}
-        >
-          {isOpen ? <CloseIcon /> : <BurgerMenuIcon className={twMerge(atTop ? "text-TextLight" : "text-TextDark")} />}
-        </button>
       </div>
       <div
         className={twMerge(
@@ -122,9 +128,6 @@ const Header: FC<Props> = ({ locale }) => {
         )}
       >
         <Navbar classNameList="flex-col" classNameItem="text-2xl" onClick={() => setIsOpen(!isOpen)} />
-        <div className="flex items-center justify-center">
-          <LanguageSelector locale={locale} fullWidth />
-        </div>
         <Social />
         <Contact />
         <Button
