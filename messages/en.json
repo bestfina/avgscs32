@@ -12,7 +12,9 @@
     "landing": "Landing & Business Card Website",
     "corporate": "Corporate Website",
     "privacy": "Privacy Policy",
-    "notfound": "Redirecting to page"
+    "notfound": "Redirecting to page",
+    "steps" : "Stages of Development",
+    "faq" : "FAQ"
   },
   "header": {
     "consultation": "Get a Consultation"
