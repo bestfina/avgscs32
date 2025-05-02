@@ -16,7 +16,6 @@ interface Description {
 }
 
 export type TCase = BaseEntity & {
-  video: [string, string];
   poster: string;
   url: URL;
   category: string;
@@ -63,4 +62,4 @@ export type TSteps = BaseEntity & {
   description: string;
 };
 
-export type TLocales = "ru" | "en"
+export type TLocales = "ru" | "en";

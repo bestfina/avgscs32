@@ -134,11 +134,53 @@
         "category": "Corporate Websites",
         "description": "Our own website showcasing our accumulated experience. Built with modern technologies such as Next.js, TypeScript, etc."
       },
-      "travaMurava": {
-        "title": "Trava-murava",
-        "poster_alt": "Trava-murava Project Poster",
+      "meteorex": {
+        "title": "Meteorex",
+        "poster_alt": "Project Poster meteorex",
         "category": "Corporate Websites",
-        "description": "Website for booking guest houses in Voronezh. Built using WordPress plugins and optimized for SEO."
+        "description": "Calculator to quickly buy, sell and exchange cryptocurrency. Developed on wordpress and api of some services."
+      },
+      "bzTitan": {
+        "title": "Titan",
+        "poster_alt": "Project Poster Titan",
+        "category": "Corporate Websites",
+        "description": "Corporate website of a company selling concrete. We did a complete redesign and redesign of the project in php."
+      },
+      "taxi": {
+        "title": "TAXIPRO",
+        "poster_alt": "Project Poster TAXIPRO",
+        "category": "Corporate Websites",
+        "description": "Lending company for taxi hire. Made on pure code one-page with crm and telephony integrations."
+      },
+      "proxyLuxe": {
+        "title": "ProxyLuxe",
+        "poster_alt": "Project Poster ProxyLuxe",
+        "category": "Corporate Websites",
+        "description": "Multilingual site for buying resident proxies. Made on react(next)+node(nest) with full admin panel."
+      },
+      "klikmi": {
+        "title": "Klikmi",
+        "poster_alt": "Project Poster klikmi",
+        "category": "Corporate Websites",
+        "description": "Marketplace for pawnshops and customers. Developed with a stretch on woocommerce, the site itself allows you to publish goods and reject them in the admin."
+      },
+      "infisol": {
+        "title": "Infisol",
+        "poster_alt": "Project Poster infisol",
+        "category": "Corporate Websites",
+        "description": "Crypto-calculator for buying, selling and exchanging currencies. Developed on wordpress+elementor in 3 days, as the customer insisted on urgency."
+      },
+      "pride": {
+        "title": "Praid",
+        "poster_alt": "Project Poster Praid",
+        "category": "Corporate Websites",
+        "description": "Moscow company selling concrete. Developed on bitrix on a clean template with custom design and integrations."
+      },
+      "runa": {
+        "title": "Runa",
+        "poster_alt": "Project Poster Runa",
+        "category": "Corporate Websites",
+        "description": "A large company selling concrete with delivery. The project is made on wordpress+elementor with individual design and functionality."
       }
     },
     "about": {
@@ -319,22 +361,22 @@
       "order_button": "Order Now",
       "ecommerce": {
         "title": "E-Commerce",
-        "price": "From ₽190,000 / 30 days",
+        "price": "From $2.500 / 30 days",
         "description": "We develop modern e-commerce sites that increase sales by at least 30% through intuitive design, SEO optimisation, and integrations."
       },
       "corporate": {
         "title": "Corporate Website",
-        "price": "From ₽120,000 / 21 days",
+        "price": "From $1.500 / 21 days",
         "description": "Create corporate websites that reflect your brand values while ensuring usability for all visitors."
       },
       "landing": {
         "title": "Landing Page",
-        "price": "From ₽50,000 / 10 days",
+        "price": "From $750 / 10 days",
         "description": "We create effective landing pages that deliver conversions of 4–15%."
       },
       "other": {
         "title": "Other",
-        "price": "From ₽25,000 / 14 days",
+        "price": "From $350 / 14 days",
         "description": "We offer comprehensive marketing or technical website support."
       }
     },
@@ -404,8 +446,8 @@
   },
   "contacts": {
     "title": "Contacts",
-    "description": "Contact us via your preferred method: call, email, Telegram, or WhatsApp. We will respond within one business day!",
-    "working_hours": "Daily: from 9:00 AM to 9:00 PM (MSK)",
+    "description": "To contact us, choose a convenient way for you: leave a request, write an email or send a message via messenger. We will reply to you within a working day!",
+    "working_hours": "Daily: from 9:00 AM to 9:00 PM",
     "submit_request": "Submit Request",
     "clock_icon_alt": "Clock Icon",
     "team_image_alt": "Team Image",
@@ -572,8 +614,8 @@
       "description": "We develop landing pages tailored to your audience: unique design, well-thought-out text, configured analytics, and ad-ready for maximum conversion."
     },
     "tariffs": {
-      "priceTemplate": "From ₽50,000 / 10 days",
-      "priceCustom": "From ₽120,000 / 21 days"
+      "priceTemplate": "From $750 / 10 days",
+      "priceCustom": "From $1.500 / 21 days"
     }
   },
   "ecommerce": {
@@ -582,8 +624,8 @@
       "description": "We create e-shops from scratch and fully manage the process — from niche analysis, design and functionality to integration, advertising setup, and ongoing support."
     },
     "tariffs": {
-      "priceTemplate": "From ₽200,000 / 35 days",
-      "priceCustom": "From ₽500,000 / 60 days"
+      "priceTemplate": "From $2.500 / 35 days",
+      "priceCustom": "From $6.500 / 60 days"
     }
   },
   "corporate": {
@@ -592,8 +634,8 @@
       "description": "We take full responsibility — from business analysis and structure planning to creating a modern design and integrating with internal systems."
     },
     "tariffs": {
-      "priceTemplate": "From ₽120,000 / 18 days",
-      "priceCustom": "From ₽250,000 / 45 days"
+      "priceTemplate": "From $1.500 / 18 days",
+      "priceCustom": "From $3.500 / 45 days"
     }
   }
 }

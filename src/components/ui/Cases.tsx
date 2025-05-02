@@ -2,9 +2,10 @@
 import { useTranslations } from "next-intl";
 import ArrowIcon from "./icon/ArrowIcon";
 import { motion } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { TCase } from "@/types";
+import Image from "next/image";
 
 interface CasesProps {
   caseArr: TCase[];
@@ -15,14 +16,6 @@ const Cases = ({ caseArr, main }: CasesProps) => {
   const t = useTranslations();
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { margin: "0px 0px -100px 0px" });
-  const [visibleVideos, setVisibleVideos] = useState<{ [key: number]: boolean }>({});
-
-  useEffect(() => {
-    if (isInView) {
-      const newVisibleVideos = caseArr.reduce((acc, { id }) => ({ ...acc, [id]: true }), {});
-      setVisibleVideos(prev => ({ ...prev, ...newVisibleVideos }));
-    }
-  }, [isInView, caseArr]);
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -35,9 +28,7 @@ const Cases = ({ caseArr, main }: CasesProps) => {
 
   return (
     <div ref={containerRef} className="flex flex-wrap justify-between gap-md xxl:gap-sm md:gap-xs">
-      {caseArr.map(({ id, title, video, url, description, poster }) => {
-        const isVisible = visibleVideos[id];
-
+      {caseArr.map(({ id, title, url, description, poster }) => {
         return (
           <motion.a
             href={url}
@@ -51,22 +42,13 @@ const Cases = ({ caseArr, main }: CasesProps) => {
           >
             <h3 className="underline">{t(title)}</h3>
             <p className="mb-xs mt-xxxs xl:mt-xxxxs xl:mb-xxs xl:text-base md:text-sm">{t(description)}</p>
-            <video
-              className="w-full object-cover rounded-3xl"
-              autoPlay={isVisible}
-              controls={false}
-              muted
-              playsInline
-              loop
-              poster={poster}
-            >
-              {isVisible && (
-                <>
-                  <source src={video[1]} type="video/webm" />
-                  <source src={video[0]} type="video/mp4" />
-                </>
-              )}
-            </video>
+            <Image
+              src={poster}
+              width={800}
+              height={300}
+              alt={title}
+              className="rounded-3xl h-96 w-full object-cover lg:h-80 md:h-60"
+            />
           </motion.a>
         );
       })}

@@ -7,17 +7,18 @@ const PartnersScroll = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const technologies = [
     "https://cdn.tbank.ru/static/pfa-multimedia/images/e888870a-f15a-4684-968e-256ad5694e46.svg",
+    "https://meteorex.net/wp-content/uploads/2024/06/meteorex.svg",
     "https://denissanko.com/wp-content/themes/Sanko/land-strategy/images/common/logo.svg",
     "https://bisovet.pro/wp-content/uploads/2024/09/logo.svg",
     "https://www.zolotarevka.ru/public/icons/logo-black.svg",
     "https://runabeton.ru/wp-content/themes/twentytwentyone/img/logo.svg",
+    "/assets/icons/TAXIPRO.svg",
     "https://bz-titan.ru/wp-content/themes/titan/img/logo.svg",
-    "https://meteorex.net/wp-content/uploads/2024/06/meteorex.svg",
   ];
   useEffect(() => {
     if (scrollRef.current) {
       const element = scrollRef.current;
-      const width = element.scrollWidth / 5;
+      const width = element.scrollWidth / 4;
 
       gsap.fromTo(
         element,
