@@ -47,6 +47,7 @@ const Cases = ({ caseArr, main }: CasesProps) => {
               width={800}
               height={300}
               alt={title}
+              priority
               className="rounded-3xl h-96 w-full object-cover lg:h-80 md:h-60"
             />
           </motion.a>
