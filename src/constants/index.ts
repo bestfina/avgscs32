@@ -31,7 +31,7 @@ export const ROUTE_TRANSLATE = {
   "landing-page": "link.landing",
   contacts: "nav.contacts",
   "#about": "nav.about",
-  "corporate#feedback": "nav.feedback",
+  "#feedback": "nav.feedback",
   "corporate#steps": "link.steps",
   "corporate#faq": "link.faq",
   corporate: "link.corporate",

@@ -90,30 +90,70 @@ export function TransitionRouter({
     router.back();
   }, [router]);
 
+  const scrollToAnchor = useCallback((hash: string) => {
+    const id = hash.replace('#', '');
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      // Обновляем URL без перезагрузки страницы
+      history.pushState(null, '', hash);
+    }
+  }, []);
+
   const handleClick = useCallback(
-    (event: DelegateEvent<MouseEvent>) => {
+    async (event: DelegateEvent<MouseEvent>) => {
       const anchor = event.delegateTarget as HTMLAnchorElement;
       const href = anchor?.getAttribute("href");
       const ignore = anchor?.getAttribute("data-transition-ignore");
 
-      if (!href?.startsWith("/")) return;
+      if (!href?.startsWith("/") && !href?.startsWith("#")) return;
 
       const cleanedHref = normalizeHref(href);
       const currentPathWithoutLocale = removeLocale(pathname);
       const targetPathWithoutLocale = removeLocale(new URL(cleanedHref, window.location.origin).pathname);
+      const isAnchorLink = href.startsWith("#") || new URL(href, window.location.origin).hash;
 
+      if (ignore) return;
+
+      // Обработка якорных ссылок на текущей странице
+      if (isAnchorLink && targetPathWithoutLocale === currentPathWithoutLocale) {
+        event.preventDefault();
+        
+        // Запускаем анимацию выхода
+        setStage("leaving");
+        const cleanup = await leave(() => {
+          // После анимации выхода, через 3 секунды выполняем плавную прокрутку
+          setTimeout(() => {
+            if (href.startsWith("#")) {
+              scrollToAnchor(href);
+            } else {
+              const hash = new URL(href, window.location.origin).hash;
+              if (hash) {
+                scrollToAnchor(hash);
+              }
+            }
+            // Запускаем анимацию входа
+            setStage("entering");
+          }, 1500);
+        }, pathname, normalizeHref(href));
+        
+        if (typeof cleanup === "function") {
+          leaveRef.current = cleanup;
+        }
+        return;
+      }
+
+      // Обычный переход между страницами
       if (
-        !ignore &&
         targetPathWithoutLocale !== currentPathWithoutLocale &&
         anchor.target !== "_blank" &&
-        !isModifiedEvent(event) &&
-        !(new URL(href, window.location.origin).hash && targetPathWithoutLocale === currentPathWithoutLocale)
+        !isModifiedEvent(event)
       ) {
         event.preventDefault();
         push(href);
       }
     },
-    [push, pathname, normalizeHref, removeLocale]
+    [push, pathname, normalizeHref, removeLocale, leave, scrollToAnchor]
   );
 
   useEffect(() => {
