@@ -36,10 +36,10 @@ const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
             <div className="h-px bg-black"></div>
             <p>{t("optimal.description")}</p>
             <div className="flex justify-between mt-auto flex-wrap gap-xxxs">
-              <TransitionLink href="#steps" className="underline">
+              <TransitionLink href="/corporate#steps" className="underline">
                 {t("steps_link")}
               </TransitionLink>
-              <TransitionLink href="#faq" className="underline">
+              <TransitionLink href="/corporate#faq" className="underline">
                 {t("terms_link")}
               </TransitionLink>
             </div>
@@ -59,10 +59,10 @@ const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
             <div className="h-px bg-black"></div>
             <p>{t("premium.description")}</p>
             <div className="flex justify-between mt-auto flex-wrap gap-xxxs">
-              <TransitionLink href="#steps" className="underline">
+              <TransitionLink href="/corporate#steps" className="underline">
                 {t("steps_link")}
               </TransitionLink>
-              <TransitionLink href="#faq" className="underline">
+              <TransitionLink href="/corporate#faq" className="underline">
                 {t("terms_link")}
               </TransitionLink>
             </div>

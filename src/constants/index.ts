@@ -32,6 +32,7 @@ export const ROUTE_TRANSLATE = {
   contacts: "nav.contacts",
   "#about": "nav.about",
   "#feedback": "nav.feedback",
+  "#steps": "link.steps",
   corporate: "link.corporate",
   privacy: "link.privacy",
   "not-found": "link.notfound",
