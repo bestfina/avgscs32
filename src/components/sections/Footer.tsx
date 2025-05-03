@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useTranslations } from "next-intl";
 import Logo from "../ui/Logo";
@@ -18,8 +18,11 @@ const Footer = () => {
         <div className="flex justify-between items-center sm:flex-col sm:gap-xs">
           <Logo big />
           <Navbar classNameList="md:gap-sm sm:gap-xxs xs:gap-xxxs" classNameItem="xs:text-[13px]" />
-          <div className="flex flex-col items-end gap-xxxs md:gap-xxxxs sm:items-center">
-            <Contact className="md:flex-col md:gap-xxxxs" size="text-xl lg:text-base text-end sm:text-center" />
+          <div className="flex items-center gap-xxxs sm:items-center">
+            <Contact
+              className="md:flex-col md:gap-xxxxs"
+              size="text-2xl xl:text-xl lg:text-base text-end sm:text-center"
+            />
             <Social />
           </div>
         </div>
@@ -35,14 +38,11 @@ const Footer = () => {
               className="md:w-3 md:h-3"
             />
           </FirstSection>
-          <div className="flex flex-col gap-xxxxs items-end sm:items-center">
-            <TransitionLink href="/privacy" className="font-semibold text-base sm:text-sm">
-              {t("privacy_policy")}
-            </TransitionLink>
-            {/* <Link href="/" className="text-base sm:order-3 sm:text-sm">
-              {t("developed_by")}
-            </Link> */}
-          </div>
+          {/* <div className="flex flex-col gap-xxxxs items-end sm:items-center"> */}
+          <TransitionLink href="/privacy" className="font-semibold text-base sm:text-sm">
+            {t("privacy_policy")}
+          </TransitionLink>
+          {/* </div> */}
         </div>
       </div>
     </footer>

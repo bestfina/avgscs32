@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const CallbackWidget = () => {
   const t = useTranslations("callback_widget");
@@ -46,7 +47,7 @@ const CallbackWidget = () => {
             exit="exit"
             variants={menuVariants}
           >
-            <a
+            <Link
               href="https://t.me/CORTEX_DIGITAL"
               target="_blank"
               rel="noopener noreferrer"
@@ -54,8 +55,8 @@ const CallbackWidget = () => {
             >
               <Image src="/assets/icons/telegram.svg" alt={t("telegram_icon_alt")} width={24} height={24} />
               {t("telegram")}
-            </a>
-            <a
+            </Link>
+            {/* <a
               href="https://wa.me/79950203385"
               target="_blank"
               rel="noopener noreferrer"
@@ -63,23 +64,23 @@ const CallbackWidget = () => {
             >
               <Image src="/assets/icons/whatsApp.svg" alt={t("whatsapp_icon_alt")} width={24} height={24} />
               {t("whatsapp")}
-            </a>
-            <a
+            </a> */}
+            {/* <a
               target="_blank"
               href="tel:+7(995)020-33-85"
               className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
             >
               <Image src="/assets/icons/phone.svg" alt={t("phone_icon_alt")} width={24} height={24} />
               {t("phone")}
-            </a>
-            <a
+            </a> */}
+            <Link
               target="_blank"
               href="mailto:info@cortexdigital.net"
               className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
             >
               <Image src="/assets/icons/email.svg" alt={t("email_icon_alt")} width={24} height={24} />
               {t("email")}
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
