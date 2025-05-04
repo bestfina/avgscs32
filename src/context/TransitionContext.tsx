@@ -96,18 +96,25 @@ export function TransitionRouter({
       const href = anchor?.getAttribute("href");
       const ignore = anchor?.getAttribute("data-transition-ignore");
 
-      if (!href?.startsWith("/")) return;
+      if (!href?.startsWith("/") && !href?.startsWith("#")) return;
 
       const cleanedHref = normalizeHref(href);
       const currentPathWithoutLocale = removeLocale(pathname);
       const targetPathWithoutLocale = removeLocale(new URL(cleanedHref, window.location.origin).pathname);
+      const isAnchorLink = href.startsWith("#") || new URL(href, window.location.origin).hash;
 
+      if (ignore) return;
+
+      // Для якорных ссылок просто позволяем браузеру обработать переход по умолчанию
+      if (isAnchorLink && targetPathWithoutLocale === currentPathWithoutLocale) {
+        return;
+      }
+
+      // Обычный переход между страницами с анимацией
       if (
-        !ignore &&
         targetPathWithoutLocale !== currentPathWithoutLocale &&
         anchor.target !== "_blank" &&
-        !isModifiedEvent(event) &&
-        !(new URL(href, window.location.origin).hash && targetPathWithoutLocale === currentPathWithoutLocale)
+        !isModifiedEvent(event)
       ) {
         event.preventDefault();
         push(href);

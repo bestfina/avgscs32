@@ -6,12 +6,12 @@ import Image from "next/image";
 const PartnersScroll = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const technologies = [
-    "https://cdn.tbank.ru/static/pfa-multimedia/images/e888870a-f15a-4684-968e-256ad5694e46.svg",
     "/assets/icons/meteorex.svg",
     "https://denissanko.com/wp-content/themes/Sanko/land-strategy/images/common/logo.svg",
     "/assets/icons/bisovet.svg",
     "https://www.zolotarevka.ru/public/icons/logo-black.svg",
     "https://runabeton.ru/wp-content/themes/twentytwentyone/img/logo.svg",
+    "https://cdn.tbank.ru/static/pfa-multimedia/images/e888870a-f15a-4684-968e-256ad5694e46.svg",
     "/assets/icons/TAXIPRO.svg",
     "/assets/images/parthers/klikmi.png",
     "https://bz-titan.ru/wp-content/themes/titan/img/logo.svg",
