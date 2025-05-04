@@ -90,18 +90,8 @@ export function TransitionRouter({
     router.back();
   }, [router]);
 
-  const scrollToAnchor = useCallback((hash: string) => {
-    const id = hash.replace('#', '');
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      // Обновляем URL без перезагрузки страницы
-      history.pushState(null, '', hash);
-    }
-  }, []);
-
   const handleClick = useCallback(
-    async (event: DelegateEvent<MouseEvent>) => {
+    (event: DelegateEvent<MouseEvent>) => {
       const anchor = event.delegateTarget as HTMLAnchorElement;
       const href = anchor?.getAttribute("href");
       const ignore = anchor?.getAttribute("data-transition-ignore");
@@ -115,35 +105,12 @@ export function TransitionRouter({
 
       if (ignore) return;
 
-      // Обработка якорных ссылок на текущей странице
+      // Для якорных ссылок просто позволяем браузеру обработать переход по умолчанию
       if (isAnchorLink && targetPathWithoutLocale === currentPathWithoutLocale) {
-        event.preventDefault();
-        
-        // Запускаем анимацию выхода
-        setStage("leaving");
-        const cleanup = await leave(() => {
-          // После анимации выхода, через 3 секунды выполняем плавную прокрутку
-          setTimeout(() => {
-            if (href.startsWith("#")) {
-              scrollToAnchor(href);
-            } else {
-              const hash = new URL(href, window.location.origin).hash;
-              if (hash) {
-                scrollToAnchor(hash);
-              }
-            }
-            // Запускаем анимацию входа
-            setStage("entering");
-          }, 1500);
-        }, pathname, normalizeHref(href));
-        
-        if (typeof cleanup === "function") {
-          leaveRef.current = cleanup;
-        }
         return;
       }
 
-      // Обычный переход между страницами
+      // Обычный переход между страницами с анимацией
       if (
         targetPathWithoutLocale !== currentPathWithoutLocale &&
         anchor.target !== "_blank" &&
@@ -153,7 +120,7 @@ export function TransitionRouter({
         push(href);
       }
     },
-    [push, pathname, normalizeHref, removeLocale, leave, scrollToAnchor]
+    [push, pathname, normalizeHref, removeLocale]
   );
 
   useEffect(() => {
