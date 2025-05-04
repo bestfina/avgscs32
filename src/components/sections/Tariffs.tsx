@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Button from "../ui/Button";
 import { TransitionLink } from "@/lib/link";
+import { usePathname } from "@/i18n/navigation";
 
 interface TariffsProps {
   priceTemplate: string;
@@ -11,6 +12,7 @@ interface TariffsProps {
 
 const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
   const t = useTranslations("main.tariffs");
+  const pathname = usePathname()
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -36,10 +38,10 @@ const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
             <div className="h-px bg-black"></div>
             <p>{t("optimal.description")}</p>
             <div className="flex justify-between mt-auto flex-wrap gap-xxxs">
-              <TransitionLink href="/corporate#steps" className="underline">
+              <TransitionLink href={`${pathname}#steps`} className="underline">
                 {t("steps_link")}
               </TransitionLink>
-              <TransitionLink href="/corporate#faq" className="underline">
+              <TransitionLink href={`${pathname}#faq`} className="underline">
                 {t("terms_link")}
               </TransitionLink>
             </div>
@@ -59,10 +61,10 @@ const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
             <div className="h-px bg-black"></div>
             <p>{t("premium.description")}</p>
             <div className="flex justify-between mt-auto flex-wrap gap-xxxs">
-              <TransitionLink href="/corporate#steps" className="underline">
+              <TransitionLink href={`${pathname}#steps`} className="underline">
                 {t("steps_link")}
               </TransitionLink>
-              <TransitionLink href="/corporate#faq" className="underline">
+              <TransitionLink href={`${pathname}#faq`} className="underline">
                 {t("terms_link")}
               </TransitionLink>
             </div>
