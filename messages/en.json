@@ -1,6 +1,9 @@
 {
   "nav": {
     "service": "Services",
+    "serviceLanding": "Landing Page",
+    "serviceCorporate": "Corporate Website",
+    "serviceEcommerce": "E-Commerce",
     "portfolio": "Portfolio",
     "about": "About Us",
     "feedback": "Reviews",
@@ -355,6 +358,9 @@
     },
     "partners": {
       "title": "Our Clients and Partners"
+    },
+    "teams": {
+      "title": "Teams"
     },
     "service": {
       "portfolio_link": "over 110 successful projects",

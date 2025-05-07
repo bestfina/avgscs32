@@ -64,8 +64,8 @@ const Ecommerce = () => {
       <Tariffs priceTemplate={t("tariffs.priceTemplate")} priceCustom={t("tariffs.priceCustom")} />
       <Portfolio />
       <Steps />
-      <Faq />
       <Feedback />
+      <Faq />
     </>
   );
 };

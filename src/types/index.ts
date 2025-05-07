@@ -8,6 +8,7 @@ export interface BaseEntity {
 
 export type TLink = BaseEntity & {
   url: URL;
+  subMenu?: { id: number; title: string; url: URL }[];
 };
 
 interface Description {
@@ -63,3 +64,8 @@ export type TSteps = BaseEntity & {
 };
 
 export type TLocales = "ru" | "en";
+
+export type Team = {
+  id: number;
+  img: Image;
+};

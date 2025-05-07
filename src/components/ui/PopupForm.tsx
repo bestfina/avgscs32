@@ -59,16 +59,16 @@ const PopupForm = () => {
   };
 
   return (
-    <div className="p-md lg:p-xs sm:p-xxs flex flex-col gap-xxxs">
+    <div className="p-md lg:p-xs sm:p-xxs flex flex-col gap-xs">
       {isFormSubmitted === null ? (
         <>
           <h5>
             {t("popup_form.title")}
             <div>{t("popup_form.working_hours")}</div>
           </h5>
-          <form onSubmit={handleSubmit} className="flex flex-col gap-sm lg:gap-xs mt-xxxs">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-sm lg:gap-xs">
             <div className="flex gap-xs lg:gap-xxxs sm:flex-wrap">
-              {FIELDS.map(({ id, type , placeholder}) => (
+              {FIELDS.map(({ id, type, placeholder }) => (
                 <div key={id} className="w-[450px] relative flex items-center sm:w-full">
                   {id !== 2 ? (
                     <input
@@ -95,10 +95,10 @@ const PopupForm = () => {
                 </div>
               ))}
             </div>
-            <div className="flex gap-md xl:gap-sm mt-xxxs mb-xs md:my-xxxs">
-              <div className="flex flex-col gap-xxs">
+            <div className="flex gap-md xl:gap-sm">
+              <div className="flex flex-col gap-xxs sm:gap-xxxs">
                 <div>{t("popup_form.contact_methods.label")}</div>
-                <div className="flex flex-wrap gap-md xl:gap-sm md:gap-xs">
+                <div className="flex flex-wrap gap-md xl:gap-sm md:gap-xs sm:gap-xxs">
                   <CustomCheckbox
                     isAgreed={preferredContactMethods.telegram}
                     setIsAgreed={() => toggleContactMethod("telegram")}
@@ -126,7 +126,7 @@ const PopupForm = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-xxs">
+            <div className="flex flex-col gap-xxs sm:gap-xxxs">
               <button
                 type="submit"
                 className={twMerge(

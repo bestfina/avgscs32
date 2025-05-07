@@ -17,7 +17,7 @@ const CustomCheckbox = ({ isAgreed, setIsAgreed, children, id, className }: Cust
       <input type="checkbox" id={id} checked={isAgreed} onChange={handleCheckboxChange} className="hidden" />
       <div
         className={twMerge(
-          `min-w-6 min-h-6 border-2 md:min-w-5 md:min-h-5 rounded-full flex items-center justify-center border-black`,
+          `min-w-6 min-h-6 border md:min-w-5 md:min-h-5 xs:min-w-4 xs:min-h-4 rounded-full flex items-center justify-center border-black`,
           className
         )}
       >

@@ -20,8 +20,8 @@ const Home = () => {
       <Partners />
       <Service />
       <Portfolio />
-      <About />
       <Feedback />
+      <About />
     </>
   );
 };

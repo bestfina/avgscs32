@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
 interface ContactProps {
@@ -18,13 +19,9 @@ const Contact = ({ className, size, atTop }: ContactProps) => {
         className
       )}
     >
-      <a
-        target="_blank"
-        href={`mailto:${t("email")}`}
-        className={twMerge("text-2xl lg:text-xl sm:text-lg xs:text-base", size)}
-      >
+      <Link href={`mailto:${t("email")}`} className={twMerge("text-2xl lg:text-xl sm:text-lg xs:text-base", size)}>
         {t("email")}
-      </a>
+      </Link>
       {/* <Link href={`tel:${t("phone")}`} className={twMerge("text-2xl lg:text-xl sm:text-lg xs:text-base", size)}>
         {t("phone")}
       </Link> */}

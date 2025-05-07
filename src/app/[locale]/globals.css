@@ -166,7 +166,7 @@
   }
 
   .input-style {
-    @apply py-xxs pl-[25px] text-lg lg:py-xxxs lg:pl-xxs lg:text-base border-2 border-black focus:outline-none rounded-full text-TextDark;
+    @apply py-xxs pl-[25px] text-lg xl:py-xxxs lg:pl-xxs xs:p-xxxs lg:text-base border sm:text-sm xs:text-xs border-black focus:outline-none rounded-full text-TextDark;
   }
 
   .next-section-btn:hover .bounce {
@@ -209,6 +209,11 @@
     animation-delay: 1s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+  }
+
+  .animateSvg:hover svg {
+    opacity: 1;
+    margin-left: 8px;
   }
 
   @keyframes slideme {

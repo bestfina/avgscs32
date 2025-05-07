@@ -27,7 +27,7 @@ const Contacts = () => {
             <Contact className="flex-col gap-xxxs my-xxxs md:my-xxxxs x:my-0s" size="x:text-lg" />
             <Social />
           </div>
-          <Button type="blue" className="mt-xs md:mt-xxxs x:w-full">
+          <Button type="blue" className="x:w-full">
             {t("submit_request")}
           </Button>
         </div>
@@ -37,7 +37,7 @@ const Contacts = () => {
           width={800}
           height={400}
           priority={false}
-          className="w-2/4 rounded-3xl md:w-full x:h-80 object-cover"
+          className="w-2/4 rounded-3xl md:w-full x:h-80 xs:h-60 object-cover"
         />
       </div>
     </section>

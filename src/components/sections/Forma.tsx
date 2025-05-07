@@ -9,7 +9,7 @@ const Forma = () => {
   return (
     <section>
       <div className="container">
-        <div className="flex gap-28 p-md xl:p-sm xl:gap-20 md:gap-sm md:flex-wrap sm:p-xs rounded-3xl overflow-hidden bg-AccentDark/80 bg-[url('/assets/images/show.webp')]">
+        <div className="flex gap-28 p-md xl:p-sm xl:gap-20 md:gap-sm md:flex-wrap sm:p-xs rounded-3xl overflow-hidden bg-AccentDark/80">
           <div className="flex flex-col w-2/4 md:w-full">
             <h2 className="text-TextLight">{t("title")}</h2>
             <p

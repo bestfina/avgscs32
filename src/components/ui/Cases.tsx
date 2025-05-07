@@ -53,9 +53,20 @@ const Cases = ({ caseArr, main }: CasesProps) => {
           </motion.a>
         );
       })}
-      {!main && (
+      {!main ? (
         <motion.a
           href="/portfolio"
+          className="w-[48.5%] lg:w-[48.4%] md:w-[48%] sm:w-full sm:p-2 bg-black/80 hover:bg-black duration-300 rounded-3xl flex justify-center gap-xxs md:gap-xxxxs items-center text-TextLight text-6xl xl:text-5xl lg:text-4xl md:text-3xl sm:rounded-full sm:text-xl sm:h-fit"
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={cardVariants}
+          whileHover={{ scale: 1.02 }}
+        >
+          {t("main.portfolio.view_more")} <ArrowIcon className="-rotate-90 w-10 h-10 md:w-8 md:h-8 sm:w-6 sm:h-6" />
+        </motion.a>
+      ) : (
+        <motion.a
+          href="/contacts"
           className="w-[48.5%] lg:w-[48.4%] md:w-[48%] sm:w-full sm:p-2 bg-black/80 hover:bg-black duration-300 rounded-3xl flex justify-center gap-xxs md:gap-xxxxs items-center text-TextLight text-6xl xl:text-5xl lg:text-4xl md:text-3xl sm:rounded-full sm:text-xl sm:h-fit"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}

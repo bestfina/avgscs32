@@ -24,7 +24,7 @@ const Social = ({ className }: SocialProps) => {
           width={50}
           height={50}
           alt="telegram"
-          className="xl:w-10 lg:w-9 xs:w-7"
+          className="xl:w-10 lg:w-9 sm:w-8 xs:w-7"
         />
       </Link>
     </div>

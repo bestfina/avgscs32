@@ -93,10 +93,10 @@ const Header: FC<Props> = ({ locale }) => {
       >
         <div className="flex items-center gap-md md:gap-xs">
           <Logo atTop={atTop} isOpen={isOpen} />
-          <Navbar className="sm:hidden" classNameItem="md:text-sm" classNameList="md:gap-[23px]" atTop={atTop} />
+          <Navbar className="sm:hidden" classNameItem="md:text-sm" classNameList="sm:gap-[23px]" atTop={atTop} />
         </div>
         <div className="flex items-center gap-xxxs">
-          <div className="flex flex-col items-end gap-xxxxs">
+          <div className="flex flex-col items-end gap-xxxxs sm:gap-0">
             <div className="flex gap-xs xl:gap-xxs lg:gap-xxxs items-center">
               <LanguageSelector locale={locale} />
               <Button className="sm:hidden" type={twMerge(atTop ? "border-white" : "black")}>

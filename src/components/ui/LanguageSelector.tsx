@@ -47,23 +47,27 @@ const LanguageSelector: FC<Props> = ({ className, locale, fullWidth }) => {
     router.replace({ pathname }, { locale: lang });
   };
 
-  const languageProps: SVGProps<SVGElement> = { width: 20, height: 20 };
+  const languageProps: SVGProps<SVGElement> = { width: 30, height: 30 };
 
   return (
     <div className={clsx("relative inline-block text-left", className, fullWidth ? "w-full" : "w-auto")}>
       <button
         onClick={toggleDropdown}
         className={clsx(
-          "flex items-center space-x-2 bg-white hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-full border border-black shadow-sm transition-all duration-300",
+          "flex items-center space-x-2 bg-white hover:bg-gray-50 text-gray-700 rounded-full shadow-[0_0_8px_3px_rgb(0_0_0_/_0.2);] transition-all duration-300",
           fullWidth ? "w-full" : "w-auto"
         )}
       >
-        {locale === "ru" ? <RussiaIcon {...languageProps} /> : <EnglishIcon {...languageProps} />}
+        {locale === "ru" ? (
+          <RussiaIcon className="xl:w-6 xl:h-6" {...languageProps} />
+        ) : (
+          <EnglishIcon className="xl:w-6 xl:h-6" {...languageProps} />
+        )}
         {/* <span>{currentLanguage}</span> */}
       </button>
 
       {isOpen && (
-        <div className="absolute mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 origin-top-right -right-4 z-10 animate-fadeIn">
+        <div className="absolute mt-4 rounded-md shadow-lg bg-white border border-black origin-top-right -right-8 z-10 animate-fadeIn">
           <div className="py-1" role="menu" aria-orientation="vertical">
             {locales.map(lang => {
               return (
@@ -71,7 +75,7 @@ const LanguageSelector: FC<Props> = ({ className, locale, fullWidth }) => {
                   key={lang}
                   onClick={() => changeLanguage(lang)}
                   disabled={locale === lang}
-                  className={`${"text-gray-700"} flex items-center w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200`}
+                  className={`${"text-gray-700"} flex items-center w-full text-left px-4 py-2 text-sm hover:bg-gray-300 transition-colors duration-200`}
                   role="menuitem"
                 >
                   {LOCALES_MAP[lang]}
