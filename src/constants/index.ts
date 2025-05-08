@@ -327,7 +327,7 @@ export const CASE: TCase[] = [
     id: 2,
     title: "main.portfolio.taxi.title",
     poster: "/assets/images/project/taxi.png",
-    url: "https://klicktaxi.ru/",
+    url: "https://taksi-pro.ru/",
     category: "main.portfolio.taxi.category",
     description: "main.portfolio.taxi.description",
   },
