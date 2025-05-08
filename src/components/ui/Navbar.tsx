@@ -21,7 +21,7 @@ const Navbar = ({ className, classNameList, atTop, onClick, classNameItem, ifSub
 
   return (
     <nav className={className}>
-      <ul className={twMerge("flex gap-md lg:gap-sm md:gap-[12px] sm:gap-xs relative", classNameList)}>
+      <ul className={twMerge("flex gap-md lg:gap-sm md:gap-[11px] sm:gap-xs relative", classNameList)}>
         {LINK.map(({ title, id, url, subMenu }) => (
           <li
             key={id}

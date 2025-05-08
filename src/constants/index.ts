@@ -504,25 +504,25 @@ export const ABOUT_IN_NUMBERS: TAboutInNumber[] = [
   {
     id: 1,
     title: "main.aboutInNumbers.clients.title",
-    count: 110,
+    count: 150,
     text: "main.aboutInNumbers.clients.text",
   },
   {
     id: 2,
     title: "main.aboutInNumbers.experience.title",
-    count: 6,
+    count: 7,
     text: "main.aboutInNumbers.experience.text",
   },
   {
     id: 3,
     title: "main.aboutInNumbers.projects.title",
-    count: 400,
+    count: 500,
     text: "main.aboutInNumbers.projects.text",
   },
   {
     id: 4,
     title: "main.aboutInNumbers.technologies.title",
-    count: 30,
+    count: 45,
     text: "main.aboutInNumbers.technologies.text",
   },
 ];
