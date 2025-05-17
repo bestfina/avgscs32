@@ -38,22 +38,7 @@ const Exo2 = Exo_2({
   preload: true,
 });
 
-// export const metadata: Metadata = {
-//   title: {
-//     default: "layout.metadata.title", // Will be resolved by next-intl
-//     template: "%s | CortexDigital",
-//   },
-//   description: "layout.metadata.description", // Will be resolved by next-intl
-//   keywords: "layout.metadata.keywords", // Will be resolved by next-intl
-//   icons: "/favicon.ico",
-//   other: {
-//     "yandex-verification": "8cf8659d30ac0744",
-//   },
-// };
-
-export async function generateMetadata(
-  { params: { locale } }: { params: { locale: TLocales } },
-): Promise<Metadata> {
+export async function generateMetadata({ params: { locale } }: { params: { locale: TLocales } }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "layout.metadata" });
 
   return {

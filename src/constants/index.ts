@@ -314,6 +314,89 @@ export const FIELDS: TFields[] = [
     placeholder: "popup_form.fields.email_placeholder",
   },
 ];
+export const ABOUT_IN_NUMBERS: TAboutInNumber[] = [
+  {
+    id: 1,
+    title: "main.aboutInNumbers.clients.title",
+    count: 150,
+    text: "main.aboutInNumbers.clients.text",
+  },
+  {
+    id: 2,
+    title: "main.aboutInNumbers.experience.title",
+    count: 7,
+    text: "main.aboutInNumbers.experience.text",
+  },
+  {
+    id: 3,
+    title: "main.aboutInNumbers.projects.title",
+    count: 500,
+    text: "main.aboutInNumbers.projects.text",
+  },
+  {
+    id: 4,
+    title: "main.aboutInNumbers.technologies.title",
+    count: 45,
+    text: "main.aboutInNumbers.technologies.text",
+  },
+];
+export const STEPS: TSteps[] = [
+  {
+    id: 1,
+    title: "main.steps.analysis.title",
+    icon: "/assets/icons/document-tick.svg",
+    description: "main.steps.analysis.description",
+  },
+  {
+    id: 2,
+    title: "main.steps.uxDesign.title",
+    icon: "/assets/icons/maths.svg",
+    description: "main.steps.uxDesign.description",
+  },
+  {
+    id: 3,
+    title: "main.steps.uiDesign.title",
+    icon: "/assets/icons/palette.svg",
+    description: "main.steps.uiDesign.description",
+  },
+  {
+    id: 4,
+    title: "main.steps.development.title",
+    icon: "/assets/icons/code.svg",
+    description: "main.steps.development.description",
+  },
+  {
+    id: 5,
+    title: "main.steps.testing.title",
+    icon: "/assets/icons/checklist.svg",
+    description: "main.steps.testing.description",
+  },
+  {
+    id: 6,
+    title: "main.steps.launch.title",
+    icon: "/assets/icons/rocket.svg",
+    description: "main.steps.launch.description",
+  },
+];
+
+export const TEAM: Team[] = [
+  {
+    id: 1,
+    img: "/assets/images/teams/team1.jpg",
+  },
+  {
+    id: 2,
+    img: "/assets/images/teams/team2.jpg",
+  },
+  {
+    id: 3,
+    img: "/assets/images/poster/corporate.webp",
+  },
+  {
+    id: 4,
+    img: "/assets/images/poster/corporate.webp",
+  },
+];
 export const CASE: TCase[] = [
   {
     id: 1,
@@ -500,86 +583,189 @@ export const CASE: TCase[] = [
     description: "main.portfolio.runa.description",
   },
 ];
-export const ABOUT_IN_NUMBERS: TAboutInNumber[] = [
-  {
-    id: 1,
-    title: "main.aboutInNumbers.clients.title",
-    count: 150,
-    text: "main.aboutInNumbers.clients.text",
-  },
-  {
-    id: 2,
-    title: "main.aboutInNumbers.experience.title",
-    count: 7,
-    text: "main.aboutInNumbers.experience.text",
-  },
-  {
-    id: 3,
-    title: "main.aboutInNumbers.projects.title",
-    count: 500,
-    text: "main.aboutInNumbers.projects.text",
-  },
-  {
-    id: 4,
-    title: "main.aboutInNumbers.technologies.title",
-    count: 45,
-    text: "main.aboutInNumbers.technologies.text",
-  },
-];
-export const STEPS: TSteps[] = [
-  {
-    id: 1,
-    title: "main.steps.analysis.title",
-    icon: "/assets/icons/document-tick.svg",
-    description: "main.steps.analysis.description",
-  },
-  {
-    id: 2,
-    title: "main.steps.uxDesign.title",
-    icon: "/assets/icons/maths.svg",
-    description: "main.steps.uxDesign.description",
-  },
-  {
-    id: 3,
-    title: "main.steps.uiDesign.title",
-    icon: "/assets/icons/palette.svg",
-    description: "main.steps.uiDesign.description",
-  },
-  {
-    id: 4,
-    title: "main.steps.development.title",
-    icon: "/assets/icons/code.svg",
-    description: "main.steps.development.description",
-  },
-  {
-    id: 5,
-    title: "main.steps.testing.title",
-    icon: "/assets/icons/checklist.svg",
-    description: "main.steps.testing.description",
-  },
-  {
-    id: 6,
-    title: "main.steps.launch.title",
-    icon: "/assets/icons/rocket.svg",
-    description: "main.steps.launch.description",
-  },
-];
-
-export const TEAM: Team[] = [
-  {
-    id: 1,
-    img: "/assets/images/poster/corporate.webp",
-  },
-  {
-    id: 2,
-    img: "/assets/images/poster/corporate.webp",
-  },
-  {
-    id: 3,
-    img: "/assets/images/poster/corporate.webp",
-  },
-  {
-    id: 4,
-    img: "/assets/images/poster/corporate.webp",
-  },
-];
+// export const CASE2: TCase[] = [
+//   {
+//     id: 1,
+//     title: "main.portfolio.bisovet.title",
+//     poster: "/assets/images/project/bisovet.png",
+//     url: "https://bisovet.ru",
+//     category: "main.portfolio.bisovet.category",
+//     description: ["Лендинг", "Woocommerce", "Woocommerce", "Woocommerce"],
+//   },
+//   {
+//     id: 2,
+//     title: "main.portfolio.taxi.title",
+//     poster: "/assets/images/project/taxi.png",
+//     url: "https://taksi-pro.ru/",
+//     category: "main.portfolio.taxi.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 3,
+//     title: "main.portfolio.klikmi.title",
+//     poster: "/assets/images/project/klikmi.png",
+//     url: "https://klikmi.pl/",
+//     category: "main.portfolio.klikmi.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 4,
+//     title: "main.portfolio.bzTitan.title",
+//     poster: "/assets/images/project/titan.png",
+//     url: "https://bz-titan.ru",
+//     category: "main.portfolio.bzTitan.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 5,
+//     title: "main.portfolio.meteorex.title",
+//     poster: "/assets/images/project/meteorex.png",
+//     url: "https://meteorex.net",
+//     category: "main.portfolio.meteorex.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 6,
+//     title: "main.portfolio.altAcva.title",
+//     poster: "/assets/images/project/altAcva.png",
+//     url: "https://altaqua.ru/product/membrany_hynamo/",
+//     category: "main.portfolio.altAcva.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 7,
+//     title: "main.portfolio.vintageCottage.title",
+//     poster: "/assets/images/project/vintageCottage.png",
+//     url: "https://vintage-cottage.eu",
+//     category: "main.portfolio.vintageCottage.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 8,
+//     title: "main.portfolio.fgos.title",
+//     poster: "/assets/images/project/fgos.png",
+//     url: "https://fgosonline.ru",
+//     category: "main.portfolio.fgos.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 9,
+//     title: "main.portfolio.bavin.title",
+//     poster: "/assets/images/project/bavin.png",
+//     url: "https://bavin.pro",
+//     category: "main.portfolio.bavin.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 10,
+//     title: "main.portfolio.tradeCDB.title",
+//     poster: "/assets/images/project/tradeCDB.png",
+//     url: "https://tradecdb.com",
+//     category: "main.portfolio.tradeCDB.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 11,
+//     title: "main.portfolio.moip.title",
+//     poster: "/assets/images/project/moip.png",
+//     url: "https://mcoip.ru",
+//     category: "main.portfolio.moip.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 12,
+//     title: "main.portfolio.cyberTribe.title",
+//     poster: "/assets/images/project/cyber.png",
+//     url: "https://www.cybertribe.uk",
+//     category: "main.portfolio.cyberTribe.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 13,
+//     title: "main.portfolio.sattva.title",
+//     poster: "/assets/images/project/sattva.png",
+//     url: "https://sattva-centr.ru",
+//     category: "main.portfolio.sattva.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 14,
+//     title: "main.portfolio.acharge.title",
+//     poster: "/assets/images/project/acharge.png",
+//     url: "https://www.zolotarevka.ru",
+//     category: "main.portfolio.acharge.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 15,
+//     title: "main.portfolio.pride.title",
+//     poster: "/assets/images/project/praid.png",
+//     url: "https://pride-beton.ru",
+//     category: "main.portfolio.pride.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 16,
+//     title: "main.portfolio.malibu.title",
+//     poster: "/assets/images/project/malibu.png",
+//     url: "https://malibu-trc.ru",
+//     category: "main.portfolio.malibu.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 17,
+//     title: "main.portfolio.tatyanaVelichko.title",
+//     poster: "/assets/images/project/tatianaVelichko.png",
+//     url: "https://tatyana-velichko.ru/",
+//     category: "main.portfolio.tatyanaVelichko.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 18,
+//     title: "main.portfolio.cortexDigital.title",
+//     poster: "/assets/images/project/cortexDigital.png",
+//     url: "/",
+//     category: "main.portfolio.cortexDigital.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 19,
+//     title: "main.portfolio.denisSanko.title",
+//     poster: "/assets/images/project/denisSanko.png",
+//     url: "https://denissanko.com/kouching-pervyh-licz/",
+//     category: "main.portfolio.denisSanko.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 20,
+//     title: "main.portfolio.proxyLuxe.title",
+//     poster: "/assets/images/project/proxyLuxe.png",
+//     url: "https://proxy.luxe",
+//     category: "main.portfolio.proxyLuxe.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 21,
+//     title: "main.portfolio.gloSkin.title",
+//     poster: "/assets/images/project/gloskin.png",
+//     url: "https://gloskin.ru",
+//     category: "main.portfolio.gloSkin.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 22,
+//     title: "main.portfolio.infisol.title",
+//     poster: "/assets/images/project/infisol.png",
+//     url: "https://infisol.net",
+//     category: "main.portfolio.infisol.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+//   {
+//     id: 23,
+//     title: "main.portfolio.runa.title",
+//     poster: "/assets/images/project/runa.png",
+//     url: "https://runabeton.ru",
+//     category: "main.portfolio.runa.category",
+//     description: ["Лендинг", "Woocommerce"],
+//   },
+// ];

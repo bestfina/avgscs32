@@ -363,7 +363,7 @@
       "title": "Teams"
     },
     "service": {
-      "portfolio_link": "over 110 successful projects",
+      "portfolio_link": "over 500 successful projects",
       "title": "Our Web Development Services",
       "card_aria_label": "Learn more about \"{title}\" service",
       "order_button": "Order Now",
@@ -384,8 +384,8 @@
       },
       "other": {
         "title": "Other",
-        "price": "From $350 / 14 days",
-        "description": "We offer comprehensive marketing or technical website support."
+        "price": "Individually",
+        "description": "We will make custom application, marketing or website revision."
       }
     },
     "steps": {
@@ -499,7 +499,7 @@
     "message_icon_alt": "Callback Widget Icon",
     "telegram": "Telegram",
     "whatsapp": "WhatsApp",
-    "phone": "Phone",
+    "application": "Leave a request",
     "email": "Email",
     "telegram_icon_alt": "Telegram Icon",
     "whatsapp_icon_alt": "WhatsApp Icon",

@@ -22,7 +22,7 @@ const ServiceCard = ({ title, description, url, icon, className, price, iconAlt 
     <div
       aria-label={t("card_aria_label", { title })}
       className={twMerge(
-        "rounded-3xl overflow-hidden bg-center bg-cover service-item flex flex-col h-full group",
+        "rounded-3xl overflow-hidden bg-center service-item bg-cover flex flex-col h-full group",
         className
       )}
     >
@@ -30,7 +30,7 @@ const ServiceCard = ({ title, description, url, icon, className, price, iconAlt 
         <div className="flex items-center md:items-end">
           <Link
             href={url}
-            scroll={url ? true : false}
+            scroll={url == "" ? false : true}
             className="flex items-center gap-xxs md:flex-col md:items-start md:gap-xxxxs"
           >
             <Image
@@ -43,25 +43,31 @@ const ServiceCard = ({ title, description, url, icon, className, price, iconAlt 
             />
             <h3 className="relative">
               {title}
-              {url && (
-                <span className="absolute -mb-[3px] bottom-0 left-0 w-0 h-[2px] bg-black transition-all group-hover:w-[102%]"></span>
-              )}
+              <span
+                className={twMerge(
+                  "absolute -mb-[3px] bottom-0 left-0 w-0 h-[2px] bg-black transition-all",
+                  url !== "" ? "group-hover:w-[102%]" : ""
+                )}
+              ></span>
             </h3>
           </Link>
-          {url && (
+          {url !== "" ? (
             <Link
               href={url}
+              scroll={url == "" ? false : true}
               className="service-link text-TextDark duration-300 rounded-3xl w-11 h-11 xxl:h-9 xxl:w-9 lg:w-7 lg:h-7 flex justify-center items-center ml-auto"
             >
               <ArrowLink />
             </Link>
+          ) : (
+            ""
           )}
         </div>
         <p className="mt-xxxs leading-9 text-2xl xxl:leading-8 xxl:text-[22px] xl:text-[19px] xl:leading-7 lg:text-base text-TextDark font-extralight">
           {description}
         </p>
         <div className="mt-auto">
-          <div className="mt-6 mb-xxs lg:mt-4 lg:mb-xxxs text-3xl xxl:text-[28px] xl:text-xl lg:text-lg xs:text-base font-bold">
+          <div className="mt-6 mb-xxs lg:mt-4 sm:mt-2 lg:mb-xxxs text-3xl xxl:text-[28px] xl:text-xl lg:text-lg xs:text-base font-bold">
             {price}
           </div>
           <div onClick={e => e.stopPropagation()}>
