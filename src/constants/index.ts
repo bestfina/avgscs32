@@ -267,6 +267,13 @@ export const FEEDBACKS: TFeedbacks[] = [
     video: ["/video/mp4/reviews/ramis.mp4", ""],
   },
   {
+    id: 14,
+    name: "main.feedback.roman.name",
+    avatar: "/assets/images/reviews/avatar/roman.jpg",
+    poster: "/assets/images/reviews/poster/roman.png",
+    video: ["/video/mp4/reviews/roman.mp4", ""],
+  },
+  {
     id: 4,
     name: "main.feedback.yavrep.name",
     avatar: "/assets/images/reviews/avatar/kwork.webp",
