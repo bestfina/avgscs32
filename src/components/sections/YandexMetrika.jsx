@@ -3,34 +3,47 @@ import { useEffect } from "react";
 
 const YandexMetrika = () => {
   useEffect(() => {
+    // Функция инициализации метрики
     const initYandexMetrika = () => {
-      if (typeof window === "undefined" || !window.ym) {
-        (function (m, e, t, r, i, k, a) {
-          m[i] =
-            m[i] ||
-            function () {
-              (m[i].a = m[i].a || []).push(arguments);
-            };
-          m[i].l = 1 * new Date();
-          k = e.createElement(t);
-          a = e.getElementsByTagName(t)[0];
-          k.async = 1;
-          k.src = r;
-          a.parentNode?.insertBefore(k, a);
-        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      if (typeof window === "undefined" || window.ym) return;
 
-        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        window.ym &&
-          window.ym(99095541, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true,
-          });
-      }
+      console.log("Yandex Metrika initialized");
+
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        k = e.createElement(t);
+        a = e.getElementsByTagName(t)[0];
+        k.async = 1;
+        k.src = r;
+        a.parentNode?.insertBefore(k, a);
+      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+      window.ym(99095541, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
     };
 
     initYandexMetrika();
+
+    // Обработчик кастомного события
+    const handleStorageChange = () => {
+      const newConsent = localStorage.getItem("cookieConsent");
+      if (newConsent === "accepted") initYandexMetrika();
+    };
+
+    // Подписываемся на событие
+    window.addEventListener("localStorageChange", handleStorageChange);
+
+    // Отписка при размонтировании
+    return () => window.removeEventListener("localStorageChange", handleStorageChange);
   }, []);
 
   return (

@@ -14,6 +14,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { Providers } from "./providers";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import CookieConsent from "@/components/sections/CookieConsent";
 
 // export const dynamicParams = true;
 
@@ -70,6 +71,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Providers>
             <Header locale={params.locale} />
             <main>{children}</main>
+            <CookieConsent />
             <Footer />
             <MobileLink />
             <Popup />
