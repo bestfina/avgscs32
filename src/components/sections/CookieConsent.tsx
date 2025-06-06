@@ -47,12 +47,8 @@ const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept, onDecline 
       allCookies.push(`${name}`);
     });
 
-    console.log(allCookies);
-
     setCookiesList(allCookies.filter(i => !!i));
   };
-
-  console.log("cookiesList", cookiesList);
 
   // Обновляем высоту контента
   useEffect(() => {
@@ -155,8 +151,9 @@ const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept, onDecline 
               <h2 className="text-xl font-semibold mb-4">Мы ценим вашу конфиденциальность</h2>
               <p className="text-gray-300 text-sm leading-relaxed mb-4">
                 Сайт использует файлы Cookie для улучшения качества вашего просмотра, показа контента и анализа трафика.
-                Нажимая "Принять", вы даете согласие на использование файлов cookie. Используя сайт, вы предоставляете
-                согласие на обработку ваших персональных данных в том числе с помощью сервисов веб-аналитики.
+                Нажимая &quot;Принять&quot;, вы даете согласие на использование файлов cookie. Используя сайт, вы
+                предоставляете согласие на обработку ваших персональных данных в том числе с помощью сервисов
+                веб-аналитики.
               </p>
               <p className="text-gray-400 text-xs italic">
                 * При отказе некоторые функции сайта могут стать недоступными.

@@ -6,7 +6,7 @@ import PopupForm from "./PopupForm";
 
 interface ButtonProps {
   children: ReactNode;
-  type: "white" | "blue" | "black" | "blue-light" | "border-white" | "border-black";
+  type: "white" | "blue" | "black" | "blue-light" | "border-white" | "border-black" | string;
   className?: string;
   onClick?: () => void;
   openPopupAfterClick?: boolean;
