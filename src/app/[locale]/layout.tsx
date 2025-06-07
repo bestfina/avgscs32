@@ -70,6 +70,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           <Providers>
             <Header locale={params.locale} />
+            <div id="global-top" />
             <main>{children}</main>
             <CookieConsent />
             <Footer />
