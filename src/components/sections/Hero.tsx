@@ -41,7 +41,7 @@ const Hero = ({ video, title, description, poster }: HeroProps) => {
             <h1 className="text-TextLight xxl:max-w-[900px] xl:max-w-[775px] lg:max-w-[625px] md:max-w-full">
               {title}
             </h1>
-            <p className="text-TextLight leading-8 xl:leading-7 lg:leading-6 x:leading-5 xs:leading-[18px] mt-xs xl:mt-xxs">
+            <p className="text-TextLight xxl:max-w-[900px] xl:max-w-[750px] lg:max-w-[625px] leading-8 xl:leading-7 lg:leading-6 x:leading-5 xs:leading-[18px] mt-xs xl:mt-xxs">
               {description}
             </p>
             <MainCta />

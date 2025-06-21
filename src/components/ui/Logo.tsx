@@ -38,7 +38,7 @@ const Logo = ({ big = false, atTop, isOpen }: LogoProps) => {
           big ? "text-TextDark [&&]:text-lg xl:[&&]:text-base" : null
         )}
       >
-        company
+        agency
       </div>
     </Link>
   );

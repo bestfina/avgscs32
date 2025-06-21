@@ -17,6 +17,7 @@ const Footer = () => {
       <div className="container flex flex-col gap-xxs py-sm xl:py-xs sm:gap-xs">
         <div className="flex justify-between items-center sm:flex-col sm:gap-xs">
           <Logo big />
+
           <Navbar classNameList="sm:gap-xxs xs:gap-xxxs" classNameItem="xs:text-[13px]" ifSubMenu />
           <div className="flex items-center gap-xxxs sm:items-center">
             <Contact

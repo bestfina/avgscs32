@@ -27,7 +27,7 @@ const CallbackWidget = () => {
   };
 
   return (
-    <div className="fixed md:block bottom-7 right-16 xl:right-9 lg:right-4 lg:bottom-5 xs:right-[15px] xs:bottom-[15px] z-[100000]">
+    <div className="fixed hidden sm:block bottom-7 right-16 xl:right-9 lg:right-4 lg:bottom-5 xs:right-[15px] xs:bottom-[15px] z-[100000]">
       <motion.div
         className="relative bg-AccentLight w-16 h-16 xs:w-14 xs:h-14 rounded-full flex justify-center items-center cursor-pointer"
         onClick={toggleMenu}
@@ -65,6 +65,16 @@ const CallbackWidget = () => {
             >
               <Image src="/assets/icons/telegram.svg" alt={t("telegram_icon_alt")} width={24} height={24} />
               {t("telegram")}
+            </Link>
+            <Link
+              href="https://wa.me/79950203385"
+              target="_blank"
+              onClick={() => setIsMenuOpen(false)}
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
+            >
+              <Image src="/assets/icons/whatsapp.svg" alt="whatsapp" width={24} height={24} />
+              {t("whatsapp")}
             </Link>
             <Link
               target="_blank"
