@@ -325,7 +325,7 @@ export const ABOUT_IN_NUMBERS: TAboutInNumber[] = [
   {
     id: 1,
     title: "main.aboutInNumbers.clients.title",
-    count: 150,
+    count: 82,
     text: "main.aboutInNumbers.clients.text",
   },
   {
@@ -337,13 +337,13 @@ export const ABOUT_IN_NUMBERS: TAboutInNumber[] = [
   {
     id: 3,
     title: "main.aboutInNumbers.projects.title",
-    count: 500,
+    count: 497,
     text: "main.aboutInNumbers.projects.text",
   },
   {
     id: 4,
     title: "main.aboutInNumbers.technologies.title",
-    count: 45,
+    count: 38,
     text: "main.aboutInNumbers.technologies.text",
   },
 ];
