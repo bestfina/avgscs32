@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito, Exo_2 } from "next/font/google";
+import { Nunito, Jura, Roboto } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import Header from "@/components/sections/Header";
@@ -15,7 +15,6 @@ import { Providers } from "./providers";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import CookieConsent from "@/components/sections/CookieConsent";
-
 // export const dynamicParams = true;
 
 type Props = {
@@ -23,7 +22,7 @@ type Props = {
   params: { locale: TLocales };
 };
 
-const raleway = Nunito({
+const nunito = Nunito({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "600"],
@@ -31,7 +30,7 @@ const raleway = Nunito({
   adjustFontFallback: false,
 });
 
-const Exo2 = Exo_2({
+const jura = Jura({
   subsets: ["latin"],
   display: "swap",
   weight: ["600"],
@@ -65,7 +64,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={params.locale}>
-      <body className={twMerge(raleway.className, Exo2.variable, "antialiased text-TextDark")}>
+      <body className={twMerge(nunito.className, jura.variable, "antialiased text-TextDark")}>
         <YandexMetrika />
         <NextIntlClientProvider messages={messages}>
           <Providers>
