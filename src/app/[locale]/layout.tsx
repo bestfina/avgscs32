@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito, Jura, Roboto } from "next/font/google";
+import { Nunito, Jura } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import Header from "@/components/sections/Header";
