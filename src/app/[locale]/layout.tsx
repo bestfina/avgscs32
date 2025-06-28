@@ -33,7 +33,7 @@ const nunito = Nunito({
 const jura = Jura({
   subsets: ["latin"],
   display: "swap",
-  weight: ["600"],
+  weight: ["700"],
   variable: "--font-press",
   preload: true,
 });

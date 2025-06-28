@@ -96,7 +96,7 @@ const Header: FC<Props> = ({ locale }) => {
           <Navbar className="sm:hidden" classNameItem="md:text-sm" classNameList="sm:gap-[23px]" atTop={atTop} />
         </div>
         <div className="flex items-center gap-xxxs">
-          <div className="flex flex-col items-end gap-xxxxs sm:gap-0">
+          <div className="flex flex-col items-end gap-xxxs xl:gap-xxxxs sm:gap-0">
             <div className="flex gap-xs xl:gap-xxs lg:gap-xxxs items-center">
               <LanguageSelector locale={locale} />
               <Button className="sm:hidden" type={twMerge(atTop ? "border-white" : "black")}>
@@ -104,7 +104,7 @@ const Header: FC<Props> = ({ locale }) => {
               </Button>
               <Social className="md:hidden" />
             </div>
-            <Contact size="text-lg lg:text-base md:hidden" atTop={atTop} />
+            <Contact size="md:hidden" atTop={atTop} />
           </div>
           <button
             className={twMerge(
