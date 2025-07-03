@@ -1,10 +1,9 @@
-import { ReactNode } from "react";
+import { cn } from "@/lib/cn";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface FirstSectionProps {
-  children: ReactNode;
-}
+interface FirstSectionProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
-const FirstSection = ({ children }: FirstSectionProps) => {
+const FirstSection = ({ children, ...props }: FirstSectionProps) => {
   const scrollToTop = () => {
     const topElement = document.getElementById("global-top");
     if (topElement) {
@@ -13,7 +12,14 @@ const FirstSection = ({ children }: FirstSectionProps) => {
   };
 
   return (
-    <button onClick={scrollToTop} className="flex gap-xxxxs items-center w-fit text-base sm:text-sm">
+    <button
+      {...props}
+      onClick={(e) => {
+        scrollToTop();
+        props.onClick?.(e);
+      }}
+      className={cn("flex gap-xxxxs items-center w-fit text-base sm:text-sm" , props.className)}
+    >
       {children}
     </button>
   );

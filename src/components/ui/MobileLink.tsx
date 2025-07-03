@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Button from "./Button";
+import { SocialLinks } from "@/constants";
 
 const CallbackWidget = () => {
   const t = useTranslations("callback_widget");
@@ -57,7 +58,7 @@ const CallbackWidget = () => {
               {t("application")}
             </Button>
             <Link
-              href="https://t.me/CORTEX_DIGITAL"
+              href={SocialLinks.TELEGRAM}
               target="_blank"
               onClick={() => setIsMenuOpen(false)}
               rel="noopener noreferrer"
@@ -67,7 +68,7 @@ const CallbackWidget = () => {
               {t("telegram")}
             </Link>
             <Link
-              href="https://wa.me/79950203385"
+              href={SocialLinks.TELEGRAM}
               target="_blank"
               onClick={() => setIsMenuOpen(false)}
               rel="noopener noreferrer"

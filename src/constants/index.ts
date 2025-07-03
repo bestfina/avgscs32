@@ -15,6 +15,13 @@ import {
 export const locales: TLocales[] = ["en", "ru"] as const;
 export const defaultLocale: TLocales = "ru";
 
+export enum SocialLinks {
+ TELEGRAM = "https://t.me/CORTEX_DIGITAL",
+ WHATSAPP = "https://wa.me/79950203385",
+ VK = "",
+ YOUTUBE = ""
+}
+
 export const LINK: TLink[] = [
   {
     title: "nav.service",
@@ -53,6 +60,7 @@ export const ROUTE_TRANSLATE = {
   "landing-page": "link.landing",
   contacts: "nav.contacts",
   "#about": "nav.about",
+  "#feedback": "nav.feedback",
   "corporate#feedback": "nav.feedback",
   "corporate#steps": "link.steps",
   "corporate#faq": "link.faq",
