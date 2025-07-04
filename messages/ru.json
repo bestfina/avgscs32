@@ -8,7 +8,9 @@
     "portfolio": "Портфолио",
     "about": "О нас",
     "feedback": "Отзывы",
-    "contacts": "Контакты"
+    "contacts": "Контакты",
+    "aboutCompany": "О компании",
+    "cases": "Кейсы"
   },
   "link": {
     "main": "Главная",
@@ -231,7 +233,7 @@
     "footer": {
       "copyright": "CortexDigital © {year}",
       "privacy_policy": "Политика конфиденциальности",
-      "to_top": "наверх",
+      "to_top": "Наверх",
       "arrow_up_alt": "Стрелка вверх",
       "developed_by": "Разработано в CortexDigital"
     },

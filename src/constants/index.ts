@@ -6,49 +6,107 @@ import {
   TFaq,
   TFeedbacks,
   TFields,
+  TFooterPageLink,
+  TFooterSocialLink,
   TLink,
   TLocales,
   TService,
   TSteps,
 } from "@/types";
 
+import TGIcon from "public/assets/icons/tg-icon.svg";
+import WAIcon from "public/assets/icons/wa-icon.svg";
+import VKIcon from "public/assets/icons/vk-icon.svg";
+import YTIcon from "public/assets/icons/yt-icon.svg";
+
 export const locales: TLocales[] = ["en", "ru"] as const;
 export const defaultLocale: TLocales = "ru";
 
 export enum SocialLinks {
- TELEGRAM = "https://t.me/CORTEX_DIGITAL",
- WHATSAPP = "https://wa.me/79950203385",
- VK = "",
- YOUTUBE = ""
+  TELEGRAM = "https://t.me/CORTEX_DIGITAL",
+  WHATSAPP = "https://wa.me/79950203385",
+  VK = "",
+  YOUTUBE = "",
 }
+
+export enum NavLinks {
+  SERVICE = "/#service",
+  SERVICE_LANDING = "/landing-page",
+  SERVICE_CORPORATE = "/corporate",
+  SERVICE_ECOMMERCE = "/e-commerce",
+  PORTFOLIO = "/portfolio",
+  ABOUT = "/#about",
+  FEEDBACK = "/#feedback",
+  CONTACTS = "/contacts",
+}
+
+export const FOOTER_SOCIAL_LINKS: TFooterSocialLink[] = [
+  {
+    icon: TGIcon,
+    link: SocialLinks.TELEGRAM,
+  },
+  {
+    icon: WAIcon,
+    link: SocialLinks.WHATSAPP,
+  },
+  {
+    icon: VKIcon,
+    link: SocialLinks.VK,
+  },
+  {
+    icon: YTIcon,
+    link: SocialLinks.YOUTUBE,
+  },
+];
+
+export const FOOTER_PAGE_LINKS: TFooterPageLink[] = [
+  {
+    label: "nav.cases",
+    url: NavLinks.PORTFOLIO,
+  },
+  {
+    label: "nav.aboutCompany",
+    url: NavLinks.ABOUT,
+  },
+  {
+    label: "nav.feedback",
+    url: NavLinks.FEEDBACK,
+  },
+  {
+    label: "nav.contacts",
+    url: NavLinks.CONTACTS,
+  },
+];
+
+export const SERVICE_SUB_MENU: TLink["subMenu"] = [
+  {
+    title: "nav.serviceLanding",
+    url: NavLinks.SERVICE_LANDING,
+    id: 1,
+  },
+  {
+    title: "nav.serviceCorporate",
+    url: NavLinks.SERVICE_CORPORATE,
+    id: 2,
+  },
+  {
+    title: "nav.serviceEcommerce",
+    url: NavLinks.SERVICE_ECOMMERCE,
+    id: 3,
+  },
+];
 
 export const LINK: TLink[] = [
   {
     title: "nav.service",
-    url: "/#service",
+    url: NavLinks.SERVICE,
     id: 1,
-    subMenu: [
-      {
-        title: "nav.serviceLanding",
-        url: "/landing-page",
-        id: 1,
-      },
-      {
-        title: "nav.serviceCorporate",
-        url: "/corporate",
-        id: 2,
-      },
-      {
-        title: "nav.serviceEcommerce",
-        url: "/e-commerce",
-        id: 3,
-      },
-    ],
+    subMenu: SERVICE_SUB_MENU,
   },
-  { title: "nav.portfolio", url: "/portfolio", id: 2 },
-  { title: "nav.about", url: "/#about", id: 3 },
-  { title: "nav.feedback", url: "/#feedback", id: 4 },
-  { title: "nav.contacts", url: "/contacts", id: 5 },
+  { title: "nav.portfolio", url: NavLinks.PORTFOLIO, id: 2 },
+  { title: "nav.about", url: NavLinks.ABOUT, id: 3 },
+  { title: "nav.feedback", url: NavLinks.FEEDBACK, id: 4 },
+  { title: "nav.contacts", url: NavLinks.CONTACTS, id: 5 },
 ];
 
 export const ROUTE_TRANSLATE = {
@@ -68,44 +126,6 @@ export const ROUTE_TRANSLATE = {
   privacy: "link.privacy",
   "not-found": "link.notfound",
 };
-// [
-//   {
-//     value: "/", translated : "link.main",
-//   },
-//   {
-//     value: "#hero", translated : "link.main",
-//   },
-//   {
-//     value: "portfolio", translated : "nav.portfolio",
-//   },
-//   {
-//     value: "e-commerce", translated : "link.ecommerce",
-//   },
-//   {
-//     value: "#service", translated : "nav.service",
-//   },
-//   {
-//     value: "landing-page", translated : "link.landing",
-//   },
-//   {
-//     value: "contacts", translated : "nav.contacts",
-//   },
-//   {
-//     value: "#about", translated : "nav.about",
-//   },
-//   {
-//     value: "#feedback", translated : "nav.feedback",
-//   },
-//   {
-//     value : "corporate" , translated : "link.corporate",
-//   },
-//   {
-//     value : "privacy" , translated : "link.privacy",
-//   },
-//   {
-//     value : "not-found" , translated : "link.notfound",
-//   }
-// ]
 
 export const ADVANTAGES: TAdvantages[] = [
   {
