@@ -45,7 +45,7 @@ const Footer = () => {
               className="text-[20px] font-semibold text-white mb-4 leading-tight sm:text-[18px] sm:mb-4"
               style={{ fontFamily: "var(--font-nunito)" }}
             >
-              Услуги
+              {t("main.footer.services")}
             </h3>
             <nav className="space-y-3 sm:space-y-2">
               {SERVICE_SUB_MENU?.map(item => (
@@ -84,9 +84,11 @@ const Footer = () => {
                   target="_blank"
                   className="text-[22px] font-semibold text-white mb-2 block leading-tight hover:text-[#FFFFFF99] transition-colors duration-300 sm:text-[18px]"
                 >
-                  + 7 (995) 020-33-85
+                  +7 (995) 020-33-85
                 </a>
-                <p className="text-[16px] text-[#FFFFFF99] leading-relaxed sm:text-[14px]">Позвоните нам</p>
+                <p className="text-[16px] text-[#FFFFFF99] leading-relaxed sm:text-[14px]">
+                  {t("main.footer.call_us")}
+                </p>
               </div>
 
               <div className="text-end">
@@ -97,7 +99,9 @@ const Footer = () => {
                 >
                   info@cortexdigital.net
                 </a>
-                <p className="text-[16px] text-[#FFFFFF99] leading-relaxed sm:text-[14px]">Напишите нам</p>
+                <p className="text-[16px] text-[#FFFFFF99] leading-relaxed sm:text-[14px]">
+                  {t("main.footer.write_us")}
+                </p>
               </div>
             </div>
           </div>
@@ -129,7 +133,7 @@ const Footer = () => {
               style={{ fontFamily: "var(--font-nunito)" }}
               className="text-[18px] font-semibold text-white mb-1 leading-tight sm:text-[16px] sm:mb-2"
             >
-              Адрес компании:
+              {t("main.footer.company_address")}
             </h3>
             <div className="space-y-1">
               <a
@@ -147,10 +151,10 @@ const Footer = () => {
           <div className="flex-1 min-w-[200px] max-w-[250px] sm:max-w-none sm:mb-6 sm:flex sm:justify-center">
             <button
               onClick={downloadPresentationWithFetch}
-              className="flex items-center gap-3 bg-transparent text-white text-[16px] hover:opacity-[0.7] transition-opacity duration-300 sm:text-[15px]  bg-[#263641] px-[20px] rounded-lg h-[60px]"
+              className="flex items-center gap-3 bg-transparent text-white text-[16px] hover:opacity-[0.7] transition-opacity duration-300 sm:text-[15px] bg-[#263641] px-[20px] rounded-lg h-[60px]"
             >
               <FolderIcon width={16} height={16} alt="Download" className="w-4 h-4 flex-shrink-0" />
-              Скачать презентацию
+              {t("main.footer.download_presentation")}
             </button>
           </div>
 
@@ -180,7 +184,7 @@ const Footer = () => {
                 href="/privacy"
                 className="text-[16px] text-[#FFFFFF99] hover:text-white transition-colors duration-300 leading-relaxed sm:text-[14px]"
               >
-                Политика <br/> конфиденциальности
+                {t("main.footer.privacy_policy")}
               </TransitionLink>
             </div>
 
@@ -190,7 +194,7 @@ const Footer = () => {
                 href="/"
                 className="text-[16px] text-[#FFFFFF99] hover:text-white transition-colors duration-300 leading-relaxed sm:text-[14px]"
               >
-                Согласие на обработку персональных данных
+                {t("main.footer.privacy_consent")}
               </TransitionLink>
             </div>
 
