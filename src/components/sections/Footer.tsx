@@ -78,7 +78,7 @@ const Footer = () => {
           {/* Contact Info Column */}
           <div className="flex-1 min-w-[250px] max-w-[300px] sm:max-w-none">
             <div className="space-y-6 sm:space-y-4">
-              <div className="text-end">
+              <div className="text-end sm:text-start">
                 <a
                   href="tel:+79950203385"
                   target="_blank"
@@ -91,7 +91,7 @@ const Footer = () => {
                 </p>
               </div>
 
-              <div className="text-end">
+              <div className="text-end sm:text-start">
                 <a
                   href="mailto:info@cortexdigital.net"
                   target="_blank"
@@ -108,19 +108,19 @@ const Footer = () => {
         </div>
 
         {/* Social Media - Mobile Only */}
-        <div className="hidden sm:block py-6 border-t border-[#FFFFFF33]">
-          <div className="flex items-center justify-center gap-4">
+        <div className="hidden sm:block py-2">
+          <div className="w-full flex items-end justify-start gap-4 sm:mb-6">
             <SocialFooter />
           </div>
         </div>
 
         {/* Middle Section */}
-        <div className="flex flex-wrap justify-between py-8 gap-8 lg:py-8 sm:py-8 sm:flex-col">
+        <div className="flex flex-wrap justify-between py-8 gap-8 lg:py-8 sm:py-4 sm:flex-col">
           {/* Company Info */}
-          <div className="flex-1 min-w-[200px] max-w-[300px] sm:max-w-none sm:mb-6">
+          <div className="flex-1 min-w-[200px] max-w-[300px] sm:max-w-none sm:mb-2">
             <div className="space-y-2 sm:space-y-1">
               <p className="text-[16px] text-[#FFFFFF99] leading-relaxed sm:text-[14px]">
-                ИП Волков Александр <br /> Александрович
+                ИП Волков Александр <br className="sm:hidden"/> Александрович
               </p>
               <p className="text-[16px] text-[#FFFFFF99] leading-relaxed sm:text-[14px]">ОГРН 000000000000</p>
               <p className="text-[16px] text-[#FFFFFF99] leading-relaxed sm:text-[14px]">ИНН 000000000000</p>
@@ -151,7 +151,7 @@ const Footer = () => {
           <div className="flex-1 min-w-[200px] max-w-[250px] sm:max-w-none sm:mb-6 sm:flex sm:justify-center">
             <button
               onClick={downloadPresentationWithFetch}
-              className="flex items-center gap-3 bg-transparent text-white text-[16px] hover:opacity-[0.7] transition-opacity duration-300 sm:text-[15px] bg-[#263641] px-[20px] rounded-lg h-[60px]"
+              className="flex items-center justify-center gap-3 bg-transparent text-white text-[16px] hover:opacity-[0.7] transition-opacity duration-300 sm:text-[18px] bg-[#263641] px-[20px] rounded-lg h-[60px] w-full"
             >
               <FolderIcon width={16} height={16} alt="Download" className="w-4 h-4 flex-shrink-0" />
               {t("main.footer.download_presentation")}
@@ -167,10 +167,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="w-full flex flex-wrap justify-between py-16 gap-8 lg:py-12 sm:py-8 sm:flex-col border-t border-[#FFFFFF33] ">
-          <div className="w-full flex flex-wrap justify-between items-center gap-6 sm:flex-col sm:gap-4">
+        <div className="w-full flex flex-wrap justify-between py-16 gap-8 lg:py-12 sm:py-8 sm:flex-col border-t border-[#FFFFFF33] relative">
+          <div className="w-full flex flex-wrap justify-between items-center gap-6 sm:flex-col sm:gap-4 sm:items-start">
             {/* Copyright */}
-            <div className="flex-1 min-w-[200px] max-w-[300px] sm:max-w-none sm:mb-6">
+            <div className="order-1 sm:order-3 flex-1 min-w-[200px] max-w-[300px] sm:max-w-none sm:mb-3 sm:w-3/5">
               <div className="text-[16px] text-[#FFFFFF99] leading-relaxed sm:text-[14px]">
                 <span className="text-white font-medium">CortexDigital © {new Date().getFullYear()}</span>
                 <br />
@@ -179,7 +179,7 @@ const Footer = () => {
             </div>
 
             {/* Privacy Policy */}
-            <div className="flex-1 min-w-[200px] max-w-[250px] sm:max-w-none sm:mb-6">
+            <div className="order-2 flex-1 min-w-[200px] max-w-[250px] sm:max-w-none sm:mb-3 sm:w-1/2">
               <TransitionLink
                 href="/privacy"
                 className="text-[16px] text-[#FFFFFF99] hover:text-white transition-colors duration-300 leading-relaxed sm:text-[14px]"
@@ -189,7 +189,7 @@ const Footer = () => {
             </div>
 
             {/* Privacy Consent */}
-            <div className="flex-1 min-w-[200px] max-w-[250px] sm:max-w-none sm:mb-6">
+            <div className="order-3 sm:order-1 flex-1 min-w-[200px] max-w-[250px] sm:max-w-none sm:mb-3 sm:w-3/5">
               <TransitionLink
                 href="/"
                 className="text-[16px] text-[#FFFFFF99] hover:text-white transition-colors duration-300 leading-relaxed sm:text-[14px]"
@@ -199,12 +199,12 @@ const Footer = () => {
             </div>
 
             {/* Back to Top */}
-            <div className="flex w-full justify-end min-w-[250px] max-w-[300px] sm:max-w-none">
+            <div className="order-4 flex w-full justify-end min-w-[250px] max-w-[300px] sm:max-w-none sm:absolute sm:bottom-10 sm:right-[3px]">
               <FirstSection
                 withIcon
                 className="text-[16px] text-[#FFFFFF99] hover:text-white transition-colors duration-300 leading-relaxed"
               >
-                {t("main.footer.to_top")}
+                <span className="sm:hidden">{t("main.footer.to_top")}</span>
               </FirstSection>
             </div>
           </div>
