@@ -106,6 +106,7 @@ export function Providers({ children }: Props) {
         leave={(next, from, to) => {
           const normalizedPath = normalizePath(to);
           setCurrentPathName(normalizedPath);
+          console.log(normalizedPath , 'normalizedPath')
           const animation = handleLeaveAnimation(firstLayer, secondLayer, textRef, next);
           return () => animation.kill();
         }}

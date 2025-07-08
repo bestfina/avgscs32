@@ -92,7 +92,7 @@ const Header: FC<Props> = ({ locale }) => {
         )}
       >
         <div className="flex items-center gap-md md:gap-xs">
-          <Logo atTop={atTop} isOpen={isOpen} />
+          <Logo atTop={atTop} isOpen={isOpen} light={false} />
           <Navbar className="sm:hidden" classNameItem="md:text-sm" classNameList="sm:gap-[23px]" atTop={atTop} />
         </div>
         <div className="flex items-center gap-xxxs">

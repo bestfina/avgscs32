@@ -69,7 +69,7 @@ const Cases = ({ caseArr, main }: CasesProps) => {
       })}
       <motion.a
         href={!main ? "/portfolio" : "/contacts"}
-        className="w-[48.5%] lg:w-[48.4%] md:w-[48%] sm:w-full sm:p-2 bg-black/80 hover:bg-black duration-300 rounded-3xl flex justify-center 
+        className="w-[48.5%] lg:w-[48.4%] md:w-[48%] sm:w-full sm:p-2 bg-[#0E202C] duration-300 rounded-3xl flex justify-center 
         gap-xxs md:gap-xxxxs items-center text-TextLight text-6xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl sm:h-[320px] xs:h-[280px]"
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}

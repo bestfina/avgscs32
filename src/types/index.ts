@@ -1,3 +1,6 @@
+import { NavLinks, SocialLinks } from "@/constants";
+import { FC, SVGProps } from "react";
+
 type URL = string;
 type Image = string;
 
@@ -6,9 +9,19 @@ export interface BaseEntity {
   title: string;
 }
 
+export type TFooterSocialLink = {
+  icon: FC<SVGProps<SVGElement>>;
+  link: SocialLinks;
+};
+
 export type TLink = BaseEntity & {
   url: URL;
   subMenu?: { id: number; title: string; url: URL }[];
+};
+
+export type TFooterPageLink = {
+  label: string;
+  url: NavLinks;
 };
 
 interface Description {

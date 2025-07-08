@@ -17,7 +17,7 @@ interface CookieSettings {
   analytics: boolean;
 }
 
-const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept }) => {
+const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept, onDecline }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [cookieSettings, setCookieSettings] = useState<CookieSettings>({
@@ -34,7 +34,85 @@ const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept }) => {
 
   const closeModal = () => setShowModal(false);
 
+  // Функция для удаления всех куков
+  const clearAllCookies = () => {
+    // Удаляем все куки для текущего домена
+    document.cookie.split(";").forEach(cookie => {
+      const eqPos = cookie.indexOf("=");
+      const name = eqPos > -1 ? cookie.substr(0, eqPos).trim() : cookie.trim();
+
+      // Удаляем куки для разных путей и доменов
+      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`;
+      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=${window.location.hostname}`;
+      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=.${window.location.hostname}`;
+    });
+
+    // Очищаем localStorage от аналитических данных
+    const keysToRemove = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && (key.includes("yandex") || key.includes("_ym") || key.includes("analytics"))) {
+        keysToRemove.push(key);
+      }
+    }
+    keysToRemove.forEach(key => localStorage.removeItem(key));
+
+    // Очищаем sessionStorage от аналитических данных
+    const sessionKeysToRemove = [];
+    for (let i = 0; i < sessionStorage.length; i++) {
+      const key = sessionStorage.key(i);
+      if (key && (key.includes("yandex") || key.includes("_ym") || key.includes("analytics"))) {
+        sessionKeysToRemove.push(key);
+      }
+    }
+    sessionKeysToRemove.forEach(key => sessionStorage.removeItem(key));
+  };
+
   const handleQuickAccept = () => {
+    localStorage.setItem("cookieConsent", JSON.stringify(cookieSettings));
+
+    // Генерируем кастомное событие для уведомления других компонентов
+    window.dispatchEvent(
+      new CustomEvent("localStorageChange", {
+        detail: { key: "cookieConsent", newValue: cookieSettings },
+      })
+    );
+
+    closeModal();
+    setIsVisible(false);
+    onAccept?.(cookieSettings);
+  };
+
+  const handleDecline = () => {
+    const declinedSettings: CookieSettings = {
+      technical: false,
+      analytics: false,
+    };
+
+    // Сохраняем отклоненные настройки
+    localStorage.setItem("cookieConsent", JSON.stringify(declinedSettings));
+
+    // Удаляем все существующие куки
+    clearAllCookies();
+
+    // Генерируем кастомное событие для уведомления других компонентов
+    window.dispatchEvent(
+      new CustomEvent("localStorageChange", {
+        detail: { key: "cookieConsent", newValue: declinedSettings },
+      })
+    );
+
+    closeModal();
+    setIsVisible(false);
+    onDecline?.();
+  };
+
+  const handleModalAccept = () => {
+    // Если любые куки отключены, удаляем существующие
+    if (!cookieSettings.analytics || !cookieSettings.technical) {
+      clearAllCookies();
+    }
+
     localStorage.setItem("cookieConsent", JSON.stringify(cookieSettings));
 
     // Генерируем кастомное событие для уведомления других компонентов
@@ -71,35 +149,32 @@ const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept }) => {
             className
           )}
         >
-          <div className="max-w-7xl mx-auto flex x:flex-col items-center justify-between gap-4">
-            <div className="flex-1 min-w-0 w-2/3 x:w-full">
-              <p className="text-sm text-gray-700">
+          <div className="max-w-7xl mx-auto flex sm:flex-col items-center justify-between gap-4">
+            <div className="flex-1 min-w-0 w-2/3 sm:w-full">
+              <p className="text-base sm:text-sm xs:text-xs text-gray-700">
                 Мы используем{" "}
-                <button
+                {/* <button
                   onClick={() => setShowModal(true)}
                   className="text-blue-600 underline hover:text-blue-800 transition-colors"
-                >
-                  cookie
-                </button>
-                . Они помогают нам понять, как вы взаимодействуете с сайтом.{" "}
+                > */}
+                cookie
+                {/* </button> */}. Они помогают нам понять, как вы взаимодействуете с сайтом.{" "}
                 <button
                   onClick={() => setShowModal(true)}
-                  className="text-blue-600 underline hover:text-blue-800 transition-colors"
+                  className="text-blue-600 underline hover:text-blue-800 transition-colors !text-base xs:!text-xs"
                 >
                   Изменить настройки
                 </button>
               </p>
             </div>
-            <div className="flex gap-2 w-1/3 x:w-full">
-              <Button
-                onClick={handleQuickAccept}
-                type="blue"
-                className="!px-6 !py-2 text-sm !w-full"
-                openPopupAfterClick={false}
-              >
-                ОК
-              </Button>
-            </div>
+            <Button
+              onClick={handleQuickAccept}
+              type="blue"
+              className="!px-6 !py-2 text-sm !w-1/3 sm:!w-full"
+              openPopupAfterClick={false}
+            >
+              Принять все
+            </Button>
           </div>
         </motion.div>
       </AnimatePresence>
@@ -137,21 +212,19 @@ const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept }) => {
 
                 <div className="space-y-4 mb-6">
                   {/* Технические куки */}
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-3 x:flex-col x:gap-1">
                     <div className="flex-shrink-0 mt-1">
                       <div className="relative">
                         <input
                           type="checkbox"
                           checked={cookieSettings.technical}
-                          onChange={() => toggleCookieSetting("technical")}
+                          disabled
+                          // onChange={() => toggleCookieSetting("technical")}
                           className="sr-only"
                         />
                         <div
-                          className={cn(
-                            "w-12 h-6 rounded-full shadow-inner relative cursor-pointer transition-colors duration-200",
-                            cookieSettings.technical ? "bg-green-500" : "bg-gray-300"
-                          )}
-                          onClick={() => toggleCookieSetting("technical")}
+                          className="w-12 h-6 rounded-full shadow-inner relative bg-green-500 transition-colors duration-200
+                         cursor-not-allowed opacity-60"
                         >
                           <div
                             className={cn(
@@ -163,15 +236,13 @@ const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept }) => {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-medium text-gray-900 mb-1">Технические cookie-файлы</h4>
-                      {/* <p className="text-sm text-gray-600">
-                        Эти файлы cookie необходимы для корректной работы сайта. Без них сайт не сможет функционировать должным образом. Обычно они используются для навигации по сайту, доступа к защищённым областям, запоминания содержимого корзины.
-                      </p> */}
+                      <h4 className="text-xl x:text-lg text-gray-900 mb-1">Технические cookie-файлы</h4>
+                      <p className="text-base x:text-sm text-gray-600">Необходимы для корректной работы сайта</p>
                     </div>
                   </div>
 
                   {/* Аналитические куки */}
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-3 x:flex-col x:gap-1">
                     <div className="flex-shrink-0 mt-1">
                       <div className="relative">
                         <input
@@ -197,35 +268,16 @@ const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept }) => {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-medium text-gray-900 mb-1">Аналитические cookie-файлы</h4>
-                      {/* <p className="text-sm text-gray-600">
-                        Аналитические файлы cookie используются для понимания того, как посетители взаимодействуют с веб-сайтом. Эти файлы cookie помогают получить информацию о количестве посетителей, показателе отказов, источнике трафика. Используются Яндекс.Метрика для улучшения работы сайта.
-                      </p> */}
+                      <h4 className="text-xl x:text-lg text-gray-900 mb-1">Аналитические cookie-файлы</h4>
+                      <p className="text-base x:text-sm text-gray-600">
+                        Помогают понять, как вы взаимодействуете с сайтом
+                      </p>
                     </div>
                   </div>
                 </div>
-
-                <div className="text-xs text-gray-500 mb-6">
-                  Подробнее в{" "}
-                  <LocaleLink
-                    href="/privacy"
-                    onClick={closeModal}
-                    className="text-blue-600 underline hover:text-blue-800"
-                  >
-                    Политике ООО «CortexDigital» в отношении cookie-файлов
-                  </LocaleLink>
-                </div>
-
-                {/* <div className="flex justify-end">
-                  <Button
-                    onClick={handleModalAccept}
-                    type="blue"
-                    className="!px-6"
-                    openPopupAfterClick={false}
-                  >
-                    ОК
-                  </Button>
-                </div> */}
+                <Button onClick={handleModalAccept} type="blue" className="!w-full" openPopupAfterClick={false}>
+                  Сохранить
+                </Button>
               </div>
             </motion.div>
           </motion.div>

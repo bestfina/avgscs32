@@ -7,7 +7,9 @@
     "portfolio": "Portfolio",
     "about": "About Us",
     "feedback": "Reviews",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "aboutCompany" : "About the Company",
+    "cases" : "Cases"
   },
   "link": {
     "main": "Main",
@@ -228,11 +230,17 @@
       "description": "You don’t have to waste time browsing the site — get answers to all your questions directly from our managers within one working day."
     },
     "footer": {
-      "copyright": "CortexDigital © {year}",
       "privacy_policy": "Privacy Policy",
-      "to_top": "top",
+      "to_top": "Top",
       "arrow_up_alt": "Up Arrow Icon",
-      "developed_by": "Developed by CortexDigital"
+      "developed_by": "Developed by CortexDigital",
+      "services": "Services",
+      "call_us": "Call us",
+      "write_us": "Write to us",
+      "company_address": "Company Address:",
+      "all_rights_reserved": "All Rights Reserved",
+      "privacy_consent": "Consent to Personal Data Processing",
+      "download_presentation": "Download Presentation"
     },
     "feedback": {
       "title": "Your Reviews — Our Pride",

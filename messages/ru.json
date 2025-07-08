@@ -8,7 +8,9 @@
     "portfolio": "Портфолио",
     "about": "О нас",
     "feedback": "Отзывы",
-    "contacts": "Контакты"
+    "contacts": "Контакты",
+    "aboutCompany": "О компании",
+    "cases": "Кейсы"
   },
   "link": {
     "main": "Главная",
@@ -229,11 +231,17 @@
       "description": "Вы можете не терять время на сайте, а сразу узнать ответы на все интересующие Вас вопросы от наших менеджеров в течении рабочего дня."
     },
     "footer": {
-      "copyright": "CortexDigital © {year}",
       "privacy_policy": "Политика конфиденциальности",
-      "to_top": "наверх",
+      "to_top": "Наверх",
       "arrow_up_alt": "Стрелка вверх",
-      "developed_by": "Разработано в CortexDigital"
+      "developed_by": "Разработано в CortexDigital",
+      "services": "Услуги",
+      "call_us": "Позвоните нам",
+      "write_us": "Напишите нам",
+      "company_address": "Адрес компании:",
+      "all_rights_reserved": "Все права защищены",
+      "privacy_consent": "Согласие на обработку персональных данных",
+      "download_presentation": "Скачать презентацию"
     },
     "feedback": {
       "title": "Ваши отзывы — наша гордость",
@@ -363,14 +371,14 @@
       }
     },
     "partners": {
-      "title": "Наши клиенты и партнёры"
+      "title": "Нам доверяют"
     },
     "teams": {
       "title": "Наша команда"
     },
     "service": {
       "portfolio_link": "более 500 успешных проектов",
-      "title": "Наши услуги в веб-разработке",
+      "title": "Комплекс наших услуг и решений",
       "card_aria_label": "Подробнее об услуге \"{title}\"",
       "order_button": "Заказать",
       "ecommerce": {

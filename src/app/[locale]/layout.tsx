@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito, Jura, Roboto } from "next/font/google";
+import { Nunito, Jura } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import Header from "@/components/sections/Header";
@@ -15,7 +15,6 @@ import { Providers } from "./providers";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import CookieConsent from "@/components/sections/CookieConsent";
-// export const dynamicParams = true;
 
 type Props = {
   children: ReactNode;
@@ -27,7 +26,8 @@ const nunito = Nunito({
   display: "swap",
   weight: ["400", "600"],
   preload: true,
-  adjustFontFallback: false,
+  // adjustFontFallback: false,
+  variable: "--font-nunito",
 });
 
 const jura = Jura({
@@ -64,7 +64,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={params.locale}>
-      <body className={twMerge(nunito.className, jura.variable, "antialiased text-TextDark")}>
+      <body className={twMerge(nunito.className, nunito.variable, jura.variable, "antialiased text-TextDark")}>
         <YandexMetrika />
         <NextIntlClientProvider messages={messages}>
           <Providers>
