@@ -16,17 +16,15 @@ import {
 
 import TGIcon from "public/assets/icons/tg-icon.svg";
 import WAIcon from "public/assets/icons/wa-icon.svg";
-import VKIcon from "public/assets/icons/vk-icon.svg";
-import YTIcon from "public/assets/icons/yt-icon.svg";
 
 export const locales: TLocales[] = ["en", "ru"] as const;
 export const defaultLocale: TLocales = "ru";
 
 export enum SocialLinks {
   TELEGRAM = "https://t.me/CORTEX_DIGITAL",
-  WHATSAPP = "https://wa.me/79950203385",
-  VK = "",
-  YOUTUBE = "",
+  WHATSAPP = "https://api.whatsapp.com/send/?phone=79951396206&text&type=phone_number&app_absent=0",
+  // VK = "",
+  // YOUTUBE = "",
 }
 
 export enum NavLinks {

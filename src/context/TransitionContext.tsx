@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { createContext, ReactNode, use, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import delegate, { DelegateEvent } from "delegate-it";
 import { usePathname, useRouter } from "@/i18n/navigation";
@@ -140,7 +141,7 @@ export function TransitionRouter({
     if (stage === "entering") {
       entering();
     }
-  }, [stage, enter, entering,leaveRef.current]);
+  }, [stage, enter, entering, leaveRef.current]);
 
   useEffect(() => {
     return () => {

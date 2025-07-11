@@ -4,7 +4,6 @@ import { FC, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/cn";
 import Button from "../ui/Button";
-import { LocaleLink } from "@/i18n/navigation";
 
 interface CookieConsentProps {
   className?: string;
@@ -17,7 +16,7 @@ interface CookieSettings {
   analytics: boolean;
 }
 
-const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept, onDecline }) => {
+const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [cookieSettings, setCookieSettings] = useState<CookieSettings>({
@@ -29,35 +28,44 @@ const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept, onDecline 
     const cookieConsent = localStorage.getItem("cookieConsent");
     if (!cookieConsent) {
       setIsVisible(true);
+      const defaultSettings = { technical: true, analytics: true };
+      localStorage.setItem("cookieConsent", JSON.stringify(defaultSettings));
+      window.dispatchEvent(
+        new CustomEvent("localStorageChange", {
+          detail: { key: "cookieConsent", newValue: defaultSettings },
+        })
+      );
     }
   }, []);
 
   const closeModal = () => setShowModal(false);
 
-  // Функция для удаления всех куков
-  const clearAllCookies = () => {
-    // Удаляем все куки для текущего домена
+  // Функция для удаления аналитических куков
+  const clearAnalyticsCookies = () => {
     document.cookie.split(";").forEach(cookie => {
       const eqPos = cookie.indexOf("=");
       const name = eqPos > -1 ? cookie.substr(0, eqPos).trim() : cookie.trim();
 
-      // Удаляем куки для разных путей и доменов
-      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`;
-      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=${window.location.hostname}`;
-      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=.${window.location.hostname}`;
+      if (name.includes("_ym") || name.includes("yandex") || name.includes("analytics")) {
+        document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`;
+        document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=${window.location.hostname}`;
+        document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=.${window.location.hostname}`;
+      }
     });
 
-    // Очищаем localStorage от аналитических данных
     const keysToRemove = [];
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
-      if (key && (key.includes("yandex") || key.includes("_ym") || key.includes("analytics"))) {
+      if (
+        key &&
+        (key.includes("yandex") || key.includes("_ym") || key.includes("analytics")) &&
+        key !== "cookieConsent"
+      ) {
         keysToRemove.push(key);
       }
     }
     keysToRemove.forEach(key => localStorage.removeItem(key));
 
-    // Очищаем sessionStorage от аналитических данных
     const sessionKeysToRemove = [];
     for (let i = 0; i < sessionStorage.length; i++) {
       const key = sessionStorage.key(i);
@@ -69,53 +77,17 @@ const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept, onDecline 
   };
 
   const handleQuickAccept = () => {
-    localStorage.setItem("cookieConsent", JSON.stringify(cookieSettings));
-
-    // Генерируем кастомное событие для уведомления других компонентов
-    window.dispatchEvent(
-      new CustomEvent("localStorageChange", {
-        detail: { key: "cookieConsent", newValue: cookieSettings },
-      })
-    );
-
-    closeModal();
     setIsVisible(false);
     onAccept?.(cookieSettings);
   };
 
-  const handleDecline = () => {
-    const declinedSettings: CookieSettings = {
-      technical: false,
-      analytics: false,
-    };
-
-    // Сохраняем отклоненные настройки
-    localStorage.setItem("cookieConsent", JSON.stringify(declinedSettings));
-
-    // Удаляем все существующие куки
-    clearAllCookies();
-
-    // Генерируем кастомное событие для уведомления других компонентов
-    window.dispatchEvent(
-      new CustomEvent("localStorageChange", {
-        detail: { key: "cookieConsent", newValue: declinedSettings },
-      })
-    );
-
-    closeModal();
-    setIsVisible(false);
-    onDecline?.();
-  };
-
   const handleModalAccept = () => {
-    // Если любые куки отключены, удаляем существующие
-    if (!cookieSettings.analytics || !cookieSettings.technical) {
-      clearAllCookies();
+    if (!cookieSettings.analytics) {
+      clearAnalyticsCookies();
     }
 
     localStorage.setItem("cookieConsent", JSON.stringify(cookieSettings));
 
-    // Генерируем кастомное событие для уведомления других компонентов
     window.dispatchEvent(
       new CustomEvent("localStorageChange", {
         detail: { key: "cookieConsent", newValue: cookieSettings },
@@ -128,6 +100,8 @@ const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept, onDecline 
   };
 
   const toggleCookieSetting = (type: keyof CookieSettings) => {
+    // Технические куки нельзя отключать
+    if (type === "technical") return;
     setCookieSettings(prev => ({
       ...prev,
       [type]: !prev[type],
@@ -152,13 +126,7 @@ const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept, onDecline 
           <div className="max-w-7xl mx-auto flex sm:flex-col items-center justify-between gap-4">
             <div className="flex-1 min-w-0 w-2/3 sm:w-full">
               <p className="text-base sm:text-sm xs:text-xs text-gray-700">
-                Мы используем{" "}
-                {/* <button
-                  onClick={() => setShowModal(true)}
-                  className="text-blue-600 underline hover:text-blue-800 transition-colors"
-                > */}
-                cookie
-                {/* </button> */}. Они помогают нам понять, как вы взаимодействуете с сайтом.{" "}
+                Мы используем cookie. Они помогают нам понять, как вы взаимодействуете с сайтом.{" "}
                 <button
                   onClick={() => setShowModal(true)}
                   className="text-blue-600 underline hover:text-blue-800 transition-colors !text-base xs:!text-xs"
@@ -215,29 +183,17 @@ const CookieConsent: FC<CookieConsentProps> = ({ className, onAccept, onDecline 
                   <div className="flex items-start gap-3 x:flex-col x:gap-1">
                     <div className="flex-shrink-0 mt-1">
                       <div className="relative">
-                        <input
-                          type="checkbox"
-                          checked={cookieSettings.technical}
-                          disabled
-                          // onChange={() => toggleCookieSetting("technical")}
-                          className="sr-only"
-                        />
-                        <div
-                          className="w-12 h-6 rounded-full shadow-inner relative bg-green-500 transition-colors duration-200
-                         cursor-not-allowed opacity-60"
-                        >
-                          <div
-                            className={cn(
-                              "w-5 h-5 bg-white rounded-full shadow absolute top-0.5 transition-transform duration-200",
-                              cookieSettings.technical ? "right-0.5" : "left-0.5"
-                            )}
-                          />
+                        <input type="checkbox" checked={cookieSettings.technical} disabled className="sr-only" />
+                        <div className="w-12 h-6 rounded-full shadow-inner relative bg-green-500 transition-colors duration-200 cursor-not-allowed opacity-60">
+                          <div className="w-5 h-5 bg-white rounded-full shadow absolute top-0.5 right-0.5 transition-transform duration-200" />
                         </div>
                       </div>
                     </div>
                     <div className="flex-1">
                       <h4 className="text-xl x:text-lg text-gray-900 mb-1">Технические cookie-файлы</h4>
-                      <p className="text-base x:text-sm text-gray-600">Необходимы для корректной работы сайта</p>
+                      <p className="text-base x:text-sm text-gray-600">
+                        Необходимы для корректной работы сайта (не могут быть отключены)
+                      </p>
                     </div>
                   </div>
 

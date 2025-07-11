@@ -1,14 +1,15 @@
 "use client";
 import { useEffect } from "react";
+import Image from "next/image";
 
 const YandexMetrika = () => {
   useEffect(() => {
     // Функция инициализации метрики
     const initYandexMetrika = () => {
       if (typeof window === "undefined" || window.ym) return;
-      
+
       console.log("Yandex Metrika initialized");
-      
+
       (function (m, e, t, r, i, k, a) {
         m[i] =
           m[i] ||
@@ -22,7 +23,7 @@ const YandexMetrika = () => {
         k.src = r;
         a.parentNode?.insertBefore(k, a);
       })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-      
+
       window.ym(99095541, "init", {
         clickmap: true,
         trackLinks: true,
@@ -51,7 +52,7 @@ const YandexMetrika = () => {
     checkAndInit();
 
     // Обработчик изменений в localStorage
-    const handleStorageChange = (e) => {
+    const handleStorageChange = e => {
       // Проверяем изменения в localStorage через событие storage
       if (e.key === "cookieConsent") {
         try {
@@ -97,11 +98,7 @@ const YandexMetrika = () => {
   return (
     <noscript>
       <div>
-        <img 
-          src="https://mc.yandex.ru/watch/99095541" 
-          style={{ position: "absolute", left: "-9999px" }} 
-          alt="" 
-        />
+        <Image src="https://mc.yandex.ru/watch/99095541" style={{ position: "absolute", left: "-9999px" }} alt="" />
       </div>
     </noscript>
   );

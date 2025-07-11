@@ -76,11 +76,11 @@ const Footer = () => {
             <div className="space-y-6 sm:space-y-4">
               <div className="text-end sm:text-start">
                 <a
-                  href="tel:+79950203385"
+                  href="tel:+79951396206"
                   target="_blank"
                   className="text-[22px] font-semibold text-white mb-2 block leading-tight hover:text-[#FFFFFF99] transition-colors duration-300 sm:text-[18px]"
                 >
-                  +7 (995) 020-33-85
+                  +7 (995) 139-62-06
                 </a>
                 <p className="text-[16px] text-[#FFFFFF99] leading-relaxed sm:text-[14px]">
                   {t("main.footer.call_us")}

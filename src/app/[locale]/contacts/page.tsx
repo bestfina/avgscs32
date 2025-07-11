@@ -14,7 +14,7 @@ const Contacts = () => {
           <h1>{t("title")}</h1>
           <p>{t("description")}</p>
           <div>
-            <div className="flex items-center font-semibold gap-xxxxs text-lg lg:text-sm md:mt-xxxs">
+            {/* <div className="flex items-center font-semibold gap-xxxxs text-lg lg:text-sm md:mt-xxxs">
               <Image
                 src="/assets/icons/clock-contact.svg"
                 alt={t("clock_icon_alt")}
@@ -23,7 +23,7 @@ const Contacts = () => {
                 className="lg:w-3 lg:h-3"
               />
               {t("working_hours")}
-            </div>
+            </div> */}
             <Contact className="flex-col gap-xxxs my-xxxs md:my-xxxxs x:my-0s" size="x:text-lg" />
             <Social />
           </div>
