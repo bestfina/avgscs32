@@ -24,7 +24,6 @@ export enum SocialLinks {
   TELEGRAM = "https://t.me/CORTEX_DIGITAL",
   WHATSAPP = "https://api.whatsapp.com/send/?phone=79951396206&text&type=phone_number&app_absent=0",
   // VK = "",
-  // YOUTUBE = "",
 }
 
 export enum NavLinks {
