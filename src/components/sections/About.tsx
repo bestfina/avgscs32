@@ -10,7 +10,7 @@ const About = () => {
       <div className="container flex flex-col">
         <h2>{t("title")}</h2>
         <div className="flex flex-col justify-center gap-md xl:gap-sm">
-          {/* <p className="leading-9 xl:leading-8 lg:leading-6 xs:leading-5">{t("description")}</p> */}
+          {/* <p className="leading-9 xl:leading-8 lg:leading-6 xs:leading-5">{t("description")}</p>*/}
           <Technologies />
           <AboutInCount />
         </div>
