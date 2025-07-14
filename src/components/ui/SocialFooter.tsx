@@ -22,7 +22,6 @@ const SocialFooter = ({ className }: SocialProps) => {
           <Icon className="text-white" />
         </Link>
       ))}
-
     </div>
   );
 };

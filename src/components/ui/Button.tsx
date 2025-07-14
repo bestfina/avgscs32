@@ -41,7 +41,7 @@ const Button: FC<ButtonProps> = ({ children, type, className, onClick, openPopup
         }
       }}
       className={twMerge(
-        "text-TextLight rounded-full font-bold w-80 py-3 hover:opacity-70 duration-500 xl:w-72 lg:w-60 md:w-56 xl:py-2",
+        "text-TextLight rounded-full font-bold w-80 py-3 hover:opacity-70 duration-500 xl:w-72 md:w-56 xl:py-2",
         color,
         className
       )}

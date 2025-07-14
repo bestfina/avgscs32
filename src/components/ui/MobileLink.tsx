@@ -74,7 +74,7 @@ const CallbackWidget = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
             >
-              <Image src="/assets/icons/whatsapp.svg" alt="whatsapp" width={24} height={24} />
+              <Image src="/assets/icons/whatsApp.svg" alt="whatsapp" width={24} height={24} />
               {t("whatsapp")}
             </Link>
             <Link

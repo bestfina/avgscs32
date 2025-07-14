@@ -30,11 +30,11 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0E202C] text-white" id="contact">
+    <footer className="bg-[#0E202C] text-white mt-10" id="contact">
       <div className="container">
         {/* Upper Section */}
         <div className="flex flex-wrap justify-between py-16 gap-8 lg:py-12 md:py-10 md:flex-wrap md:gap-x-6 md:[&>div]:mb-4 sm:pt-8 sm:pb-4 sm:flex-col">
-          <div className="flex-1 min-w-[200px] max-w-[300px] md:min-w-[45%] md:max-w-[45%] sm:max-w-none sm:hidden">
+          <div className="flex-1 min-w-[200px] max-w-[300px] md:min-w-[45%] md:max-w-[45%] sm:max-w-none">
             <Logo big light />
           </div>
 
