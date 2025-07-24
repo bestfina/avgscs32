@@ -1,8 +1,7 @@
 "use client";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
-import Button from "./Button";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import Button from "./Button";
 
 const MainCta = () => {
   const t = useTranslations("main.hero.cta");
