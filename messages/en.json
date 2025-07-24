@@ -8,8 +8,8 @@
     "about": "About Us",
     "feedback": "Reviews",
     "contacts": "Contacts",
-    "aboutCompany" : "About the Company",
-    "cases" : "Cases"
+    "aboutCompany": "About the Company",
+    "cases": "Cases"
   },
   "link": {
     "main": "Main",
@@ -30,8 +30,7 @@
       "description": "We are not just a digital agency, but partners who understand your business and build full-fledged IT solutions for growth. We guarantee high-quality work at every stage and timely delivery of the project.",
       "cta": {
         "calculate_cost": "Calculate Cost",
-        "view_services": "View All Services",
-        "view_portfolio": "View Portfolio"
+        "view_presentation": "download presentation"
       },
       "next_section": "Next Section",
       "poster_alt": "Main section background"

@@ -163,7 +163,7 @@ const Footer = () => {
               <div className="text-[16px] text-[#FFFFFF99] leading-relaxed sm:text-[14px]">
                 <span className="text-white font-medium">CortexDigital © {new Date().getFullYear()}</span>
                 <br />
-                <span>All Rights Reserved</span>
+                <span>Все права защищены</span>
               </div>
             </div>
 

@@ -58,11 +58,11 @@ export const FOOTER_SOCIAL_LINKS: TFooterSocialLink[] = [
 
 export const FOOTER_PAGE_LINKS: TFooterPageLink[] = [
   {
-    label: "nav.cases",
+    label: "nav.portfolio",
     url: NavLinks.PORTFOLIO,
   },
   {
-    label: "nav.aboutCompany",
+    label: "nav.about",
     url: NavLinks.ABOUT,
   },
   {
