@@ -5,6 +5,14 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "mc.yandex.ru",
+      },
+    ],
+  },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find(rule => rule.test?.test?.(".svg"));
 
