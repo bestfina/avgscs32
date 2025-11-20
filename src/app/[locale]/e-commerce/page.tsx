@@ -61,7 +61,8 @@ const Ecommerce = () => {
         poster="/assets/images/poster/e-commerce.webp"
       />
       <Partners />
-      <Tariffs priceTemplate={t("tariffs.priceTemplate")} priceCustom={t("tariffs.priceCustom")} />
+      {/* <Tariffs priceTemplate={t("tariffs.priceTemplate")} priceCustom={t("tariffs.priceCustom")} /> */}
+      <Tariffs />
       <Portfolio />
       <Steps />
       <Feedback />

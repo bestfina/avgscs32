@@ -5,14 +5,14 @@ import Button from "../ui/Button";
 import { TransitionLink } from "@/lib/link";
 import { usePathname } from "@/i18n/navigation";
 
-interface TariffsProps {
-  priceTemplate: string;
-  priceCustom: string;
-}
+// interface TariffsProps {
+//   priceTemplate?: string;
+//   priceCustom?: string;
+// }
 
-const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
+const Tariffs = () => {
   const t = useTranslations("main.tariffs");
-  const pathname = usePathname()
+  const pathname = usePathname();
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -32,7 +32,7 @@ const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
           >
             <div>
               <h3>{t("optimal.title")}</h3>
-              <h4 className="mt-xxs xl:mt-xxxxs">{priceTemplate}</h4>
+              {/* <h4 className="mt-xxs xl:mt-xxxxs">{priceTemplate}</h4> */}
             </div>
             <Button type="blue">{t("discuss_project")}</Button>
             <div className="h-px bg-black"></div>
@@ -55,7 +55,7 @@ const Tariffs = ({ priceTemplate, priceCustom }: TariffsProps) => {
           >
             <div>
               <h3>{t("premium.title")}</h3>
-              <h4 className="mt-xxs xl:mt-xxxxs">{priceCustom}</h4>
+              {/* <h4 className="mt-xxs xl:mt-xxxxs">{priceCustom}</h4> */}
             </div>
             <Button type="border-black">{t("discuss_project")}</Button>
             <div className="h-px bg-black"></div>

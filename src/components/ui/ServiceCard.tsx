@@ -15,7 +15,7 @@ interface ServiceCardProps {
   iconAlt?: string;
 }
 
-const ServiceCard = ({ title, description, url, icon, className, price, iconAlt }: ServiceCardProps) => {
+const ServiceCard = ({ title, description, url, icon, className, iconAlt }: ServiceCardProps) => {
   const t = useTranslations("main.service");
 
   return (
@@ -67,9 +67,9 @@ const ServiceCard = ({ title, description, url, icon, className, price, iconAlt 
           {description}
         </p>
         <div className="mt-auto">
-          <div className="mt-6 mb-xxs lg:mt-4 sm:mt-2 lg:mb-xxxs text-3xl xxl:text-[28px] xl:text-xl lg:text-lg xs:text-base font-bold">
+          {/* <div className="mt-6 mb-xxs lg:mt-4 sm:mt-2 lg:mb-xxxs text-3xl xxl:text-[28px] xl:text-xl lg:text-lg xs:text-base font-bold">
             {price}
-          </div>
+          </div> */}
           <div onClick={e => e.stopPropagation()}>
             <Button type="border-black">{t("order_button")}</Button>
           </div>
