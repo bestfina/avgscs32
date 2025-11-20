@@ -98,7 +98,13 @@ const YandexMetrika = () => {
   return (
     <noscript>
       <div>
-        <Image src="https://mc.yandex.ru/watch/99095541" style={{ position: "absolute", left: "-9999px" }} alt="" />
+        <Image
+          src="https://mc.yandex.ru/watch/99095541"
+          width={32}
+          height={32}
+          style={{ position: "absolute", left: "-9999px" }}
+          alt=""
+        />
       </div>
     </noscript>
   );
